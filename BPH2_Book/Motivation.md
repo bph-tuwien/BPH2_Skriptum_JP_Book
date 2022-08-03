@@ -1,5 +1,6 @@
 # Motivation
 ## Erste Teil
-Ich finde das einchach!!!
+Ich finde das einfach!!!
 
 ## Zweiter Teil
+Oder zweifach

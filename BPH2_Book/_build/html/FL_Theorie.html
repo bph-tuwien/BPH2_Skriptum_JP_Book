@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Flüssigwassertransport - Theorie &#8212; 206.291 Bauphysik 2 VU</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -64,7 +63,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -73,9 +86,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -93,19 +107,25 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   206.291 Bauphysik 3 VU
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    206.289 Bauphysik 2 VU
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Inhalt
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Motivation.html">
+   Motivation
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="W%C3%A4rmebr%C3%BCcken.html">
    Wärmebrücken
@@ -123,7 +143,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_risk_standards.html">
-     Normative Grundlagen der Risikonanalyse bei diffusiven Wärme- und Feuchtetransport
+     Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport
     </a>
    </li>
    <li class="toctree-l2">
@@ -135,7 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Konvektiver_Transport.html">
-   Leckagen oder “Warum wir konvektiven Transport nicht vernachlässigen dürfen”
+   Konvektiver Stofftransport
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -146,6 +166,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="Convective_Theorie.html">
      Theorethische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Convective_risk_standards.html">
+     Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport
     </a>
    </li>
    <li class="toctree-l2">
@@ -184,7 +209,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Holzbauphysik.html">
-   Laborübung
+   Holzbauphysik
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -199,12 +224,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="LU_FL.html">
-     Laborübung - Aufsaugversuch
+     Laborübung - Bestimmung hygrothermsicher Kenngrößen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="LU_Lambda.html">
-     Laborübung - Aufsaugversuch
+     Laborübung -  In-Situ U-Wert Messung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="LU_BlowerDoor.html">
+     Laborübung - Blower Door Messung und Bestimmung von Luftvolumenströmen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="LU_Estrich_Trocknung.html">
+     Laborübung - Estrichtrocknung
     </a>
    </li>
   </ul>
@@ -217,90 +252,180 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/FL_Theorie.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book/issues/new?title=Issue%20on%20page%20%2FFL_Theorie.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/andreass0/BPH2_Skriptum_JP_Book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/andreass0/BPH2_Skriptum_JP_Book/issues/new?title=Issue%20on%20page%20%2FFL_Theorie.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/FL_Theorie.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#geschichte">
    Geschichte
@@ -347,12 +472,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Flüssigwassertransport - Theorie</h1>
@@ -415,15 +539,16 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="flussigwassertransport-theorie">
-<span id="fl-theorie"></span><h1>Flüssigwassertransport - Theorie<a class="headerlink" href="#flussigwassertransport-theorie" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="flussigwassertransport-theorie">
+<span id="fl-theorie"></span><h1>Flüssigwassertransport - Theorie<a class="headerlink" href="#flussigwassertransport-theorie" title="Permalink to this headline">#</a></h1>
 <p>Theoretischer Hintergrund Flüssigwasser.</p>
 <p><em>Mitschrift VO 01.04.2022:</em></p>
-<div class="section" id="geschichte">
-<h2>Geschichte<a class="headerlink" href="#geschichte" title="Permalink to this headline">¶</a></h2>
+<section id="geschichte">
+<h2>Geschichte<a class="headerlink" href="#geschichte" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>1822 Fourier - Ansatz zum Wärmetransport</p></li>
 <li><p>1850 Graham/Fick - Diffusion</p></li>
@@ -455,18 +580,18 @@ numerical simulation“</p></li>
 Probability Assessment of Performance &amp; Cost”</p></li>
 </ul>
 <p>“1D Simulation bei einer Sanierung stellt Risiko dar wenn das wahre Problem vergessen wird.”</p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="feuchtetransport-und-speicherung">
-<h2>Feuchtetransport und –speicherung<a class="headerlink" href="#feuchtetransport-und-speicherung" title="Permalink to this headline">¶</a></h2>
+<section id="feuchtetransport-und-speicherung">
+<h2>Feuchtetransport und –speicherung<a class="headerlink" href="#feuchtetransport-und-speicherung" title="Permalink to this headline">#</a></h2>
 <p>Diffusion können wir gut beschreiben</p>
 <p>Gleichung für Diffusion hier</p>
 <div class="math notranslate nohighlight" id="equation-eq-g-v">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq-g-v" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-g-v" title="Permalink to this equation">#</a></span>\[
 g_{v} = - \delta_{p} \cdot \frac{\partial p}{\partial x}
 \]</div>
-<div class="section" id="feuchtespeicherung">
-<h3>Feuchtespeicherung<a class="headerlink" href="#feuchtespeicherung" title="Permalink to this headline">¶</a></h3>
+<section id="feuchtespeicherung">
+<h3>Feuchtespeicherung<a class="headerlink" href="#feuchtespeicherung" title="Permalink to this headline">#</a></h3>
 <p>Feuchte kann sich in einem Material in all seinen Aggregatzuständen einlagern:</p>
 <ul class="simple">
 <li><p>Fest <span class="math notranslate nohighlight">\(\rightarrow\)</span> Eis</p></li>
@@ -477,43 +602,51 @@ g_{v} = - \delta_{p} \cdot \frac{\partial p}{\partial x}
 Wandlung der Moleküle in Eis statt. Neben flüssigem Wasser haben wir, dort wo noch Luft vorhanden ist, auch Wasserdampf.
 Dieser Wasserdampf ist auch im Gleichgewicht mit dem Wasser selber.</p>
 <p>Erklärung der Begriffe: Freie Wassersättigung/Vakuum Sättigung</p>
-<div class="section" id="kapillarkrafte">
-<h4>Kapillarkräfte<a class="headerlink" href="#kapillarkrafte" title="Permalink to this headline">¶</a></h4>
+<section id="kapillarkrafte">
+<h4>Kapillarkräfte<a class="headerlink" href="#kapillarkrafte" title="Permalink to this headline">#</a></h4>
 <p>Die meisten Baustoffoberflächen haben anziehende Kräfte auf Wasser.</p>
-<div class="figure align-default" id="gasbeton-mikro">
-<a class="reference internal image-reference" href="img/FL_Theorie/gasbeton_mikro.png"><img alt="img/FL_Theorie/gasbeton_mikro.png" src="img/FL_Theorie/gasbeton_mikro.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Aufnahme von Gasbeton. Sehr kleine Poren (<span class="math notranslate nohighlight">\(\leq\)</span> 1000 <span class="math notranslate nohighlight">\(\mu m\)</span>) bilden Porennetzwerk in dem Wasser transportiert werden
-kann.</span><a class="headerlink" href="#gasbeton-mikro" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="gasbeton-mikro">
+<a class="reference internal image-reference" href="_images/gasbeton_mikro.png"><img alt="_images/gasbeton_mikro.png" src="_images/gasbeton_mikro.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Aufnahme von Gasbeton. Sehr kleine Poren (<span class="math notranslate nohighlight">\(\leq\)</span> 1000 <span class="math notranslate nohighlight">\(\mu m\)</span>) bilden Porennetzwerk in dem Wasser transportiert werden
+kann.</span><a class="headerlink" href="#gasbeton-mikro" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Je kleiner die Kapillare desto höher die Steighöhe, weil
 das Volumen klein ist im Verhältnis zur Kraft die entlang dieses Umfangs auftritt. Je größer Kapillardurchmesser, desto
 weniger ist die maximale Steighöhe. Zusammenhang zwischen Porenstruktur und Geschwindigkeit der Flüssigleitung auf Grund
 von vorhandener Saugspannung. <a class="reference internal" href="#kapillaren"><span class="std std-numref">Fig. 2</span></a></p>
-<div class="figure align-default" id="kapillaren">
-<a class="reference internal image-reference" href="img/FL_Theorie/kapillaren.png"><img alt="img/FL_Theorie/kapillaren.png" src="img/FL_Theorie/kapillaren.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Je kleiner die Kapillare desto höher die Steighöhe, weil
-das Volumen klein ist im Verhältnis zur Kraft die entlang dieses Umfangs auftritt.</span><a class="headerlink" href="#kapillaren" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="bestimmung-des-zusammenhanges-zwischen-saugspannung-und-wassergehalt-plattenapparat">
-<h4>Bestimmung des Zusammenhanges zwischen Saugspannung und Wassergehalt - Plattenapparat<a class="headerlink" href="#bestimmung-des-zusammenhanges-zwischen-saugspannung-und-wassergehalt-plattenapparat" title="Permalink to this headline">¶</a></h4>
+<figure class="align-default" id="kapillaren">
+<a class="reference internal image-reference" href="_images/kapillaren.png"><img alt="_images/kapillaren.png" src="_images/kapillaren.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Je kleiner die Kapillare desto höher die Steighöhe, weil
+das Volumen klein ist im Verhältnis zur Kraft die entlang dieses Umfangs auftritt.</span><a class="headerlink" href="#kapillaren" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="bestimmung-des-zusammenhanges-zwischen-saugspannung-und-wassergehalt-plattenapparat">
+<h4>Bestimmung des Zusammenhanges zwischen Saugspannung und Wassergehalt - Plattenapparat<a class="headerlink" href="#bestimmung-des-zusammenhanges-zwischen-saugspannung-und-wassergehalt-plattenapparat" title="Permalink to this headline">#</a></h4>
 <p>Ein Versuch zur Messung des Zusammenhanges zwischen Kraft die auf das Wasser wirkt und wie viel Wasser im Porensystem gehalten werden
 kann. Als Unterlage für die Probe wird eine Keramikplatte verwendet. Diese hat eine sehr feine Porenstruktur und wird
 mit Kaolin beschichtet. Kaolin ist ein feines, eisenfreies, weißes Gestein, auch mit einer feinen Porenstruktur. Auf
 diese Platte wird eine gesättigte Probe gelegt, sodass die Porenstruktur des Baustoffes in die feinere Porenstruktur der Platte
 übergeht. <a class="reference internal" href="#plattenapparat"><span class="std std-numref">Fig. 3</span></a></p>
-<div class="figure align-default" id="plattenapparat">
-<a class="reference internal image-reference" href="img/FL_Theorie/plattenapparat.png"><img alt="img/FL_Theorie/plattenapparat.png" src="img/FL_Theorie/plattenapparat.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Je kleiner die Kapillare desto höher die Steighöhe, weil
-das Volumen klein ist im Verhältnis zur Kraft die entlang dieses Umfangs auftritt.</span><a class="headerlink" href="#plattenapparat" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="plattenapparat">
+<a class="reference internal image-reference" href="_images/plattenapparat.png"><img alt="_images/plattenapparat.png" src="_images/plattenapparat.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Je kleiner die Kapillare desto höher die Steighöhe, weil
+das Volumen klein ist im Verhältnis zur Kraft die entlang dieses Umfangs auftritt.</span><a class="headerlink" href="#plattenapparat" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Es wird nun schrittweise der Luftdruck über der Probe erhöht, was zu einer graduellen Entleerung der jeweiligen Poren
 führt, je nachdem wann der Luftdruck die Saugspannung in der Pore überschreitet. <a class="reference internal" href="#druck-pore-versuch"><span class="std std-numref">Fig. 4</span></a></p>
-<div class="figure align-default" id="druck-pore-versuch">
-<a class="reference internal image-reference" href="img/FL_Theorie/druck_pore_versuch.png"><img alt="img/FL_Theorie/druck_pore_versuch.png" src="img/FL_Theorie/druck_pore_versuch.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Schematische Darstellung des zeitlichen Verlaufs eines Versuchs im Plattenapparat. Entleerung der Poren wenn
-<span class="math notranslate nohighlight">\( P_{suc} &lt; P_{Luft} \)</span>.</span><a class="headerlink" href="#druck-pore-versuch" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="druck-pore-versuch">
+<a class="reference internal image-reference" href="_images/druck_pore_versuch.png"><img alt="_images/druck_pore_versuch.png" src="_images/druck_pore_versuch.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Schematische Darstellung des zeitlichen Verlaufs eines Versuchs im Plattenapparat. Entleerung der Poren wenn
+<span class="math notranslate nohighlight">\( P_{suc} &lt; P_{Luft} \)</span>.</span><a class="headerlink" href="#druck-pore-versuch" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Minisken verhindern, dass es luftundicht wird, dadurch kann der Druck aufrechterhalten werden, doch das Wasser kann
 abrinnen.</p>
 <p><strong>Versuchsablauf:</strong></p>
@@ -525,37 +658,45 @@ abrinnen.</p>
 </ul>
 <p>Dieser Vorgang, abhängig von der Probe, kann zum Teil bis zu einem Monat dauern. Als Ergebnis erhält man die
 Saugspannungskurve der jeweiligen Probe.  <a class="reference internal" href="#saugspannungskurven"><span class="std std-numref">Fig. 5</span></a></p>
-<div class="figure align-default" id="saugspannungskurven">
-<a class="reference internal image-reference" href="img/FL_Theorie/saugspannungskurven.png"><img alt="img/FL_Theorie/saugspannungskurven.png" src="img/FL_Theorie/saugspannungskurven.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Saugspannungskurven verschieddener Probekörper.</span><a class="headerlink" href="#saugspannungskurven" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="saugspannungskurven">
+<a class="reference internal image-reference" href="_images/saugspannungskurven.png"><img alt="_images/saugspannungskurven.png" src="_images/saugspannungskurven.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Saugspannungskurven verschieddener Probekörper.</span><a class="headerlink" href="#saugspannungskurven" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Wasserdampf in der Luft ist nicht beliebig sondern vom Sättigungsgehalt der Luft abhängig.  Die mögliche Sättigung
 steigt mit der Temperatur. <a class="reference internal" href="#saettigung-luft-diag"><span class="std std-numref">Fig. 6</span></a></p>
-<div class="figure align-default" id="saettigung-luft-diag">
-<a class="reference internal image-reference" href="img/FL_Theorie/saettigung_luft_diag.png"><img alt="img/FL_Theorie/saettigung_luft_diag.png" src="img/FL_Theorie/saettigung_luft_diag.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Diagramm zur Bestimmung des Wassergehaltes in der Luft abhängig von der Temperatur und relativen Luftfeuchtigkeit.
-Sättigungsgealt steigt mit der Temperatur.</span><a class="headerlink" href="#saettigung-luft-diag" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="saettigung-luft-diag">
+<a class="reference internal image-reference" href="_images/saettigung_luft_diag.png"><img alt="_images/saettigung_luft_diag.png" src="_images/saettigung_luft_diag.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Diagramm zur Bestimmung des Wassergehaltes in der Luft abhängig von der Temperatur und relativen Luftfeuchtigkeit.
+Sättigungsgealt steigt mit der Temperatur.</span><a class="headerlink" href="#saettigung-luft-diag" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Wenn wir uns das bei einem Material ansehen, bemerken wir das Phänomen, dass die Materialoberfläche Bindungskräfte auf
 das Wasserdampfmolekül hat. Abhängig davon kann mit einer gewissen Wahrscheinlichkeit solch ein Wasserdampfmolekül an
 der Materialoberfläche hängen bleiben. Die Geschwindikeit der Bewegung der Moleküle hängt von der Temperatur ab. Je
 höher die Luftfeuchte ist, desto stärker wird die Schicht der angelagerten Wasserdampfmoleküle. Durch die Bindungskräfte
 können dadurch an dieser Schicht wesentlich mehr Wasserdampfmoleküle im Gleichgewicht stehen, als in der Luft selber.
 <a class="reference internal" href="#wasserdampfmolekuele"><span class="std std-numref">Fig. 7</span></a> <br></p>
-<div class="figure align-default" id="wasserdampfmolekuele">
-<a class="reference internal image-reference" href="img/FL_Theorie/wasserdampfmolekuele.png"><img alt="img/FL_Theorie/wasserdampfmolekuele.png" src="img/FL_Theorie/wasserdampfmolekuele.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Vereinfachte Darstellung der Anlagerung von Wasserdampfmolekülen auf eine Materialoberfläche.</span><a class="headerlink" href="#wasserdampfmolekuele" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="wasserdampfmolekuele">
+<a class="reference internal image-reference" href="_images/wasserdampfmolekuele.png"><img alt="_images/wasserdampfmolekuele.png" src="_images/wasserdampfmolekuele.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Vereinfachte Darstellung der Anlagerung von Wasserdampfmolekülen auf eine Materialoberfläche.</span><a class="headerlink" href="#wasserdampfmolekuele" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Der Zusammenhang zwischen Konzentration und Temperatur kann am besten durch die relative Luftfeuchtigkeit ausgedrückt
 werden. Diese Überlegung kann mittels der Sorptionsisotherme eines Materials veranschaulicht werden. <a class="reference internal" href="#sorptionsisotherme"><span class="std std-numref">Fig. 8</span></a></p>
-<div class="figure align-default" id="sorptionsisotherme">
-<a class="reference internal image-reference" href="img/FL_Theorie/sorptionsisotherme.png"><img alt="img/FL_Theorie/sorptionsisotherme.png" src="img/FL_Theorie/sorptionsisotherme.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Klassische Darstellung einer Sorptionsisotherme. Auf der Abszisse ist die relative Luftfeuchtigkeit und auf der Ordinate
-der korrespondierende Wassergehalt für die jeweiligen Materialien dargestellt.</span><a class="headerlink" href="#sorptionsisotherme" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="saugspannung-krummungsradius-der-wasseroberflache">
-<h4>Saugspannung – Krümmungsradius der Wasseroberfläche<a class="headerlink" href="#saugspannung-krummungsradius-der-wasseroberflache" title="Permalink to this headline">¶</a></h4>
+<figure class="align-default" id="sorptionsisotherme">
+<a class="reference internal image-reference" href="_images/sorptionsisotherme.png"><img alt="_images/sorptionsisotherme.png" src="_images/sorptionsisotherme.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Klassische Darstellung einer Sorptionsisotherme. Auf der Abszisse ist die relative Luftfeuchtigkeit und auf der Ordinate
+der korrespondierende Wassergehalt für die jeweiligen Materialien dargestellt.</span><a class="headerlink" href="#sorptionsisotherme" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="saugspannung-krummungsradius-der-wasseroberflache">
+<h4>Saugspannung – Krümmungsradius der Wasseroberfläche<a class="headerlink" href="#saugspannung-krummungsradius-der-wasseroberflache" title="Permalink to this headline">#</a></h4>
 <p>In einem abgeschlossenem Volumen gefüllt mit Wasser stellt sich über der Wasseroberfläche ein Partialdruck ein der 100 %
 relativer Luftfeuchte entspricht. Bei einer gekrümmten Oberfläche werden die Moleküle mehr
 zurückgehalten. Dadurch ist die Luftfeuchte darüber &lt; 100 %. <code class="xref std std-numref docutils literal notranslate"><span class="pre">saugsp_kelvin</span></code></p>
@@ -566,7 +707,7 @@ zurückgehalten. Dadurch ist die Luftfeuchte darüber &lt; 100 %. <code class="x
 <p>Der Zusammenhang zwischen relativer Luftfeuchtikeit und Saugspannung wir über die Kelvin Gleichung hergestellt,
 Gleichung <a class="reference internal" href="#equation-eq-kelvin">(2)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-kelvin">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq-kelvin" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-kelvin" title="Permalink to this equation">#</a></span>\[
   \varphi = e^{\frac{s}{\rho_{H_{2}O} \cdot R_{H_{2}O} \cdot T}}
 \]</div>
 <table class="colwidths-auto table">
@@ -599,22 +740,24 @@ Gleichung <a class="reference internal" href="#equation-eq-kelvin">(2)</a>.</p>
 </tr>
 </tbody>
 </table>
-<div class="figure align-default" id="saugsp-kelvin">
-<a class="reference internal image-reference" href="img/FL_Theorie/saugsp_kelvin.png"><img alt="img/FL_Theorie/saugsp_kelvin.png" src="img/FL_Theorie/saugsp_kelvin.png" style="height: 250px;" /></a>
-</div>
+<figure class="align-default" id="saugsp-kelvin">
+<a class="reference internal image-reference" href="_images/saugsp_kelvin.png"><img alt="_images/saugsp_kelvin.png" src="_images/saugsp_kelvin.png" style="height: 250px;" /></a>
+</figure>
 <p>Durch Gleichung <a class="reference internal" href="#equation-eq-kelvin">(2)</a> kann ein Zusammenhang zwischen der Sorptionsisotherme und der Saugspannungslurve
 herstellen, Abbildung .</p>
-<div class="figure align-default" id="feuchtespeicherfu">
-<a class="reference internal image-reference" href="img/FL_Theorie/feuchtespeicherfu.png"><img alt="img/FL_Theorie/feuchtespeicherfu.png" src="img/FL_Theorie/feuchtespeicherfu.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Darstellung der Feuchtespeicherfunktion mithilfe der Sorptionsisotherme und Saugspannungskurve.</span><a class="headerlink" href="#feuchtespeicherfu" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="bestimmung-des-speicher-und-transportkoeffizienten-mit-hilfe-von-parameteranpassung-von-modellfunktionen">
-<h4>Bestimmung des Speicher- und Transportkoeffizienten mit Hilfe von Parameteranpassung von Modellfunktionen<a class="headerlink" href="#bestimmung-des-speicher-und-transportkoeffizienten-mit-hilfe-von-parameteranpassung-von-modellfunktionen" title="Permalink to this headline">¶</a></h4>
+<figure class="align-default" id="feuchtespeicherfu">
+<a class="reference internal image-reference" href="_images/feuchtespeicherfu.png"><img alt="_images/feuchtespeicherfu.png" src="_images/feuchtespeicherfu.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Darstellung der Feuchtespeicherfunktion mithilfe der Sorptionsisotherme und Saugspannungskurve.</span><a class="headerlink" href="#feuchtespeicherfu" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="bestimmung-des-speicher-und-transportkoeffizienten-mit-hilfe-von-parameteranpassung-von-modellfunktionen">
+<h4>Bestimmung des Speicher- und Transportkoeffizienten mit Hilfe von Parameteranpassung von Modellfunktionen<a class="headerlink" href="#bestimmung-des-speicher-und-transportkoeffizienten-mit-hilfe-von-parameteranpassung-von-modellfunktionen" title="Permalink to this headline">#</a></h4>
 <p>Um numerische Simulationen zu ermöglichen müssen aus den Messpunkte durchgehende FUnktionen erzeugt werden. Es gibt
 hierzu verschiedenste Ansätze, XXX Lit refs XXX, einer davon ist in Gleichung <a class="reference internal" href="#equation-eq-feuchtefu">(3)</a> dargestellt.</p>
 <div class="math notranslate nohighlight" id="equation-eq-feuchtefu">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eq-feuchtefu" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-feuchtefu" title="Permalink to this equation">#</a></span>\[
 w(s) = \frac{u_{f}}{1 + \left(\frac{s}{s_{0}}\right)^{p}}
 \]</div>
 <table class="colwidths-auto table">
@@ -647,18 +790,18 @@ w(s) = \frac{u_{f}}{1 + \left(\frac{s}{s_{0}}\right)^{p}}
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="gibt-es-einen-zusammenhang-zwischen-relativer-luftfeuchte-und-saugspannung">
-<h4>Gibt es einen Zusammenhang zwischen relativer Luftfeuchte und Saugspannung?<a class="headerlink" href="#gibt-es-einen-zusammenhang-zwischen-relativer-luftfeuchte-und-saugspannung" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gibt-es-einen-zusammenhang-zwischen-relativer-luftfeuchte-und-saugspannung">
+<h4>Gibt es einen Zusammenhang zwischen relativer Luftfeuchte und Saugspannung?<a class="headerlink" href="#gibt-es-einen-zusammenhang-zwischen-relativer-luftfeuchte-und-saugspannung" title="Permalink to this headline">#</a></h4>
 <p>Wenn man mit 100 bar eine Saugspannungsmessung durchführt ergibt sich derselbe Feuchtegehalt, wie wenn man einen
 Aufsaugversuch bei 95 % relativer Luftfeuchtigkeit durchführt.</p>
-<div class="figure align-default" id="sorpt-saug-zusammen">
-<a class="reference internal image-reference" href="img/FL_Theorie/sorpt_saug_zusammen.png"><img alt="img/FL_Theorie/sorpt_saug_zusammen.png" src="img/FL_Theorie/sorpt_saug_zusammen.png" style="height: 250px;" /></a>
-</div>
-</div>
-</div>
-</div>
-</div>
+<figure class="align-default" id="sorpt-saug-zusammen">
+<a class="reference internal image-reference" href="_images/sorpt_saug_zusammen.png"><img alt="_images/sorpt_saug_zusammen.png" src="_images/sorpt_saug_zusammen.png" style="height: 250px;" /></a>
+</figure>
+</section>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -682,9 +825,11 @@ Aufsaugversuch bei 95 % relativer Luftfeuchtigkeit durchführt.</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="Fl%C3%BCssigwassertransport.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -700,24 +845,28 @@ Aufsaugversuch bei 95 % relativer Luftfeuchtigkeit durchführt.</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
