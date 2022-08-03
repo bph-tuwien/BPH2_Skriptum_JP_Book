@@ -1,5 +1,5 @@
 # Motivation
 ## Erste Teil
-Ich finde das einchach!!!
+Ich finde das einach!!!
 
 ## Zweiter Teil
