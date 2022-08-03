@@ -6,6 +6,7 @@ root: intro
 parts:
   - caption: Inhalt
     chapters:
+      - file: Motivation
       - file: Wärmebrücken
         sections:
           - file: Diffusive_Theorie

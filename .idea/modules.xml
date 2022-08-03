@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../Projekte/20_003_RoofAlarm/JP_Notebook/220202_RoofAlarm_JP/.idea/220202_RoofAlarm_JP.iml" filepath="$PROJECT_DIR$/../../../Projekte/20_003_RoofAlarm/JP_Notebook/220202_RoofAlarm_JP/.idea/220202_RoofAlarm_JP.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/BPH2_Skriptum_JP_Book.iml" filepath="$PROJECT_DIR$/.idea/BPH2_Skriptum_JP_Book.iml" />
     </modules>
   </component>
