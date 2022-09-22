@@ -4,8 +4,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes &#8212; 206.291 Bauphysik 2 VU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes &#8212; 206.291 Bauphysik 2 VU</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,9 +52,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Normative Grundlagen der Risikonanalyse bei diffusiven Wärme- und Feuchtetransport" href="Diffusive_risk_standards.html" />
+    <link rel="next" title="Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport" href="Diffusive_risk_standards.html" />
     <link rel="prev" title="Wärmebrücken" href="W%C3%A4rmebr%C3%BCcken.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -104,6 +107,11 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Motivation.html">
+   Motivation
+  </a>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="W%C3%A4rmebr%C3%BCcken.html">
    Wärmebrücken
@@ -116,12 +124,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes
+     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_risk_standards.html">
-     Normative Grundlagen der Risikonanalyse bei diffusiven Wärme- und Feuchtetransport
+     Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport
     </a>
    </li>
    <li class="toctree-l2">
@@ -148,7 +156,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Convective_risk_standards.html">
-     Normative Grundlagen der Risikonanalyse bei konvektiven Wärme- und Feuchtetransport
+     Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport
     </a>
    </li>
    <li class="toctree-l2">
@@ -202,17 +210,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="LU_FL.html">
-     Laborübung - Aufsaugversuch
+     Laborübung - Bestimmung hygrothermsicher Kenngrößen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="LU_Lambda.html">
-     Laborübung - Aufsaugversuch
+     Laborübung -  In-Situ U-Wert Messung
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="LU_BlowerDoor.html">
-     Laborübung - Blower Door Messung
+     Laborübung - Blower Door Messung und Bestimmung von Luftvolumenströmen
     </a>
    </li>
    <li class="toctree-l2">
@@ -318,10 +326,27 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#allgemeine-transportgleichungen-diffusion">
    Allgemeine Transportgleichungen Diffusion
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#warmetransport">
+     Wärmetransport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feuchtetransport">
+     Feuchtetransport
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numerisches-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
-   Numerisches Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung
+  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
+   Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#randbedingungen">
+   Randbedingungen
   </a>
  </li>
 </ul>
@@ -334,7 +359,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes</h1>
+                <h1>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -348,10 +373,27 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#allgemeine-transportgleichungen-diffusion">
    Allgemeine Transportgleichungen Diffusion
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#warmetransport">
+     Wärmetransport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feuchtetransport">
+     Feuchtetransport
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numerisches-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
-   Numerisches Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung
+  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
+   Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#randbedingungen">
+   Randbedingungen
   </a>
  </li>
 </ul>
@@ -363,15 +405,63 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="theorethische-grundlagen-des-diffusiven-warme-und-feuchtetranspoortes">
-<h1>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes<a class="headerlink" href="#theorethische-grundlagen-des-diffusiven-warme-und-feuchtetranspoortes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="allgemeine-transportgleichungen-diffusion">
+  <section class="tex2jax_ignore mathjax_ignore" id="theorethische-grundlagen-des-diffusiven-warme-und-feuchtetransportes">
+<h1>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes<a class="headerlink" href="#theorethische-grundlagen-des-diffusiven-warme-und-feuchtetransportes" title="Permalink to this headline">¶</a></h1>
+<p>Wenn eine Koppelung zwischen Wärme- und Feuchtetransport in einer Berechnung besteht spricht man allgemein von einer
+hygrothermischen Simulation. Diese Koppelung bringt den Vorteil, dass der Einfluss des Feuchtegehaltes auf die
+Wärmeleitfähigkeit berücksichtigt werden kann. Die Differentialgleichungen, welche für solche Berechnungen miteinander
+gekoppelt werden müssen, werden im folgenden vorgestellt, mit dem Ziel ein Verständnis für die unterliegenden Grundlagen
+und Konzepte zu vermitteln.</p>
+<section id="allgemeine-transportgleichungen-diffusion">
 <h2>Allgemeine Transportgleichungen Diffusion<a class="headerlink" href="#allgemeine-transportgleichungen-diffusion" title="Permalink to this headline">¶</a></h2>
+<section id="warmetransport">
+<h3>Wärmetransport<a class="headerlink" href="#warmetransport" title="Permalink to this headline">¶</a></h3>
+<p>Bei Betrachtung der Wärmeleitung ergibt sich aus Gleichung <a class="reference internal" href="Motivation.html#equation-delta-v-q-eq">(7)</a></p>
+<div class="math notranslate nohighlight" id="equation-dt-eq">
+<span class="eqno">(8)<a class="headerlink" href="#equation-dt-eq" title="Permalink to this equation">¶</a></span>\[ \rho c \frac{\partial T}{\partial t} = -\nabla \cdot q + h \]</div>
+<p>Dabei beschreibt <span class="math notranslate nohighlight">\(h\)</span> (J/(m³s)) eine Wärmequelle. Diese kann ausgelöst sein durch mechanisches Heizen, chemischen
+Reaktionen etc. Der Wärmefluss q (J/(m²s) ist für den eindimensionalen Fall definiert als</p>
+<div class="math notranslate nohighlight" id="equation-q-delta-x-eq">
+<span class="eqno">(9)<a class="headerlink" href="#equation-q-delta-x-eq" title="Permalink to this equation">¶</a></span>\[ q = -\lambda \cdot \frac{\Delta T}{\Delta x}\]</div>
+<figure class="align-default" id="q-steady-state-wall">
+<a class="reference internal image-reference" href="_images/q_steady_state_wall.png"><img alt="_images/q_steady_state_wall.png" src="_images/q_steady_state_wall.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Stationärer Wärmefluss durch ein finites Wandstück.</span><a class="headerlink" href="#q-steady-state-wall" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Gleichung <a class="reference internal" href="#equation-q-delta-x-eq">(9)</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den Differentialoperator</p>
+<div class="math notranslate nohighlight" id="equation-q-dx-eq">
+<span class="eqno">(10)<a class="headerlink" href="#equation-q-dx-eq" title="Permalink to this equation">¶</a></span>\[ q = -\lambda \cdot \frac{d T}{d x}\]</div>
+<p>Mehrdimensional verallgemeinern lässt sich Gleichung <a class="reference internal" href="#equation-q-dx-eq">(10)</a> mittels des Nabla-Operators zu</p>
+<div class="math notranslate nohighlight" id="equation-q-nabla-eq">
+<span class="eqno">(11)<a class="headerlink" href="#equation-q-nabla-eq" title="Permalink to this equation">¶</a></span>\[ q = -\lambda \cdot \nabla T\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(\lambda\)</span> kann eine vektorielle Größe sein wodurch richtungsabhängigen Wärmeleitfähigkeiten berücksichtigt werden können.
+Falls also <span class="math notranslate nohighlight">\(\lambda_{x} \neq \lambda_{y} \neq \lambda_{z}\)</span>.</p>
 </div>
-<div class="section" id="numerisches-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
-<h2>Numerisches Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung<a class="headerlink" href="#numerisches-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+<p>Gleichung <a class="reference internal" href="#equation-q-nabla-eq">(11)</a> eingesetzt in Gleichung <a class="reference internal" href="#equation-dt-eq">(8)</a> führt auf</p>
+<div class="math notranslate nohighlight" id="equation-dt-laplace-eq">
+<span class="eqno">(12)<a class="headerlink" href="#equation-dt-laplace-eq" title="Permalink to this equation">¶</a></span>\[ \frac {\lambda}{\rho c} \frac{\partial T}{\partial t} = \nabla \cdot (\nabla T) = \nabla^{2}T\]</div>
+<p>Dabei beschreibt <span class="math notranslate nohighlight">\(\nabla^{2}\)</span> den Laplace-Operator:</p>
+<div class="math notranslate nohighlight">
+\[ \nabla^{2} = \frac{\partial^{2}}{\partial x^{2}} + \frac{\partial^{2}}{\partial y^{2}} + \frac{\partial^{2}}{\partial
+z^{2}} \]</div>
+<div class="math notranslate nohighlight">
+\[ \nabla^{2}T = \frac{\partial^{2}T_{x}}{\partial x^{2}} + \frac{\partial^{2}T_{y}}{\partial y^{2}} +
+\frac{\partial^{2}T_{z}}{\partial z^{2}} \]</div>
+</section>
+<section id="feuchtetransport">
+<h3>Feuchtetransport<a class="headerlink" href="#feuchtetransport" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
+<h2>Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung<a class="headerlink" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="randbedingungen">
+<h2>Randbedingungen<a class="headerlink" href="#randbedingungen" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -408,7 +498,7 @@ const thebe_selector_output = ".output, .cell_output"
     <a class='right-next' id="next-link" href="Diffusive_risk_standards.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Normative Grundlagen der Risikonanalyse bei diffusiven Wärme- und Feuchtetransport</p>
+        <p class="prev-next-title">Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -3,7 +3,7 @@
 
 # (FL-Numerik)=
 # # Flüssigwassertransport - Numerische Anwendung
-# In diesem Kapitel sollen die dem Flüssigwassertransport zu Grunde liegenden Differentialgleichungen in einem einfachen numerischen Modell angewendet werden. Die verwendeten Gleichungen stützen sich auf die Ausführungen in {ref}`FL_Theorie` und {cite}`AngelaSasicKalagasidis.2004`.
+# In diesem Kapitel sollen die dem Flüssigwassertransport zu Grunde liegenden Differentialgleichungen in einem einfachen numerischen Modell angewendet werden. Die verwendeten Gleichungen stützen sich auf die Ausführungen in {ref}`FL_Theorie` und {cite}`kalagasidisEvaluationInterfaceMoisture2004`.
 # 
 # Die zur numerischen Lösung der beschreibenden Differentialgleichung verwendeten Bibliotheken und Funktionen können hier eingeblendet werden.
 
@@ -54,13 +54,14 @@ plt.rcParams['text.usetex'] = False
 #   \frac{\partial w}{\partial t} = - \frac{\partial g_{l}}{\partial x}
 # $$ (eq_dw_dt_simp)
 # 
-# In {cite}`AngelaSasicKalagasidis.2004` wird der Wassergehalt in Abhängigkeit der Saugspannung definiert lt. Gleichung {eq}`w_Psuc`.
+# In {
+# }`kalagasidisEvaluationInterfaceMoisture2004` wird der Wassergehalt in Abhängigkeit der Saugspannung definiert lt. Gleichung {eq}`w_Psuc`.
 # 
 # $$
 # w(P_{suc}) = 300 \cdot (1 + 10^{-6} \cdot P_{suc})^{-1}
 # $$ (w_Psuc)
 # 
-# Die Flüssigwasserleitung, als Funktion der Saugspannung und eines freien Parameters n {cite}`Bednar.2000`, kann durch GLeichung {eq}`K_w` beschrieben werden.
+# Die Flüssigwasserleitung, als Funktion der Saugspannung und eines freien Parameters n {cite}`bednarBeurteilungFeuchteUnd2000`, kann durch GLeichung {eq}`K_w` beschrieben werden.
 # 
 # $$
 # K_{w}(P_{suc}, n) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{n + 1}{2 n} \cdot \left(\frac{A}{300}\right)^{2} \cdot \left(\frac{w(P_{suc}}{300}\right)^{n} \cdot \left( n + 1 - \left(\frac{w(P_{suc}}{300}\right)^{n}\right)

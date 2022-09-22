@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Wärmebrücken &#8212; 206.291 Bauphysik 2 VU</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
@@ -51,10 +52,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes" href="Diffusive_Theorie.html" />
-    <link rel="prev" title="206.289 Bauphysik 2 VU" href="intro.html" />
+    <link rel="next" title="Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes" href="Diffusive_Theorie.html" />
+    <link rel="prev" title="Motivation" href="Motivation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -104,6 +107,11 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Motivation.html">
+   Motivation
+  </a>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Wärmebrücken
@@ -116,7 +124,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_Theorie.html">
-     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes
+     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes
     </a>
    </li>
    <li class="toctree-l2">
@@ -141,6 +149,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Convective_Theorie.html">
+     Theorethische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Convective_risk_standards.html">
      Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport
@@ -197,17 +210,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="LU_FL.html">
-     Laborübung - Aufsaugversuch
+     Laborübung - Bestimmung hygrothermsicher Kenngrößen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="LU_Lambda.html">
-     Laborübung - Messung des Wärmedurchflusses
+     Laborübung -  In-Situ U-Wert Messung
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="LU_BlowerDoor.html">
-     Laborübung - Blower Door Messung
+     Laborübung - Blower Door Messung und Bestimmung von Luftvolumenströmen
     </a>
    </li>
    <li class="toctree-l2">
@@ -304,6 +317,19 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uberblick-uber-das-kapitel">
+   Überblick über das Kapitel
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -316,17 +342,65 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uberblick-uber-das-kapitel">
+   Überblick über das Kapitel
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="warmebrucken">
+  <section class="tex2jax_ignore mathjax_ignore" id="warmebrucken">
 <h1>Wärmebrücken<a class="headerlink" href="#warmebrucken" title="Permalink to this headline">¶</a></h1>
+<p>Die Vermeidung von Wärmebrücken ist eine der klassischen Fragestellungen in der bauphysikalischen Planung. Eine
+Wärmebrücke tritt immer dann auf, wenn auf Grund von unzureichendem Widerstand (durch Dämmungen oder ähnlichem) ein, im
+Vergleich zu anderen Stellen im Gebäude, erhöhter Wärmetransport auftritt. Insbesondere Ecken (unvorteilhafte Ratio von
+Außenoberfläche zu Innenoberfläche) und Anschlussstellen (schlecht zugänglich zur Isolierung während der Ausführung oder
+bei der Planung/Ausführung darauf vergessen) bilden dabei meistens die Problemstellen bei Gebäuden.</p>
+<figure class="align-default" id="wbr-gebaeude">
+<a class="reference internal image-reference" href="_images/wbr_gebaeude.png"><img alt="_images/wbr_gebaeude.png" src="_images/wbr_gebaeude.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Thermografie eines Einfamilienhauses. Wärmere Oberflächen sind rot dargestellten und weisen auf einen höheren Wärmefluss
+von innen nach außen hin. <a class="reference external" href="https://bauingenieur-meyer.de/waermebruecken-identifizieren-und-reduzieren/">Quelle</a></span><a class="headerlink" href="#wbr-gebaeude" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Das numerische Erfassen solcher Problemstellen bietet gerade in der Planung die Möglichkeit der Indetifikation und
+Vorsorge damit vermeidbaren Wärmeverluste rechtzeitig entgegengewirkt wird. Treibend für die genaue Berechnung mittels
+hygrothermischer Simulation sind dabei die Themen der Nachhaltigkeit und Ökonomie.</p>
+<p>In der Praxis gilt zumeist:</p>
+<p><em>“So viel dämmen wie nötig, so wenig dämmen wie möglich.”</em></p>
+<section id="uberblick-uber-das-kapitel">
+<h2>Überblick über das Kapitel<a class="headerlink" href="#uberblick-uber-das-kapitel" title="Permalink to this headline">¶</a></h2>
+<p>Da der Umgang mit komplexeren Simulationstools nicht auf Vertrauen sondern fundiertem Hintergrundwissen beruhen soll,
+werden eingangs einige</p>
+<ul class="simple">
+<li><p><strong>theoretische Grundlagen des diffusiven Wärem- und Feuchtetransportes</strong></p></li>
+</ul>
+<p>dargelegt, um den kritischen Umgang mit solchen Berechnungsergebnisse und deren Plausibilitätsprüfung  zu
+ermöglichen. Anschließend wird zur Interpretation und Nachweisverfahren unserer ersten Ergebnisse der</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(f_{R_{Si}}\)</span></strong></p></li>
+</ul>
+<p>näher erläutert und wir beschäftigen uns mit der Frage welchen</p>
+<ul class="simple">
+<li><p><strong>Einfluss Feuchtigkeit auf die Wärmeleitfähigkeit von Baustoffen</strong></p></li>
+</ul>
+<p>haben kann.</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -353,17 +427,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Motivation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">206.289 Bauphysik 2 VU</p>
+            <p class="prev-next-title">Motivation</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Diffusive_Theorie.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes</p>
+        <p class="prev-next-title">Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
