@@ -14,8 +14,8 @@ Bei Betrachtung der Wärmeleitung ergibt sich aus Gleichung {eq}`delta_V_q_eq`
 
 $$ \rho c \frac{\partial T}{\partial t} = -\nabla \cdot q + h $$(dT_eq)
 
-Dabei beschreibt $h$ (J/(m³s)) eine Wärmequelle. Diese kann ausgelöst sein durch mechanisches Heizen, chemischen
-Reaktionen etc. Der Wärmefluss q (J/(m²s) ist für den eindimensionalen Fall definiert als
+Dabei beschreibt $h$ (J/(m³s)) eine Wärmequelle. Diese kann ausgelöst sein durch mechanisches Heizen, chemische
+Reaktionen etc. Der Wärmefluss q (J/(m²s) ist für den diffusiven eindimensionalen Fall definiert als
 
 $$ q = -\lambda \cdot \frac{\Delta T}{\Delta x}$$(q_delta_x_eq)
 
@@ -27,7 +27,8 @@ name: q_steady_state_wall
 Stationärer Wärmefluss durch ein finites Wandstück.
 ```
 
-Gleichung {eq}`q_delta_x_eq` kann bei Grenzwertbetrachtung $\lim \limits_{\Delta x \to 0}$ übergeführt werden in den Differentialoperator
+Gleichung {eq}`q_delta_x_eq` kann bei Grenzwertbetrachtung $\lim \limits_{\Delta x \to 0}$ übergeführt werden in den
+Differentialoperator
 
 $$ q = -\lambda \cdot \frac{d T}{d x}$$(q_dx_eq)
 
@@ -53,7 +54,6 @@ $$ \nabla^{2}T = \frac{\partial^{2}T_{x}}{\partial x^{2}} + \frac{\partial^{2}T_
 \frac{\partial^{2}T_{z}}{\partial z^{2}} $$
 
 ### Feuchtetransport
-
 
 ## Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung
 

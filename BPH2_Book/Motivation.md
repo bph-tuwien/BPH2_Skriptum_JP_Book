@@ -58,8 +58,8 @@ Dieselbe Formulierung ist analog auch für den Wärmestrom möglich.
 
 $$ \iint_S q \,dS = \frac{dE}{dt} $$(q_int_eq)
 
-Hier steht $E$ in Joule für die Gesamtenergie innerhalb des Volumens V. Aufteilung des oberflächlichen Wärmestromes führt
-wiederum auf Gleichung {eq}`q_sum_eq`.
+Hier steht $E$ in Joule für die Gesamtenergie innerhalb des Volumens V. Aufteilung des oberflächlichen Wärmestromes
+führt wiederum auf Gleichung {eq}`q_sum_eq`.
 
 $$ \sum_{i=1}^{N} \iint_{S_{i}} q \,dS = \sum_{i=1}^{N} Q_{i} = \frac{dE}{dt} $$(q_sum_eq)
 
@@ -82,21 +82,15 @@ Wenn wir gedanklich nun das betrachtete Volumen sehr klein werden lassen (z.B. z
 vorstellen, dass der Wärmestrom um diesen Punkt herum physikalisch gesehen konstant ist. Mathematisch gesehen bedeutet
 das, dass unser Wärmestrom nun nicht mehr vom Volumen abhängig ist und somit aus dem Integral herausgezogen werden kann.
 
-$$ 
-\lim_{V \to \Delta V} \iiint_V -\nabla \cdot q \,dV\ = \iiint_{\Delta V} -\nabla \cdot q \,d\Delta V\ 
-$$
+$$ \lim_{V \to \Delta V} \iiint_V -\nabla \cdot q \,dV\ = \iiint_{\Delta V} -\nabla \cdot q \,d\Delta V\ $$
 
-$$ 
-\iiint_{\Delta V} 1 \ \,d\Delta V\ \cdot -\nabla \cdot q \approx - \Delta V \cdot (\nabla \cdot q) =\frac{dE}{dt} 
-$$
+$$ \iiint_{\Delta V} 1 \ \,d\Delta V\ \cdot -\nabla \cdot q \approx - \Delta V \cdot (\nabla \cdot q) =\frac{dE}{dt} $$
 
 Umgeformt ergibt das:
 
-$$
-- \nabla \cdot q =\frac{dE}{dt} \cdot \frac{1}{\Delta V }
-$$(delta_V_q_eq)
+$$ - \nabla \cdot q =\frac{dE}{dt} \cdot \frac{1}{\Delta V } $$(delta_V_q_eq)
 
-Gleichung {eq}`delta_V_q_eq` hat eine besondere Bedeutung. Sie ermöglicht es den Divergenz-Operator physikalisch zu 
+Gleichung {eq}`delta_V_q_eq` hat eine besondere Bedeutung. Sie ermöglicht es den Divergenz-Operator physikalisch zu
 interpetieren. Er beschreibt die Nettorate des Wärmestromes zu einem Punkt pro Volumseinheit:
 
 $ - \nabla \cdot q $ = Netto Wärmestrom-Eintrag pro Volumseinheit pro Zeitschritt in J/sm³
