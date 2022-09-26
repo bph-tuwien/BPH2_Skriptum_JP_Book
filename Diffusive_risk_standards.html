@@ -8,9 +8,8 @@
 
     <title>Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport &#8212; 206.291 Bauphysik 2 VU</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,16 +19,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -37,13 +40,12 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -55,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Anwendungsbeispiel Balkonanschluss" href="Problem_Balkonanschluss.html" />
-    <link rel="prev" title="Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes" href="Diffusive_Theorie.html" />
+    <link rel="prev" title="Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes" href="Diffusive_Theorie.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -63,21 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -86,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -107,15 +94,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    206.289 Bauphysik 2 VU
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   206.289 Bauphysik 2 VU
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Inhalt
  </span>
@@ -138,7 +124,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_Theorie.html">
-     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes
+     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -169,7 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Convective_risk_standards.html">
+    <a class="reference internal" href="Convective_risk.html">
      Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport
     </a>
    </li>
@@ -252,17 +238,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -270,182 +251,119 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/andreass0/BPH2_Skriptum_JP_Book"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/andreass0/BPH2_Skriptum_JP_Book/issues/new?title=Issue%20on%20page%20%2FDiffusive_risk_standards.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/Diffusive_risk_standards.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Diffusive_risk_standards.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book/issues/new?title=Issue%20on%20page%20%2FDiffusive_risk_standards.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#risikoanalyse-mittels-temperaturfaktor-f-r-si">
+   Risikoanalyse mittels  Temperaturfaktor
+   <span class="math notranslate nohighlight">
+    \(f_{R_{Si}}\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anforderungen">
+     Anforderungen
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#abhangigkeit-der-warmeleitung-von-der-relativen-luftfeuchtigkeit">
    Abhängigkeit der Wärmeleitung von der relativen Luftfeuchtigkeit
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#risikoanalyse-mittels-f-rsi">
-   Risikoanalyse mittels
-   <span class="math notranslate nohighlight">
-    \(f_{RSi}\)
-   </span>
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#beinflussung-des-warmestroms-durch-feuchtezustande">
+     Beinflussung des Wärmestroms durch Feuchtezustände
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#beispiel-verringerung-des-warmedurchlasswiderstandes-zu-folge-des-ausgefallenen-kondensats-fur-die-vorgegebene-schicht">
+       Beispiel: Verringerung des Wärmedurchlasswiderstandes zu Folge des ausgefallenen Kondensats für die vorgegebene Schicht.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport</h1>
@@ -459,17 +377,38 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#risikoanalyse-mittels-temperaturfaktor-f-r-si">
+   Risikoanalyse mittels  Temperaturfaktor
+   <span class="math notranslate nohighlight">
+    \(f_{R_{Si}}\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anforderungen">
+     Anforderungen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#abhangigkeit-der-warmeleitung-von-der-relativen-luftfeuchtigkeit">
    Abhängigkeit der Wärmeleitung von der relativen Luftfeuchtigkeit
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#risikoanalyse-mittels-f-rsi">
-   Risikoanalyse mittels
-   <span class="math notranslate nohighlight">
-    \(f_{RSi}\)
-   </span>
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#beinflussung-des-warmestroms-durch-feuchtezustande">
+     Beinflussung des Wärmestroms durch Feuchtezustände
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#beispiel-verringerung-des-warmedurchlasswiderstandes-zu-folge-des-ausgefallenen-kondensats-fur-die-vorgegebene-schicht">
+       Beispiel: Verringerung des Wärmedurchlasswiderstandes zu Folge des ausgefallenen Kondensats für die vorgegebene Schicht.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -477,17 +416,138 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="methoden-zur-risikonanalyse-bei-diffusiven-warme-und-feuchtetransport">
-<h1>Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport<a class="headerlink" href="#methoden-zur-risikonanalyse-bei-diffusiven-warme-und-feuchtetransport" title="Permalink to this headline">#</a></h1>
-<section id="abhangigkeit-der-warmeleitung-von-der-relativen-luftfeuchtigkeit">
-<h2>Abhängigkeit der Wärmeleitung von der relativen Luftfeuchtigkeit<a class="headerlink" href="#abhangigkeit-der-warmeleitung-von-der-relativen-luftfeuchtigkeit" title="Permalink to this headline">#</a></h2>
+<h1>Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport<a class="headerlink" href="#methoden-zur-risikonanalyse-bei-diffusiven-warme-und-feuchtetransport" title="Permalink to this headline">¶</a></h1>
+<section id="risikoanalyse-mittels-temperaturfaktor-f-r-si">
+<h2>Risikoanalyse mittels  Temperaturfaktor <span class="math notranslate nohighlight">\(f_{R_{Si}}\)</span><a class="headerlink" href="#risikoanalyse-mittels-temperaturfaktor-f-r-si" title="Permalink to this headline">¶</a></h2>
+<p>Um einschätzen zu können, ob sich bei üblicher Wohnungsnutzung Schimmelpilze an einer Bauteiloberfläche bilden, hat sich
+der sogenannte Temperaturfaktor <span class="math notranslate nohighlight">\(f_{R_{Si}}\)</span> als sinnvolle Kenngröße für die Planung bewährt. Dieser kann auch bei rein
+thermischen Simulationen, was zur Beurteilung von Wärmebrücken manchmal ausreichend ist, zur Bewertung herangezogen
+werden.</p>
+<section id="anforderungen">
+<h3>Anforderungen<a class="headerlink" href="#anforderungen" title="Permalink to this headline">¶</a></h3>
+<p>Der Temperaturfaktor ergibt sich aus der Bedingung, dass an einer Oberfläche eine bestimmte Oberflächentemperatur
+gewährleistet werden muss <a class="reference internal" href="#equation-nu-min-eq">(24)</a>,</p>
+<div class="math notranslate nohighlight" id="equation-nu-min-eq">
+<span class="eqno">(24)<a class="headerlink" href="#equation-nu-min-eq" title="Permalink to this equation">¶</a></span>\[ T_{O,i} &gt; T_{O,i, min} \]</div>
+<p>um kritische Feuchtigkeitszustände und deren Folgen (z.B. Schimmelbildung, Kondensation etc.)
+hintanzuhalten. Der <span class="math notranslate nohighlight">\(f_{R_{Si}}\)</span> berechnet sich zu</p>
+<div class="math notranslate nohighlight">
+\[ f_{R_{Si}} = \frac{T_{O,i} - T_{e}}{T_{i} - T_{e}} \]</div>
+<p>und der Bemessungstemperaturfaktor <span class="math notranslate nohighlight">\( f_{R_{Si, min}} \)</span> zu</p>
+<div class="math notranslate nohighlight">
+\[ f_{R_{Si, min}} = \frac{T_{O,i, min} - T_{e}}{T_{i} - T_{e}} \]</div>
+<p>Somit ist für alle Konstruktionen nachzuweisen, dass</p>
+<div class="math notranslate nohighlight">
+\[ f_{R_{Si}} &gt; f_{R_{Si, min}} \]</div>
+<p>auf der gesamten Innenoberfläche (auch an Ecken und Kanten) gilt.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Kondensation tritt auf, wenn an einer Oberfläche eine relative Luftfeuchtigkeit von 100 % erreicht wird (auch kurzfristig).
+Das <a class="reference internal" href="Convective_risk.html#mould-index"><span class="std std-ref">Risiko für Schimmelbefall</span></a> besteht, wenn über mehrere Tage die Oberflächenfeuchte über 80 % liegt.</p>
+</div>
+<p><a class="reference internal" href="#frsi-3d"><span class="std std-numref">Fig. 6</span></a> zeigt die Ergebnisse einer 3D-Simulation für den <span class="math notranslate nohighlight">\( f_{R_{Si}}\)</span> für einen Bauteilanschluss über Eck.</p>
+<figure class="align-default" id="frsi-3d">
+<a class="reference internal image-reference" href="_images/frsi_3d.png"><img alt="_images/frsi_3d.png" src="_images/frsi_3d.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Ecken stellen die kritischen Punkte dar. Im Fall einer vollständigen Wärmedämmung an der Außenseite werden
+alle Bereiche unkritischer. Im Fall einer Innendämmung werden die Anschlüsse kritischer, während sich das Risiko
+an der Fläche deutlich minimiert.</span><a class="headerlink" href="#frsi-3d" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Für Wohnungen mit Klimaannahmen gemäß ÖNORM B 8110-2:2020 gilt:</strong></p>
+<div class="math notranslate nohighlight">
+\[f_{R_{Si}} &gt; 0.71 \]</div>
+</div>
 </section>
-<section id="risikoanalyse-mittels-f-rsi">
-<h2>Risikoanalyse mittels <span class="math notranslate nohighlight">\(f_{RSi}\)</span><a class="headerlink" href="#risikoanalyse-mittels-f-rsi" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="abhangigkeit-der-warmeleitung-von-der-relativen-luftfeuchtigkeit">
+<h2>Abhängigkeit der Wärmeleitung von der relativen Luftfeuchtigkeit<a class="headerlink" href="#abhangigkeit-der-warmeleitung-von-der-relativen-luftfeuchtigkeit" title="Permalink to this headline">¶</a></h2>
+<p>Einer der materialtechnischen Gründe für die Notwendigkeit der gekoppelten Betrachtung von Feuchte- und
+Wärmetransportprozessen bei der Beurteilung von Bauteilen, liegt in der <strong>Feuchteabhängigkeit der Wärmeleitfähigkeit von
+Baustoffen</strong>.</p>
+<p>Wenn poröse Baustoffe Feuchtigkeit aufnehmen, füllen sich die zuvor mit Luft gefüllten Kapillaren mit dieser. Im
+Bauwesen ist das zumeist Wasser. Wasser hat im Vergleich zu Luft eine mehr als 20-mal höhere Wärmeleitfähigkeit. Die nun
+gefüllten Kapillaren transportieren Wärme nun zu Folge der Leitfähigkeit des Wasser und nicht mehr der Luft. Dadurch
+ergibt sich bei steigenden Wassergehalt in Summee ein höherer Wert für die Wärmeleitfähigkeit des Baustoffes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Wasser hat im Vergleich zu Luft eine mehr als 20-mal höhere Wärmeleitfähigkeit.</strong></p>
+<p><span class="math notranslate nohighlight">\(\lambda_{Wasser} \approx 0.5562 \gg \lambda_{Luft} \approx 0.0262\)</span> W/mK</p>
+</div>
+<p>Dieser Zusammenhang kann einerseits durch Messungen bestimmt werden, andererseits gibt es für bestimmte Anwendungsfälle
+mathematische Modelle um die Wärmeleitfähigkeit vorherzusagen z.B. <span id="id1">[<a class="reference internal" href="References.html#id8" title="Driss Taoukil, Abdelmajid El bouardi, Friedrich Sick, Abdelaziz Mimet, Hassan Ezbakhe, and Taib Ajzoul. Moisture content influence on the thermal conductivity and diffusivity of wood–concrete composite. Construction and Building Materials, 48:104–115, November 2013. doi:10.1016/j.conbuildmat.2013.06.067.">Taoukil <em>et al.</em>, 2013</a>]</span> oder auch
+<span id="id2">[<a class="reference internal" href="References.html#id3" title="D. R. Chaudhary and R. C. Bhandari. Heat transfer through a three-phase porous medium. Journal of Physics D: Applied Physics, 1(6):815–817, June 1968. doi:10.1088/0022-3727/1/6/418.">Chaudhary and Bhandari, 1968</a>]</span>.</p>
+<p>Für die bauphysikalische Praxis hat sich die Formulierung in ÖNORM EN 10456 bewährt:</p>
+<div class="math notranslate nohighlight" id="equation-lambda-psi-eq">
+<span class="eqno">(26)<a class="headerlink" href="#equation-lambda-psi-eq" title="Permalink to this equation">¶</a></span>\[ \lambda(\psi) = \lambda_{Bemessungswert} \cdot e^{f_{\psi} \cdot \psi} \]</div>
+<section id="beinflussung-des-warmestroms-durch-feuchtezustande">
+<h3>Beinflussung des Wärmestroms durch Feuchtezustände<a class="headerlink" href="#beinflussung-des-warmestroms-durch-feuchtezustande" title="Permalink to this headline">¶</a></h3>
+<p>Laut ÖNORM B 8110-2:2020 muss diese Beeinflussung des Wärmestroms durch Feuchtezustände auch nachgewiesen werden. Dabei
+gilt, dass die <strong>Erhöhung des mittleren Wärmestroms <span class="math notranslate nohighlight">\(\leq 10\ \%\)</span></strong> betragen muss. Um diesen Nachweis zu führen, kann
+folgendermaßen vorgegangen werden:</p>
+<p>Die Wärmeleitfähigkeit bei erhöhtem Feuchtigkeitsgehalt in W/mK berechnet sich zu</p>
+<div class="math notranslate nohighlight" id="equation-lambda-psi-eq">
+<span class="eqno">(26)<a class="headerlink" href="#equation-lambda-psi-eq" title="Permalink to this equation">¶</a></span>\[ \lambda(\psi) = \lambda_{Bemessungswert} \cdot e^{f_{\psi} \cdot \psi} \]</div>
+<p>wobei <span class="math notranslate nohighlight">\(\psi\)</span> für den volumenbezogenen Feuchtigkeitsgehalt in m³/m³ steht und definiert ist als</p>
+<div class="math notranslate nohighlight" id="equation-psi-eq">
+<span class="eqno">(27)<a class="headerlink" href="#equation-psi-eq" title="Permalink to this equation">¶</a></span>\[ \psi = \frac{u}{\rho_{Wasser} \cdot d}\]</div>
+<p>In Gleichung <a class="reference internal" href="#equation-lambda-psi-eq">(26)</a> und <a class="reference internal" href="#equation-psi-eq">(27)</a> steht <span class="math notranslate nohighlight">\(\lambda_{Bemessungswert}\)</span> für den Bemessungswert der
+Wärmeleitfähigkeit in W/mK, <span class="math notranslate nohighlight">\(f_{\psi}\)</span> für den volumenbezogenen Feuchteumrechnungskoeffizienten <span class="math notranslate nohighlight">\(u\)</span> für die
+Kondensatmente in kg/m², <span class="math notranslate nohighlight">\(\rho_{Wasser}\)</span> für die Rohdichte des Wassers in kg/m³ und <span class="math notranslate nohighlight">\(d\)</span> für die betrachtete Schichtdicke
+in m.</p>
+<p>Der Nachweis der Beeinflussung der Wärmeleitfähigkeit wird bei Bauteilen, welche durch andere Nachweisführungen als
+tauglich eingestuft werden, zumeist nicht schlagend werden. Nachfolgendes Beispiel, soll das veranschaulichen.</p>
+<section id="beispiel-verringerung-des-warmedurchlasswiderstandes-zu-folge-des-ausgefallenen-kondensats-fur-die-vorgegebene-schicht">
+<h4>Beispiel: Verringerung des Wärmedurchlasswiderstandes zu Folge des ausgefallenen Kondensats für die vorgegebene Schicht.<a class="headerlink" href="#beispiel-verringerung-des-warmedurchlasswiderstandes-zu-folge-des-ausgefallenen-kondensats-fur-die-vorgegebene-schicht" title="Permalink to this headline">¶</a></h4>
+<p>In <a class="reference internal" href="#psi-ex"><span class="std std-numref">Fig. 7</span></a> sei ein verfeinfachtes diskretisiertes Modell eines Flachdachaufbaues dargestellt für den die
+Verringerung der Wärmedurchlasswiderstandes nachgewiesen werden soll.</p>
+<figure class="align-default" id="psi-ex">
+<a class="reference internal image-reference" href="_images/psi_ex.png"><img alt="_images/psi_ex.png" src="_images/psi_ex.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Vereinfacht diskretisierter Flachdachaufbau.</span><a class="headerlink" href="#psi-ex" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Die aufgetretene Kondensatmenge ist bewusst knapp unter dem Grenzwert der möglichen Feuchteanreicherung (<span class="math notranslate nohighlight">\(gc \leq 0.5\)</span>
+kg/m²) durch Kondensation laut ÖNORM B 8110-2:2020 gewählt.</p>
+<p><strong>Angabe:</strong></p>
+<p>Kondensatmenge für den betrachteten Aufbau <span class="math notranslate nohighlight">\( u = 440 \frac{g}{m^{2}} \)</span></p>
+<p>Bemessungswert der Leitfähigkeit der Schicht <span class="math notranslate nohighlight">\( \lambda_{Bemessungswert} = 0.04 \frac{W}{mK} \)</span></p>
+<p>Schichtdicke <span class="math notranslate nohighlight">\(d = 0.04 m\)</span></p>
+<p>Wärmedurchlasswiderstand des Bauteils <span class="math notranslate nohighlight">\(R = 5 \frac{m^{2} K}{W}\)</span></p>
+<p><span class="math notranslate nohighlight">\(f_{\psi}\)</span> kann ÖNORM EN ISO 10456: 2010: Tabelle 4 entnommen werden:</p>
+<figure class="align-default" id="f-psi-tab4">
+<a class="reference internal image-reference" href="_images/f_psi_tab4.png"><img alt="_images/f_psi_tab4.png" src="_images/f_psi_tab4.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Auszug aus ÖNORM EN ISO 10456: 2010: Tabelle 4 zur Bestimmung von <span class="math notranslate nohighlight">\(f_{\psi}\)</span> verschiedener Materialien.</span><a class="headerlink" href="#f-psi-tab4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Einsetzen in Gleichung <a class="reference internal" href="#equation-lambda-psi-eq">(26)</a> und <a class="reference internal" href="#equation-psi-eq">(27)</a> führt auf:</p>
+<div class="math notranslate nohighlight">
+\[ \psi = \frac{u}{\rho_{Wasser} \cdot d} = \frac{0.44}{1000 \cdot 0.04} = 0.011 \frac{m^{3}}{m^{3}}\]</div>
+<div class="math notranslate nohighlight">
+\[ \lambda(0.011) = \lambda_{Bemessungswert} \cdot e^{f_{\psi} \cdot \psi} = 0.04 \cdot e^{4 \cdot 0.011} = 0.042
+\frac{W}{mK}\]</div>
+<div class="math notranslate nohighlight">
+\[ \Delta R = \frac{d}{\lambda(0.011)} - \frac{d}{\lambda_{Bemessungswert}} = \frac{0.04}{0.042} - \frac{0.04}{0.04} =
+0.048 \frac{m^{2}K}{W} \]</div>
+<p>10 % des Wärmedurchlasswiderstandes vom Bauteil wären <span class="math notranslate nohighlight">\( 0.1 \cdot R = 0.5 \frac{m^{2}K}{W}\)</span></p>
+<p>Und somit führt der Nachweis auf</p>
+<div class="math notranslate nohighlight">
+\[ 0.048 \ll 0.5 \frac{m^{2}K}{W} \]</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Obwohl die gewählte Kondensatmenge nur knapp unter dem normativ möglichen Grenzwer liegt, beträgt die Erhöhung der
+Wärmeleitfähigkeit durch Feuchteanreicherung weniger als 1%. Somit liegt der Schluss nahe, dass in den meisten Fällen,
+andere Grenzwerte überschritten werden, bevor der Nachweis der Erhöhung des Wärmestromes schlagend wird.</p>
+</div>
+</section>
+</section>
 </section>
 </section>
 
@@ -513,16 +573,14 @@ title="Print to PDF"
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="Diffusive_Theorie.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes</p>
+            <p class="prev-next-title">Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Problem_Balkonanschluss.html" title="next page">
@@ -533,28 +591,24 @@ title="Print to PDF"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

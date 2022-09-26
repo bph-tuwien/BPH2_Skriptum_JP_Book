@@ -6,11 +6,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes &#8212; 206.291 Bauphysik 2 VU</title>
+    <title>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes &#8212; 206.291 Bauphysik 2 VU</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,16 +19,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -37,19 +40,20 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport" href="Diffusive_risk_standards.html" />
@@ -61,21 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -84,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -105,15 +94,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    206.289 Bauphysik 2 VU
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   206.289 Bauphysik 2 VU
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Inhalt
  </span>
@@ -136,7 +124,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes
+     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes
     </a>
    </li>
    <li class="toctree-l2">
@@ -250,17 +238,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -268,182 +251,127 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/andreass0/BPH2_Skriptum_JP_Book"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/andreass0/BPH2_Skriptum_JP_Book/issues/new?title=Issue%20on%20page%20%2FDiffusive_Theorie.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/Diffusive_Theorie.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Diffusive_Theorie.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book/issues/new?title=Issue%20on%20page%20%2FDiffusive_Theorie.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#allgemeine-transportgleichungen-diffusion">
    Allgemeine Transportgleichungen Diffusion
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#warmetransport">
+     Wärmetransport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feuchtetransport">
+     Feuchtetransport
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numerisches-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
-   Numerisches Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung
+  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
+   Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#randbedingungen">
+   Randbedingungen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konvektiver-warmeubergangskoeffizient">
+     Konvektiver Wärmeübergangskoeffizient
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radiativer-warmeubergangskoeffizient">
+     Radiativer Wärmeübergangskoeffizient
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes</h1>
+                <h1>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -457,11 +385,40 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#allgemeine-transportgleichungen-diffusion">
    Allgemeine Transportgleichungen Diffusion
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#warmetransport">
+     Wärmetransport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feuchtetransport">
+     Feuchtetransport
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numerisches-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
-   Numerisches Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung
+  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
+   Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#randbedingungen">
+   Randbedingungen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konvektiver-warmeubergangskoeffizient">
+     Konvektiver Wärmeübergangskoeffizient
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radiativer-warmeubergangskoeffizient">
+     Radiativer Wärmeübergangskoeffizient
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -469,17 +426,164 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="theorethische-grundlagen-des-diffusiven-warme-und-feuchtetranspoortes">
-<h1>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes<a class="headerlink" href="#theorethische-grundlagen-des-diffusiven-warme-und-feuchtetranspoortes" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="theorethische-grundlagen-des-diffusiven-warme-und-feuchtetransportes">
+<h1>Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes<a class="headerlink" href="#theorethische-grundlagen-des-diffusiven-warme-und-feuchtetransportes" title="Permalink to this headline">¶</a></h1>
+<p>Wenn eine Koppelung zwischen Wärme- und Feuchtetransport in einer Berechnung besteht spricht man allgemein von einer
+hygrothermischen Simulation. Diese Koppelung bringt den Vorteil, dass der Einfluss des Feuchtegehaltes auf die
+Wärmeleitfähigkeit berücksichtigt werden kann. Die Differentialgleichungen, welche für solche Berechnungen miteinander
+gekoppelt werden müssen, werden im folgenden vorgestellt, mit dem Ziel ein Verständnis für die unterliegenden Grundlagen
+und Konzepte zu vermitteln.</p>
 <section id="allgemeine-transportgleichungen-diffusion">
-<h2>Allgemeine Transportgleichungen Diffusion<a class="headerlink" href="#allgemeine-transportgleichungen-diffusion" title="Permalink to this headline">#</a></h2>
+<h2>Allgemeine Transportgleichungen Diffusion<a class="headerlink" href="#allgemeine-transportgleichungen-diffusion" title="Permalink to this headline">¶</a></h2>
+<p>Bei Betrachtung der</p>
+<section id="warmetransport">
+<h3>Wärmetransport<a class="headerlink" href="#warmetransport" title="Permalink to this headline">¶</a></h3>
+<p>Bei Betrachtung der Wärmeleitung ergibt sich aus Gleichung <a class="reference internal" href="Motivation.html#equation-delta-v-q-eq">(7)</a></p>
+<div class="math notranslate nohighlight" id="equation-dt-eq">
+<span class="eqno">(8)<a class="headerlink" href="#equation-dt-eq" title="Permalink to this equation">¶</a></span>\[ \rho c \frac{\partial T}{\partial t} = -\nabla \cdot q + h \]</div>
+<p>Dabei beschreibt <span class="math notranslate nohighlight">\(h\)</span> (J/(m³s)) eine Wärmequelle. Diese kann ausgelöst sein durch mechanisches Heizen, chemische
+Reaktionen etc.</p>
+<p>Der Wärmefluss q (J/(m²s) ist definiert als</p>
+<div class="math notranslate nohighlight" id="equation-q-diff-conv-eq">
+<span class="eqno">(9)<a class="headerlink" href="#equation-q-diff-conv-eq" title="Permalink to this equation">¶</a></span>\[ q = q_{diff} + q_{conv}\]</div>
+<p>wobei <span class="math notranslate nohighlight">\(q_{diff}\)</span> den diffusiven Anteil und <span class="math notranslate nohighlight">\(q_{conv}\)</span> den durch Konvektion tranportierten Anteil des Wärmeflusses
+beschreibt. Bei Vernachlässigung konvektiver Phänomene können wir <span class="math notranslate nohighlight">\(q_{conv} = 0\)</span> setzen.</p>
+<p>Für den diffusiven eindimensionalen Fall ist <span class="math notranslate nohighlight">\(q\)</span> definiert als</p>
+<div class="math notranslate nohighlight" id="equation-q-delta-x-eq">
+<span class="eqno">(11)<a class="headerlink" href="#equation-q-delta-x-eq" title="Permalink to this equation">¶</a></span>\[ q = q_{diff} = \lambda \cdot \frac{T - (T + \Delta T)}{\Delta x}\]</div>
+<div class="math notranslate nohighlight" id="equation-q-delta-x-eq">
+<span class="eqno">(11)<a class="headerlink" href="#equation-q-delta-x-eq" title="Permalink to this equation">¶</a></span>\[ q = -\lambda \cdot \frac{\Delta T}{\Delta x}\]</div>
+<figure class="align-default" id="q-steady-state-wall">
+<a class="reference internal image-reference" href="_images/q_steady_state_wall.png"><img alt="_images/q_steady_state_wall.png" src="_images/q_steady_state_wall.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Stationärer Wärmefluss durch ein finites Wandstück.</span><a class="headerlink" href="#q-steady-state-wall" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Gleichung <a class="reference internal" href="#equation-q-delta-x-eq">(11)</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den
+Differentialoperator</p>
+<div class="math notranslate nohighlight" id="equation-q-dx-eq">
+<span class="eqno">(12)<a class="headerlink" href="#equation-q-dx-eq" title="Permalink to this equation">¶</a></span>\[ q = -\lambda \cdot \frac{d T}{d x}\]</div>
+<p>Mehrdimensional verallgemeinern lässt sich Gleichung <a class="reference internal" href="#equation-q-dx-eq">(12)</a> mittels des Nabla-Operators zu</p>
+<div class="math notranslate nohighlight" id="equation-q-nabla-eq">
+<span class="eqno">(13)<a class="headerlink" href="#equation-q-nabla-eq" title="Permalink to this equation">¶</a></span>\[ q = -\lambda \cdot \nabla T\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(\lambda\)</span> kann eine vektorielle Größe sein wodurch richtungsabhängigen Wärmeleitfähigkeiten berücksichtigt werden können.
+Falls also <span class="math notranslate nohighlight">\(\lambda_{x} \neq \lambda_{y} \neq \lambda_{z}\)</span>.</p>
+</div>
+<p>Gleichung <a class="reference internal" href="#equation-q-nabla-eq">(13)</a> eingesetzt in Gleichung <a class="reference internal" href="#equation-dt-eq">(8)</a> führt auf</p>
+<div class="math notranslate nohighlight" id="equation-dt-laplace-eq">
+<span class="eqno">(14)<a class="headerlink" href="#equation-dt-laplace-eq" title="Permalink to this equation">¶</a></span>\[ \frac {\lambda}{\rho c} \frac{\partial T}{\partial t} = \nabla \cdot (\nabla T) = \nabla^{2}T\]</div>
+<p>Dabei beschreibt <span class="math notranslate nohighlight">\(\nabla^{2}\)</span> den Laplace-Operator:</p>
+<div class="math notranslate nohighlight">
+\[ \nabla^{2} = \frac{\partial^{2}}{\partial x^{2}} + \frac{\partial^{2}}{\partial y^{2}} + \frac{\partial^{2}}{\partial
+z^{2}} \]</div>
+<div class="math notranslate nohighlight">
+\[ \nabla^{2}T = \frac{\partial^{2}T_{x}}{\partial x^{2}} + \frac{\partial^{2}T_{y}}{\partial y^{2}} +
+\frac{\partial^{2}T_{z}}{\partial z^{2}} \]</div>
 </section>
-<section id="numerisches-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
-<h2>Numerisches Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung<a class="headerlink" href="#numerisches-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung" title="Permalink to this headline">#</a></h2>
+<section id="feuchtetransport">
+<h3>Feuchtetransport<a class="headerlink" href="#feuchtetransport" title="Permalink to this headline">¶</a></h3>
+<p>Analog zum Wärmetransport kann der Feuchtetransport durch Gleichung <a class="reference internal" href="#equation-w-eq">(15)</a> beschrieben werden:</p>
+<div class="math notranslate nohighlight" id="equation-w-eq">
+<span class="eqno">(15)<a class="headerlink" href="#equation-w-eq" title="Permalink to this equation">¶</a></span>\[ \frac{\partial w}{\partial t}  = - \nabla \cdot g + m \]</div>
+<p>Hier steht <span class="math notranslate nohighlight">\(\frac{\partial w}{\partial t}\)</span> für die Veränderung des Wassergehaltes in kg/m³s, <span class="math notranslate nohighlight">\(g\)</span> für die
+Feuchtestromdichte in kg/(m²s) und m für eine Feuchtequelle in kg/(m³s). Die Feuchtestromdichte setzt sich in porösen
+Medien zusammen aus der</p>
+<ul class="simple">
+<li><p>Dampfdiffusionsstromdichte <span class="math notranslate nohighlight">\(g_{v}\)</span> und</p></li>
+<li><p>Flüssigwasserstromdichte <span class="math notranslate nohighlight">\(g_{l}\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-g-eq">
+<span class="eqno">(16)<a class="headerlink" href="#equation-g-eq" title="Permalink to this equation">¶</a></span>\[ g = g_{v} + g_{l} \]</div>
+<p>Wenn wir vorübergehend den Flüssigwassertransport vernachlässigen <span class="math notranslate nohighlight">\(g_{l} = 0\)</span>, was bei entsprechenden Randbedingungen
+eine <a class="reference internal" href="#randbedingungen-diffusive"><span class="std std-ref">valide Annahme</span></a> darstellt, setzt sich die Dampfdiffusionsstromdichte <span class="math notranslate nohighlight">\(g_{v}\)</span>, ähnlich
+wie der Wärmefluss <a class="reference internal" href="#equation-q-diff-conv-eq">(9)</a>, aus einem diffusiven und konvektiven Anteil zusammen</p>
+<div class="math notranslate nohighlight" id="equation-g-diff-conveq">
+<span class="eqno">(17)<a class="headerlink" href="#equation-g-diff-conveq" title="Permalink to this equation">¶</a></span>\[ g = g_{v} = g_{diff} + g_{conv} \]</div>
+<p>Bei Vernachlässigung konvektiver Phänomene können wir wiederum <span class="math notranslate nohighlight">\(g_{conv} = 0\)</span> setzen. Den noch verbleibenden Anteil der
+Feuchtstromdichte können wir in porösen Medien über das Fick’sche Gesetz beschreiben.</p>
+<figure class="align-default" id="g-steady">
+<a class="reference internal image-reference" href="_images/g_steady.png"><img alt="_images/g_steady.png" src="_images/g_steady.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Feuchtestromdichte durch ein finites poröses Wandstück.</span><a class="headerlink" href="#g-steady" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Dabei wird die Diffusion in ruhender Luft in Abhängigkeit gesetzt zu dem Dampfdruckgradienten <span class="math notranslate nohighlight">\(\Delta v\)</span> und einer
+Transportkonstante <span class="math notranslate nohighlight">\(\delta_{v}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ g = g_{diff} = \delta_{v} \cdot \frac{v - (v + \Delta v)}{\Delta x} \]</div>
+<div class="math notranslate nohighlight" id="equation-g-delta-eq">
+<span class="eqno">(19)<a class="headerlink" href="#equation-g-delta-eq" title="Permalink to this equation">¶</a></span>\[ g = -\delta_{v} \cdot \frac{\Delta v}{\Delta x} \]</div>
+<div class="math notranslate nohighlight" id="equation-g-delta-eq">
+<span class="eqno">(19)<a class="headerlink" href="#equation-g-delta-eq" title="Permalink to this equation">¶</a></span>\[ g = -\frac{D}{\mu} \cdot \frac{\Delta v}{\Delta x} \]</div>
+<p>Hierbei steht D (m²/s) für den temperaturabhängigen Diffusionskoeffizienten ruhender Luft, wobei <span class="math notranslate nohighlight">\(T\)</span> in Grad Celsius
+einzusetzen ist</p>
+<div class="math notranslate nohighlight">
+\[ D = (22.2 + 0.14 \cdot T) \cdot 10^{-6}\]</div>
+<p>und <span class="math notranslate nohighlight">\(\mu\)</span> für einen Faktor den Widerstand zu beschreiben der zu Folge des porösen Mediums besteht. Dieser Widerstand
+entsteht einerseits durch</p>
+<ul class="simple">
+<li><p>Reduktion des Vorhandenen Raumes für Diffusion und andererseits</p></li>
+<li><p>zu Folge der längeren Wege die ein Dampf-Teilchen zu Folge eines Porennetzwerkes zurücklegen muss.</p></li>
+</ul>
+<p>Analog zum Wärmefluss kann Gleichung <a class="reference internal" href="#equation-g-delta-eq">(19)</a> bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span>
+übergeführt werden in den Differentialoperator</p>
+<div class="math notranslate nohighlight" id="equation-g-dx-eq">
+<span class="eqno">(20)<a class="headerlink" href="#equation-g-dx-eq" title="Permalink to this equation">¶</a></span>\[ g = -\delta_{v} \cdot \frac{d v}{\Delta x} \]</div>
+<p>und mittels des Nabal-Operator mehrdimensional verallgemeinert werden zu</p>
+<div class="math notranslate nohighlight" id="equation-g-nabla-eq">
+<span class="eqno">(21)<a class="headerlink" href="#equation-g-nabla-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v \]</div>
+</section>
+</section>
+<section id="numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung">
+<h2>Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung<a class="headerlink" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitung" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="randbedingungen">
+<span id="randbedingungen-diffusive"></span><h2>Randbedingungen<a class="headerlink" href="#randbedingungen" title="Permalink to this headline">¶</a></h2>
+<p>Der Wärmeübergangswiderstand <span class="math notranslate nohighlight">\(R_{s}\)</span> in m²K/W setzt sich aus dem konvektiven <span class="math notranslate nohighlight">\(\alpha_{c}\)</span> und und radiativen
+Wärmeübergangskoeffizienten <span class="math notranslate nohighlight">\(\alpha_{r}\)</span> zusammen:</p>
+<div class="math notranslate nohighlight" id="equation-r-s-eq">
+<span class="eqno">(22)<a class="headerlink" href="#equation-r-s-eq" title="Permalink to this equation">¶</a></span>\[ R_{s} = \frac{1}{\alpha_{c} + \alpha_{r}}\]</div>
+<section id="konvektiver-warmeubergangskoeffizient">
+<h3>Konvektiver Wärmeübergangskoeffizient<a class="headerlink" href="#konvektiver-warmeubergangskoeffizient" title="Permalink to this headline">¶</a></h3>
+<p>Für Innenräume ist der konvektive Wärmeübergangskoeffizient definiert als:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Richtung des Wärmestroms</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\alpha_{c,i}\)</span> in /m²K</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>aufwärts</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>horizontal</p></td>
+<td><p>2.5</p></td>
+</tr>
+<tr class="row-even"><td><p>abwärts</p></td>
+<td><p>0.7</p></td>
+</tr>
+</tbody>
+</table>
+<p>Für Außenoberflächen ist <span class="math notranslate nohighlight">\(\alpha_{c,e}\)</span> vorrangig abhängig von der Windgeschwindigkeit v in m/s:</p>
+<div class="math notranslate nohighlight">
+\[ \alpha_{c,e} = 4 + 4 \cdot v \]</div>
+</section>
+<section id="radiativer-warmeubergangskoeffizient">
+<h3>Radiativer Wärmeübergangskoeffizient<a class="headerlink" href="#radiativer-warmeubergangskoeffizient" title="Permalink to this headline">¶</a></h3>
+<p>Der radiative Wärmeübergangskoeffizient <span class="math notranslate nohighlight">\(\alpha_{r}\)</span> berechnet sich mittels des Emissionsgrades <span class="math notranslate nohighlight">\(\epsilon\)</span>, der
+Stefan-Boltzmann-Konstante <span class="math notranslate nohighlight">\(\sigma\)</span> (<span class="math notranslate nohighlight">\(5.67 \cdot 10^{-8}\)</span> W/m²K<sup>4</sup>), der mittleren
+Außenoberflächentemperatur <span class="math notranslate nohighlight">\(T_{se}\)</span> und der mittleren Himmelstemperatur <span class="math notranslate nohighlight">\(T_{sky}\)</span> in Kelvin.</p>
+<div class="math notranslate nohighlight" id="equation-alpha-r-eq">
+<span class="eqno">(23)<a class="headerlink" href="#equation-alpha-r-eq" title="Permalink to this equation">¶</a></span>\[ \alpha_{r} = \epsilon \cdot 4 \cdot \sigma \cdot \left(\frac{T_{se} + T_{sky}}{2}\right)^{3} \]</div>
+<p>Für übliche Verhältnisse kann der radiative Wärmeübergangskoeffizient jedoch angenähert werden zu:</p>
+<div class="math notranslate nohighlight">
+\[ \alpha_{r} \approx 5 \cdot \epsilon \]</div>
+</section>
 </section>
 </section>
 
@@ -505,11 +609,9 @@ title="Print to PDF"
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="W%C3%A4rmebr%C3%BCcken.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -525,28 +627,24 @@ title="Print to PDF"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
