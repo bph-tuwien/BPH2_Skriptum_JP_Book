@@ -11,8 +11,9 @@ bei der Planung/Ausführung darauf vergessen) bilden dabei meistens die Problems
 height: 350px
 name: wbr_gebaeude
 ---
-Thermografie eines Einfamilienhauses. Wärmere Oberflächen sind rot dargestellten und weisen auf einen höheren Wärmefluss
- von innen nach außen hin. [Quelle](https://bauingenieur-meyer.de/waermebruecken-identifizieren-und-reduzieren/)
+Außenthermografie eines zweidimensionalen Bauteilanschlusses. 
+Wärmere Oberflächen sind rot dargestellten und weisen auf einen höheren Wärmefluss
+ von innen nach außen hin.
 ```
 
 Das numerische Erfassen solcher Problemstellen bietet gerade in der Planung die Möglichkeit der Indetifikation und
@@ -31,7 +32,7 @@ werden eingangs einige
 dargelegt, um den kritischen Umgang mit solchen Berechnungsergebnisse und deren Plausibilitätsprüfung  zu
 ermöglichen. Anschließend wird zur Interpretation und Nachweisverfahren unserer ersten Ergebnisse der 
 
-- **$f_{R_{Si}}$**
+- **Temperaturfaktor $f_{R_{Si}}$**
 
 näher erläutert und wir beschäftigen uns mit der Frage welchen 
 

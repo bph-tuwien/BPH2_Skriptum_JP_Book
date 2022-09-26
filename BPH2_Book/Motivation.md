@@ -23,7 +23,7 @@ entsprechend saugfähigen Baustoffen, der
 
 All diese Transportprozesse beeinflussen das Bauteilverhalten und können entsprechende Risiken und Schäden mit sich
 führen (Schimmelbildung, Eisbildung etc.). Um das bewerten zu können, müssen Simulationsergebnisse ausgewertet,
-interpretiert und mit entsprechenden Risikomodellen analysiertm werden.
+interpretiert und mit entsprechenden Risikomodellen analysiert werden.
 
 ## Energie- und Massenerhaltung
 
@@ -65,6 +65,9 @@ $$ \sum_{i=1}^{N} \iint_{S_{i}} q \,dS = \sum_{i=1}^{N} Q_{i} = \frac{dE}{dt} $$
 
 ## Der Nabla-Operator - Anschaulich erklärt
 
+Da uns der Nabla-Operator bei der Beschreibung unserer Transportphänomene als Werkzeug begleiten wird, wird hier der
+Versuch gewagt die mathematische Operation in ein möglichst anschauliches physikalisches Verständnis zu überführen.
+
 Der Gauss'sche Integralsatz ermöglicht uns die Transformation eines Oberflächenintegrals in ein Volumenintegral.
 Angewendet auf Gleichung {eq}`q_int_eq` führt das auf Gleichung {eq}`q_gauss_eq`.
 
@@ -90,7 +93,7 @@ Umgeformt ergibt das:
 
 $$ - \nabla \cdot q =\frac{dE}{dt} \cdot \frac{1}{\Delta V } $$(delta_V_q_eq)
 
-Gleichung {eq}`delta_V_q_eq` hat eine besondere Bedeutung. Sie ermöglicht es den Divergenz-Operator physikalisch zu
+Gleichung {eq}`delta_V_q_eq` hat eine besondere Bedeutung. Sie ermöglicht es den Nabla-Operator physikalisch zu
 interpetieren. Er beschreibt die Nettorate des Wärmestromes zu einem Punkt pro Volumseinheit:
 
 $ - \nabla \cdot q $ = Netto Wärmestrom-Eintrag pro Volumseinheit pro Zeitschritt in J/sm³
