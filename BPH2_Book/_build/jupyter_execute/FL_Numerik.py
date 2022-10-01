@@ -267,7 +267,7 @@ t_eval = np.linspace(t0, tf, 100)
 
 # Lösen der Differentialgleichung und Berechnung des Integrals mittels Solver:
 
-# In[21]:
+# In[7]:
 
 
 # ----------------------
@@ -289,7 +289,7 @@ print('Done.')
 
 # ### Verteilung des Wassergehaltes im diskretisierten Probekörper
 
-# In[17]:
+# In[8]:
 
 
 # Moisture content distribution in discretized specimen

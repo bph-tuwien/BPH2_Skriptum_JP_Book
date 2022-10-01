@@ -141,7 +141,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Konvektiver_Transport.html">
-   Konvektiver Stofftransport
+   Konvektiver Stofftransport und Wärmestransport
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -155,7 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Convective_risk_standards.html">
+    <a class="reference internal" href="Convective_risk.html">
      Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport
     </a>
    </li>
@@ -446,10 +446,10 @@ und Konzepte zu vermitteln.</p>
 <span class="eqno">(8)<a class="headerlink" href="#equation-dt-eq" title="Permalink to this equation">¶</a></span>\[ \rho c \frac{\partial T}{\partial t} = -\nabla \cdot q + h \]</div>
 <p>Dabei beschreibt <span class="math notranslate nohighlight">\(h\)</span> (J/(m³s)) eine Wärmequelle. Diese kann ausgelöst sein durch mechanisches Heizen, chemische
 Reaktionen etc.</p>
-<p>Der Wärmefluss q (J/(m²s) ist definiert als</p>
+<p>Die Wärmestromdichte q (J/(m²s) ist definiert als</p>
 <div class="math notranslate nohighlight" id="equation-q-diff-conv-eq">
 <span class="eqno">(9)<a class="headerlink" href="#equation-q-diff-conv-eq" title="Permalink to this equation">¶</a></span>\[ q = q_{diff} + q_{conv}\]</div>
-<p>wobei <span class="math notranslate nohighlight">\(q_{diff}\)</span> den diffusiven Anteil und <span class="math notranslate nohighlight">\(q_{conv}\)</span> den durch Konvektion tranportierten Anteil des Wärmeflusses
+<p>wobei <span class="math notranslate nohighlight">\(q_{diff}\)</span> den diffusiven Anteil und <span class="math notranslate nohighlight">\(q_{conv}\)</span> den durch Konvektion tranportierten Anteil der Wärmestromdichte
 beschreibt. Bei Vernachlässigung konvektiver Phänomene können wir <span class="math notranslate nohighlight">\(q_{conv} = 0\)</span> setzen.</p>
 <p>Für den diffusiven eindimensionalen Fall ist <span class="math notranslate nohighlight">\(q\)</span> definiert als</p>
 <div class="math notranslate nohighlight" id="equation-q-delta-x-eq">
@@ -484,12 +484,14 @@ z^{2}} \]</div>
 <div class="math notranslate nohighlight">
 \[ \nabla^{2}T = \frac{\partial^{2}T_{x}}{\partial x^{2}} + \frac{\partial^{2}T_{y}}{\partial y^{2}} +
 \frac{\partial^{2}T_{z}}{\partial z^{2}} \]</div>
+<p>Multiplikation der Wärmestromdichte mit der entsprechend durchströmten Fläche <span class="math notranslate nohighlight">\(A\)</span> in jm² führt auf den Wärmestrom <span class="math notranslate nohighlight">\(Q\)</span> in
+J/s.</p>
 </section>
 <section id="feuchtetransport">
 <h3>Feuchtetransport<a class="headerlink" href="#feuchtetransport" title="Permalink to this headline">¶</a></h3>
 <p>Analog zum Wärmetransport kann der Feuchtetransport durch Gleichung <a class="reference internal" href="#equation-w-eq">(15)</a> beschrieben werden:</p>
 <div class="math notranslate nohighlight" id="equation-w-eq">
-<span class="eqno">(15)<a class="headerlink" href="#equation-w-eq" title="Permalink to this equation">¶</a></span>\[ \frac{\partial w}{\partial t}  = - \nabla \cdot g + m \]</div>
+<span class="eqno">(15)<a class="headerlink" href="#equation-w-eq" title="Permalink to this equation">¶</a></span>\[ \frac{\partial w}{\partial t} = - \nabla \cdot g + m \]</div>
 <p>Hier steht <span class="math notranslate nohighlight">\(\frac{\partial w}{\partial t}\)</span> für die Veränderung des Wassergehaltes in kg/m³s, <span class="math notranslate nohighlight">\(g\)</span> für die
 Feuchtestromdichte in kg/(m²s) und m für eine Feuchtequelle in kg/(m³s). Die Feuchtestromdichte setzt sich in porösen
 Medien zusammen aus der</p>
@@ -502,8 +504,8 @@ Medien zusammen aus der</p>
 <p>Wenn wir vorübergehend den Flüssigwassertransport vernachlässigen <span class="math notranslate nohighlight">\(g_{l} = 0\)</span>, was bei entsprechenden Randbedingungen
 eine <a class="reference internal" href="#randbedingungen-diffusive"><span class="std std-ref">valide Annahme</span></a> darstellt, setzt sich die Dampfdiffusionsstromdichte <span class="math notranslate nohighlight">\(g_{v}\)</span>, ähnlich
 wie der Wärmefluss <a class="reference internal" href="#equation-q-diff-conv-eq">(9)</a>, aus einem diffusiven und konvektiven Anteil zusammen</p>
-<div class="math notranslate nohighlight" id="equation-g-diff-conveq">
-<span class="eqno">(17)<a class="headerlink" href="#equation-g-diff-conveq" title="Permalink to this equation">¶</a></span>\[ g = g_{v} = g_{diff} + g_{conv} \]</div>
+<div class="math notranslate nohighlight" id="equation-g-diff-conv-eq">
+<span class="eqno">(17)<a class="headerlink" href="#equation-g-diff-conv-eq" title="Permalink to this equation">¶</a></span>\[ g = g_{v} = g_{diff} + g_{conv} \]</div>
 <p>Bei Vernachlässigung konvektiver Phänomene können wir wiederum <span class="math notranslate nohighlight">\(g_{conv} = 0\)</span> setzen. Den noch verbleibenden Anteil der
 Feuchtstromdichte können wir in porösen Medien über das Fick’sche Gesetz beschreiben.</p>
 <figure class="align-default" id="g-steady">
@@ -534,7 +536,7 @@ entsteht einerseits durch</p>
 übergeführt werden in den Differentialoperator</p>
 <div class="math notranslate nohighlight" id="equation-g-dx-eq">
 <span class="eqno">(20)<a class="headerlink" href="#equation-g-dx-eq" title="Permalink to this equation">¶</a></span>\[ g = -\delta_{v} \cdot \frac{d v}{\Delta x} \]</div>
-<p>und mittels des Nabal-Operator mehrdimensional verallgemeinert werden zu</p>
+<p>und mittels des Nabal-Operators mehrdimensional verallgemeinert werden zu</p>
 <div class="math notranslate nohighlight" id="equation-g-nabla-eq">
 <span class="eqno">(21)<a class="headerlink" href="#equation-g-nabla-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v \]</div>
 </section>
@@ -576,8 +578,8 @@ Wärmeübergangskoeffizienten <span class="math notranslate nohighlight">\(\alph
 <section id="radiativer-warmeubergangskoeffizient">
 <h3>Radiativer Wärmeübergangskoeffizient<a class="headerlink" href="#radiativer-warmeubergangskoeffizient" title="Permalink to this headline">¶</a></h3>
 <p>Der radiative Wärmeübergangskoeffizient <span class="math notranslate nohighlight">\(\alpha_{r}\)</span> berechnet sich mittels des Emissionsgrades <span class="math notranslate nohighlight">\(\epsilon\)</span>, der
-Stefan-Boltzmann-Konstante <span class="math notranslate nohighlight">\(\sigma\)</span> (<span class="math notranslate nohighlight">\(5.67 \cdot 10^{-8}\)</span> W/m²K<sup>4</sup>), der mittleren
-Außenoberflächentemperatur <span class="math notranslate nohighlight">\(T_{se}\)</span> und der mittleren Himmelstemperatur <span class="math notranslate nohighlight">\(T_{sky}\)</span> in Kelvin.</p>
+Stefan-Boltzmann-Konstante <span class="math notranslate nohighlight">\(\sigma\)</span> (<span class="math notranslate nohighlight">\(5.67 \cdot 10^{-8}\)</span> W/m²K<sup>4</sup>), der mittleren Außenoberflächentemperatur
+<span class="math notranslate nohighlight">\(T_{se}\)</span> und der mittleren Himmelstemperatur <span class="math notranslate nohighlight">\(T_{sky}\)</span> in Kelvin.</p>
 <div class="math notranslate nohighlight" id="equation-alpha-r-eq">
 <span class="eqno">(23)<a class="headerlink" href="#equation-alpha-r-eq" title="Permalink to this equation">¶</a></span>\[ \alpha_{r} = \epsilon \cdot 4 \cdot \sigma \cdot \left(\frac{T_{se} + T_{sky}}{2}\right)^{3} \]</div>
 <p>Für übliche Verhältnisse kann der radiative Wärmeübergangskoeffizient jedoch angenähert werden zu:</p>

@@ -19,11 +19,11 @@ $$ \rho c \frac{\partial T}{\partial t} = -\nabla \cdot q + h $$(dT_eq)
 Dabei beschreibt $h$ (J/(m³s)) eine Wärmequelle. Diese kann ausgelöst sein durch mechanisches Heizen, chemische
 Reaktionen etc.
 
-Der Wärmefluss q (J/(m²s) ist definiert als
+Die Wärmestromdichte q (J/(m²s) ist definiert als
 
 $$ q = q_{diff} + q_{conv}$$ (q_diff_conv_eq)
 
-wobei $q_{diff}$ den diffusiven Anteil und $q_{conv}$ den durch Konvektion tranportierten Anteil des Wärmeflusses
+wobei $q_{diff}$ den diffusiven Anteil und $q_{conv}$ den durch Konvektion tranportierten Anteil der Wärmestromdichte
 beschreibt. Bei Vernachlässigung konvektiver Phänomene können wir $q_{conv} = 0$ setzen.
 
 Für den diffusiven eindimensionalen Fall ist $q$ definiert als
@@ -65,11 +65,14 @@ z^{2}} $$
 $$ \nabla^{2}T = \frac{\partial^{2}T_{x}}{\partial x^{2}} + \frac{\partial^{2}T_{y}}{\partial y^{2}} +
 \frac{\partial^{2}T_{z}}{\partial z^{2}} $$
 
+Multiplikation der Wärmestromdichte mit der entsprechend durchströmten Fläche $A$ in jm² führt auf den Wärmestrom $Q$ in
+J/s.
+
 ### Feuchtetransport
 
 Analog zum Wärmetransport kann der Feuchtetransport durch Gleichung {eq}`w_eq` beschrieben werden:
 
-$$ \frac{\partial w}{\partial t}  = - \nabla \cdot g + m $$ (w_eq)
+$$ \frac{\partial w}{\partial t} = - \nabla \cdot g + m $$ (w_eq)
 
 Hier steht $\frac{\partial w}{\partial t}$ für die Veränderung des Wassergehaltes in kg/m³s, $g$ für die
 Feuchtestromdichte in kg/(m²s) und m für eine Feuchtequelle in kg/(m³s). Die Feuchtestromdichte setzt sich in porösen
@@ -84,7 +87,7 @@ Wenn wir vorübergehend den Flüssigwassertransport vernachlässigen $g_{l} = 0$
 eine [valide Annahme](Randbedingungen_Diffusive) darstellt, setzt sich die Dampfdiffusionsstromdichte $g_{v}$, ähnlich
 wie der Wärmefluss {eq}`q_diff_conv_eq`, aus einem diffusiven und konvektiven Anteil zusammen
 
-$$ g = g_{v} = g_{diff} + g_{conv} $$ (g_diff_conveq)
+$$ g = g_{v} = g_{diff} + g_{conv} $$ (g_diff_conv_eq)
 
 Bei Vernachlässigung konvektiver Phänomene können wir wiederum $g_{conv} = 0$ setzen. Den noch verbleibenden Anteil der
 Feuchtstromdichte können wir in porösen Medien über das Fick'sche Gesetz beschreiben.
@@ -122,7 +125,7 @@ Analog zum Wärmefluss kann Gleichung {eq}`g_delta_eq` bei Grenzwertbetrachtung 
 
 $$ g = -\delta_{v} \cdot \frac{d v}{\Delta x} $$ (g_dx_eq)
 
-und mittels des Nabal-Operator mehrdimensional verallgemeinert werden zu
+und mittels des Nabal-Operators mehrdimensional verallgemeinert werden zu
 
 $$ g = - \delta_{v} \cdot \nabla v $$ (g_nabla_eq)
 
@@ -154,8 +157,8 @@ $$ \alpha_{c,e} = 4 + 4 \cdot v $$
 ### Radiativer Wärmeübergangskoeffizient
 
 Der radiative Wärmeübergangskoeffizient $\alpha_{r}$ berechnet sich mittels des Emissionsgrades $\epsilon$, der
-Stefan-Boltzmann-Konstante $\sigma$ ($5.67 \cdot 10^{-8}$ W/m²K<sup>4</sup>), der mittleren
-Außenoberflächentemperatur $T_{se}$ und der mittleren Himmelstemperatur $T_{sky}$ in Kelvin.
+Stefan-Boltzmann-Konstante $\sigma$ ($5.67 \cdot 10^{-8}$ W/m²K<sup>4</sup>), der mittleren Außenoberflächentemperatur
+$T_{se}$ und der mittleren Himmelstemperatur $T_{sky}$ in Kelvin.
 
 $$ \alpha_{r} = \epsilon \cdot 4 \cdot \sigma \cdot \left(\frac{T_{se} + T_{sky}}{2}\right)^{3} $$ (alpha_r_eq)
 
