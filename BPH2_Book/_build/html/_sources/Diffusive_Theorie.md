@@ -72,7 +72,7 @@ J/s.
 
 Analog zum Wärmetransport kann der Feuchtetransport durch Gleichung {eq}`w_eq` beschrieben werden:
 
-$$ \frac{\partial w}{\partial t} = - \nabla \cdot g + m $$ (w_eq)
+$$ \frac{\partial w}{\partial t} = - \nabla \cdot g + m $$(w_eq)
 
 Hier steht $\frac{\partial w}{\partial t}$ für die Veränderung des Wassergehaltes in kg/m³s, $g$ für die
 Feuchtestromdichte in kg/(m²s) und m für eine Feuchtequelle in kg/(m³s). Die Feuchtestromdichte setzt sich in porösen

@@ -111,6 +111,38 @@ Dieses vereinfachte Verfahren berücksichtig laut EN ISO 13788 nicht:
     - Kondensat im Bauteil muss unter $g_{c} < 0.5$ kg/m² liegen
     - Vollständige Austrocknung der in der kühlen Jahreszeit aufgetretenen Feuchte im **2. Sommer**
 
+### Modifizierter Euro-Glaser
+
+Das Modifizierte Euro-Glaser-Verfahren wurde als solches erstmals in {cite}`nusserEuroGlaserUnterBeachtung2010`
+präsentiert:
+
+> Im Zuge der Untersuchungen wurden 50 Einfamilienhäuser hinsichtlich der Anzahl ihrer Elektro- und
+> Heizung/Klima/Sanitärinstallationen hin ausgewertet. Mit Hilfe der Verallgemeinerung des Luftvolumenstroms durch diese
+> Leckagen auf den Luftvolumenstrom durch ein nicht abgeklebtes Elektrokabel wird eine Volumenstromgleichung hergeleitet
+> und vier Luftdichtheitsklassen definiert.
+
+Um den erhöhten Wärme- und Feuchtetransport zu Folge von Leckagen zu berücksichtigen wird für durchströmbare Schichten
+die Diffusion-/Konvekitonsgleichung angewendet. {numref}`euro_schichten`
+
+```{figure} img/Konvektion/euro_schichten.png
+---
+height: 350px
+name: euro_schichten
+---
+Definition der Schichten in denen Diffusion und Diffusion + Konvektion angesetzt wird.
+```
+
+Dabei wird auch gezeigt, dass die Berechnungen für den betrachteten Fall auf der sicheren Seite liegen und das Verfahren
+für konservative Abschätzungen eine gute erste Nöherung darstellt. {numref}`eruoglas_sichere`
+
+```{figure} img/Konvektion/eruoglas_sichere.png
+---
+height: 350px
+name: eruoglas_sichere
+---
+Euro-Glaser liegt auf der sicheren Seite
+```
+
 (Anfangsfeuchte)=
 
 ## Berücksichtigung von Anfangsfeuchten bei Verwendung des Euro-Glasers laut 8110-2:2020
@@ -166,14 +198,13 @@ Es wurden im direkten Zitat die Referenzen {cite}`hukkaMathematicalModelMould199
 weiterführende Selbstrecherche bei Bedarf zu vereinfachen.
 ```
 
-
-
 ### Mould Index nach Viitanen, Ojanen und Peuhkuri et. al.
 
 Das mathematische Modell für die Simulation des Verrottungsverhaltens von Materialien und die Einstufung des sichtbaren
-Schimmelpilzbefalles, in weiterer Folge als Mould Index bezeichnet, wurde erstmals für Materialien aus Holz in {cite}`hukkaMathematicalModelMould1999`
-gezeigt und im Zuge weiterer Forschung verfeinert bis es mit {cite}`ojanenClassificationMaterialSensitivity2011` möglich war auch das Verhalten anderer Materialien
-unter zu Hilfenahme diese
+Schimmelpilzbefalles, in weiterer Folge als Mould Index bezeichnet, wurde erstmals für Materialien aus Holz in
+{cite}`hukkaMathematicalModelMould1999`
+gezeigt und im Zuge weiterer Forschung verfeinert bis es mit {cite}`ojanenClassificationMaterialSensitivity2011` möglich
+war auch das Verhalten anderer Materialien unter zu Hilfenahme diese
 
 Die approbierte gedruckte Originalversion dieser Diplomarbeit ist an der TU Wien Bibliothek verfügbar. The approved
 original version of this thesis is available in print at TU Wien Bibliothek. 34 3 Grundlagen Modelles zu beschreiben. In
@@ -184,8 +215,8 @@ experimentellen Randbedingungen zur Evaluation dieser nach {cite}`hukkaMathemati
 
 Das experimentelle Material bestand aus kleinen Proben mit den Abmessungen 7x15x50 mm. Herangezogen wurden die
 Materialien Kiefer und Fichte, wobei nochmals unterschiedliche Oberflächenqualitäten, ofengetrocknet und sägerauh,
-betrachtet wurden. {cite}`hukkaMathematicalModelMould1999` Die Veröffentlichung der Ergebnisse findet man in [26], [25] und [24]. In den Experimenten werden
-folgende Vorbedingungen in {cite}`hukkaMathematicalModelMould1999` vorausgesetzt:
+betrachtet wurden. {cite}`hukkaMathematicalModelMould1999` Die Veröffentlichung der Ergebnisse findet man in [26], [25]
+und [24]. In den Experimenten werden folgende Vorbedingungen in {cite}`hukkaMathematicalModelMould1999` vorausgesetzt:
 
 • Die Proben erreichen die Ausgleichsfeuchte ohne Verzögerung. Die Größe der Versuchsstücke ist demnach als
 vernachlässigbar klein zu betrachten und auch die Verzögerung zur Herstellung des Feuchtegleichgewichtes in den
@@ -205,7 +236,8 @@ than 10%)
 3 some growth detected visually 4 visually detected coverage more than 10% 5 visually detected coverage more than 50% 6
 visually detected coverage 100%"
 
-Für das mathematische Modell ist diese Skala nicht auf ganzzahlige Werte beschränkt. {cite}`hukkaMathematicalModelMould1999`
+Für das mathematische Modell ist diese Skala nicht auf ganzzahlige Werte beschränkt.
+{cite}`hukkaMathematicalModelMould1999`
 
 #### Modell Entwicklung
 
@@ -256,7 +288,8 @@ Des Weiteren ist das maximal mögliche Schimmelpilzwachstum nach oben hin auch b
 bestmöglichen Konditionen. können nach 3.79 für die untere Schranke Mmax = 1 bei zugehöriger relativer RH unabhängig von
 der Zeit und für die obere Schranke Mmax = 6 bei 100% relativer Luftfeuchtigkeit angegeben werden. Wobei bei Mmax = 6,
 in einem Temperaturbereich von 0-50°C, die gesamte Oberfläche irgendwann von Schimmel bedeckt sein wird. Zwischen diesen
-beiden Fixpunkten besagen Experimente, dass der Mould Index eine parabolische Funktion, nach 3.80, annimmt. {cite}`hukkaMathematicalModelMould1999`
+beiden Fixpunkten besagen Experimente, dass der Mould Index eine parabolische Funktion, nach 3.80, annimmt.
+{cite}`hukkaMathematicalModelMould1999`
 
 ```{figure} img/Konvektion/mould_temp.png
 ---
@@ -271,17 +304,18 @@ $$ M_{max} = 1 + 7\cdot \frac{RH_{crit} - RH}{RH_{crit} - 100} - 2\cdot \left(\f
 
 Somit kann nach 3.80 interpretiert werden, dass RHcrit nicht nur von der Temperatur sondern auch vom Mould Index selber
 abhängig ist. Zu dieser Erkenntnis kann man kommen, wenn man 3.80 nach RH löst, womit nun ein Zusammenhang zwischen
-einem für ein Mmax benötigtes temperaturabhängiges RH hergestellt werden kann. 3.7 {cite}`hukkaMathematicalModelMould1999`
+einem für ein Mmax benötigtes temperaturabhängiges RH hergestellt werden kann. 3.7
+{cite}`hukkaMathematicalModelMould1999`
 
 **Wachtumsrate bei günstigen Bedingungen**
 
 Das hier vorgestellte mathematische Modell bildet das Wachstum des Schimmelpilzes nicht in den Zellen der Versuchskörper
 ab, da die Proben nur visuell überprüft wurden. Des Weiteren kommt es bei der Berechnung nicht zu einer genauen
 Abbildung der während der Studie beobachteten Veränderungen des Schimmelpilzbefalles der Oberfläche. Somit ist der Mould
-Index als ein mögliches Maß an Aktivität des Schimmelpilzes an der Holzoberfläche zu interpretieren. {cite}`hukkaMathematicalModelMould1999` Als Grundlage
-des Wachstums Modelles stellt Viitanen in [24] die Regressionsgleichung nach 3.81 vor und beschreibt damit die Zeit (in
-Wochen) die benötigt wird, um bei konstanter Temperatur und Feuchtebedingungen das Schimmelpilzwachstum in Gang zu
-setzen. {cite}`hukkaMathematicalModelMould1999`
+Index als ein mögliches Maß an Aktivität des Schimmelpilzes an der Holzoberfläche zu interpretieren.
+{cite}`hukkaMathematicalModelMould1999` Als Grundlage des Wachstums Modelles stellt Viitanen in [24] die
+Regressionsgleichung nach 3.81 vor und beschreibt damit die Zeit (in Wochen) die benötigt wird, um bei konstanter
+Temperatur und Feuchtebedingungen das Schimmelpilzwachstum in Gang zu setzen. {cite}`hukkaMathematicalModelMould1999`
 
 $$t_{m} = \exp(-0.68\cdot \ln T - 13.9\cdot \ln RH + 0.14\cdot W - 0.33\cdot SQ + 66.02) $$
 
@@ -311,7 +345,8 @@ $$k_{1} = \begin{cases}1&\text{wenn $ M<1 $}\\\frac{2}{t_{v}/t_{m}-1}&\text{wenn
 
 Obwohl 3.84 sich auf konstante Bedingungen bezieht haben Experimente gezeigt, dass der Korrekturkoeffizient auch für
 fluktuierende Bedingungen gilt, so lange diese vorteilhaft für das Wachstum sind. Somit kann gesagt werden, dass k1 für
-die gesamte Bandbreite ab dem Zeitpunkt der Schimmelpilz sichtbar ist, also M > 1, gilt. {cite}`hukkaMathematicalModelMould1999`
+die gesamte Bandbreite ab dem Zeitpunkt der Schimmelpilz sichtbar ist, also M > 1, gilt.
+{cite}`hukkaMathematicalModelMould1999`
 
 Unter der Annahme, dass die Wachstumsrate sich um 10% bei Annäherung an den oberen Grenzwert 3.80 verlangsamt, kann
 dieser Umstand auch durch einen Korrekturkoeffizienten k2 erfasst werden.
@@ -352,7 +387,8 @@ $}\\-0.016&\text{wenn $ t-t_{1}> 24\ h $}\end{cases}$$
 Die experimentellen Ergebnisse für 3.87 decken Trockenzeiten zwischen 6 Stunden und 14 Tagen ab, jedoch stützt sich die
 Gleichung nur auf eine kleine Anzahl von Experimenten und ist somit nur zum Teil aussagekräftig. Der Einfluss von
 längeren Trockenzeiten und der von Temperaturen unter 0 °C ist noch wenig erforscht, somit ist die Anwendung von 3.87
-zwar für solche Situationen möglich, die Ergebnisse sollten aber hinterfragt werden. {cite}`hukkaMathematicalModelMould1999`
+zwar für solche Situationen möglich, die Ergebnisse sollten aber hinterfragt werden.
+{cite}`hukkaMathematicalModelMould1999`
 
 #### Vergleich der Ergebnisse des Modelles mit experimentellen Daten
 
@@ -368,12 +404,13 @@ Ergebnisse zeigen den Mittelwert von 6 parallel gemessenen Proben. Man kann erke
 Fehler zu sehen sind und bei den Vergleichen der Zeitdauer bis Schimmelpizlwachstum einsetzt die Fehler kleiner als 25%
 sind. Es sind auch einige sehr große Fehlerwerte zu erkennen, wodurch man darauf schließen kann, dass ein Modell mit nur
 wenigen numerischen Parametern nicht ausreichend ist um über den gesamten Temperaturbereich und den der relativen
-Luftfeuchtigkeit, vor allem bei höheren Temperaturen, Aussagen über das Schimmelpilzwachstum zu treffen. {cite}`hukkaMathematicalModelMould1999` Abbildung
-3.13 zeigt einen Vergleich bei veränderlichen Bedingungen der Luftfeuchtigkeit. Dabei wurde die relative
-Luftfeuchtigkeit zwischen 75% und 95% gehalten und ein periodischer Wechsel beider Luftfeuchtigkeiten zwischen 6 und 196
-Stunden durchgeführt. Die Temperatur wurde konstant bei 20 °C gehalten. 80 % der simulierten Punkte weisen einen Fehler
-des Einsatzzeitpunktes von weniger als 25 % auf. Der durchschnittliche Fehler in der simulierten Einsatzzeit beträgt 1%,
-somit kann man darauf schließen, dass das Modell frei von systematischen Fehlern ist. {cite}`hukkaMathematicalModelMould1999`
+Luftfeuchtigkeit, vor allem bei höheren Temperaturen, Aussagen über das Schimmelpilzwachstum zu treffen.
+{cite}`hukkaMathematicalModelMould1999` Abbildung 3.13 zeigt einen Vergleich bei veränderlichen Bedingungen der
+Luftfeuchtigkeit. Dabei wurde die relative Luftfeuchtigkeit zwischen 75% und 95% gehalten und ein periodischer Wechsel
+beider Luftfeuchtigkeiten zwischen 6 und 196 Stunden durchgeführt. Die Temperatur wurde konstant bei 20 °C gehalten. 80
+% der simulierten Punkte weisen einen Fehler des Einsatzzeitpunktes von weniger als 25 % auf. Der durchschnittliche
+Fehler in der simulierten Einsatzzeit beträgt 1%, somit kann man darauf schließen, dass das Modell frei von
+systematischen Fehlern ist. {cite}`hukkaMathematicalModelMould1999`
 
 ```{figure} img/Konvektion/calc_sim_const.png
 ---
@@ -390,17 +427,19 @@ Temperatur- und Feuchtigkeitsgeschichten auch unter Berücksichtigung von Trocke
 Parameter gelten nur für reines Kiefer- oder Fichtenholz und versuchen die durchschnittliche Materialantwort auf
 Grundlage einer kleinen Versuchsprobenmenge nachzubilden. Die Materialantwort unterscheidet sich jedoch zu gleichen
 Teilen in den verschiedenen Proben aus verschiedenen Stämmen der gleichen Holzart wie in verschiedenen Proben
-verschiedener Holzarten. Somit wird in  {cite}`hukkaMathematicalModelMould1999` darauf verwiesen, dass es möglich sein sollte durch Korrekturkoeffizienten
-andere Holzarten abzubilden. Diese These wurde mit {cite}`ojanenClassificationMaterialSensitivity2011` erweitert und ermöglichte die Darstellung des
-Verrottungsverhaltens anderer Materialien auf Grundlage des hier vorgestellten Modelles, worauf im weiteren Verlauf
-dieses Kapitels noch eingegangen wird. {cite}`hukkaMathematicalModelMould1999`
+verschiedener Holzarten. Somit wird in {cite}`hukkaMathematicalModelMould1999` darauf verwiesen, dass es möglich sein
+sollte durch Korrekturkoeffizienten andere Holzarten abzubilden. Diese These wurde mit
+{cite}`ojanenClassificationMaterialSensitivity2011` erweitert und ermöglichte die Darstellung des Verrottungsverhaltens
+anderer Materialien auf Grundlage des hier vorgestellten Modelles, worauf im weiteren Verlauf dieses Kapitels noch
+eingegangen wird. {cite}`hukkaMathematicalModelMould1999`
 
 Die für das Modell durchgeführten Versuche decken Temperaturen zwischen 5 und 40 °C und relative Luftfeuchtigkeiten von
 75 bis 100 % ab. Die Expositionszeit bei konstanten Bedingungen betrug mindestens 12 Wochen und bei veränderlichen 6
 oder 24 Wochen. Diese Zeitfenster sind wesentlich geringer als die Zeiten die mit Hilfe dieses Modells normalerweise
 simuliert werden. Dadurch ist eine Extrapolation der experimentellen Ergebnisse notwendig, wodurch sich eine gewisse
 Unsicherheit bei Betrachtung solcher Situation durch das Modell ergibt. Gerade die Versuche unter veränderlichen
-Bedingungen bedürfen einer Revision, da die numerische Lösung in 3.87 noch nicht zufriedenstellend ist. {cite}`hukkaMathematicalModelMould1999`
+Bedingungen bedürfen einer Revision, da die numerische Lösung in 3.87 noch nicht zufriedenstellend ist.
+{cite}`hukkaMathematicalModelMould1999`
 
 Mmax in 3.80 wurde aus Ergebnissen unter konstanten Bedingungen für die Luftfeuchtigkeit abgeleitet. Es ist bekannt,
 dass dieser Parameter unter veränderlichen Bedingungen geringer ist, jedoch gibt es bisher keine Aussagen über einen
@@ -433,9 +472,10 @@ Vergleich der gemessenen und simulierten Zeitdauer um Schimmelpilzwachstum bei F
 
 ### Erweiterung des Modelles auf andere Materialien
 
-Aufbauend auf dem eben vorgestellten Modell zur Beurteilung des Schimmelpilzwachstums auf Holzoberflächen  {cite}`hukkaMathematicalModelMould1999` wurde das
-Modell zur Berechnung anderer Materialien erweitert und die Entwicklungen in {cite}`ojanenClassificationMaterialSensitivity2011` zusammengefasst. Hier wird ein
-Überblick der Ergebnisse aus {cite}`ojanenClassificationMaterialSensitivity2011` gegeben.
+Aufbauend auf dem eben vorgestellten Modell zur Beurteilung des Schimmelpilzwachstums auf Holzoberflächen
+{cite}`hukkaMathematicalModelMould1999` wurde das Modell zur Berechnung anderer Materialien erweitert und die
+Entwicklungen in {cite}`ojanenClassificationMaterialSensitivity2011` zusammengefasst. Hier wird ein Überblick der
+Ergebnisse aus {cite}`ojanenClassificationMaterialSensitivity2011` gegeben.
 
 ```{figure} img/Konvektion/mould_surf_qual.png
 ---
@@ -458,8 +498,8 @@ Kiefer-Splintholz verwendet. {cite}`ojanenClassificationMaterialSensitivity2011`
 #### Verbesserung des Modelles für Schimmelpilzwachstum
 
 Die Überlegung bestand darin das schon bestehende Modell durch Adaption der Wachstumsraten verschiedener Materialien zu
-erweitern. Dies bedurfte der Einführung von Sensitivitätsklassen um das unterschiedliche Materialverhalten
-abzubilden. {cite}`ojanenClassificationMaterialSensitivity2011`
+erweitern. Dies bedurfte der Einführung von Sensitivitätsklassen um das unterschiedliche Materialverhalten abzubilden.
+{cite}`ojanenClassificationMaterialSensitivity2011`
 
 #### Anpassung des Mould Index
 
@@ -489,7 +529,8 @@ Angepasster Mould Index. {cite}`ojanenClassificationMaterialSensitivity2011`
 Die untere Grenze der relativen Luftfeuchtigkeit für das Wachstum von Schimmelpilzen bei empfindlichen Materialien nach
 mehreren Monaten, wie beispielsweise Holz, beträgt 80%. Die durch die große Anzahl an Versuche, vorgeschlagenen Grenzen
 der relativen Luftfeuchtigkeit anderer Materialien sind weiterhin Approximationen, korrespondieren aber besser mit der
-eigentlichen Materialantwort. Für resistentere Materialien wurde die Grenze auf 85% RH gesetzt. {cite}`ojanenClassificationMaterialSensitivity2011`
+eigentlichen Materialantwort. Für resistentere Materialien wurde die Grenze auf 85% RH gesetzt.
+{cite}`ojanenClassificationMaterialSensitivity2011`
 
 #### Intensität des Schimmelpilzwachstums
 
@@ -521,7 +562,8 @@ Darin steht W für die Holzart (0=Kiefer, 1=Fichte), SQ für die Oberflächenqua
 Wachstums. Letzteren beiden Koeffizienten, dabei steht k1 für die Intensität des Schimmelpilzwachstums und k2 für die
 Dämpfung des Wachstums bei Annäherung an den maximalen Wert des Mould Indexes, werden am angepassten Modell herangezogen
 um das Verhalten unterschiedlicher Materialien zu beschreiben. Da das Referenzmaterial bei der Simulation anderer
-Baustoffe Kiefer mit einer sägerauhen Oberfläche ist, sind W = 0 und SQ = 0 zu setzen. {cite}`ojanenClassificationMaterialSensitivity2011`
+Baustoffe Kiefer mit einer sägerauhen Oberfläche ist, sind W = 0 und SQ = 0 zu setzen.
+{cite}`ojanenClassificationMaterialSensitivity2011`
 
 Die Versuche führten zu neuen Gleichungen 3.89 und 3.90 für den Intensitätskoeffizienten k1, wobei der Index pine in den
 Gleichungen für das Referenzmaterial Kiefer steht.
@@ -534,10 +576,11 @@ $$ k_{1} = 2\cdot \frac{(t_{M=3,pine} - t_{M=1,pine})}{(t_{M=3} - t_{M=1})}\ wen
 
 Wobei tM=1 die Zeit beschreibt die benötigt wird bis das Wachstum einsetzt (ergo M = 1 erreicht wird) und tM=3 für die
 Zeit steht die benötigt wird um M = 3 zu erreichen. k1 wurde für jedes Material in den Versuchen gelöst, was in
-Abbildung 3.16 dargestellt wurde. {cite}`ojanenClassificationMaterialSensitivity2011` Um die Handhabbarkeit dieser neuen Daten zu gewährleisten, wurden
-Sensitivitätsklassen im Bezug auf das Schimmelpilzwachstum für die Materialien, in Tabelle 3.2 zu sehen, eingeführt.
-Durch die kleine Anzahl der Versuchsproben liegt der Einteilung keine statistische Auswertung zu Grunde, sondern eine
-Abschätzung durch die Versuchsergebnisse. Die für k1 bestimmten Werte können 3.17 entnommen werden. {cite}`ojanenClassificationMaterialSensitivity2011`
+Abbildung 3.16 dargestellt wurde. {cite}`ojanenClassificationMaterialSensitivity2011` Um die Handhabbarkeit dieser neuen
+Daten zu gewährleisten, wurden Sensitivitätsklassen im Bezug auf das Schimmelpilzwachstum für die Materialien, in
+Tabelle 3.2 zu sehen, eingeführt. Durch die kleine Anzahl der Versuchsproben liegt der Einteilung keine statistische
+Auswertung zu Grunde, sondern eine Abschätzung durch die Versuchsergebnisse. Die für k1 bestimmten Werte können 3.17
+entnommen werden. {cite}`ojanenClassificationMaterialSensitivity2011`
 
 ```{figure} img/Konvektion/k_coeff.png
 ---
@@ -568,10 +611,11 @@ $$ M_{max} = A + B\cdot \frac{RH_{crit} - RH}{RH_{crit} - 100} - C\cdot \left(\f
 
 Hierbei hängen die Koeffizienten A, B und C von den Material Klassen ab und RHcrit ist weiterhin der Wert der relativen
 Luftfeuchtigkeit bei der gerade das Schimmelpilzwachstum einsetzt. Somit geht Mmax mit der Berücksichtigung der
-Sensitivitätsklassen in k2 ein und hat einen direkten Einfluss auf das Simulationsergebnis. {cite}`ojanenClassificationMaterialSensitivity2011` Für die Verwendung der
-eben genannten Faktoren wurden die Materialien in Sensitivitätsgruppen zusammengefasst die den jeweiligen Koeffizienten
-bestimmte Werte zuordnen. Eine Übersicht dieser Zuordnung ist in 3.3 zusammengestellt, diese Parameter lagen auch der
-Modellstudie zu Grunde. {cite}`ojanenClassificationMaterialSensitivity2011`
+Sensitivitätsklassen in k2 ein und hat einen direkten Einfluss auf das Simulationsergebnis.
+{cite}`ojanenClassificationMaterialSensitivity2011` Für die Verwendung der eben genannten Faktoren wurden die
+Materialien in Sensitivitätsgruppen zusammengefasst die den jeweiligen Koeffizienten bestimmte Werte zuordnen. Eine
+Übersicht dieser Zuordnung ist in 3.3 zusammengestellt, diese Parameter lagen auch der Modellstudie zu Grunde.
+{cite}`ojanenClassificationMaterialSensitivity2011`
 
 ```{figure} img/Konvektion/k_diag.png
 ---
@@ -592,19 +636,22 @@ Parameter für die unterschiedlichen Sensitivitätsklassen. {cite}`ojanenClassif
 #### Verbesserter Abfall des Mould Index
 
 Es erfolgte auch eine Verbesserung von 3.87 zur Berücksichtigung unvorteilhafter Bedingungen des Schimmelpilzwachstums.
-Ermittelt wurde der in 3.93 dargelegte Zusammenhang aus einem zyklischen Wechsel der Feuchtigkeitsbedingungen. {cite}`ojanenClassificationMaterialSensitivity2011`
+Ermittelt wurde der in 3.93 dargelegte Zusammenhang aus einem zyklischen Wechsel der Feuchtigkeitsbedingungen.
+{cite}`ojanenClassificationMaterialSensitivity2011`
 
 $$ \frac{dM}{dt} = \begin{cases}-0.000133&\text{wenn $ t-t_{1}\leq 6\ h $}\\ 0&\text{wenn $ 6\ h \leq t-t_{1}\leq 24\ h
 $}\\-0.000667&\text{wenn $ t-t_{1}> 24\ h $}\end{cases} $$
 
 Wobei M den Mould Index und t die Zeit beschreibt, die seit t1 vergangen ist, wo die Bedingungen an der kritischen
-Oberfläche ein visuell sichtbares Wachstum ermöglichten. {cite}`ojanenClassificationMaterialSensitivity2011` Der Rückgang des Wachstums für andere Materialien dM dt mat
-wird durch Hinzunahme eines Relativitätskoeffizienten Cmat beschrieben mit dessen Hilfe weiterhin das ursprüngliche
-Modell für Holz verwendet werden kann. {cite}`ojanenClassificationMaterialSensitivity2011`
+Oberfläche ein visuell sichtbares Wachstum ermöglichten. {cite}`ojanenClassificationMaterialSensitivity2011` Der
+Rückgang des Wachstums für andere Materialien dM dt mat wird durch Hinzunahme eines Relativitätskoeffizienten Cmat
+beschrieben mit dessen Hilfe weiterhin das ursprüngliche Modell für Holz verwendet werden kann.
+{cite}`ojanenClassificationMaterialSensitivity2011`
 
 $$ \frac{dM}{dt}_{mat} = C_{mat}\cdot v\frac{dM}{dt}_{0} $$
 
-Die Versuchsergebnisse die der Ermittelung von Cmat zu Grunde liegen sind in Abbildung 3.18 dargestellt. {cite}`ojanenClassificationMaterialSensitivity2011`
+Die Versuchsergebnisse die der Ermittelung von Cmat zu Grunde liegen sind in Abbildung 3.18 dargestellt.
+{cite}`ojanenClassificationMaterialSensitivity2011`
 
 ```{figure} img/Konvektion/cmat_mould.png
 ---
@@ -628,11 +675,12 @@ Das angepasste Modell wurde mit den Versuchsergebnissen längerer Versuchsstudie
 den Berechnungen zu Grunde gelegt wurden und die Evaluation des mathematischen Modelles sind Abbildung 3.19, 3.20 und
 3.21 zu entnehmen. Es wurden bei dem Versuch die Bedingungen an der kritischen Oberfläche zwischen beiden Materialien
 gemessen. Um das Schimmelpilzwachstum an der Schnittstelle beider Oberflächen darzustellen wurde eine Mischung aus
-Kombinationen zwischen den Sensitivitätsklassen und maximal möglichem Wachstum der Klassen gewählt. {cite}`ojanenClassificationMaterialSensitivity2011` Es zeigte sich,
-dass an den Schichtgrenzen das Schimmelpilzwachstum bei Wahl der sensibleren Sensitivitätsklasse ßensible"besser mit den
-Versuchsergebnissen korrespondierte. Das maximalen Maß an Schimmel hängt vom Grundmaterial ab. Der Dämpfungsbeiwert für
-das Wachstum wurde mit 0.25 gewählt. Es konnte eine relativ gute Korrelation des verbesserten Modelles gezeigt werden,
-wo auch in den kälteren Perioden die simulierten Werte wenig von den gemessenen abweichen. {cite}`ojanenClassificationMaterialSensitivity2011`
+Kombinationen zwischen den Sensitivitätsklassen und maximal möglichem Wachstum der Klassen gewählt.
+{cite}`ojanenClassificationMaterialSensitivity2011` Es zeigte sich, dass an den Schichtgrenzen das Schimmelpilzwachstum
+bei Wahl der sensibleren Sensitivitätsklasse ßensible"besser mit den Versuchsergebnissen korrespondierte. Das maximalen
+Maß an Schimmel hängt vom Grundmaterial ab. Der Dämpfungsbeiwert für das Wachstum wurde mit 0.25 gewählt. Es konnte eine
+relativ gute Korrelation des verbesserten Modelles gezeigt werden, wo auch in den kälteren Perioden die simulierten
+Werte wenig von den gemessenen abweichen. {cite}`ojanenClassificationMaterialSensitivity2011`
 
 ```{figure} img/Konvektion/sim_exp_beton.png
 ---
@@ -658,15 +706,77 @@ Schimmelpilzwachstums bei Berücksichtigung der jeweiligen Materialien möglich.
 kritischen Werte der relativen Luftfeuchtigkeit, welche benötigt wird für die Beschreibung des Wachstums und Rückgangs
 des Mould Index bei kalten oder trockenen Perioden. Damit ist allgemein eine bessere Aussage über den Einsatz und
 Verlauf des Schimmelpilzwachstums auf Materialober- und Grenzflächen zwischen Materialien möglich. Eine weitere
-Verbesserung besteht nun in der Auswahl der entsprechenden Sensitivitätsklassen für die verschiedenen Materialien. {cite}`ojanenClassificationMaterialSensitivity2011`
+Verbesserung besteht nun in der Auswahl der entsprechenden Sensitivitätsklassen für die verschiedenen Materialien.
+{cite}`ojanenClassificationMaterialSensitivity2011`
 
 ## Nachweis der Holzverrottung
 
+Zum Nachweis der Holzverrottung kann beispielsweise das Modell von Viitanen {cite}`ModellingDurabilityWooden` oder auch
+das in den WTA-Merkbättern beschriebene verwendet werden {cite}`FeuchtetechnischeBewertungHolzbauteilen`. Hier wird das
+Modell aus den WTA-Merkblättern vorestellt.
+
+**Für den vereinfachten Nachweis der Verrottung gilt:**
+
+> Die relative Porenluftfeucte im Massivholzprodukt darf 95 % bei 0 °C und 86 % bei 30 °C
+> im Tagesmittel nicht überschreiten. {cite}`FeuchtetechnischeBewertungHolzbauteilen`
+
+```{figure} img/Konvektion/verrottung.png
+---
+height: 350px
+name: verrottung
+---
+Ausschnitt der Darstellung im WTA-Merkblatt für den Nachweis für Verrottung.
+```
+
+Eine Auswertung einer hygrothermischen Simulation für den Nachweis eines fehlerhaften Flachdaches mittels diesem
+Verfahren ist in {numref}`verrottung_num` zu sehen.
+
+```{figure} img/Konvektion/verrottung_num.png
+---
+height: 350px
+name: verrottung_num
+---
+Auswertung einer hygrothermischen Simulation für den Nachweis eines fehlerhaften Flachdaches mittels WTA-Merkblatt-
+Verfahren für die Verrottung von MAssivholz.
+```
+
 ## Nachweis der Tragfähigkeit
+
+Zum Nachweis der Tragfähigkeit von Bauteilen aus Holz kann das in den WTA-Merkbättern beschriebene Verfahren verwendet
+werden {cite}`FeuchtetechnischeBewertungHolzbauteilen`.
+
+**Für den vereinfachten Nachweis der Tragfähigkeit gilt:**
+
+> Bauteile aus Holz und Holzwerkstoffe werden in Abhängigkeit ihrer Umgebungsbedingungen in Nutzungsklassen gemäß EN
+> 1995-1-1 eingestuft. Die Verwendbarkeit der Bauprodukte ist entsprechend dieser Nutzungsklassen sicherzustellen. So darf
+> beispielsweise in der Nutzungsklasse 2 die maximale Materialfeuchte (Tagesmittelwert) be Holzwerkstoffen 18 M-% nicht
+> übersteigen. Eine vorübergehende Auffeuchtung auf 20 M-% (Holzwerkstoffe) kann im ersten Jahr toleriert werden, sofern
+> diese innerhalb von 3 Monaten rücktrocknen kann und die Anforderungen der Gebrauchstauglichkeit erfüllt werden.
+
+Die Massenprozent für ein diskretisierten Element $i$ der Simulaiton lassen sich mittels
+
+$$ M-\% = \frac{w_{i}}{\rho_{i}} $$
+
+berechnen. Dabei steht $w_{i}$ für den Wassergehalt und \rho_{i} die Dichte in jeweils kg/m³.
+
+```{figure} img/Konvektion/tragf_num.png
+---
+height: 350px
+name: tragf_num
+---
+Auswertung einer hygrothermischen Simulation für den Nachweis eines fehlerhaften Flachdaches mittels WTA-Merkblatt-
+Verfahren für die Tragfähigkeit.
+```
+
+```{note}
+Die Zusammenfassung der wichtigsten Eckpunkte zum Nachweis Holzverrottung und Tragfähigkeit kann in dem entsprechenden
+WTA-Merkblatt {cite}`FeuchtetechnischeBewertungHolzbauteilen` gefunden werden.
+```
 
 ## Angaben im Bericht
 
-In ÖNORM 8110-2:2020 werden Ihnen inhaltliche Vorgaben bzgl. Ihres technischen Berichtes gemacht.
+In ÖNORM 8110-2:2020 werden Ihnen inhaltliche Vorgaben bzgl. Ihres technischen Berichtes gemacht die es einzuhalten
+gilt:
 
 - Darstellung des zugrunde gelegten Planungsstandes
 - Standort

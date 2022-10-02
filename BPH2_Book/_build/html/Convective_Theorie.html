@@ -432,7 +432,7 @@ werden.</p>
 <p>Ähnlich zu den Formulierungen für die Wärme- und Feuchtestromdichte, kann auch die Massenstromdichte zu Folge
 Luftströmung mit Hilfe Darcy’s Gesetz definiert werden. Wir betrachten hier die Formulierung ohne Berücksichtigung des
 Auftriebs, für den Fall, dass der Auftrieb einen maßgebenden Einfluss hat, kann das Gesetz laut
-<span id="id1">[<a class="reference internal" href="References.html#id17" title="J. Wang and C. E. Hagentoft. A numerical method for calculating combined heat, air and moisture transport in building envelope components. Nordic Journal of Building Physics, 2001.">Wang and Hagentoft, 2001</a>]</span> erweitert werden.</p>
+<span id="id1">[<a class="reference internal" href="References.html#id21" title="J. Wang and C. E. Hagentoft. A numerical method for calculating combined heat, air and moisture transport in building envelope components. Nordic Journal of Building Physics, 2001.">Wang and Hagentoft, 2001</a>]</span> erweitert werden.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Später werden wir sehen, dass diese Formulierung nicht nur zur Beschreibung poröser Materialien verwendet werden kann,
@@ -463,7 +463,7 @@ Differentialoperator</p>
 <p class="admonition-title">Note</p>
 <p>Auf Grund der bauphysikalischen Relevanz beschäftigen wir uns vorrangig mit Massenströmen deren Gas aus Luft besteht.
 Entsprechende Anpassung der Parameter ermöglichen auch die Abbildung anderer Fluide oder Gase.
-<span id="id2">[<a class="reference internal" href="References.html#id8" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></p>
+<span id="id2">[<a class="reference internal" href="References.html#id9" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></p>
 </div>
 </section>
 <section id="erweiterung-der-diffusiven-grundgleichungen-um-ihre-konvektiven-therme">
@@ -492,10 +492,11 @@ Temperatur in Kelvin.</p>
 auf</p>
 <div class="math notranslate nohighlight" id="equation-g-ges-eq">
 <span class="eqno">(34)<a class="headerlink" href="#equation-g-ges-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v\]</div>
-<p>Einsetzen in Gleichung <code class="xref eq docutils literal notranslate"><span class="pre">w_eq</span></code> führt auf die <strong>beschreibende partielle Differentialgleichung des Feuchtefeldes:</strong></p>
+<p>Einsetzen in Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-w-eq">(15)</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Feuchtefeldes:</strong></p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned} \frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$(
-w_eq)\\$$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) \end{aligned}\end{align} \]</div>
+\[\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m \]</div>
+<div class="math notranslate nohighlight">
+\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) \]</div>
 <div class="math notranslate nohighlight">
 \[ Q_{cd} = c_{pa} \dot{M}_{a} \frac{T_{ } e^{L/\ell} - T_{2}}{e^{L/\ell} -1} \]</div>
 <div class="math notranslate nohighlight">
@@ -530,7 +531,7 @@ e^{-x/\ell} \,dx\]</div>
 <p>Bauteile können durch witteriche Exposition während der Bauzeit, Abweichungen der Ausführung von der ideellen Planung
 oder unbeabsichtlichten Ausführungsfehlern immer wieder unvorhergesehenen hygrothermischen Belastungen ausgesetzt sein.
 Eine für die bauphysikalische Planung adaptierte Einstufung von Unsicherheiten wurde in
-<span id="id3">[<a class="reference internal" href="References.html#id4" title="T. Bednar and C. E. Hagentoft. Risk management by probabilistic assessment. Development of guidelines for practice, IEA Annex 55, RAP-RETRO. 2015.">Bednar and Hagentoft, 2015</a>]</span> nach <span id="id4">Mcmanus and Hastings [<a class="reference internal" href="References.html#id11" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> vorgestellt:</p>
+<span id="id3">[<a class="reference internal" href="References.html#id4" title="T. Bednar and C. E. Hagentoft. Risk management by probabilistic assessment. Development of guidelines for practice, IEA Annex 55, RAP-RETRO. 2015.">Bednar and Hagentoft, 2015</a>]</span> nach <span id="id4">Mcmanus and Hastings [<a class="reference internal" href="References.html#id13" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> vorgestellt:</p>
 <blockquote>
 <div><p>“<strong>Lack of knowledge</strong> is defined as facts that are unknown or known only imprecisely that is needed to assess performance of the concept: examples include prior
 building usage, possible salt contents, etc.</p>
@@ -552,7 +553,7 @@ that might intrude a construction, destruction by sabotage or climate change.</p
 very conservative mitigation strategy might help to handle current unknown aspects
 in the future.”</p>
 </div></blockquote>
-<p>Diese zu erwartenden Ungewissheiten können nach <span id="id5">Mcmanus and Hastings [<a class="reference internal" href="References.html#id11" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> als “Known
+<p>Diese zu erwartenden Ungewissheiten können nach <span id="id5">Mcmanus and Hastings [<a class="reference internal" href="References.html#id13" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> als “Known
 Unknowns” deklariert werden. Um diese “Known Unknowns” in hygrothermischen Berechnungen zu berücksichtigen hat sich der
 Begriff der Fehlertoleranz in der bauphysikalischen Bemessung etabliert. Das Konzept der Fehlertoleranz einer
 Baukonstruktion lässt sich mittels der von <span id="id6">Bednar [<a class="reference internal" href="References.html#id5" title="Thomas Bednar. Von der hygrothermischen Bauteilsimulation zum Risikomanagement in der Bauphysik. In Bauinstandsetzen Und Bauphysik. Gestern - Heute - Morgen. Stuttgart, 2016. Fraunhofer IRB Verlag.">2016</a>]</span>

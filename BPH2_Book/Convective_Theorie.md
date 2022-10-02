@@ -90,8 +90,7 @@ $$ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v$$(g_ge
 
 Einsetzen in Gleichung {eq}`w_eq` führt auf die **beschreibende partielle Differentialgleichung des Feuchtefeldes:**
 
-$$ \frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$(
-w_eq)
+$$\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$
 
 $$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) $$
 
@@ -127,7 +126,7 @@ $$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\el
 ## Fehlertoleranz von Bauteilen
 
 Bauteile können durch witteriche Exposition während der Bauzeit, Abweichungen der Ausführung von der ideellen Planung
-oder unbeabsichtlichten Ausführungsfehlern immer wieder unvorhergesehenen hygrothermischen Belastungen ausgesetzt sein.
+oder unbeabsichtigten Ausführungsfehlern immer wieder unvorhergesehenen hygrothermischen Belastungen ausgesetzt sein.
 Eine für die bauphysikalische Planung adaptierte Einstufung von Unsicherheiten wurde in
 {cite}`bednarRiskManagementProbabilistic2015` nach {cite:t}`mcmanusFrameworkUnderstandingUncertainty2007` vorgestellt:
 
@@ -175,5 +174,35 @@ Bei der Nachweisführung von Bauteilen findet sich diese Konzept normativ gerege
 - dem Ansetzen von künstlichen [Luftpfaden](LPF) oder
 - Vereinfachungen in der Berechnung um auf der sicheren Seite zu bleiben (z.B. Vernachlässigung der solaren Strahlung).
 
-
 ## Luftvolumenstromkoeffzienten - Hintergrund
+
+Der Ursprung der in ÖNORM 8110-2:202 angeführten Luftvolumenstromkoeffizienten zu Definition von [Leckange](LPF) liegt
+in {cite}`nusserProposalModifiedGlaserMethod2011` wo erstmals ein adabptiertes Glaserverfahren vorgestellt wird um den
+konvektiven Transport von Wärme- und Feuchtigkeit zu berücksichtigen. Diese Berücksichtigung soll, abhängig von der
+Ausführungsqualität, es ermöglichen die Anfälligkeit eines Bauteiles auf Fehler zu erfassen.
+
+```{note}
+Mann könnte auch sagen, dass die Anfälligkeit eines Bauteiles im Umkehrschluss der Kehrwert der 
+Fehlertoleranz eines Bauteiles ist.
+```
+
+Diese Kategorisierung der Ausführungsqualität wurde dann in {cite}`nusserEuroGlaserUnterBeachtung2010` nachgeschärft und
+wurde mittels F-Klassen berücksichtigt:
+
+```{figure} img/Konvektion/f_konv.png
+---
+height: 350px
+name: f_konv
+---
+Kategorisierung der F-Klassen. {cite}`nusserEuroGlaserUnterBeachtung2010`
+```
+
+Für die Norm {cite}`ONORM811022020` wurde das Verfahren weiter präzisiert und ist nunr Tabelle 3 zu entnehmen:
+
+```{figure} img/Konvektion/luftvolstrom_koeff_tab.png
+---
+height: 200px
+name: luftvolstrom_koeff_tab
+---
+Tabelle 3 zur Definition des Luftvolumenstromkoeffzienten C.
+```

@@ -514,7 +514,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="flussigwassertransport-numerische-anwendung">
 <span id="fl-numerik"></span><h1>Flüssigwassertransport - Numerische Anwendung<a class="headerlink" href="#flussigwassertransport-numerische-anwendung" title="Permalink to this headline">¶</a></h1>
-<p>In diesem Kapitel sollen die dem Flüssigwassertransport zu Grunde liegenden Differentialgleichungen in einem einfachen numerischen Modell angewendet werden. Die verwendeten Gleichungen stützen sich auf die Ausführungen in <a class="reference internal" href="FL_Theorie.html#fl-theorie"><span class="std std-ref">Flüssigwassertransport - Theorie</span></a> und <span id="id1">[<a class="reference internal" href="References.html#id10" title="Angela Sasic Kalagasidis, Thomas Bednar, and Carl-Eric Hagentoft. The evaluation of the interface moisture conductivity between control volumes. Comparison between linear, harmonic and integral averaging. 9th International Conference on Performance of the Exterior Envelopes of Whole Buildings. Clearwater Beach, Florida, 2004, 2004.">Kalagasidis <em>et al.</em>, 2004</a>]</span>.</p>
+<p>In diesem Kapitel sollen die dem Flüssigwassertransport zu Grunde liegenden Differentialgleichungen in einem einfachen numerischen Modell angewendet werden. Die verwendeten Gleichungen stützen sich auf die Ausführungen in <a class="reference internal" href="FL_Theorie.html#fl-theorie"><span class="std std-ref">Flüssigwassertransport - Theorie</span></a> und <span id="id1">[<a class="reference internal" href="References.html#id12" title="Angela Sasic Kalagasidis, Thomas Bednar, and Carl-Eric Hagentoft. The evaluation of the interface moisture conductivity between control volumes. Comparison between linear, harmonic and integral averaging. 9th International Conference on Performance of the Exterior Envelopes of Whole Buildings. Clearwater Beach, Florida, 2004, 2004.">Kalagasidis <em>et al.</em>, 2004</a>]</span>.</p>
 <p>Die zur numerischen Lösung der beschreibenden Differentialgleichung verwendeten Bibliotheken und Funktionen können hier eingeblendet werden.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -531,11 +531,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <section id="anwendungsfall">
 <h2>Anwendungsfall<a class="headerlink" href="#anwendungsfall" title="Permalink to this headline">¶</a></h2>
-<p>Es soll die Veränderung des Wassergehaltes über die Dauer eines fiktiven eindimesionalen Aufsaugversuches in einem Probekörper nachgerechnet werden. Dieses Modell kann auch verwendet werden um den <a class="reference internal" href="LU_FL.html#lu-fl"><span class="std std-ref">Aufsaugversuch der Laborübung</span></a> vereinfacht nachzubilden. Eine schematische Darstellung des Probekörpers ist in <a class="reference internal" href="#fl-sample"><span class="std std-numref">Fig. 41</span></a> gegeben.</p>
+<p>Es soll die Veränderung des Wassergehaltes über die Dauer eines fiktiven eindimesionalen Aufsaugversuches in einem Probekörper nachgerechnet werden. Dieses Modell kann auch verwendet werden um den <a class="reference internal" href="LU_FL.html#lu-fl"><span class="std std-ref">Aufsaugversuch der Laborübung</span></a> vereinfacht nachzubilden. Eine schematische Darstellung des Probekörpers ist in <a class="reference internal" href="#fl-sample"><span class="std std-numref">Fig. 44</span></a> gegeben.</p>
 <figure class="align-default" id="fl-sample">
 <a class="reference internal image-reference" href="_images/FL_sample_scheme.png"><img alt="_images/FL_sample_scheme.png" src="_images/FL_sample_scheme.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Darstellung des Probekörpers des fiktiven Aufsaugveruches mit den beschreibenden Parametern.</span><a class="headerlink" href="#fl-sample" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Darstellung des Probekörpers des fiktiven Aufsaugveruches mit den beschreibenden Parametern.</span><a class="headerlink" href="#fl-sample" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -653,11 +653,11 @@ K_{w}(P_{suc}, n) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{n
 </section>
 <section id="numerisches-modell">
 <h2>Numerisches Modell<a class="headerlink" href="#numerisches-modell" title="Permalink to this headline">¶</a></h2>
-<p>Zur numerischen Lösung von Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp">(41)</a> muss zunächst das Intervall auf dem die Ergebnisse zu ermitteln sind in endlich viele Teilintervalle diskretisiert werden. In unserem Beispiel bedeutet das, dass unser eindimensionaler fiktiver Versuchskörper eine feste Länge erhält und diese anschließend in eine finite Anzahl aufgeteilt wird, um somit an jedem dieser Diskretisierungspunkte ein Ergebnis berechnen zu können, <a class="reference internal" href="#fl-sample-disk"><span class="std std-numref">Fig. 42</span></a>.</p>
+<p>Zur numerischen Lösung von Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp">(41)</a> muss zunächst das Intervall auf dem die Ergebnisse zu ermitteln sind in endlich viele Teilintervalle diskretisiert werden. In unserem Beispiel bedeutet das, dass unser eindimensionaler fiktiver Versuchskörper eine feste Länge erhält und diese anschließend in eine finite Anzahl aufgeteilt wird, um somit an jedem dieser Diskretisierungspunkte ein Ergebnis berechnen zu können, <a class="reference internal" href="#fl-sample-disk"><span class="std std-numref">Fig. 45</span></a>.</p>
 <figure class="align-default" id="fl-sample-disk">
 <a class="reference internal image-reference" href="_images/FL_sample_disk.png"><img alt="_images/FL_sample_disk.png" src="_images/FL_sample_disk.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Probekörper mit Diskretisierungspunkten in einem gleichmäßigen Abstand dx. Die außen liegenden Diskretisierungspunkte geben die Randbedingungen vor.</span><a class="headerlink" href="#fl-sample-disk" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Probekörper mit Diskretisierungspunkten in einem gleichmäßigen Abstand dx. Die außen liegenden Diskretisierungspunkte geben die Randbedingungen vor.</span><a class="headerlink" href="#fl-sample-disk" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Da sich für solche Diskretisierungsgitter die Arbeit mittels Matrizen anbietet, werden wir mit <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">Numpy Arrays</a>  arbeiten.</p>
@@ -747,11 +747,11 @@ K_{w}(P_{suc}, n) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{n
 <span class="eqno">(46)<a class="headerlink" href="#equation-eq-dw-dt-approx" title="Permalink to this equation">¶</a></span>\[
 \frac{\partial w}{\partial t} = - \frac{\partial K}{\partial x} \cdot \frac{\partial P_{suc}}{\partial x} + K \cdot \frac{\partial^{2} P_{suc}}{\partial x^{2}}) \approx - \frac{K_{O} - K_{U}}{2 \cdot dx} \cdot \frac{P_{O} - P_{U}}{2 \cdot dx} + K_{C} \cdot \frac{P_{O} - 2 P_{C} + P_{U}}{dx^{2}}
 \]</div>
-<p>Dabei steht der Index <span class="math notranslate nohighlight">\(O\)</span> für das obere bzw. der Index <span class="math notranslate nohighlight">\(U\)</span> für das untere angrenzende Element ausgehend vom eben betrachteten Element, Index <span class="math notranslate nohighlight">\(C\)</span> (center), dargestellt in <a class="reference internal" href="#grid-index"><span class="std std-numref">Fig. 43</span></a></p>
+<p>Dabei steht der Index <span class="math notranslate nohighlight">\(O\)</span> für das obere bzw. der Index <span class="math notranslate nohighlight">\(U\)</span> für das untere angrenzende Element ausgehend vom eben betrachteten Element, Index <span class="math notranslate nohighlight">\(C\)</span> (center), dargestellt in <a class="reference internal" href="#grid-index"><span class="std std-numref">Fig. 46</span></a></p>
 <figure class="align-default" id="grid-index">
 <a class="reference internal image-reference" href="_images/grid_index.png"><img alt="_images/grid_index.png" src="_images/grid_index.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Darstellung von 3 Elementen aus der Diskretisierung. Das zu berechnende Element ist mit dem Index <span class="math notranslate nohighlight">\(C\)</span> versehen, die angrenzenden Elemente mit dem Index <span class="math notranslate nohighlight">\(U\)</span> bzw. <span class="math notranslate nohighlight">\(O\)</span>.</span><a class="headerlink" href="#grid-index" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Darstellung von 3 Elementen aus der Diskretisierung. Das zu berechnende Element ist mit dem Index <span class="math notranslate nohighlight">\(C\)</span> versehen, die angrenzenden Elemente mit dem Index <span class="math notranslate nohighlight">\(U\)</span> bzw. <span class="math notranslate nohighlight">\(O\)</span>.</span><a class="headerlink" href="#grid-index" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Wir stellen Gleichung <a class="reference internal" href="#equation-eq-dw-dt-approx">(46)</a> zur weiteren Verwendung als Funktion dar:</p>

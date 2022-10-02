@@ -90,8 +90,7 @@ $$ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v$$(g_ge
 
 Einsetzen in Gleichung {eq}`w_eq` führt auf die **beschreibende partielle Differentialgleichung des Feuchtefeldes:**
 
-$$ \frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$(
-w_eq)
+$$\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$
 
 $$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) $$
 
@@ -174,6 +173,5 @@ Bei der Nachweisführung von Bauteilen findet sich diese Konzept normativ gerege
 - [Anfangsfeuchten](Anfangsfeuchte),
 - dem Ansetzen von künstlichen [Luftpfaden](LPF) oder
 - Vereinfachungen in der Berechnung um auf der sicheren Seite zu bleiben (z.B. Vernachlässigung der solaren Strahlung).
-
 
 ## Luftvolumenstromkoeffzienten - Hintergrund
