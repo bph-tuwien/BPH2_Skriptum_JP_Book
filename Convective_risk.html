@@ -44,6 +44,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -114,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="W%C3%A4rmebr%C3%BCcken.html">
-   Wärmebrücken
+   Einstieg ins hygrothermische Verhalten am Beispiel von Wärmebrücken
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -129,7 +130,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_risk_standards.html">
-     Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport
+     Vereinfachte Methoden zur Risikonanalyse bei Wärmebrücken
     </a>
    </li>
    <li class="toctree-l2">
@@ -138,6 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="oenorm_8110_2.html">
+   Vermeidung von Feuchteschäden ÖNORM 8110-2:2020
+  </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="Konvektiver_Transport.html">
@@ -287,22 +293,6 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book/issues/new?title=Issue%20on%20page%20%2FConvective_risk.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -436,11 +426,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nachweis-der-tragfahigkeit">
    Nachweis der Tragfähigkeit
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#angaben-im-bericht">
-   Angaben im Bericht
   </a>
  </li>
 </ul>
@@ -579,11 +564,6 @@ const thebe_selector_output = ".output, .cell_output"
    Nachweis der Tragfähigkeit
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#angaben-im-bericht">
-   Angaben im Bericht
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -711,7 +691,7 @@ darstellen:</p>
 </section>
 <section id="modifizierter-euro-glaser">
 <h2>Modifizierter Euro-Glaser<a class="headerlink" href="#modifizierter-euro-glaser" title="Permalink to this headline">¶</a></h2>
-<p>Das Modifizierte Euro-Glaser-Verfahren wurde als solches erstmals in <span id="id1">[]</span>
+<p>Das Modifizierte Euro-Glaser-Verfahren wurde als solches erstmals in <span id="id1">[<a class="reference internal" href="References.html#id18" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Euro-Glaser unter Beachtung solarer Strahlungs-/ Absportionsbedingungen sowie druckinduzierter Feuchteeinträge im Vergleich zu dynamischen Simulationen. In Third German-Austrian IBPSA Conference, 541. Wien, September 2010.">Nusser <em>et al.</em>, 2010</a>]</span>
 präsentiert:</p>
 <blockquote>
 <div><p>Im Zuge der Untersuchungen wurden 50 Einfamilienhäuser hinsichtlich der Anzahl ihrer Elektro- und
@@ -772,31 +752,30 @@ Strömungswiderstand von Bauteilen entnommen werden.</p>
 <span id="id2"></span><h2>Mould Index<a class="headerlink" href="#mould-index" title="Permalink to this headline">¶</a></h2>
 <p>Zur Bewertung und Analyse der Simulationsergebnisse in Bezug auf Schimmelpilzbildung auf Oberflächen, kann das
 VTT-Modell <span id="id3">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> herangezogen werden. In
-<span id="id4">[]</span> wird eine Zusammenfassung der Entwicklung und des theorethischen
-Hintegrundes dieses Modelles gegeben. Nachfolgende Ausführungen werden als direktes Zitat von {cite:
-t}<code class="docutils literal notranslate"><span class="pre">sarkanyHygrothermischenBauteilsimulationZur2019</span></code> übernommen.</p>
+<span id="id4">[<a class="reference internal" href="References.html#id22" title="Andreas Sarkany. Von der hygrothermischen Bauteilsimulation zur Einschätzung des Risikos eines Feuchteschadens- Implementierung der Berechnung des MouldIndex in HAM4D_VIE. Master's thesis, TU Wien, Wien, 2019.">Sarkany, 2019</a>]</span> wird eine Zusammenfassung der Entwicklung und des theorethischen
+Hintegrundes dieses Modelles gegeben. Nachfolgende Ausführungen werden als direktes Zitat von <span id="id5">Sarkany [<a class="reference internal" href="References.html#id22" title="Andreas Sarkany. Von der hygrothermischen Bauteilsimulation zur Einschätzung des Risikos eines Feuchteschadens- Implementierung der Berechnung des MouldIndex in HAM4D_VIE. Master's thesis, TU Wien, Wien, 2019.">2019</a>]</span> übernommen.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Es wurden im direkten Zitat die Referenzen <span id="id5">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> und <span id="id6">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> mit den identen Referenzen in diesem Werk ersetzt um die
+<p>Es wurden im direkten Zitat die Referenzen <span id="id6">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> und <span id="id7">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> mit den identen Referenzen in diesem Werk ersetzt um die
 weiterführende Selbstrecherche bei Bedarf zu vereinfachen.</p>
 </div>
 <section id="mould-index-nach-viitanen-ojanen-und-peuhkuri-et-al">
 <h3>Mould Index nach Viitanen, Ojanen und Peuhkuri et. al.<a class="headerlink" href="#mould-index-nach-viitanen-ojanen-und-peuhkuri-et-al" title="Permalink to this headline">¶</a></h3>
 <p>Das mathematische Modell für die Simulation des Verrottungsverhaltens von Materialien und die Einstufung des sichtbaren
 Schimmelpilzbefalles, in weiterer Folge als Mould Index bezeichnet, wurde erstmals für Materialien aus Holz in
-<span id="id7">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span>
-gezeigt und im Zuge weiterer Forschung verfeinert bis es mit <span id="id8">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> möglich
+<span id="id8">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span>
+gezeigt und im Zuge weiterer Forschung verfeinert bis es mit <span id="id9">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> möglich
 war auch das Verhalten anderer Materialien unter zu Hilfenahme diese</p>
 <p>Die approbierte gedruckte Originalversion dieser Diplomarbeit ist an der TU Wien Bibliothek verfügbar. The approved
 original version of this thesis is available in print at TU Wien Bibliothek. 34 3 Grundlagen Modelles zu beschreiben. In
 weiterer Folge wird ein Überblick über die dem Mould Index zu Grunde liegenden Berechnungsverfahren und den
-experimentellen Randbedingungen zur Evaluation dieser nach <span id="id9">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> dargelegt.</p>
+experimentellen Randbedingungen zur Evaluation dieser nach <span id="id10">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> dargelegt.</p>
 <section id="experimentelle-randbedingungen">
 <h4>Experimentelle Randbedingungen<a class="headerlink" href="#experimentelle-randbedingungen" title="Permalink to this headline">¶</a></h4>
 <p>Das experimentelle Material bestand aus kleinen Proben mit den Abmessungen 7x15x50 mm. Herangezogen wurden die
 Materialien Kiefer und Fichte, wobei nochmals unterschiedliche Oberflächenqualitäten, ofengetrocknet und sägerauh,
-betrachtet wurden. <span id="id10">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> Die Veröffentlichung der Ergebnisse findet man in [26], [25]
-und [24]. In den Experimenten werden folgende Vorbedingungen in <span id="id11">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> vorausgesetzt:</p>
+betrachtet wurden. <span id="id11">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> Die Veröffentlichung der Ergebnisse findet man in [26], [25]
+und [24]. In den Experimenten werden folgende Vorbedingungen in <span id="id12">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> vorausgesetzt:</p>
 <p>• Die Proben erreichen die Ausgleichsfeuchte ohne Verzögerung. Die Größe der Versuchsstücke ist demnach als
 vernachlässigbar klein zu betrachten und auch die Verzögerung zur Herstellung des Feuchtegleichgewichtes in den
 Holzzellen zu Folge der relativen Luftfeuchte der Umgebung.</p>
@@ -805,13 +784,13 @@ Eingabedaten mit der Oberflächentemperatur und dem Feuchtegehalt aus.</p>
 <p>• Der Schimmelpilz an der Materialoberfläche beeinflusst nicht das Verhalten des Materials gegenüber Feuchteeinflüsse,
 wie z.B. Absorptionsverhalten, etc.</p>
 <p>Die Beurteilung des Schimmelpilzwachstums erfolgte auf Grundlage eines existierenden StandardIndexes der etwas angepasst
-wurde, basierend auf dem visuell feststellbaren Ausmaßes des Wachstums. <span id="id12">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+wurde, basierend auf dem visuell feststellbaren Ausmaßes des Wachstums. <span id="id13">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <p>“[0] no growth 1 some growth detected only with microscopy 2 moderate growth detected with microscopy (coverage more
 than 10%)
 3 some growth detected visually 4 visually detected coverage more than 10% 5 visually detected coverage more than 50% 6
 visually detected coverage 100%”</p>
 <p>Für das mathematische Modell ist diese Skala nicht auf ganzzahlige Werte beschränkt.
-<span id="id13">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+<span id="id14">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 </section>
 <section id="modell-entwicklung">
 <h4>Modell Entwicklung<a class="headerlink" href="#modell-entwicklung" title="Permalink to this headline">¶</a></h4>
@@ -823,11 +802,11 @@ beeinflussbar durch die Umgebungsfeuchte. Bei geringem Feuchtegehalt ist das Was
 Wasserverfügbarkeit zu beschreiben. Sie wird als die freie Energie des Wassers in einem System relativ zu der Energie
 eines Referenz Pools aus purem Wasser definiert.[19] Die Wasseraktivität aw ist ein Maß um die Verfügbarkeit von Wasser
 zu beschreiben. Sie ist definiert als Verhältnis aus dem Wasserdampfpartialdruck p und dem Sättigungsdampfdruck p0 eines
-Systems. <span id="id14">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> [29] [10]</p>
+Systems. <span id="id15">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> [29] [10]</p>
 <figure class="align-default" id="mould-math">
 <a class="reference internal image-reference" href="_images/mould_math.png"><img alt="_images/mould_math.png" src="_images/mould_math.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Mathematischer Zusammenhang günstiger Gegebenheiten zum Einsetzen des Schimmelpilzwachstums für Materialien aus Holz. <span id="id15">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#mould-math" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Mathematischer Zusammenhang günstiger Gegebenheiten zum Einsetzen des Schimmelpilzwachstums für Materialien aus Holz. <span id="id16">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#mould-math" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <div class="math notranslate nohighlight">
@@ -847,7 +826,7 @@ beschrieben werden.</p>
 \[\begin{split} RH_{crit} = \begin{cases}-0.00267\cdot T^3 + 0.160\cdot T^2 - 3.13\cdot T + 100.0&amp;\text{wenn $ T\leq 20 $}\\=
 80\%&amp;\text{wenn $ T&gt;20 $}\end{cases}\end{split}\]</div>
 <p>Das Verhalten von RHcrit im höheren Temperaturbereich ist eine Approximation, hat aber für praktische Anwendungen kaum
-Auswirkungen. <span id="id16">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+Auswirkungen. <span id="id17">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <p><strong>Größtmögliches Schimmelpilzwachstum</strong></p>
 <p>Es ist bekannt, dass das eingeleitete Schimmelpilzwachstum nicht unbedingt zu visuell erkennbaren Schimmel führt. [25]
 Des Weiteren ist das maximal mögliche Schimmelpilzwachstum nach oben hin auch begrenzt unabhängig von Zeit und
@@ -855,11 +834,11 @@ bestmöglichen Konditionen. können nach 3.79 für die untere Schranke Mmax = 1 
 der Zeit und für die obere Schranke Mmax = 6 bei 100% relativer Luftfeuchtigkeit angegeben werden. Wobei bei Mmax = 6,
 in einem Temperaturbereich von 0-50°C, die gesamte Oberfläche irgendwann von Schimmel bedeckt sein wird. Zwischen diesen
 beiden Fixpunkten besagen Experimente, dass der Mould Index eine parabolische Funktion, nach 3.80, annimmt.
-<span id="id17">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+<span id="id18">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <figure class="align-default" id="mould-temp">
 <a class="reference internal image-reference" href="_images/mould_temp.png"><img alt="_images/mould_temp.png" src="_images/mould_temp.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Temperaturabhängige kritische relative Luftfeuchtigkeit benötigt für Schimmelpilzwachstum für verschiedene Werte des Mould Index. <span id="id18">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#mould-temp" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Temperaturabhängige kritische relative Luftfeuchtigkeit benötigt für Schimmelpilzwachstum für verschiedene Werte des Mould Index. <span id="id19">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#mould-temp" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <div class="math notranslate nohighlight">
@@ -868,15 +847,15 @@ beiden Fixpunkten besagen Experimente, dass der Mould Index eine parabolische Fu
 <p>Somit kann nach 3.80 interpretiert werden, dass RHcrit nicht nur von der Temperatur sondern auch vom Mould Index selber
 abhängig ist. Zu dieser Erkenntnis kann man kommen, wenn man 3.80 nach RH löst, womit nun ein Zusammenhang zwischen
 einem für ein Mmax benötigtes temperaturabhängiges RH hergestellt werden kann. 3.7
-<span id="id19">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+<span id="id20">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <p><strong>Wachtumsrate bei günstigen Bedingungen</strong></p>
 <p>Das hier vorgestellte mathematische Modell bildet das Wachstum des Schimmelpilzes nicht in den Zellen der Versuchskörper
 ab, da die Proben nur visuell überprüft wurden. Des Weiteren kommt es bei der Berechnung nicht zu einer genauen
 Abbildung der während der Studie beobachteten Veränderungen des Schimmelpilzbefalles der Oberfläche. Somit ist der Mould
 Index als ein mögliches Maß an Aktivität des Schimmelpilzes an der Holzoberfläche zu interpretieren.
-<span id="id20">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> Als Grundlage des Wachstums Modelles stellt Viitanen in [24] die
+<span id="id21">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> Als Grundlage des Wachstums Modelles stellt Viitanen in [24] die
 Regressionsgleichung nach 3.81 vor und beschreibt damit die Zeit (in Wochen) die benötigt wird, um bei konstanter
-Temperatur und Feuchtebedingungen das Schimmelpilzwachstum in Gang zu setzen. <span id="id21">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+Temperatur und Feuchtebedingungen das Schimmelpilzwachstum in Gang zu setzen. <span id="id22">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <div class="math notranslate nohighlight">
 \[t_{m} = \exp(-0.68\cdot \ln T - 13.9\cdot \ln RH + 0.14\cdot W - 0.33\cdot SQ + 66.02) \]</div>
 <p>Für einen linearen Zusammenhang der Steigerung des Mould Index mit der Zeit, wobei die Zeit in Tagen gemessen wird,
@@ -888,7 +867,7 @@ ergibt sich nach 3.81 ein anderer Zusammenhang der Form:</p>
 relative Luftfeuchtigkeit immer über RHcrit 3.79 liegt, und die Temperatur sich zwischen 0-50 °C befindet. Der lineare
 Zusammenhang der hier zu Grunde gelegt wird ist nur eine mathematische Beschreibung der Verhältnisse im Bereich M &lt; 1,
 wobei hier auch jedes andere Wachstumsmodell verwendet werden könnte. Ein Mould Index kleiner als eins indiziert kein
-Wachstum der Pilze. <span id="id22">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+Wachstum der Pilze. <span id="id23">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <p>Für ein Voranschreiten des Wachstums ist 3.82 nicht mehr gültig. Es kommt ein weiteres in [24] vorgestelltes Modell zur
 Anwendung, dass die Zeit beschreibt, die benötigt wird bis das erste Schimmelpilzwachstum M = 3 sichtbar ist.</p>
 <div class="math notranslate nohighlight">
@@ -901,7 +880,7 @@ liefert die Kombination der vorher erwähnten Gleichungen einen Korrektur-Koeffi
 <p>Obwohl 3.84 sich auf konstante Bedingungen bezieht haben Experimente gezeigt, dass der Korrekturkoeffizient auch für
 fluktuierende Bedingungen gilt, so lange diese vorteilhaft für das Wachstum sind. Somit kann gesagt werden, dass k1 für
 die gesamte Bandbreite ab dem Zeitpunkt der Schimmelpilz sichtbar ist, also M &gt; 1, gilt.
-<span id="id23">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+<span id="id24">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <p>Unter der Annahme, dass die Wachstumsrate sich um 10% bei Annäherung an den oberen Grenzwert 3.80 verlangsamt, kann
 dieser Umstand auch durch einen Korrekturkoeffizienten k2 erfasst werden.</p>
 <div class="math notranslate nohighlight">
@@ -912,7 +891,7 @@ Bedingungen zusammenfassen als 3.86</p>
 \[ \frac{dM}{dt} = \frac{1}{7\cdot \exp (-0.68\cdot \ln T - 13.9\cdot \ln RH + 0.14\cdot W - 0.33\cdot SQ + 66.02)}\cdot
 k_{1}\cdot k_{2} \]</div>
 <p>Als Anfangswert wird üblicherweise M = 0 gesetzt, wenn Holz, dass in einem Ofen der Temperaturen größer 50 °C aufwies,
-getrocknet wurde, betrachtet wird. <span id="id24">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+getrocknet wurde, betrachtet wird. <span id="id25">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <p><strong>Modell bei nicht-günstigen Bedingungen</strong></p>
 <p>Bei fluktuierender Luftfeuchtigkeit kann durch die gesamte Zeit die in hoher Luftfeuchtigkeit verbracht wurde die Zeit
 für den Start des Schimmelpilzwachstums zu einem gewissen Grad quantifiziert werden.[24] Diese Vereinfachung führt aber
@@ -925,7 +904,7 @@ vergangen ist (t − t1), ausgedrückt werden.</p>
 <figure class="align-default" id="calc-sim-mould">
 <a class="reference internal image-reference" href="_images/calc_sim_mould.png"><img alt="_images/calc_sim_mould.png" src="_images/calc_sim_mould.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Vergleich des maximal gemessenen und berechneten Mould Index. <span id="id25">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#calc-sim-mould" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Vergleich des maximal gemessenen und berechneten Mould Index. <span id="id26">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#calc-sim-mould" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <div class="math notranslate nohighlight">
@@ -935,14 +914,14 @@ $}\\-0.016&amp;\text{wenn $ t-t_{1}&gt; 24\ h $}\end{cases}\end{split}\]</div>
 Gleichung nur auf eine kleine Anzahl von Experimenten und ist somit nur zum Teil aussagekräftig. Der Einfluss von
 längeren Trockenzeiten und der von Temperaturen unter 0 °C ist noch wenig erforscht, somit ist die Anwendung von 3.87
 zwar für solche Situationen möglich, die Ergebnisse sollten aber hinterfragt werden.
-<span id="id26">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+<span id="id27">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 </section>
 <section id="vergleich-der-ergebnisse-des-modelles-mit-experimentellen-daten">
 <h4>Vergleich der Ergebnisse des Modelles mit experimentellen Daten<a class="headerlink" href="#vergleich-der-ergebnisse-des-modelles-mit-experimentellen-daten" title="Permalink to this headline">¶</a></h4>
 <p>3.80 stützt sich auf die Ergebnisse eines 12-wöchigen Versuches unter konstanten Bedingungen. Der Vergleich der
 maximalen Werte des Mould Index zwischen mathematischen Modell und Experiment ist in 3.8 gegenübergestellt. Es wurden
 nur Punkte die eine klare Grenze des Mould Index hatten betrachtet. Der größte Fehlerwert beträgt 1.2 und ist der
-einzige Wert über 0.5 liegt. <span id="id27">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+einzige Wert über 0.5 liegt. <span id="id28">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <p>In Abbildung 3.9 und Abbildung 3.10 wird ein Vergleich der experimentellen zu den simulierten Daten für das Einsetzen
 des Schimmelpilzwachstums und die visuelle Feststellbarkeit des Schimmelpilzes für Kiefer-Splintholz dargestellt. Des
 Weiteren werden Vergleiche für Fichtenholz in Abbildung 3.11 und Abbildung 3.12 vorgestellt. Die experimentellen
@@ -951,15 +930,15 @@ Fehler zu sehen sind und bei den Vergleichen der Zeitdauer bis Schimmelpizlwachs
 sind. Es sind auch einige sehr große Fehlerwerte zu erkennen, wodurch man darauf schließen kann, dass ein Modell mit nur
 wenigen numerischen Parametern nicht ausreichend ist um über den gesamten Temperaturbereich und den der relativen
 Luftfeuchtigkeit, vor allem bei höheren Temperaturen, Aussagen über das Schimmelpilzwachstum zu treffen.
-<span id="id28">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> Abbildung 3.13 zeigt einen Vergleich bei veränderlichen Bedingungen der
+<span id="id29">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> Abbildung 3.13 zeigt einen Vergleich bei veränderlichen Bedingungen der
 Luftfeuchtigkeit. Dabei wurde die relative Luftfeuchtigkeit zwischen 75% und 95% gehalten und ein periodischer Wechsel
 beider Luftfeuchtigkeiten zwischen 6 und 196 Stunden durchgeführt. Die Temperatur wurde konstant bei 20 °C gehalten. 80</p>
 <p>Fehler in der simulierten Einsatzzeit beträgt 1%, somit kann man darauf schließen, dass das Modell frei von
-systematischen Fehlern ist. <span id="id29">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+systematischen Fehlern ist. <span id="id30">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <figure class="align-default" id="calc-sim-const">
 <a class="reference internal image-reference" href="_images/calc_sim_const.png"><img alt="_images/calc_sim_const.png" src="_images/calc_sim_const.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Vergleich der gemessenen und simulierten Zeitdauer um Schimmelpilzwachstum bei Kiefer-Splintholz unter konstanten Bedingungen hervorzurufen. <span id="id30">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#calc-sim-const" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Vergleich der gemessenen und simulierten Zeitdauer um Schimmelpilzwachstum bei Kiefer-Splintholz unter konstanten Bedingungen hervorzurufen. <span id="id31">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#calc-sim-const" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -970,38 +949,38 @@ Temperatur- und Feuchtigkeitsgeschichten auch unter Berücksichtigung von Trocke
 Parameter gelten nur für reines Kiefer- oder Fichtenholz und versuchen die durchschnittliche Materialantwort auf
 Grundlage einer kleinen Versuchsprobenmenge nachzubilden. Die Materialantwort unterscheidet sich jedoch zu gleichen
 Teilen in den verschiedenen Proben aus verschiedenen Stämmen der gleichen Holzart wie in verschiedenen Proben
-verschiedener Holzarten. Somit wird in <span id="id31">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> darauf verwiesen, dass es möglich sein
+verschiedener Holzarten. Somit wird in <span id="id32">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> darauf verwiesen, dass es möglich sein
 sollte durch Korrekturkoeffizienten andere Holzarten abzubilden. Diese These wurde mit
-<span id="id32">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> erweitert und ermöglichte die Darstellung des Verrottungsverhaltens
+<span id="id33">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> erweitert und ermöglichte die Darstellung des Verrottungsverhaltens
 anderer Materialien auf Grundlage des hier vorgestellten Modelles, worauf im weiteren Verlauf dieses Kapitels noch
-eingegangen wird. <span id="id33">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+eingegangen wird. <span id="id34">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <p>Die für das Modell durchgeführten Versuche decken Temperaturen zwischen 5 und 40 °C und relative Luftfeuchtigkeiten von
 75 bis 100 % ab. Die Expositionszeit bei konstanten Bedingungen betrug mindestens 12 Wochen und bei veränderlichen 6
 oder 24 Wochen. Diese Zeitfenster sind wesentlich geringer als die Zeiten die mit Hilfe dieses Modells normalerweise
 simuliert werden. Dadurch ist eine Extrapolation der experimentellen Ergebnisse notwendig, wodurch sich eine gewisse
 Unsicherheit bei Betrachtung solcher Situation durch das Modell ergibt. Gerade die Versuche unter veränderlichen
 Bedingungen bedürfen einer Revision, da die numerische Lösung in 3.87 noch nicht zufriedenstellend ist.
-<span id="id34">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+<span id="id35">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <p>Mmax in 3.80 wurde aus Ergebnissen unter konstanten Bedingungen für die Luftfeuchtigkeit abgeleitet. Es ist bekannt,
 dass dieser Parameter unter veränderlichen Bedingungen geringer ist, jedoch gibt es bisher keine Aussagen über einen
 genauen Wert. Das Modell kann in diesen Bereichen also noch verfeinert werden. Dasselbe gilt auch für Bedingungen mit
-veränderlicher Temperatur und konstanter relativer Luftfeuchtigkeit. <span id="id35">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
+veränderlicher Temperatur und konstanter relativer Luftfeuchtigkeit. <span id="id36">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></p>
 <figure class="align-default" id="calc-sim-visual">
 <a class="reference internal image-reference" href="_images/calc_sim_visual.png"><img alt="_images/calc_sim_visual.png" src="_images/calc_sim_visual.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Vergleich der gemessenen und simulierten Zeitdauer um Schimmelpilzwachstum bei Kiefer-Splintholz unter konstanten Bedingungen visuell feststellen zu können. <span id="id36">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#calc-sim-visual" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Vergleich der gemessenen und simulierten Zeitdauer um Schimmelpilzwachstum bei Kiefer-Splintholz unter konstanten Bedingungen visuell feststellen zu können. <span id="id37">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#calc-sim-visual" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="calc-sim-const-pine">
 <a class="reference internal image-reference" href="_images/calc_sim_const_pine.png"><img alt="_images/calc_sim_const_pine.png" src="_images/calc_sim_const_pine.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Vergleich der gemessenen und simulierten Zeitdauer um Schimmelpilzwachstum bei Fichte-Splintholz unter konstanten Bedingungen hervorzurufen. <span id="id37">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#calc-sim-const-pine" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Vergleich der gemessenen und simulierten Zeitdauer um Schimmelpilzwachstum bei Fichte-Splintholz unter konstanten Bedingungen hervorzurufen. <span id="id38">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#calc-sim-const-pine" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="calc-sim-const-pine-vis">
 <a class="reference internal image-reference" href="_images/calc_sim_const_pine_vis.png"><img alt="_images/calc_sim_const_pine_vis.png" src="_images/calc_sim_const_pine_vis.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Vergleich der gemessenen und simulierten Zeitdauer um Schimmelpilzwachstum bei Fichte-Splintholz unter konstanten Bedingungen visuell feststellen zu können. <span id="id38">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#calc-sim-const-pine-vis" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Vergleich der gemessenen und simulierten Zeitdauer um Schimmelpilzwachstum bei Fichte-Splintholz unter konstanten Bedingungen visuell feststellen zu können. <span id="id39">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#calc-sim-const-pine-vis" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1009,15 +988,15 @@ veränderlicher Temperatur und konstanter relativer Luftfeuchtigkeit. <span id="
 <section id="erweiterung-des-modelles-auf-andere-materialien">
 <h3>Erweiterung des Modelles auf andere Materialien<a class="headerlink" href="#erweiterung-des-modelles-auf-andere-materialien" title="Permalink to this headline">¶</a></h3>
 <p>Aufbauend auf dem eben vorgestellten Modell zur Beurteilung des Schimmelpilzwachstums auf Holzoberflächen
-<span id="id39">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> wurde das Modell zur Berechnung anderer Materialien erweitert und die
-Entwicklungen in <span id="id40">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> zusammengefasst. Hier wird ein Überblick der
-Ergebnisse aus <span id="id41">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> gegeben.</p>
+<span id="id40">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span> wurde das Modell zur Berechnung anderer Materialien erweitert und die
+Entwicklungen in <span id="id41">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> zusammengefasst. Hier wird ein Überblick der
+Ergebnisse aus <span id="id42">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> gegeben.</p>
 <figure class="align-default" id="mould-surf-qual">
 <a class="reference internal image-reference" href="_images/mould_surf_qual.png"><img alt="_images/mould_surf_qual.png" src="_images/mould_surf_qual.png" style="height: 350px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 27 </span><span class="caption-text">Vergleich der gemessenen und simulierten Zeitdauer um Schimmelpilzwachstum bei Kiefer-Splintholz unter veränderlichen
 Bedingungen der Luftfeuchte hervorzurufen. Oberflächenqualität SQ steht für ofengetrocknete SQ = 1 und
-sägerauhe SQ = 0 Oberflächen.  <span id="id42">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#mould-surf-qual" title="Permalink to this image">¶</a></p>
+sägerauhe SQ = 0 Oberflächen.  <span id="id43">[<a class="reference internal" href="References.html#id12" title="Antti Hukka and H. A. Viitanen. A mathematical model of mould growth on wooden material. Wood Science and Technology, 33(6):475–485, 1999.">Hukka and Viitanen, 1999</a>]</span></span><a class="headerlink" href="#mould-surf-qual" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <section id="experimentelle-forschung-zur-verbesserung-des-modelles">
@@ -1026,30 +1005,30 @@ sägerauhe SQ = 0 Oberflächen.  <span id="id42">[<a class="reference internal" 
 Tampere University of Technology wurden statische und dynamische Laborversuche für eine große Anzahl von häufig
 verwendeten Baumaterialien (Fichtenbretter, Beton, Porenbeton, Faserbeton, Polyurethan Dämmung mit Papieroberfläche und
 polierter Oberfläche, Glaswolle, Polyester Wolle und expandiertes Polysterol) durchgeführt. Als Referenzmaterial wurde
-Kiefer-Splintholz verwendet. <span id="id43">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+Kiefer-Splintholz verwendet. <span id="id44">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 </section>
 <section id="verbesserung-des-modelles-fur-schimmelpilzwachstum">
 <h4>Verbesserung des Modelles für Schimmelpilzwachstum<a class="headerlink" href="#verbesserung-des-modelles-fur-schimmelpilzwachstum" title="Permalink to this headline">¶</a></h4>
 <p>Die Überlegung bestand darin das schon bestehende Modell durch Adaption der Wachstumsraten verschiedener Materialien zu
 erweitern. Dies bedurfte der Einführung von Sensitivitätsklassen um das unterschiedliche Materialverhalten abzubilden.
-<span id="id44">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+<span id="id45">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 </section>
 <section id="anpassung-des-mould-index">
 <h4>Anpassung des Mould Index<a class="headerlink" href="#anpassung-des-mould-index" title="Permalink to this headline">¶</a></h4>
 <p>Bei der Verwendung weiterer Materialien abseits von Holz wurde festgestellt, dass die vom Schimmelpilz bedeckte Fläche
 zwar für das menschliche Auge nicht sichtbar, aber unter dem Mikroskop relativ stark ausgeprägt sein konnte 3.14. Diese
 Erkenntnisse führten zu einer Anpassung des Mould Index in den Bereichen M = 3 und M = 4 wie in Tabelle 3.1 zu sehen
-ist. <span id="id45">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+ist. <span id="id46">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 <figure class="align-default" id="pur-pic">
 <a class="reference internal image-reference" href="_images/pur_pic.png"><img alt="_images/pur_pic.png" src="_images/pur_pic.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Schimmel in den Poren von Porenbeton (links) und auf der Papieroberfläche von einem PUR-Dämmstoff (rechts). <span id="id46">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#pur-pic" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Schimmel in den Poren von Porenbeton (links) und auf der Papieroberfläche von einem PUR-Dämmstoff (rechts). <span id="id47">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#pur-pic" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="tab-mould">
 <a class="reference internal image-reference" href="_images/tab_mould.png"><img alt="_images/tab_mould.png" src="_images/tab_mould.png" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Angepasster Mould Index. <span id="id47">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#tab-mould" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Angepasster Mould Index. <span id="id48">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#tab-mould" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1059,7 +1038,7 @@ ist. <span id="id45">[<a class="reference internal" href="References.html#id20" 
 mehreren Monaten, wie beispielsweise Holz, beträgt 80%. Die durch die große Anzahl an Versuche, vorgeschlagenen Grenzen
 der relativen Luftfeuchtigkeit anderer Materialien sind weiterhin Approximationen, korrespondieren aber besser mit der
 eigentlichen Materialantwort. Für resistentere Materialien wurde die Grenze auf 85% RH gesetzt.
-<span id="id48">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+<span id="id49">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 </section>
 <section id="intensitat-des-schimmelpilzwachstums">
 <h4>Intensität des Schimmelpilzwachstums<a class="headerlink" href="#intensitat-des-schimmelpilzwachstums" title="Permalink to this headline">¶</a></h4>
@@ -1071,11 +1050,11 @@ anzupassen, dass es möglich war auch andere Materialien zu simulieren. In Abbil
 Schimmelpilzwachstum verschiedener Materialien unter konstanten Bedingungen dargestellt. Es ist zu erkennen, dass die
 Baustoffe ein sehr unterschiedliches Verhalten bzgl. Intensität und Verzögerung des Wachstums und den Maximalwerten des
 Mould Index aufweisen. Derselbe Versuch wurde auch bei anderen konstanten Bedingungen durchgeführt. Diese Informationen
-konnten dann verwendet werden um das bestehende Modell anzupassen. <span id="id49">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+konnten dann verwendet werden um das bestehende Modell anzupassen. <span id="id50">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 <figure class="align-default" id="monitor-mould">
 <a class="reference internal image-reference" href="_images/monitor_mould.png"><img alt="_images/monitor_mould.png" src="_images/monitor_mould.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Monitoring Geschichte des Mould Index verschiedener Materialien bei konstanten Bedingungen für die Temperatur und Luftfeuchtigkeit (+22°C, 97% RH). <span id="id50">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#monitor-mould" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Monitoring Geschichte des Mould Index verschiedener Materialien bei konstanten Bedingungen für die Temperatur und Luftfeuchtigkeit (+22°C, 97% RH). <span id="id51">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#monitor-mould" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Im ursprünglichen Modell wird die Intensität des Schimmelpilzwachstums beschrieben durch 3.88 zuvor in 3.82 dargelegt.</p>
@@ -1088,7 +1067,7 @@ Wachstums. Letzteren beiden Koeffizienten, dabei steht k1 für die Intensität d
 Dämpfung des Wachstums bei Annäherung an den maximalen Wert des Mould Indexes, werden am angepassten Modell herangezogen
 um das Verhalten unterschiedlicher Materialien zu beschreiben. Da das Referenzmaterial bei der Simulation anderer
 Baustoffe Kiefer mit einer sägerauhen Oberfläche ist, sind W = 0 und SQ = 0 zu setzen.
-<span id="id51">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+<span id="id52">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 <p>Die Versuche führten zu neuen Gleichungen 3.89 und 3.90 für den Intensitätskoeffizienten k1, wobei der Index pine in den
 Gleichungen für das Referenzmaterial Kiefer steht.</p>
 <div class="math notranslate nohighlight">
@@ -1098,21 +1077,21 @@ Gleichungen für das Referenzmaterial Kiefer steht.</p>
 \[ k_{1} = 2\cdot \frac{(t_{M=3,pine} - t_{M=1,pine})}{(t_{M=3} - t_{M=1})}\ wenn\ M\geq1 \]</div>
 <p>Wobei tM=1 die Zeit beschreibt die benötigt wird bis das Wachstum einsetzt (ergo M = 1 erreicht wird) und tM=3 für die
 Zeit steht die benötigt wird um M = 3 zu erreichen. k1 wurde für jedes Material in den Versuchen gelöst, was in
-Abbildung 3.16 dargestellt wurde. <span id="id52">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> Um die Handhabbarkeit dieser neuen
+Abbildung 3.16 dargestellt wurde. <span id="id53">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> Um die Handhabbarkeit dieser neuen
 Daten zu gewährleisten, wurden Sensitivitätsklassen im Bezug auf das Schimmelpilzwachstum für die Materialien, in
 Tabelle 3.2 zu sehen, eingeführt. Durch die kleine Anzahl der Versuchsproben liegt der Einteilung keine statistische
 Auswertung zu Grunde, sondern eine Abschätzung durch die Versuchsergebnisse. Die für k1 bestimmten Werte können 3.17
-entnommen werden. <span id="id53">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+entnommen werden. <span id="id54">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 <figure class="align-default" id="k-coeff">
 <a class="reference internal image-reference" href="_images/k_coeff.png"><img alt="_images/k_coeff.png" src="_images/k_coeff.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Intensitätskoeffizient für verschiedene Materialien in den Versuchen. <span id="id54">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#k-coeff" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Intensitätskoeffizient für verschiedene Materialien in den Versuchen. <span id="id55">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#k-coeff" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="sens-class">
 <a class="reference internal image-reference" href="_images/sens_class.png"><img alt="_images/sens_class.png" src="_images/sens_class.png" style="height: 100px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Einteilung der unterschiedlichen Materialien in Sensitivitätsklassen. <span id="id55">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#sens-class" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Einteilung der unterschiedlichen Materialien in Sensitivitätsklassen. <span id="id56">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#sens-class" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Um die Dämpfung des Wachstums bei Annäherung an den maximalen Wert des Mould Indexes bei vorherrschenden Bedingungen zu
@@ -1127,20 +1106,20 @@ Materialien und ihrer Sensitivitätsklassen nach 3.92 angepasst.</p>
 <p>Hierbei hängen die Koeffizienten A, B und C von den Material Klassen ab und RHcrit ist weiterhin der Wert der relativen
 Luftfeuchtigkeit bei der gerade das Schimmelpilzwachstum einsetzt. Somit geht Mmax mit der Berücksichtigung der
 Sensitivitätsklassen in k2 ein und hat einen direkten Einfluss auf das Simulationsergebnis.
-<span id="id56">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> Für die Verwendung der eben genannten Faktoren wurden die
+<span id="id57">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> Für die Verwendung der eben genannten Faktoren wurden die
 Materialien in Sensitivitätsgruppen zusammengefasst die den jeweiligen Koeffizienten bestimmte Werte zuordnen. Eine
 Übersicht dieser Zuordnung ist in 3.3 zusammengestellt, diese Parameter lagen auch der Modellstudie zu Grunde.
-<span id="id57">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+<span id="id58">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 <figure class="align-default" id="k-diag">
 <a class="reference internal image-reference" href="_images/k_diag.png"><img alt="_images/k_diag.png" src="_images/k_diag.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Einteilung des Intensitätskoeffizienten k1 in vier Sensitivitätsklassen. <span id="id58">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#k-diag" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Einteilung des Intensitätskoeffizienten k1 in vier Sensitivitätsklassen. <span id="id59">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#k-diag" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="k-tab">
 <a class="reference internal image-reference" href="_images/k_tab.png"><img alt="_images/k_tab.png" src="_images/k_tab.png" style="height: 100px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Parameter für die unterschiedlichen Sensitivitätsklassen. <span id="id59">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#k-tab" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Parameter für die unterschiedlichen Sensitivitätsklassen. <span id="id60">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#k-tab" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1148,29 +1127,29 @@ Materialien in Sensitivitätsgruppen zusammengefasst die den jeweiligen Koeffizi
 <h4>Verbesserter Abfall des Mould Index<a class="headerlink" href="#verbesserter-abfall-des-mould-index" title="Permalink to this headline">¶</a></h4>
 <p>Es erfolgte auch eine Verbesserung von 3.87 zur Berücksichtigung unvorteilhafter Bedingungen des Schimmelpilzwachstums.
 Ermittelt wurde der in 3.93 dargelegte Zusammenhang aus einem zyklischen Wechsel der Feuchtigkeitsbedingungen.
-<span id="id60">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+<span id="id61">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \frac{dM}{dt} = \begin{cases}-0.000133&amp;\text{wenn $ t-t_{1}\leq 6\ h $}\\ 0&amp;\text{wenn $ 6\ h \leq t-t_{1}\leq 24\ h
 $}\\-0.000667&amp;\text{wenn $ t-t_{1}&gt; 24\ h $}\end{cases} \end{split}\]</div>
 <p>Wobei M den Mould Index und t die Zeit beschreibt, die seit t1 vergangen ist, wo die Bedingungen an der kritischen
-Oberfläche ein visuell sichtbares Wachstum ermöglichten. <span id="id61">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> Der
+Oberfläche ein visuell sichtbares Wachstum ermöglichten. <span id="id62">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> Der
 Rückgang des Wachstums für andere Materialien dM dt mat wird durch Hinzunahme eines Relativitätskoeffizienten Cmat
 beschrieben mit dessen Hilfe weiterhin das ursprüngliche Modell für Holz verwendet werden kann.
-<span id="id62">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+<span id="id63">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 <div class="math notranslate nohighlight">
 \[ \frac{dM}{dt}_{mat} = C_{mat}\cdot v\frac{dM}{dt}_{0} \]</div>
 <p>Die Versuchsergebnisse die der Ermittelung von Cmat zu Grunde liegen sind in Abbildung 3.18 dargestellt.
-<span id="id63">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+<span id="id64">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 <figure class="align-default" id="cmat-mould">
 <a class="reference internal image-reference" href="_images/cmat_mould.png"><img alt="_images/cmat_mould.png" src="_images/cmat_mould.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Rückgang des Schimmelpilzwachstums Cmat verglichen mit der Oberfläche des Referenzmaterials Kiefer. <span id="id64">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#cmat-mould" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Rückgang des Schimmelpilzwachstums Cmat verglichen mit der Oberfläche des Referenzmaterials Kiefer. <span id="id65">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#cmat-mould" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="climate-exp-mould">
 <a class="reference internal image-reference" href="_images/climate_exp_mould.png"><img alt="_images/climate_exp_mould.png" src="_images/climate_exp_mould.png" style="height: 100px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Klimatischen Bedingungen für die Versuche. <span id="id65">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#climate-exp-mould" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Klimatischen Bedingungen für die Versuche. <span id="id66">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#climate-exp-mould" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1181,21 +1160,21 @@ den Berechnungen zu Grunde gelegt wurden und die Evaluation des mathematischen M
 3.21 zu entnehmen. Es wurden bei dem Versuch die Bedingungen an der kritischen Oberfläche zwischen beiden Materialien
 gemessen. Um das Schimmelpilzwachstum an der Schnittstelle beider Oberflächen darzustellen wurde eine Mischung aus
 Kombinationen zwischen den Sensitivitätsklassen und maximal möglichem Wachstum der Klassen gewählt.
-<span id="id66">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> Es zeigte sich, dass an den Schichtgrenzen das Schimmelpilzwachstum
+<span id="id67">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span> Es zeigte sich, dass an den Schichtgrenzen das Schimmelpilzwachstum
 bei Wahl der sensibleren Sensitivitätsklasse ßensible”besser mit den Versuchsergebnissen korrespondierte. Das maximalen
 Maß an Schimmel hängt vom Grundmaterial ab. Der Dämpfungsbeiwert für das Wachstum wurde mit 0.25 gewählt. Es konnte eine
 relativ gute Korrelation des verbesserten Modelles gezeigt werden, wo auch in den kälteren Perioden die simulierten
-Werte wenig von den gemessenen abweichen. <span id="id67">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+Werte wenig von den gemessenen abweichen. <span id="id68">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 <figure class="align-default" id="sim-exp-beton">
 <a class="reference internal image-reference" href="_images/sim_exp_beton.png"><img alt="_images/sim_exp_beton.png" src="_images/sim_exp_beton.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Vergleich der im Versuch gemessenen und simulierten Daten mit dem Dämpfungsbeiwert für das Wachstum von 0.25 für die Schichtgrenze zwischen PUR mit Papieroberfläche und Beton. <span id="id68">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#sim-exp-beton" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Vergleich der im Versuch gemessenen und simulierten Daten mit dem Dämpfungsbeiwert für das Wachstum von 0.25 für die Schichtgrenze zwischen PUR mit Papieroberfläche und Beton. <span id="id69">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#sim-exp-beton" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="sim-exp-pine">
 <a class="reference internal image-reference" href="_images/sim_exp_pine.png"><img alt="_images/sim_exp_pine.png" src="_images/sim_exp_pine.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Vergleich der im Versuch gemessenen und simulierten Daten mit dem Dämpfungsbeiwert für das Wachstum von 0.25 für die Schichtgrenze zwischen Glaswolle und Fichtenbretter. <span id="id69">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#sim-exp-pine" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Vergleich der im Versuch gemessenen und simulierten Daten mit dem Dämpfungsbeiwert für das Wachstum von 0.25 für die Schichtgrenze zwischen Glaswolle und Fichtenbretter. <span id="id70">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></span><a class="headerlink" href="#sim-exp-pine" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1208,19 +1187,19 @@ kritischen Werte der relativen Luftfeuchtigkeit, welche benötigt wird für die 
 des Mould Index bei kalten oder trockenen Perioden. Damit ist allgemein eine bessere Aussage über den Einsatz und
 Verlauf des Schimmelpilzwachstums auf Materialober- und Grenzflächen zwischen Materialien möglich. Eine weitere
 Verbesserung besteht nun in der Auswahl der entsprechenden Sensitivitätsklassen für die verschiedenen Materialien.
-<span id="id70">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
+<span id="id71">[<a class="reference internal" href="References.html#id20" title="Tuomo Ojanen, Ruut Peuhkuri, Hannu Viitanen, Kimmo Lähdesmäki, Juha Vinha, and Kati Salminen. Classification of material sensitivity–new approach for mould growth modeling. In 9th Nordic Symposium on Building Physics, volume 2, 867–874. 2011.">Ojanen <em>et al.</em>, 2011</a>]</span></p>
 </section>
 </section>
 </section>
 <section id="nachweis-der-holzverrottung">
 <h2>Nachweis der Holzverrottung<a class="headerlink" href="#nachweis-der-holzverrottung" title="Permalink to this headline">¶</a></h2>
-<p>Zum Nachweis der Holzverrottung kann beispielsweise das Modell von Viitanen <span id="id71">[<a class="reference internal" href="References.html#id17" title="Modelling durability of wooden structures | Request PDF. https://www.researchgate.net/publication/42604409_Modelling_durability_of_wooden_structures."><em>Modelling Durability of Wooden Structures | Request PDF</em>, n.d.</a>]</span> oder auch
-das in den WTA-Merkbättern beschriebene verwendet werden <span id="id72">[<a class="reference internal" href="References.html#id9"><em>Feuchtetechnische Bewertung von Holzbauteilen – Vereinfachte Nachweise Und Simulation</em>, n.d.</a>]</span>. Hier wird das
+<p>Zum Nachweis der Holzverrottung kann beispielsweise das Modell von Viitanen <span id="id72">[<a class="reference internal" href="References.html#id17" title="Modelling durability of wooden structures | Request PDF. https://www.researchgate.net/publication/42604409_Modelling_durability_of_wooden_structures."><em>Modelling Durability of Wooden Structures | Request PDF</em>, n.d.</a>]</span> oder auch
+das in den WTA-Merkbättern beschriebene verwendet werden <span id="id73">[<a class="reference internal" href="References.html#id9"><em>Feuchtetechnische Bewertung von Holzbauteilen – Vereinfachte Nachweise Und Simulation</em>, 2016</a>]</span>. Hier wird das
 Modell aus den WTA-Merkblättern vorestellt.</p>
 <p><strong>Für den vereinfachten Nachweis der Verrottung gilt:</strong></p>
 <blockquote>
 <div><p>Die relative Porenluftfeucte im Massivholzprodukt darf 95 % bei 0 °C und 86 % bei 30 °C
-im Tagesmittel nicht überschreiten. <span id="id73">[<a class="reference internal" href="References.html#id9"><em>Feuchtetechnische Bewertung von Holzbauteilen – Vereinfachte Nachweise Und Simulation</em>, n.d.</a>]</span></p>
+im Tagesmittel nicht überschreiten. <span id="id74">[<a class="reference internal" href="References.html#id9"><em>Feuchtetechnische Bewertung von Holzbauteilen – Vereinfachte Nachweise Und Simulation</em>, 2016</a>]</span></p>
 </div></blockquote>
 <figure class="align-default" id="verrottung">
 <a class="reference internal image-reference" href="_images/verrottung.png"><img alt="_images/verrottung.png" src="_images/verrottung.png" style="height: 350px;" /></a>
@@ -1241,7 +1220,7 @@ Verfahren für die Verrottung von MAssivholz.</span><a class="headerlink" href="
 <section id="nachweis-der-tragfahigkeit">
 <h2>Nachweis der Tragfähigkeit<a class="headerlink" href="#nachweis-der-tragfahigkeit" title="Permalink to this headline">¶</a></h2>
 <p>Zum Nachweis der Tragfähigkeit von Bauteilen aus Holz kann das in den WTA-Merkbättern beschriebene Verfahren verwendet
-werden <span id="id74">[<a class="reference internal" href="References.html#id9"><em>Feuchtetechnische Bewertung von Holzbauteilen – Vereinfachte Nachweise Und Simulation</em>, n.d.</a>]</span>.</p>
+werden <span id="id75">[<a class="reference internal" href="References.html#id9"><em>Feuchtetechnische Bewertung von Holzbauteilen – Vereinfachte Nachweise Und Simulation</em>, 2016</a>]</span>.</p>
 <p><strong>Für den vereinfachten Nachweis der Tragfähigkeit gilt:</strong></p>
 <blockquote>
 <div><p>Bauteile aus Holz und Holzwerkstoffe werden in Abhängigkeit ihrer Umgebungsbedingungen in Nutzungsklassen gemäß EN
@@ -1264,34 +1243,8 @@ Verfahren für die Tragfähigkeit.</span><a class="headerlink" href="#tragf-num"
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Die Zusammenfassung der wichtigsten Eckpunkte zum Nachweis Holzverrottung und Tragfähigkeit kann in dem entsprechenden
-WTA-Merkblatt <span id="id75">[<a class="reference internal" href="References.html#id9"><em>Feuchtetechnische Bewertung von Holzbauteilen – Vereinfachte Nachweise Und Simulation</em>, n.d.</a>]</span> gefunden werden.</p>
+WTA-Merkblatt <span id="id76">[<a class="reference internal" href="References.html#id9"><em>Feuchtetechnische Bewertung von Holzbauteilen – Vereinfachte Nachweise Und Simulation</em>, 2016</a>]</span> gefunden werden.</p>
 </div>
-</section>
-<section id="angaben-im-bericht">
-<h2>Angaben im Bericht<a class="headerlink" href="#angaben-im-bericht" title="Permalink to this headline">¶</a></h2>
-<p>In ÖNORM 8110-2:2020 werden Ihnen inhaltliche Vorgaben bzgl. Ihres technischen Berichtes gemacht die es einzuhalten
-gilt:</p>
-<ul class="simple">
-<li><p>Darstellung des zugrunde gelegten Planungsstandes</p></li>
-<li><p>Standort</p></li>
-<li><p>nachvollziehbare Darstellung des Konzeptes zur Vermeidung schadensverursachender Wasser dampfkondensation im Inneren
-und an der Oberfläche von Bauteilen</p></li>
-<li><p>die aus dem Konzept resultierenden Bemessungsklimata für den Innen- und den Außenbereich</p></li>
-<li><p>außenseitige, standortbezogene, lokale Randbedingungen (z. B. solare Einstrahlung, langwelliger Strahlungsaustausch
-Beschattung durch Nachbargebäude und/oder Bäume, Photovoltaik-Anlagen, Schlagregen)</p></li>
-<li><p>Angaben aus der Gebäudetechnikplanung zu raumlufttechnischen Anlagen und der anzunehmenden Druckdifferenz über die
-Konstruktion</p></li>
-<li><p>Darstellung der relevanten technischen Eigenschaften der Konstruktion</p></li>
-<li><p>Für den Nachweis der Vermeidung von schadensverursachender Wasserdampfkondensation im Inneren von Bauteilen: —
-Begründung der Wahl des Verfahrens (siehe Abschnitt 8, Abschnitt 10 und Abschnitt 11)</p></li>
-<li><p>bei Verfahren nach Abschnitt 10 und Abschnitt 11 Darstellung der Einhaltung der Kriterien</p></li>
-<li><p>Nachweis der Vermeidung von schadensverursachender Wasserdampfkondensation an der Oberfläche von Bauteilen:</p>
-<ul>
-<li><p>anzuwendender Bemessungstemperaturfaktor</p></li>
-<li><p>Temperaturfaktor des Bauteils</p></li>
-</ul>
-</li>
-</ul>
 </section>
 </section>
 

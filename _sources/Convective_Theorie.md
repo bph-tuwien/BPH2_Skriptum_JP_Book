@@ -39,7 +39,7 @@ der Luft, $k$ für die Permeabiliät des porösen Materials in m² und $P$ für 
 height: 350px
 name: m_steady_state_wall
 ---
-Massenstrom durch ein poröses finites Wandstück.
+Massenstrom durch ein poröses finites Wandstück. {cite}`hagentoftIntroductionBuildingPhysics2001`
 ```
 
 Gleichung {eq}`m_delta_x_eq` kann bei Grenzwertbetrachtung $\lim \limits_{\Delta x \to 0}$ übergeführt werden in den
@@ -118,7 +118,7 @@ $$ \ell = \frac{A \lambda}{c_{pa} \dot{M}_{a}} $$
 height: 350px
 name: peclet_num
 ---
-Temperatur Profil durch ein finites Wandelement für unterschiedliche $L/\ell = Pe^{*}$
+Temperatur Profil durch ein finites Wandelement für unterschiedliche $L/\ell = Pe^{*}$ {cite}`hagentoftIntroductionBuildingPhysics2001`
 ```
 
 $Pe^{*}$ ist negativ wenn $\dot{M}_{a}$ negativ ist. Der Einfluss der modifizierten Peclet Zahl auf den
@@ -236,7 +236,7 @@ Bei der Nachweisführung von Bauteilen findet sich diese Konzept normativ gerege
 
 ## Luftvolumenstromkoeffzienten - Hintergrund
 
-Der Ursprung der in ÖNORM 8110-2:202 angeführten Luftvolumenstromkoeffizienten zu Definition von [Leckange](LPF) liegt
+Der Ursprung der in ÖNORM 8110-2:202 angeführten Luftvolumenstromkoeffizienten zu Definition von [Leckagen](LPF) liegt
 in {cite}`nusserProposalModifiedGlaserMethod2011` wo erstmals ein adabptiertes Glaserverfahren vorgestellt wird um den
 konvektiven Transport von Wärme- und Feuchtigkeit zu berücksichtigen. Diese Berücksichtigung soll, abhängig von der
 Ausführungsqualität, es ermöglichen die Anfälligkeit eines Bauteiles auf Fehler zu erfassen.
@@ -246,7 +246,7 @@ Mann könnte auch sagen, dass die Anfälligkeit eines Bauteiles im Umkehrschluss
 Fehlertoleranz eines Bauteiles ist.
 ```
 
-Diese Kategorisierung der Ausführungsqualität wurde dann in {cite}`nusserEuroGlaserUnterBeachtung2010` nachgeschärft und
+Diese Kategorisierung der Ausführungsqualität wurde dann in {cite}`nusserEuroGlaserUnterBeachtung2010a` nachgeschärft und
 wurde mittels F-Klassen berücksichtigt:
 
 ```{figure} img/Konvektion/f_konv.png
@@ -254,10 +254,10 @@ wurde mittels F-Klassen berücksichtigt:
 height: 250px
 name: f_konv
 ---
-Kategorisierung der F-Klassen. {cite}`nusserEuroGlaserUnterBeachtung2010`
+Kategorisierung der F-Klassen. {cite}`nusserEuroGlaserUnterBeachtung2010a`
 ```
 
-Für die Norm {cite}`ONORM811022020` wurde das Verfahren weiter präzisiert und ist nunr Tabelle 3 zu entnehmen:
+Für die Norm {cite}`onormONORM8110220202020` wurde das Verfahren weiter präzisiert und ist nun Tabelle 3 zu entnehmen:
 
 ```{figure} img/Konvektion/luftvolstrom_koeff_tab.png
 ---
