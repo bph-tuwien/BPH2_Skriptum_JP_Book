@@ -40,7 +40,7 @@ Das [Risiko für Schimmelbefall](Mould_Index) besteht, wenn über mehrere Tage d
 
 ```{figure} img/Wärmebrücke/frsi_3d.png
 ---
-height: 500px
+height: 350px
 name: frsi_3d
 ---
 Ecken stellen die kritischen Punkte dar. Im Fall einer vollständigen Wärmedämmung an der Außenseite werden
@@ -109,7 +109,7 @@ Verringerung der Wärmedurchlasswiderstandes nachgewiesen werden soll.
 
 ```{figure} img/Wärmebrücke/psi_ex.png
 ---
-height: 350px
+height: 250px
 name: psi_ex
 ---
 Vereinfacht diskretisierter Flachdachaufbau.

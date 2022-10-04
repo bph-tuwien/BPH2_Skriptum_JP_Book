@@ -31,7 +31,7 @@ $$ q = -\lambda \cdot \frac{\Delta T}{\Delta x}$$(q_delta_x_eq)
 
 ```{figure} img/Wärmebrücke/q_steady_state_wall.png
 ---
-height: 350px
+height: 250px
 name: q_steady_state_wall
 ---
 Stationärer Wärmefluss durch ein finites Wandstück. {cite}`hagentoftIntroductionBuildingPhysics2001`
@@ -92,7 +92,7 @@ Feuchtstromdichte können wir in porösen Medien über das Fick'sche Gesetz besc
 
 ```{figure} img/Wärmebrücke/g_steady.png
 ---
-height: 350px
+height: 250px
 name: g_steady
 ---
 Feuchtestromdichte durch ein finites poröses Wandstück.

@@ -10,8 +10,8 @@ Sonneneinstrahlung, Regen oder Wind {numref}`building_comp`.
 height: 250px
 name: building_comp
 ---
-Poröser Baukörper mit Rissen und Luftpfaden. Es wirken sowohl Außen- als auch Innenklima auf das Bauteil. 
-{cite}`hagentoftIntroductionBuildingPhysics2001`
+Poröser Baukörper mit Rissen und Luftpfaden. Es wirken sowohl Außen- als auch 
+Innenklima auf das Bauteil. {cite}`hagentoftIntroductionBuildingPhysics2001`
 ```
 
 Baukörper bestehen zumeist aus porösen Baustoffen, wodurch

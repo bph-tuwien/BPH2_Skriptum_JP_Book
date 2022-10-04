@@ -1,7 +1,7 @@
 # Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
 
 Wenn wir uns an Gleichung {eq}`q_diff_conv_eq` und {eq}`g_diff_conv_eq`
-im [vorhergehenden Kapitel](Diffusive_Theorie.md) zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
+im [vorhergehenden Kapitel](resources/Diffusive_Theorie.md) zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
 diffusiven Therm beschäftigt und den konvektiven vernachlässigt $q_{conv} = g_{conv} = 0$. Um konvektiven Transport zu
 berücksichtigen setzen wir $q_{conv} \neq 0 $ und $g_{conv} \neq 0$ und erweitern unsere beschreibenden Gleichungen um
 diese Therme.
@@ -36,7 +36,7 @@ der Luft, $k$ für die Permeabiliät des porösen Materials in m² und $P$ für 
 
 ```{figure} img/Konvektion/m_steady_state_wall.png
 ---
-height: 350px
+height: 250px
 name: m_steady_state_wall
 ---
 Massenstrom durch ein poröses finites Wandstück. {cite}`hagentoftIntroductionBuildingPhysics2001`
@@ -117,7 +117,7 @@ $$ \ell = \frac{A \lambda}{c_{pa} \dot{M}_{a}} $$
 height: 350px
 name: peclet_num
 ---
-Temperatur Profil durch ein finites Wandelement für unterschiedliche $L/\ell = Pe^{*}$ {cite}`hagentoftIntroductionBuildingPhysics2001`
+Temperatur Profil durch ein finites Wandelement für unterschiedliche $L/\ell = Pe^{*}$. {cite}`hagentoftIntroductionBuildingPhysics2001`
 ```
 
 $Pe^{*}$ ist negativ wenn $\dot{M}_{a}$ negativ ist. Der Einfluss der modifizierten Peclet Zahl auf den
@@ -143,17 +143,16 @@ dessen Gültigkeit erbracht.
 Gleichung {eq}`Qcd_con_eq` kann für den stationären eindimensionalen Fall und wenn $-\frac{d}{dx}Q_{cd} = 0$
 folgendermaßen gelöst werden.
 
-Gleichung {eq}`Qcd_con_eq` kann umgestellt werden zu
-
-$$ Q_{cd} = c_{pa} \dot{M}_{a} \frac{T_{ } e^{L/\ell} - T_{2}}{e^{L/\ell} -1} $$
-
-und mit Hilfe der Definiton von $\ell$ kann folgender Zusammenhang aufgestellt werden
+Gleichung {eq}`Qcd_con_eq` kann umgestellt werden 
+und mit Hilfe der Definiton von $\ell$ wie folgt dargestellt werden
 
 $$ \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} = T(x) - \ell \cdot \frac{dT}{dx} $$
 
-Wenn nachfolgender Ansatz bekannt ist:
+Mit Hilfe nachfolgendem Ansatz
 
 $$ -\ell e^{x/\ell}\frac{d}{dx}\left(e^{-x/\ell} T(x)\right) = T(x) - \ell \cdot \frac{dT}{dx} $$(ansatz_eq)
+
+kann folgender Zusammenhang aufestellt werden
 
 $$ \frac{d}{dx}(e^{-x/\ell} T(x)) = - \frac{e^{-x/\ell}}{\ell} \cdot \left(T(x) - \ell \cdot \frac{dT}{dx}\right) = -
 \frac{e^{-x/\ell}}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}}$$

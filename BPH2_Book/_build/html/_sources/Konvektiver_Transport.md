@@ -11,7 +11,7 @@ entwickelt, welches insbesondere in der hygrothermischen Simulation einen besond
 
 ```{figure} img/Wärmebrücke/psi_ex.png
 ---
-height: 350px
+height: 250px
 name: psi_ex
 ---
 Möglicher Luftpfad für Konvektion in einem vereinfachten Holz-Flachdachaufbau.
