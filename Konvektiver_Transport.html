@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Konvektiver Stofftransport &#8212; 206.291 Bauphysik 2 VU</title>
+    <title>Konvektiver Stofftransport und Wärmestransport &#8212; 206.291 Bauphysik 2 VU</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -139,7 +139,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Konvektiver Stofftransport
+   Konvektiver Stofftransport und Wärmestransport
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -154,7 +154,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Convective_risk.html">
-     Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport
+     Methoden der Nachweisführung und Risikonanalyse bei Berücksichtigung des konvektiven Wärme- und Feuchtetransports
     </a>
    </li>
    <li class="toctree-l2">
@@ -180,8 +180,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="FL_Numerik.html">
-     Flüssigwassertransport - Numerische Anwendung
+    <a class="reference internal" href="FL_risk_standards.html">
+     Methoden zur Nachweisführung bei Flüssigwassertransport
     </a>
    </li>
    <li class="toctree-l2">
@@ -315,6 +315,19 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uberblick-uber-das-kapitel">
+   Überblick über das Kapitel
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -322,19 +335,65 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Konvektiver Stofftransport</h1>
+                <h1>Konvektiver Stofftransport und Wärmestransport</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uberblick-uber-das-kapitel">
+   Überblick über das Kapitel
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="konvektiver-stofftransport">
-<h1>Konvektiver Stofftransport<a class="headerlink" href="#konvektiver-stofftransport" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="konvektiver-stofftransport-und-warmestransport">
+<h1>Konvektiver Stofftransport und Wärmestransport<a class="headerlink" href="#konvektiver-stofftransport-und-warmestransport" title="Permalink to this headline">¶</a></h1>
+<p>Der konvektive Transport von Wärme- und Feuchtigkeit ist einer der treibenden Prozesse bei der Entstehung von Schäden.
+Konvektiver Transport ist immer von Luftdruck-Differenzen abhängig und kann, je nach seiner Größe, diffusive Prozessen
+beschleunigen (Auffeuchtung), verlangsamen oder umkehren (Trocknung). Durch die schwere Beherrschbarkeit dieses
+Phänomens ist eine der höchsten Prioritäten in der Planung die saubere Ausführung von luftdichten Hüllen, um somit die
+Undruchströmbarkeit von Bauteilen zu gewährleisten. Durch Abnutzung während der Lebensdauer von Bauwerken oder auch
+Ausführungsfehler können jedoch immer wieder ungewollte Strömungspfade entstehen. Um Bauteilen eine gewisse Redundanz
+gegenüber dieser unvorhergesehener Leckagen zu ermöglichen wurde das Konzept der Fehlertoleranz von Bauteilen
+entwickelt, welches insbesondere in der hygrothermischen Simulation einen besonderen Stellenwert hat.</p>
+<section id="uberblick-uber-das-kapitel">
+<h2>Überblick über das Kapitel<a class="headerlink" href="#uberblick-uber-das-kapitel" title="Permalink to this headline">¶</a></h2>
+<p>Um eine Grundlage für das tiefere Verständnis dieser Konzepte zu schaffen werden die</p>
+<ul class="simple">
+<li><p><strong>Beschreibenden Differentialgleichungen auf die konvektiven Therme erweitert</strong></p></li>
+</ul>
+<p>und die</p>
+<ul class="simple">
+<li><p><strong>Hintergründe zur vereinfachten Bescshreibung konvektiver Phänomene mittels Luftvolumenstromkoeffizienten</strong></p></li>
+</ul>
+<p>und dadurch das</p>
+<ul class="simple">
+<li><p><strong>Vereinfachte Modell zu Abbildung von Leckagen in hygrothermischen Simulationen</strong></p></li>
+</ul>
+<p>hergeleitet.</p>
+<p>In Bezug auf die Anwendung wird die</p>
+<ul class="simple">
+<li><p><strong>Fehlertoleranz - Methoden um Redundanz zu gewährleisten</strong></p></li>
+</ul>
+<p>diskutiert und</p>
+<ul class="simple">
+<li><p><strong>Methoden zur Risikoanalyse (Holzverrottung, Tragfähigkeit, Schimmelpilzbildung auf Oberflächen)</strong></p></li>
+</ul>
+<p>dargelegt.</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -385,7 +444,7 @@ const thebe_selector_output = ".output, .cell_output"
     <footer class="footer">
   <p>
     
-      By Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.<br/>
+      By Hygrothermische Bauteilsimulation und Risikoanalyse<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

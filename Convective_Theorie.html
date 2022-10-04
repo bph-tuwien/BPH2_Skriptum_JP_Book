@@ -52,10 +52,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport" href="Convective_risk_standards.html" />
-    <link rel="prev" title="Konvektiver Stofftransport" href="Konvektiver_Transport.html" />
+    <link rel="next" title="Methoden der Nachweisführung und Risikonanalyse bei Berücksichtigung des konvektiven Wärme- und Feuchtetransports" href="Convective_risk.html" />
+    <link rel="prev" title="Konvektiver Stofftransport und Wärmestransport" href="Konvektiver_Transport.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -122,7 +124,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_Theorie.html">
-     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetranspoortes
+     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes
     </a>
    </li>
    <li class="toctree-l2">
@@ -139,7 +141,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="Konvektiver_Transport.html">
-   Konvektiver Stofftransport
+   Konvektiver Stofftransport und Wärmestransport
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -153,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Convective_risk_standards.html">
-     Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport
+    <a class="reference internal" href="Convective_risk.html">
+     Methoden der Nachweisführung und Risikonanalyse bei Berücksichtigung des konvektiven Wärme- und Feuchtetransports
     </a>
    </li>
    <li class="toctree-l2">
@@ -180,8 +182,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="FL_Numerik.html">
-     Flüssigwassertransport - Numerische Anwendung
+    <a class="reference internal" href="FL_risk_standards.html">
+     Methoden zur Nachweisführung bei Flüssigwassertransport
     </a>
    </li>
    <li class="toctree-l2">
@@ -321,9 +323,33 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#darcy-s-gesetz-massenstrom-zu-folge-von-druckdifferenzen">
+   Darcy’s Gesetz - Massenstrom zu Folge von Druckdifferenzen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#erweiterung-der-diffusiven-grundgleichungen-um-ihre-konvektiven-therme">
    Erweiterung der diffusiven Grundgleichungen um ihre konvektiven Therme
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konvektiver-warmetransport">
+     Konvektiver Wärmetransport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konvektiver-feuchtetransport">
+     Konvektiver Feuchtetransport
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#analysthische-losung-der-differentialgleichung-fur-den-stationaren-eindimensionalen-fall">
+       Analysthische Lösung der Differentialgleichung für den stationären eindimensionalen Fall
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fehlertoleranz-von-bauteilen">
@@ -356,9 +382,33 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#darcy-s-gesetz-massenstrom-zu-folge-von-druckdifferenzen">
+   Darcy’s Gesetz - Massenstrom zu Folge von Druckdifferenzen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#erweiterung-der-diffusiven-grundgleichungen-um-ihre-konvektiven-therme">
    Erweiterung der diffusiven Grundgleichungen um ihre konvektiven Therme
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konvektiver-warmetransport">
+     Konvektiver Wärmetransport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konvektiver-feuchtetransport">
+     Konvektiver Feuchtetransport
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#analysthische-losung-der-differentialgleichung-fur-den-stationaren-eindimensionalen-fall">
+       Analysthische Lösung der Differentialgleichung für den stationären eindimensionalen Fall
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fehlertoleranz-von-bauteilen">
@@ -381,14 +431,227 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="theorethische-grundlagen-des-konvektiven-warme-und-feuchtetranspoortes">
 <h1>Theorethische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes<a class="headerlink" href="#theorethische-grundlagen-des-konvektiven-warme-und-feuchtetranspoortes" title="Permalink to this headline">¶</a></h1>
+<p>Wenn wir uns an Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-q-diff-conv-eq">(9)</a> und <a class="reference internal" href="Diffusive_Theorie.html#equation-g-diff-conv-eq">(17)</a>
+im <a class="reference internal" href="Diffusive_Theorie.html"><span class="doc std std-doc">vorhergehenden Kapitel</span></a> zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
+diffusiven Therm beschäftigt und den konvektiven vernachlässigt <span class="math notranslate nohighlight">\(q_{conv} = g_{conv} = 0\)</span>. Um konvektiven Transport zu
+berücksichtigen setzen wir <span class="math notranslate nohighlight">\(q_{conv} \neq 0 \)</span> und <span class="math notranslate nohighlight">\(g_{conv} \neq 0\)</span> und erweitern unsere beschreibenden Gleichungen um
+diese Therme.</p>
+<section id="darcy-s-gesetz-massenstrom-zu-folge-von-druckdifferenzen">
+<h2>Darcy’s Gesetz - Massenstrom zu Folge von Druckdifferenzen<a class="headerlink" href="#darcy-s-gesetz-massenstrom-zu-folge-von-druckdifferenzen" title="Permalink to this headline">¶</a></h2>
+<p>Faserdämmstoffe wie beispielsweise aus Mineralwolle oder Zellulose sind auf Grund Ihrer Struktur von Luft durchströmbar.
+Dadurch kann in solchen Baustoffen der konvektive Wärme- und Feuchtetransport einen maßgebedenden Einfluss auf das
+hygrothermische Verhalten haben. Der konvektive Transport kann, bei unzureichender oder nicht vorhandener Luftdichtheit,
+entweder durch natürliche Konvektion (thermischer Auftrieb) oder erzwungener Konvektion (Druckdifferenzen) ausgelöst
+werden.</p>
+<p>Ähnlich zu den Formulierungen für die Wärme- und Feuchtestromdichte, kann auch die Massenstromdichte zu Folge
+Luftströmung mit Hilfe Darcy’s Gesetz definiert werden. Wir betrachten hier die Formulierung ohne Berücksichtigung des
+Auftriebs, für den Fall, dass der Auftrieb einen maßgebenden Einfluss hat, kann das Gesetz laut
+<span id="id1">[<a class="reference internal" href="References.html#id24" title="J. Wang and C. E. Hagentoft. A numerical method for calculating combined heat, air and moisture transport in building envelope components. Nordic Journal of Building Physics, 2001.">Wang and Hagentoft, 2001</a>]</span> erweitert werden.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Später werden wir sehen, dass diese Formulierung nicht nur zur Beschreibung poröser Materialien verwendet werden kann,
+sondern auch die Grundlage für die
+Modellierung von Luftpfaden durch Baustoffe darstellt.</p>
+</div>
+<p>Für den eindimensionalen Fall ist <span class="math notranslate nohighlight">\(\dot{m}_{a}\)</span> definiert als</p>
+<div class="math notranslate nohighlight">
+\[ \dot{m}_{a} = \frac{\rho_{a} \cdot k}{\mu} \frac{P - (P + \Delta P)}{\Delta x} \]</div>
+<div class="math notranslate nohighlight" id="equation-m-delta-x-eq">
+<span class="eqno">(29)<a class="headerlink" href="#equation-m-delta-x-eq" title="Permalink to this equation">¶</a></span>\[ \dot{m}_{a} = -\frac{\rho_{a} \cdot k}{\mu} \frac{\Delta P}{\Delta x} \]</div>
+<p>In Gleichung <a class="reference internal" href="#equation-m-delta-x-eq">(29)</a> steht <span class="math notranslate nohighlight">\(\rho_{a}\)</span> für die Dichte der Luft in kg/m³, <span class="math notranslate nohighlight">\(\mu\)</span> für die dynamische Viskosität
+der Luft, <span class="math notranslate nohighlight">\(k\)</span> für die Permeabiliät des porösen Materials in m² und <span class="math notranslate nohighlight">\(P\)</span> für den jeweiligen Luftdruck in Pa.</p>
+<figure class="align-default" id="m-steady-state-wall">
+<a class="reference internal image-reference" href="_images/m_steady_state_wall.png"><img alt="_images/m_steady_state_wall.png" src="_images/m_steady_state_wall.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Massenstrom durch ein poröses finites Wandstück.</span><a class="headerlink" href="#m-steady-state-wall" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Gleichung <a class="reference internal" href="#equation-m-delta-x-eq">(29)</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den
+Differentialoperator</p>
+<div class="math notranslate nohighlight" id="equation-m-delta-x-eq">
+<span class="eqno">(29)<a class="headerlink" href="#equation-m-delta-x-eq" title="Permalink to this equation">¶</a></span>\[ \dot{m}_{a} = -\frac{\rho_{a} \cdot k}{\mu} \frac{dP)}{dx} \]</div>
+<p>und mittels des Nabla Operators verallgemeinert werden zu</p>
+<div class="math notranslate nohighlight" id="equation-m-nabla-eq">
+<span class="eqno">(30)<a class="headerlink" href="#equation-m-nabla-eq" title="Permalink to this equation">¶</a></span>\[ \dot{m}_{a} = - \frac{\rho_{a} \cdot k}{\mu} \nabla P \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Auf Grund der bauphysikalischen Relevanz beschäftigen wir uns vorrangig mit Massenströmen deren Gas aus Luft besteht.
+Entsprechende Anpassung der Parameter ermöglichen auch die Abbildung anderer Fluide oder Gase.
+<span id="id2">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></p>
+</div>
+</section>
 <section id="erweiterung-der-diffusiven-grundgleichungen-um-ihre-konvektiven-therme">
 <h2>Erweiterung der diffusiven Grundgleichungen um ihre konvektiven Therme<a class="headerlink" href="#erweiterung-der-diffusiven-grundgleichungen-um-ihre-konvektiven-therme" title="Permalink to this headline">¶</a></h2>
+<section id="konvektiver-warmetransport">
+<h3>Konvektiver Wärmetransport<a class="headerlink" href="#konvektiver-warmetransport" title="Permalink to this headline">¶</a></h3>
+<p>Bei Berücksichtigung von Konvektion wird die Wärmestromdichte beschrieben durch</p>
+<div class="math notranslate nohighlight" id="equation-q-diff-conv-2-eq">
+<span class="eqno">(31)<a class="headerlink" href="#equation-q-diff-conv-2-eq" title="Permalink to this equation">¶</a></span>\[ q = q_{diff} + q_{conv}\]</div>
+<p>wobei <span class="math notranslate nohighlight">\(q_{conv} \neq 0 \)</span> und definiert ist durch</p>
+<div class="math notranslate nohighlight">
+\[ q_{conv} = \dot{m}_{a} \cdot c_{p}T \]</div>
+<p>Dabei beschreibt <span class="math notranslate nohighlight">\(\dot{m}_{a}\)</span> (m³/(m²s)) die Massenstromdichte pro Zeiteinheit durch ein poröses Medium zu Folge eines
+Druckgradienten, <span class="math notranslate nohighlight">\(c_{p}\)</span> die spezifische Wärmekapazität (J/kgK) bei konstantem Druck (gilt für Gase) und T die
+Temperatur in Kelvin.</p>
+<p>Damit kann der für bauphysikalische Berechnungen relevante Wärmestrom komplett beschrieben werden als:</p>
+<div class="math notranslate nohighlight" id="equation-q-ges-eq">
+<span class="eqno">(32)<a class="headerlink" href="#equation-q-ges-eq" title="Permalink to this equation">¶</a></span>\[ q = - \lambda \nabla T + \dot{m}_{a} \cdot c_{p} T \]</div>
+<p>Einsetzen in Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-dt-eq">(8)</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Temperaturfeldes:</strong></p>
+<div class="math notranslate nohighlight" id="equation-dt-ges-eq">
+<span class="eqno">(33)<a class="headerlink" href="#equation-dt-ges-eq" title="Permalink to this equation">¶</a></span>\[ \rho c \frac{\partial T}{\partial t} = \nabla \cdot (\lambda \nabla T - \dot{m}_{a} \cdot c_{p} T) + h \]</div>
+</section>
+<section id="konvektiver-feuchtetransport">
+<h3>Konvektiver Feuchtetransport<a class="headerlink" href="#konvektiver-feuchtetransport" title="Permalink to this headline">¶</a></h3>
+<p>Analog zur Wärmestromdichte kann auch die Feuchtestromdichte um ihren konvektiven Einfluss erweitert werden. Das führt
+auf</p>
+<div class="math notranslate nohighlight" id="equation-g-ges-eq">
+<span class="eqno">(34)<a class="headerlink" href="#equation-g-ges-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v\]</div>
+<p>Einsetzen in Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-w-eq">(15)</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Feuchtefeldes:</strong></p>
+<div class="math notranslate nohighlight" id="equation-qcd-con-eq">
+<span class="eqno">(35)<a class="headerlink" href="#equation-qcd-con-eq" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$(
+w_conv_eq)\\### Einfluss des Lufttransportes auf den Wärme- und Feuchtetransport\\$$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) \end{aligned}\end{align} \]</div>
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(35)</a> kann für den stationären eindimensionalen Fall gelöst werden und führt auf</p>
+<div class="math notranslate nohighlight" id="equation-qcd-con-sol-eq">
+<span class="eqno">(36)<a class="headerlink" href="#equation-qcd-con-sol-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\ell} - 1}\]</div>
+<p>mit der normalisierten, dimensionslosen Temperatur</p>
+<div class="math notranslate nohighlight">
+\[ T'(x) = \frac{T(x) - T_{1}}{T_{2} - T{1}} = \frac{e(x/\ell) - 1}{e(L/\ell - 1) } \]</div>
+<p>Für diese Vereinfachung wird die modifizierte Peclet-Zahl <span class="math notranslate nohighlight">\(Pe^{*}\)</span> eingeführt. Diese ist definiert als das Verhältnis</p>
+<div class="math notranslate nohighlight">
+\[ Pe^{*} = \frac{L}{\ell} \]</div>
+<p>wobei</p>
+<div class="math notranslate nohighlight">
+\[ \ell = \frac{A \lambda}{c_{pa} \dot{M}_{a}} \]</div>
+<figure class="align-default" id="peclet-num">
+<a class="reference internal image-reference" href="_images/peclet_num.png"><img alt="_images/peclet_num.png" src="_images/peclet_num.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Temperatur Profil durch ein finites Wandelement für unterschiedliche <span class="math notranslate nohighlight">\(L/\ell = Pe^{*}\)</span></span><a class="headerlink" href="#peclet-num" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p><span class="math notranslate nohighlight">\(Pe^{*}\)</span> ist negativ wenn <span class="math notranslate nohighlight">\(\dot{M}_{a}\)</span> negativ ist. Der Einfluss der modifizierten Peclet Zahl auf den
+Temperaturverlauf kann <a class="reference internal" href="#peclet-num"><span class="std std-numref">Fig. 10</span></a> entnommen werden.</p>
+<p>Die Größe <span class="math notranslate nohighlight">\(\ell\)</span> charakterisiert das Verhältnis zwischen diffusiven und konvektiven Wärmefluss und damit auch den
+Einfluss des konvektiven Transportes auf den Gesamttransport.</p>
+<p>Die <span class="math notranslate nohighlight">\(Pe^{*}\)</span> findet sich auch normativ bei den Diffusions-/Konvektionsgleichungen in Abschnitt 11 von ÖNORM 8110-2:2020
+wieder. Dort wird jedoch die immer die Flussdichte und nicht der Wärmefluss betrachtet.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bei Vernachlässigung von Flüssigwassertransport kann der Feuchtetransport analog betrachet und gelöst werden.</p>
+</div>
+<section id="analysthische-losung-der-differentialgleichung-fur-den-stationaren-eindimensionalen-fall">
+<span id="analy-konv"></span><h4>Analysthische Lösung der Differentialgleichung für den stationären eindimensionalen Fall<a class="headerlink" href="#analysthische-losung-der-differentialgleichung-fur-den-stationaren-eindimensionalen-fall" title="Permalink to this headline">¶</a></h4>
+<p>Da sich die normative Darstellung der in Gleichung <a class="reference internal" href="#equation-qcd-con-sol-eq">(36)</a> folgt, wird nachfolgend ein kurzer Beweis für
+dessen Gültigkeit erbracht.</p>
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(35)</a> kann für den stationären eindimensionalen Fall und wenn <span class="math notranslate nohighlight">\(-\frac{d}{dx}Q_{cd} = 0\)</span>
+folgendermaßen gelöst werden.</p>
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(35)</a> kann umgestellt werden zu</p>
+<div class="math notranslate nohighlight">
+\[ Q_{cd} = c_{pa} \dot{M}_{a} \frac{T_{ } e^{L/\ell} - T_{2}}{e^{L/\ell} -1} \]</div>
+<p>und mit Hilfe der Definiton von <span class="math notranslate nohighlight">\(\ell\)</span> kann folgender Zusammenhang aufgestellt werden</p>
+<div class="math notranslate nohighlight">
+\[ \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} = T(x) - \ell \cdot \frac{dT}{dx} \]</div>
+<p>Wenn nachfolgender Ansatz bekannt ist:</p>
+<div class="math notranslate nohighlight" id="equation-ansatz-eq">
+<span class="eqno">(37)<a class="headerlink" href="#equation-ansatz-eq" title="Permalink to this equation">¶</a></span>\[ -\ell e^{x/\ell}\frac{d}{dx}\left(e^{-x/\ell} T(x)\right) = T(x) - \ell \cdot \frac{dT}{dx} \]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{d}{dx}(e^{-x/\ell} T(x)) = - \frac{e^{-x/\ell}}{\ell} \cdot \left(T(x) - \ell \cdot \frac{dT}{dx}\right) = -
+\frac{e^{-x/\ell}}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}}\]</div>
+<p>Integrieren über die Länge <span class="math notranslate nohighlight">\(L\)</span> des betrachteten finiten Stückes führt auf</p>
+<div class="math notranslate nohighlight">
+\[ \int_{0}^{L} \frac{d}{dx}(e^{-x/\ell} T(x)) \,dx \ = - \int_{0}^{L} \frac{e^{-x/\ell}}{\ell} \cdot \frac{Q_{cd}}{c_
+{pa} \dot{M}_{a}} \,dx\]</div>
+<div class="math notranslate nohighlight">
+\[ \left[e^{-x/\ell} T(x)\right]_{0}^{L} = - \frac{1}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} \int_{0}^{L}
+e^{-x/\ell} \,dx\]</div>
+<div class="math notranslate nohighlight">
+\[ \left[e^{-x/\ell} T(x)\right]_{0}^{L} = - \frac{1}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}}
+\left[-\ell e^{-x/\ell}\right]_{0}^{L}\]</div>
+<p>und entsprechendes Umformen ergibt</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned} e^{-L/\ell} T(L) - 1 \cdot T(0) = - \frac{1}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} (-\ell) \left(e^{-L/\ell}\\- 1\right) \quad | \cdot e^{L/\ell} \end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[ T(L) - T(0) \cdot e^{L/\ell} = - \frac{1}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} (-\ell) \left(1 - e^{L/\ell}
+\right) \quad | \cdot (-1) \]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} T(0) \cdot e^{L/\ell} -T(L) =\frac{Q_{cd}}{c_{pa} \dot{M}_{a}} \left(e^{L/\ell} - 1 \right)\\\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\ell} - 1}\\ \end{split}\]</div>
+</section>
+</section>
 </section>
 <section id="fehlertoleranz-von-bauteilen">
 <h2>Fehlertoleranz von Bauteilen<a class="headerlink" href="#fehlertoleranz-von-bauteilen" title="Permalink to this headline">¶</a></h2>
+<p>Bauteile können durch witteriche Exposition während der Bauzeit, Abweichungen der Ausführung von der ideellen Planung
+oder unbeabsichtigten Ausführungsfehlern immer wieder unvorhergesehenen hygrothermischen Belastungen ausgesetzt sein.
+Eine für die bauphysikalische Planung adaptierte Einstufung von Unsicherheiten wurde in
+<span id="id3">[<a class="reference internal" href="References.html#id5" title="T. Bednar and C. E. Hagentoft. Risk management by probabilistic assessment. Development of guidelines for practice, IEA Annex 55, RAP-RETRO. 2015.">Bednar and Hagentoft, 2015</a>]</span> nach <span id="id4">Mcmanus and Hastings [<a class="reference internal" href="References.html#id14" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> vorgestellt:</p>
+<blockquote>
+<div><p>“<strong>Lack of knowledge</strong> is defined as facts that are unknown or known only imprecisely that is needed to assess performance of the concept: examples include prior
+building usage, possible salt contents, etc.</p>
+<p><strong>Lack of definitions</strong> is defined as aspects of the project that are undecided or not
+specified: for example, future use and maintenance, neighbouring buildings, available
+funding and associated criteria.</p>
+<p><strong>Statistically characterized variables</strong> are defined as inputs that cannot always
+be known precisely but can be statistically characterized or at least bounded: for
+example, typical material properties (e.g. thermal conductivity, liquid transport coefficient, etc.) are not a single number but are statistically characterized variables.
+The future airtightness of the building envelope is typically a bounded value. If the
+renovation is conducted according to current state of the art practices, the future
+building airtightness is higher than the current state. The future climate conditions
+are also a bounded variable.</p>
+<p><strong>Known Unknowns</strong> are defined as aspects known to influence building performance,
+but have entirely unknown values: for example, the impact of future occupants on
+the building constructions (e.g. hanging up pictures, placing furniture, etc.), animals
+that might intrude a construction, destruction by sabotage or climate change.</p>
+<p><strong>Unknown Unknowns</strong> are defined as aspects that are unknown by definition. A
+very conservative mitigation strategy might help to handle current unknown aspects
+in the future.”</p>
+</div></blockquote>
+<p>Diese zu erwartenden Ungewissheiten können nach <span id="id5">Mcmanus and Hastings [<a class="reference internal" href="References.html#id14" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> als “Known
+Unknowns” deklariert werden. Um diese “Known Unknowns” in hygrothermischen Berechnungen zu berücksichtigen hat sich der
+Begriff der Fehlertoleranz in der bauphysikalischen Bemessung etabliert. Das Konzept der Fehlertoleranz einer
+Baukonstruktion lässt sich mittels der von <span id="id6">Bednar [<a class="reference internal" href="References.html#id6" title="Thomas Bednar. Von der hygrothermischen Bauteilsimulation zum Risikomanagement in der Bauphysik. In Bauinstandsetzen Und Bauphysik. Gestern - Heute - Morgen. Stuttgart, 2016. Fraunhofer IRB Verlag.">2016</a>]</span>
+gewählten Beschreibung der Tauglichkeit einer Baukonstruktion definieren:</p>
+<blockquote>
+<div><p>“Tauglich ist in dem Sinne eine Konstruktion, wenn sie bei üblicher Nutzung keine
+Schimmelpilzbildung an der Oberfläche oder im Inneren aufweist, Holzwerkstoffe
+nicht verrotten, keine thermischen und hygrischen Längenänderungen zu Zerstörung
+führen, Metalle keine überdurchschnittlichen Korrosionsraten aufweisen und an der
+Außenseite Algenwachstum oder Ablagerungen die optische Erscheinung störend
+verändern.”</p>
+</div></blockquote>
+<p>Bei der Nachweisführung von Bauteilen findet sich diese Konzept normativ geregelt wieder in Form von</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="Convective_risk.html#anfangsfeuchte"><span class="std std-ref">Anfangsfeuchten</span></a>,</p></li>
+<li><p>dem Ansetzen von künstlichen <a class="reference internal" href="Convective_risk.html#lpf"><span class="std std-ref">Luftpfaden</span></a> oder</p></li>
+<li><p>Vereinfachungen in der Berechnung um auf der sicheren Seite zu bleiben (z.B. Vernachlässigung der solaren Strahlung).</p></li>
+</ul>
 </section>
 <section id="luftvolumenstromkoeffzienten-hintergrund">
 <h2>Luftvolumenstromkoeffzienten - Hintergrund<a class="headerlink" href="#luftvolumenstromkoeffzienten-hintergrund" title="Permalink to this headline">¶</a></h2>
+<p>Der Ursprung der in ÖNORM 8110-2:202 angeführten Luftvolumenstromkoeffizienten zu Definition von <a class="reference internal" href="Convective_risk.html#lpf"><span class="std std-ref">Leckange</span></a> liegt
+in <span id="id7">[<a class="reference internal" href="References.html#id19" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Proposal for a modified Glaser-Method for the risk assessment of flat timber roofs. In 9th Nordic Symposium on Building Physics - NSB 2011, 181–188. June 2011.">Nusser <em>et al.</em>, 2011</a>]</span> wo erstmals ein adabptiertes Glaserverfahren vorgestellt wird um den
+konvektiven Transport von Wärme- und Feuchtigkeit zu berücksichtigen. Diese Berücksichtigung soll, abhängig von der
+Ausführungsqualität, es ermöglichen die Anfälligkeit eines Bauteiles auf Fehler zu erfassen.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mann könnte auch sagen, dass die Anfälligkeit eines Bauteiles im Umkehrschluss der Kehrwert der
+Fehlertoleranz eines Bauteiles ist.</p>
+</div>
+<p>Diese Kategorisierung der Ausführungsqualität wurde dann in <span id="id8">[]</span> nachgeschärft und
+wurde mittels F-Klassen berücksichtigt:</p>
+<figure class="align-default" id="f-konv">
+<a class="reference internal image-reference" href="_images/f_konv.png"><img alt="_images/f_konv.png" src="_images/f_konv.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Kategorisierung der F-Klassen. <span id="id9">[]</span></span><a class="headerlink" href="#f-konv" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Für die Norm <span id="id10">[<a class="reference internal" href="References.html#id21"><em>ÖNORM 8110-2:2020</em>, n.d.</a>]</span> wurde das Verfahren weiter präzisiert und ist nunr Tabelle 3 zu entnehmen:</p>
+<figure class="align-default" id="luftvolstrom-koeff-tab">
+<a class="reference internal image-reference" href="_images/luftvolstrom_koeff_tab.png"><img alt="_images/luftvolstrom_koeff_tab.png" src="_images/luftvolstrom_koeff_tab.png" style="height: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Tabelle 3 zur Definition des Luftvolumenstromkoeffzienten C.</span><a class="headerlink" href="#luftvolstrom-koeff-tab" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
@@ -421,13 +684,13 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Konvektiver Stofftransport</p>
+            <p class="prev-next-title">Konvektiver Stofftransport und Wärmestransport</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Convective_risk_standards.html" title="next page">
+    <a class='right-next' id="next-link" href="Convective_risk.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport</p>
+        <p class="prev-next-title">Methoden der Nachweisführung und Risikonanalyse bei Berücksichtigung des konvektiven Wärme- und Feuchtetransports</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -438,7 +701,7 @@ const thebe_selector_output = ".output, .cell_output"
     <footer class="footer">
   <p>
     
-      By Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.<br/>
+      By Hygrothermische Bauteilsimulation und Risikoanalyse<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

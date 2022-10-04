@@ -1,5 +1,7 @@
 # Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport
 
+## Bestimmung der geeigneten Dimensionalität des Simulationsmodelles
+
 ## Risikoanalyse mittels  Temperaturfaktor $f_{R_{Si}}$
 
 Um einschätzen zu können, ob sich bei üblicher Wohnungsnutzung Schimmelpilze an einer Bauteiloberfläche bilden, hat sich

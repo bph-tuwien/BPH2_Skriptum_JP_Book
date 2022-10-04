@@ -56,8 +56,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Anwendungsbeispiel - Sanierung Innendämmung" href="Problem_Innendaemmung.html" />
-    <link rel="prev" title="Flüssigwassertransport - Theorie" href="FL_Theorie.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -106,7 +104,7 @@ const thebe_selector_output = ".output, .cell_output"
   Inhalt
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Motivation.html">
    Motivation
@@ -141,7 +139,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Konvektiver_Transport.html">
-   Konvektiver Stofftransport
+   Konvektiver Stofftransport und Wärmestransport
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -156,7 +154,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Convective_risk.html">
-     Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport
+     Methoden der Nachweisführung und Risikonanalyse bei Berücksichtigung des konvektiven Wärme- und Feuchtetransports
     </a>
    </li>
    <li class="toctree-l2">
@@ -166,24 +164,24 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="Fl%C3%BCssigwassertransport.html">
    Flüssigwassertransport
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="FL_Theorie.html">
      Flüssigwassertransport - Theorie
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Flüssigwassertransport - Numerische Anwendung
+   <li class="toctree-l2">
+    <a class="reference internal" href="FL_risk_standards.html">
+     Methoden zur Nachweisführung bei Flüssigwassertransport
     </a>
    </li>
    <li class="toctree-l2">
@@ -514,7 +512,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="flussigwassertransport-numerische-anwendung">
 <span id="fl-numerik"></span><h1>Flüssigwassertransport - Numerische Anwendung<a class="headerlink" href="#flussigwassertransport-numerische-anwendung" title="Permalink to this headline">¶</a></h1>
-<p>In diesem Kapitel sollen die dem Flüssigwassertransport zu Grunde liegenden Differentialgleichungen in einem einfachen numerischen Modell angewendet werden. Die verwendeten Gleichungen stützen sich auf die Ausführungen in <a class="reference internal" href="FL_Theorie.html#fl-theorie"><span class="std std-ref">Flüssigwassertransport - Theorie</span></a> und <span id="id1">[<a class="reference internal" href="References.html#id7" title="Angela Sasic Kalagasidis, Thomas Bednar, and Carl-Eric Hagentoft. The evaluation of the interface moisture conductivity between control volumes. Comparison between linear, harmonic and integral averaging. 9th International Conference on Performance of the Exterior Envelopes of Whole Buildings. Clearwater Beach, Florida, 2004, 2004.">Kalagasidis <em>et al.</em>, 2004</a>]</span>.</p>
+<p>In diesem Kapitel sollen die dem Flüssigwassertransport zu Grunde liegenden Differentialgleichungen in einem einfachen numerischen Modell angewendet werden. Die verwendeten Gleichungen stützen sich auf die Ausführungen in <a class="reference internal" href="FL_Theorie.html#fl-theorie"><span class="std std-ref">Flüssigwassertransport - Theorie</span></a> und <span id="id1">[<a class="reference internal" href="References.html#id13" title="Angela Sasic Kalagasidis, Thomas Bednar, and Carl-Eric Hagentoft. The evaluation of the interface moisture conductivity between control volumes. Comparison between linear, harmonic and integral averaging. In 9th International Conference on Performance of the Exterior Envelopes of Whole Buildings. Clearwater Beach, Florida, 2004. Florida, 2004.">Kalagasidis <em>et al.</em>, 2004</a>]</span>.</p>
 <p>Die zur numerischen Lösung der beschreibenden Differentialgleichung verwendeten Bibliotheken und Funktionen können hier eingeblendet werden.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -531,44 +529,44 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <section id="anwendungsfall">
 <h2>Anwendungsfall<a class="headerlink" href="#anwendungsfall" title="Permalink to this headline">¶</a></h2>
-<p>Es soll die Veränderung des Wassergehaltes über die Dauer eines fiktiven eindimesionalen Aufsaugversuches in einem Probekörper nachgerechnet werden. Dieses Modell kann auch verwendet werden um den <a class="reference internal" href="LU_FL.html#lu-fl"><span class="std std-ref">Aufsaugversuch der Laborübung</span></a> vereinfacht nachzubilden. Eine schematische Darstellung des Probekörpers ist in <a class="reference internal" href="#fl-sample"><span class="std std-numref">Fig. 18</span></a> gegeben.</p>
+<p>Es soll die Veränderung des Wassergehaltes über die Dauer eines fiktiven eindimesionalen Aufsaugversuches in einem Probekörper nachgerechnet werden. Dieses Modell kann auch verwendet werden um den <a class="reference internal" href="LU_FL.html#lu-fl"><span class="std std-ref">Aufsaugversuch der Laborübung</span></a> vereinfacht nachzubilden. Eine schematische Darstellung des Probekörpers ist in <code class="xref std std-numref docutils literal notranslate"><span class="pre">FL_sample</span></code> gegeben.</p>
 <figure class="align-default" id="fl-sample">
 <a class="reference internal image-reference" href="_images/FL_sample_scheme.png"><img alt="_images/FL_sample_scheme.png" src="_images/FL_sample_scheme.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Darstellung des Probekörpers des fiktiven Aufsaugveruches mit den beschreibenden Parametern.</span><a class="headerlink" href="#fl-sample" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Darstellung des Probekörpers des fiktiven Aufsaugveruches mit den beschreibenden Parametern.</span><a class="headerlink" href="#fl-sample" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="physikalisches-modell">
 <h2>Physikalisches Modell<a class="headerlink" href="#physikalisches-modell" title="Permalink to this headline">¶</a></h2>
-<p>Die Veränderung des Wassergehaltes nach der Zeit bei Berücksichtigung von Wasserdampfdiffusion und Flüssigwasserleitung kann durch Gleichung <a class="reference internal" href="#equation-eq-dw-dt">(31)</a> beschrieben werden</p>
+<p>Die Veränderung des Wassergehaltes nach der Zeit bei Berücksichtigung von Wasserdampfdiffusion und Flüssigwasserleitung kann durch Gleichung <a class="reference internal" href="#equation-eq-dw-dt">()</a> beschrieben werden</p>
 <div class="math notranslate nohighlight" id="equation-eq-dw-dt">
-<span class="eqno">(31)<a class="headerlink" href="#equation-eq-dw-dt" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-dw-dt" title="Permalink to this equation">¶</a></span>\[
   \frac{\partial w}{\partial t} = - \frac{\partial g_{v}}{\partial x} - \frac{\partial g_{l}}{\partial x}.
 \]</div>
-<p>Dabei ist <span class="math notranslate nohighlight">\(g_{v}\)</span> die Feuchtestromdichte zu Folge Wasserdampftransport, Gleichung <a class="reference internal" href="#equation-eq-g-v">(32)</a>, und <span class="math notranslate nohighlight">\(g_{l}\)</span> die Feuchtestromdichte zu Folge Flüssigwassertransport, Gleichung <a class="reference internal" href="#equation-eq-g-l">(33)</a>, in kg/s.</p>
+<p>Dabei ist <span class="math notranslate nohighlight">\(g_{v}\)</span> die Feuchtestromdichte zu Folge Wasserdampftransport, Gleichung <a class="reference internal" href="#equation-eq-g-v">()</a>, und <span class="math notranslate nohighlight">\(g_{l}\)</span> die Feuchtestromdichte zu Folge Flüssigwassertransport, Gleichung <a class="reference internal" href="#equation-eq-g-l">()</a>, in kg/s.</p>
 <div class="math notranslate nohighlight" id="equation-eq-g-v">
-<span class="eqno">(32)<a class="headerlink" href="#equation-eq-g-v" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-g-v" title="Permalink to this equation">¶</a></span>\[
  g_{v} = - \delta_{p} \cdot \frac{\partial p}{\partial x}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq-g-l">
-<span class="eqno">(33)<a class="headerlink" href="#equation-eq-g-l" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-g-l" title="Permalink to this equation">¶</a></span>\[
  g_{l} = - K \cdot \frac{\partial P_{suc}}{\partial x}
 \]</div>
-<p>In diesem vereinfachten Beispiel wird der Transport zu Folge Dampfdiffusion vernachlässigt, womit sich Gleichung <a class="reference internal" href="#equation-eq-dw-dt">(31)</a> zu Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp">(34)</a> vereinfacht.</p>
+<p>In diesem vereinfachten Beispiel wird der Transport zu Folge Dampfdiffusion vernachlässigt, womit sich Gleichung <a class="reference internal" href="#equation-eq-dw-dt">()</a> zu Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp">()</a> vereinfacht.</p>
 <div class="math notranslate nohighlight" id="equation-eq-dw-dt-simp">
-<span class="eqno">(34)<a class="headerlink" href="#equation-eq-dw-dt-simp" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-dw-dt-simp" title="Permalink to this equation">¶</a></span>\[
   \frac{\partial w}{\partial t} = - \frac{\partial g_{l}}{\partial x}
 \]</div>
 <p>In {
-}<code class="docutils literal notranslate"><span class="pre">kalagasidisEvaluationInterfaceMoisture2004</span></code> wird der Wassergehalt in Abhängigkeit der Saugspannung definiert lt. Gleichung <a class="reference internal" href="#equation-w-psuc">(35)</a>.</p>
+}<code class="docutils literal notranslate"><span class="pre">kalagasidisEvaluationInterfaceMoisture2004</span></code> wird der Wassergehalt in Abhängigkeit der Saugspannung definiert lt. Gleichung <a class="reference internal" href="FL_Theorie.html#equation-w-psuc">(43)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-w-psuc">
-<span class="eqno">(35)<a class="headerlink" href="#equation-w-psuc" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-w-psuc" title="Permalink to this equation">¶</a></span>\[
 w(P_{suc}) = 300 \cdot (1 + 10^{-6} \cdot P_{suc})^{-1}
 \]</div>
-<p>Die Flüssigwasserleitung, als Funktion der Saugspannung und eines freien Parameters n <span id="id2">[<a class="reference internal" href="References.html#id2" title="Thomas Bednar. Beurteilung des feuchte- und wärmetechnischen Verhaltens von Bauteilen und Gebäuden - Weiterentwicklung der Meß- und Rechenverfahren. Wien, Techn. Univ., Diss., 2000.">Bednar, 2000</a>]</span>, kann durch GLeichung <a class="reference internal" href="#equation-k-w">(36)</a> beschrieben werden.</p>
+<p>Die Flüssigwasserleitung, als Funktion der Saugspannung und eines freien Parameters n <span id="id2">[<a class="reference internal" href="References.html#id3" title="Thomas Bednar. Beurteilung des feuchte- und wärmetechnischen Verhaltens von Bauteilen und Gebäuden - Weiterentwicklung der Meß- und Rechenverfahren. Wien, Techn. Univ., Diss., 2000.">Bednar, 2000</a>]</span>, kann durch GLeichung <a class="reference internal" href="#equation-k-w">()</a> beschrieben werden.</p>
 <div class="math notranslate nohighlight" id="equation-k-w">
-<span class="eqno">(36)<a class="headerlink" href="#equation-k-w" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-k-w" title="Permalink to this equation">¶</a></span>\[
 K_{w}(P_{suc}, n) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{n + 1}{2 n} \cdot \left(\frac{A}{300}\right)^{2} \cdot \left(\frac{w(P_{suc}}{300}\right)^{n} \cdot \left( n + 1 - \left(\frac{w(P_{suc}}{300}\right)^{n}\right)
 \]</div>
 <p><strong>Nomenklatur:</strong></p>
@@ -648,16 +646,16 @@ K_{w}(P_{suc}, n) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{n
 </div>
 </div>
 <blockquote>
-<div><p>Für Gleichung <a class="reference internal" href="#equation-k-w">(36)</a> wurde dw/dP direkt analytisch berechnet und in die Funktion eingesetzt.</p>
+<div><p>Für Gleichung <a class="reference internal" href="#equation-k-w">()</a> wurde dw/dP direkt analytisch berechnet und in die Funktion eingesetzt.</p>
 </div></blockquote>
 </section>
 <section id="numerisches-modell">
 <h2>Numerisches Modell<a class="headerlink" href="#numerisches-modell" title="Permalink to this headline">¶</a></h2>
-<p>Zur numerischen Lösung von Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp">(34)</a> muss zunächst das Intervall auf dem die Ergebnisse zu ermitteln sind in endlich viele Teilintervalle diskretisiert werden. In unserem Beispiel bedeutet das, dass unser eindimensionaler fiktiver Versuchskörper eine feste Länge erhält und diese anschließend in eine finite Anzahl aufgeteilt wird, um somit an jedem dieser Diskretisierungspunkte ein Ergebnis berechnen zu können, <a class="reference internal" href="#fl-sample-disk"><span class="std std-numref">Fig. 19</span></a>.</p>
+<p>Zur numerischen Lösung von Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp">()</a> muss zunächst das Intervall auf dem die Ergebnisse zu ermitteln sind in endlich viele Teilintervalle diskretisiert werden. In unserem Beispiel bedeutet das, dass unser eindimensionaler fiktiver Versuchskörper eine feste Länge erhält und diese anschließend in eine finite Anzahl aufgeteilt wird, um somit an jedem dieser Diskretisierungspunkte ein Ergebnis berechnen zu können, <code class="xref std std-numref docutils literal notranslate"><span class="pre">FL_sample_disk</span></code>.</p>
 <figure class="align-default" id="fl-sample-disk">
 <a class="reference internal image-reference" href="_images/FL_sample_disk.png"><img alt="_images/FL_sample_disk.png" src="_images/FL_sample_disk.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Probekörper mit Diskretisierungspunkten in einem gleichmäßigen Abstand dx. Die außen liegenden Diskretisierungspunkte geben die Randbedingungen vor.</span><a class="headerlink" href="#fl-sample-disk" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Probekörper mit Diskretisierungspunkten in einem gleichmäßigen Abstand dx. Die außen liegenden Diskretisierungspunkte geben die Randbedingungen vor.</span><a class="headerlink" href="#fl-sample-disk" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Da sich für solche Diskretisierungsgitter die Arbeit mittels Matrizen anbietet, werden wir mit <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">Numpy Arrays</a>  arbeiten.</p>
@@ -729,32 +727,32 @@ K_{w}(P_{suc}, n) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{n
 <h3>Numerische Lösung der Differentialgleichung<a class="headerlink" href="#numerische-losung-der-differentialgleichung" title="Permalink to this headline">¶</a></h3>
 <section id="berechnung-der-veranderung-des-wassergehaltes-nach-der-zeit-approximation-mittels-fdm">
 <h4>Berechnung der Veränderung des Wassergehaltes nach der Zeit - Approximation mittels FDM<a class="headerlink" href="#berechnung-der-veranderung-des-wassergehaltes-nach-der-zeit-approximation-mittels-fdm" title="Permalink to this headline">¶</a></h4>
-<p>Um eine numerische Lösung der partiellen Differentialgleichung <a class="reference internal" href="#equation-eq-dw-dt-simp">(34)</a> zu ermöglichen wird zur Approximation der Lösung die Finite-Differenzen-Methode (FDM) angewandt.</p>
-<p>Wenn wir Gleichung <a class="reference internal" href="#equation-eq-g-l">(33)</a> in Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp">(34)</a> einsetzen erhalten wir Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp-ges">(37)</a>.</p>
+<p>Um eine numerische Lösung der partiellen Differentialgleichung <a class="reference internal" href="#equation-eq-dw-dt-simp">()</a> zu ermöglichen wird zur Approximation der Lösung die Finite-Differenzen-Methode (FDM) angewandt.</p>
+<p>Wenn wir Gleichung <a class="reference internal" href="#equation-eq-g-l">()</a> in Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp">()</a> einsetzen erhalten wir Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp-ges">()</a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-dw-dt-simp-ges">
-<span class="eqno">(37)<a class="headerlink" href="#equation-eq-dw-dt-simp-ges" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">()<a class="headerlink" href="#equation-eq-dw-dt-simp-ges" title="Permalink to this equation">¶</a></span>\[\begin{split}
  g_{l} = K \cdot \frac{\partial P_{suc}}{\partial x} \\
  \frac{\partial w}{\partial t} = - \frac{\partial g_{l}}{\partial x} \\
  \frac{\partial w}{\partial t} = - \frac{\partial}{\partial x}\left(K \cdot \frac{\partial P_{suc}}{\partial x}\right)
 \end{split}\]</div>
-<p>Da sowohl <span class="math notranslate nohighlight">\(K\)</span> als auch <span class="math notranslate nohighlight">\(P_{suc}\)</span> vom Ort abhängig sind führt Anwendung der Produktregel bei Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp-ges">(37)</a> auf Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp-ges-prod">(38)</a>.</p>
+<p>Da sowohl <span class="math notranslate nohighlight">\(K\)</span> als auch <span class="math notranslate nohighlight">\(P_{suc}\)</span> vom Ort abhängig sind führt Anwendung der Produktregel bei Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp-ges">()</a> auf Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp-ges-prod">()</a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-dw-dt-simp-ges-prod">
-<span class="eqno">(38)<a class="headerlink" href="#equation-eq-dw-dt-simp-ges-prod" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-dw-dt-simp-ges-prod" title="Permalink to this equation">¶</a></span>\[
 \frac{\partial w}{\partial t} = - \frac{\partial K}{\partial x} \cdot \frac{\partial P_{suc}}{\partial x} + K \cdot \frac{\partial^{2} P_{suc}}{\partial x^{2}}
 \]</div>
-<p>Die diskrete Form von Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp-ges-prod">(38)</a> kann nun zum Beispiel mittels FDM aufgestellt werden und ist in Gleichung <a class="reference internal" href="#equation-eq-dw-dt-approx">(39)</a> dargestellt.</p>
+<p>Die diskrete Form von Gleichung <a class="reference internal" href="#equation-eq-dw-dt-simp-ges-prod">()</a> kann nun zum Beispiel mittels FDM aufgestellt werden und ist in Gleichung <a class="reference internal" href="#equation-eq-dw-dt-approx">()</a> dargestellt.</p>
 <div class="math notranslate nohighlight" id="equation-eq-dw-dt-approx">
-<span class="eqno">(39)<a class="headerlink" href="#equation-eq-dw-dt-approx" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-dw-dt-approx" title="Permalink to this equation">¶</a></span>\[
 \frac{\partial w}{\partial t} = - \frac{\partial K}{\partial x} \cdot \frac{\partial P_{suc}}{\partial x} + K \cdot \frac{\partial^{2} P_{suc}}{\partial x^{2}}) \approx - \frac{K_{O} - K_{U}}{2 \cdot dx} \cdot \frac{P_{O} - P_{U}}{2 \cdot dx} + K_{C} \cdot \frac{P_{O} - 2 P_{C} + P_{U}}{dx^{2}}
 \]</div>
-<p>Dabei steht der Index <span class="math notranslate nohighlight">\(O\)</span> für das obere bzw. der Index <span class="math notranslate nohighlight">\(U\)</span> für das untere angrenzende Element ausgehend vom eben betrachteten Element, Index <span class="math notranslate nohighlight">\(C\)</span> (center), dargestellt in <a class="reference internal" href="#grid-index"><span class="std std-numref">Fig. 20</span></a></p>
+<p>Dabei steht der Index <span class="math notranslate nohighlight">\(O\)</span> für das obere bzw. der Index <span class="math notranslate nohighlight">\(U\)</span> für das untere angrenzende Element ausgehend vom eben betrachteten Element, Index <span class="math notranslate nohighlight">\(C\)</span> (center), dargestellt in <code class="xref std std-numref docutils literal notranslate"><span class="pre">grid_index</span></code></p>
 <figure class="align-default" id="grid-index">
 <a class="reference internal image-reference" href="_images/grid_index.png"><img alt="_images/grid_index.png" src="_images/grid_index.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Darstellung von 3 Elementen aus der Diskretisierung. Das zu berechnende Element ist mit dem Index <span class="math notranslate nohighlight">\(C\)</span> versehen, die angrenzenden Elemente mit dem Index <span class="math notranslate nohighlight">\(U\)</span> bzw. <span class="math notranslate nohighlight">\(O\)</span>.</span><a class="headerlink" href="#grid-index" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Darstellung von 3 Elementen aus der Diskretisierung. Das zu berechnende Element ist mit dem Index <span class="math notranslate nohighlight">\(C\)</span> versehen, die angrenzenden Elemente mit dem Index <span class="math notranslate nohighlight">\(U\)</span> bzw. <span class="math notranslate nohighlight">\(O\)</span>.</span><a class="headerlink" href="#grid-index" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Wir stellen Gleichung <a class="reference internal" href="#equation-eq-dw-dt-approx">(39)</a> zur weiteren Verwendung als Funktion dar:</p>
+<p>Wir stellen Gleichung <a class="reference internal" href="#equation-eq-dw-dt-approx">()</a> zur weiteren Verwendung als Funktion dar:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dwdt_calc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
@@ -778,9 +776,9 @@ K_{w}(P_{suc}, n) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{n
 </section>
 <section id="berechnung-des-wassergehaltes-nach-der-zeit-numerische-integration">
 <h4>Berechnung des Wassergehaltes nach der Zeit - Numerische Integration<a class="headerlink" href="#berechnung-des-wassergehaltes-nach-der-zeit-numerische-integration" title="Permalink to this headline">¶</a></h4>
-<p>Mit Gleichung <a class="reference internal" href="#equation-eq-dw-dt-approx">(39)</a> können wir die Veränderung des Wassergehaltes nach der Zeit berechnen. Um den Wassergehalt im Probekörper nach einer bestimmten Zeitdauer zu erhalten müssen wir die Veränderung des Wassergehaltes über die Zeit integrieren, Gleichung <a class="reference internal" href="#equation-w-integral">(40)</a>.</p>
+<p>Mit Gleichung <a class="reference internal" href="#equation-eq-dw-dt-approx">()</a> können wir die Veränderung des Wassergehaltes nach der Zeit berechnen. Um den Wassergehalt im Probekörper nach einer bestimmten Zeitdauer zu erhalten müssen wir die Veränderung des Wassergehaltes über die Zeit integrieren, Gleichung <a class="reference internal" href="#equation-w-integral">()</a>.</p>
 <div class="math notranslate nohighlight" id="equation-w-integral">
-<span class="eqno">(40)<a class="headerlink" href="#equation-w-integral" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-w-integral" title="Permalink to this equation">¶</a></span>\[
 w = \int_{}^{} \frac{\partial w}{\partial t} \,dt
 \]</div>
 <p>Da die Lösung dieses Integrals nur selten analytisch möglich ist, wird dieses numerisch Integriert. Als Integrationsverfahren wird ein explizites Runge-Kutta Verfahren verwendet (RK45). Die verwendete Funktion <code class="docutils literal notranslate"><span class="pre">solve_ivp()</span></code> zur Lösung des Anfangswertproblemes stammt aus der <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html#id2">SciPy Library</a>.</p>
@@ -939,21 +937,7 @@ w = \int_{}^{} \frac{\partial w}{\partial t} \,dt
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="FL_Theorie.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Flüssigwassertransport - Theorie</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="Problem_Innendaemmung.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Anwendungsbeispiel - Sanierung Innendämmung</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
@@ -961,7 +945,7 @@ w = \int_{}^{} \frac{\partial w}{\partial t} \,dt
     <footer class="footer">
   <p>
     
-      By Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.<br/>
+      By Hygrothermische Bauteilsimulation und Risikoanalyse<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

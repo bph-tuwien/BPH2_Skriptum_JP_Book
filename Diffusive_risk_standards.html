@@ -141,7 +141,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Konvektiver_Transport.html">
-   Konvektiver Stofftransport
+   Konvektiver Stofftransport und Wärmestransport
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -156,7 +156,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Convective_risk.html">
-     Methoden zur Risikonanalyse bei konvektiven Wärme- und Feuchtetransport
+     Methoden der Nachweisführung und Risikonanalyse bei Berücksichtigung des konvektiven Wärme- und Feuchtetransports
     </a>
    </li>
    <li class="toctree-l2">
@@ -182,8 +182,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="FL_Numerik.html">
-     Flüssigwassertransport - Numerische Anwendung
+    <a class="reference internal" href="FL_risk_standards.html">
+     Methoden zur Nachweisführung bei Flüssigwassertransport
     </a>
    </li>
    <li class="toctree-l2">
@@ -323,6 +323,11 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bestimmung-der-geeigneten-dimensionalitat-des-simulationsmodelles">
+   Bestimmung der geeigneten Dimensionalität des Simulationsmodelles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#risikoanalyse-mittels-temperaturfaktor-f-r-si">
    Risikoanalyse mittels  Temperaturfaktor
    <span class="math notranslate nohighlight">
@@ -377,6 +382,11 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bestimmung-der-geeigneten-dimensionalitat-des-simulationsmodelles">
+   Bestimmung der geeigneten Dimensionalität des Simulationsmodelles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#risikoanalyse-mittels-temperaturfaktor-f-r-si">
    Risikoanalyse mittels  Temperaturfaktor
    <span class="math notranslate nohighlight">
@@ -421,6 +431,9 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="methoden-zur-risikonanalyse-bei-diffusiven-warme-und-feuchtetransport">
 <h1>Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport<a class="headerlink" href="#methoden-zur-risikonanalyse-bei-diffusiven-warme-und-feuchtetransport" title="Permalink to this headline">¶</a></h1>
+<section id="bestimmung-der-geeigneten-dimensionalitat-des-simulationsmodelles">
+<h2>Bestimmung der geeigneten Dimensionalität des Simulationsmodelles<a class="headerlink" href="#bestimmung-der-geeigneten-dimensionalitat-des-simulationsmodelles" title="Permalink to this headline">¶</a></h2>
+</section>
 <section id="risikoanalyse-mittels-temperaturfaktor-f-r-si">
 <h2>Risikoanalyse mittels  Temperaturfaktor <span class="math notranslate nohighlight">\(f_{R_{Si}}\)</span><a class="headerlink" href="#risikoanalyse-mittels-temperaturfaktor-f-r-si" title="Permalink to this headline">¶</a></h2>
 <p>Um einschätzen zu können, ob sich bei üblicher Wohnungsnutzung Schimmelpilze an einer Bauteiloberfläche bilden, hat sich
@@ -481,8 +494,8 @@ ergibt sich bei steigenden Wassergehalt in Summee ein höherer Wert für die Wä
 <p><span class="math notranslate nohighlight">\(\lambda_{Wasser} \approx 0.5562 \gg \lambda_{Luft} \approx 0.0262\)</span> W/mK</p>
 </div>
 <p>Dieser Zusammenhang kann einerseits durch Messungen bestimmt werden, andererseits gibt es für bestimmte Anwendungsfälle
-mathematische Modelle um die Wärmeleitfähigkeit vorherzusagen z.B. <span id="id1">[<a class="reference internal" href="References.html#id8" title="Driss Taoukil, Abdelmajid El bouardi, Friedrich Sick, Abdelaziz Mimet, Hassan Ezbakhe, and Taib Ajzoul. Moisture content influence on the thermal conductivity and diffusivity of wood–concrete composite. Construction and Building Materials, 48:104–115, November 2013. doi:10.1016/j.conbuildmat.2013.06.067.">Taoukil <em>et al.</em>, 2013</a>]</span> oder auch
-<span id="id2">[<a class="reference internal" href="References.html#id3" title="D. R. Chaudhary and R. C. Bhandari. Heat transfer through a three-phase porous medium. Journal of Physics D: Applied Physics, 1(6):815–817, June 1968. doi:10.1088/0022-3727/1/6/418.">Chaudhary and Bhandari, 1968</a>]</span>.</p>
+mathematische Modelle um die Wärmeleitfähigkeit vorherzusagen z.B. <span id="id1">[<a class="reference internal" href="References.html#id23" title="Driss Taoukil, Abdelmajid El bouardi, Friedrich Sick, Abdelaziz Mimet, Hassan Ezbakhe, and Taib Ajzoul. Moisture content influence on the thermal conductivity and diffusivity of wood–concrete composite. Construction and Building Materials, 48:104–115, November 2013. doi:10.1016/j.conbuildmat.2013.06.067.">Taoukil <em>et al.</em>, 2013</a>]</span> oder auch
+<span id="id2">[<a class="reference internal" href="References.html#id7" title="D. R. Chaudhary and R. C. Bhandari. Heat transfer through a three-phase porous medium. Journal of Physics D: Applied Physics, 1(6):815–817, June 1968. doi:10.1088/0022-3727/1/6/418.">Chaudhary and Bhandari, 1968</a>]</span>.</p>
 <p>Für die bauphysikalische Praxis hat sich die Formulierung in ÖNORM EN 10456 bewährt:</p>
 <div class="math notranslate nohighlight" id="equation-lambda-psi-eq">
 <span class="eqno">(26)<a class="headerlink" href="#equation-lambda-psi-eq" title="Permalink to this equation">¶</a></span>\[ \lambda(\psi) = \lambda_{Bemessungswert} \cdot e^{f_{\psi} \cdot \psi} \]</div>
@@ -597,7 +610,7 @@ andere Grenzwerte überschritten werden, bevor der Nachweis der Erhöhung des W�
     <footer class="footer">
   <p>
     
-      By Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.<br/>
+      By Hygrothermische Bauteilsimulation und Risikoanalyse<br/>
     
         &copy; Copyright 2021.<br/>
   </p>
