@@ -8,7 +8,7 @@ Dabei wird eingangs die Motivation zur Auseinandersetzung mit dem Kapitel dargel
 Erklärung der notwendigen theorethischen Grundlagen, ein Kapitel zur anwendungsbezogenen und normativen Umsetzung und
 abschließend ein Übungsbeispiel.
 
-Viele der theoretischen Inhalte sind angelehnt oder zitiert aus {cite}`hagentoftIntroductionBuildingPhysics2001`,
+[//]: # (Viele der theoretischen Inhalte sind angelehnt oder zitiert aus {cite}`hagentoftIntroductionBuildingPhysics2001`,)
 {cite}`bednarBaukonstruktionslehre2013`, {cite}`mezeraBaukonstrulktionslehreHTLIII2015` und
 {cite}`mezeraBaukonstrulktionslehreIVHTL2015` sowohl diese Werke, als auch andere verwendete Referenzen sowie
 weiterführende Sekundärliteratur kann dem [Literaturverzeichnis](References.md) entnommen werden. Die Referenzen sind
