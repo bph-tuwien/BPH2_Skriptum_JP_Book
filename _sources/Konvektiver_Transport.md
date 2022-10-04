@@ -9,6 +9,38 @@ Ausführungsfehler können jedoch immer wieder ungewollte Strömungspfade entste
 gegenüber dieser unvorhergesehener Leckagen zu ermöglichen wurde das Konzept der Fehlertoleranz von Bauteilen
 entwickelt, welches insbesondere in der hygrothermischen Simulation einen besonderen Stellenwert hat.
 
+```{figure} img/Wärmebrücke/psi_ex.png
+---
+height: 350px
+name: psi_ex
+---
+Möglicher Luftpfad für Konvektion in einem vereinfachten Holz-Flachdachaufbau.
+```
+
+Die Beurteilung der hygrothermischen Simulationsergebnisse ist erst durch entsprechende Risikoanalysen möglich. Mit
+Hilfe des Mould Index kann Risiko für Schimmelpilzbildung auf Oberflächen kategorisiert werden, Verrottungsrisiko und
+Tragfähigkeit müssen ebenfals überprüft werden. Dem Mould Index wird in diesem Kapitel besondere Aufmerksamkeit
+geschenkt, da dieses Modell (VTT-Modell) einem groß angelegten Forschungsprojekt entsprungen und sehr gut dokumentiert
+ist. Des Weiteren ermöglicht die tiefere Auseinadersetzung mit dem VTT-Modell die Limitationen solcher Modelle im
+allgemeinen besser zu verstehen und bei der Anwendung die Ergebnisse kritisch zu Hinterfragen.
+
+```{figure} img/Konvektion/bt_sim.png
+---
+height: 250px
+name: bt_sim
+---
+```
+
+```{figure} img/Konvektion/bt_rot.png
+---
+height: 250px
+name: bt_sim
+---
+Simulationsergebnis in Bezug auf das Risiko einer Schimmelpilzbildung: In der Bestandskonstruktion im Inneren 
+herrschen entsprechende Temperaturen und Feuchtigkeiten über so lange Zeiträume, dass das Wachstum von Schimmelpilzen 
+ermöglicht wird.
+```
+
 ## Überblick über das Kapitel
 
 Um eine Grundlage für das tiefere Verständnis dieser Konzepte zu schaffen werden die

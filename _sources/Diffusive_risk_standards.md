@@ -1,4 +1,4 @@
-# Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport
+# Vereinfachte Methoden zur Risikonanalyse bei Wärmebrücken
 
 ## Bestimmung der geeigneten Dimensionalität des Simulationsmodelles
 

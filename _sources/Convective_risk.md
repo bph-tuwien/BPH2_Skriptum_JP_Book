@@ -771,7 +771,7 @@ werden {cite}`FeuchtetechnischeBewertungHolzbauteilen`.
 
 Die Massenprozent für ein diskretisierten Element $i$ der Simulaiton lassen sich mittels
 
-$$ M-\% = \frac{w_{i}}{\rho_{i}} $$
+$$ M\ \% = \frac{w_{i}}{\rho_{i}} $$
 
 berechnen. Dabei steht $w_{i}$ für den Wassergehalt und $\rho_{i}$ die Dichte in jeweils kg/m³.
 
