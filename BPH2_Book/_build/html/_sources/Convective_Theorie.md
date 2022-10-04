@@ -1,4 +1,4 @@
-# Theorethische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
+# Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
 
 Wenn wir uns an Gleichung {eq}`q_diff_conv_eq` und {eq}`g_diff_conv_eq`
 im [vorhergehenden Kapitel](Diffusive_Theorie.md) zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
@@ -90,8 +90,7 @@ $$ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v$$(g_ge
 
 Einsetzen in Gleichung {eq}`w_eq` führt auf die **beschreibende partielle Differentialgleichung des Feuchtefeldes:**
 
-$$\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$(
-w_conv_eq)
+$$\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$(w_conv_eq)
 
 ### Einfluss des Lufttransportes auf den Wärme- und Feuchtetransport
 

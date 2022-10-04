@@ -727,13 +727,13 @@ Verbesserung besteht nun in der Auswahl der entsprechenden Sensitivitätsklassen
 ## Nachweis der Holzverrottung
 
 Zum Nachweis der Holzverrottung kann beispielsweise das Modell von Viitanen {cite}`ModellingDurabilityWooden` oder auch
-das in den WTA-Merkbättern beschriebene verwendet werden {cite}`FeuchtetechnischeBewertungHolzbauteilen2016`. Hier wird das
+das in den WTA-Merkbättern beschriebene verwendet werden {cite}`wtaFeuchtetechnischeBewertungHolzbauteilen2016`. Hier wird das
 Modell aus den WTA-Merkblättern vorestellt.
 
 **Für den vereinfachten Nachweis der Verrottung gilt:**
 
 > Die relative Porenluftfeucte im Massivholzprodukt darf 95 % bei 0 °C und 86 % bei 30 °C
-> im Tagesmittel nicht überschreiten. {cite}`FeuchtetechnischeBewertungHolzbauteilen2016`
+> im Tagesmittel nicht überschreiten. {cite}`wtaFeuchtetechnischeBewertungHolzbauteilen2016`
 
 ```{figure} img/Konvektion/verrottung.png
 ---
@@ -758,7 +758,7 @@ Verfahren für die Verrottung von MAssivholz.
 ## Nachweis der Tragfähigkeit
 
 Zum Nachweis der Tragfähigkeit von Bauteilen aus Holz kann das in den WTA-Merkbättern beschriebene Verfahren verwendet
-werden {cite}`FeuchtetechnischeBewertungHolzbauteilen2016`.
+werden {cite}`wtaFeuchtetechnischeBewertungHolzbauteilen2016`.
 
 **Für den vereinfachten Nachweis der Tragfähigkeit gilt:**
 
@@ -785,6 +785,6 @@ Verfahren für die Tragfähigkeit.
 
 ```{note}
 Die Zusammenfassung der wichtigsten Eckpunkte zum Nachweis Holzverrottung und Tragfähigkeit kann in dem entsprechenden
-WTA-Merkblatt {cite}`FeuchtetechnischeBewertungHolzbauteilen2016` gefunden werden.
+WTA-Merkblatt {cite}`wtaFeuchtetechnischeBewertungHolzbauteilen2016` gefunden werden.
 ```
 

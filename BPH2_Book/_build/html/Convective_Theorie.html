@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Theorethische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes &#8212; 206.291 Bauphysik 2 VU</title>
+    <title>Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes &#8212; 206.291 Bauphysik 2 VU</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -125,7 +125,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_Theorie.html">
-     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes
+     Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes
     </a>
    </li>
    <li class="toctree-l2">
@@ -157,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Theorethische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
+     Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
     </a>
    </li>
    <li class="toctree-l2">
@@ -331,6 +331,11 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal nav-link" href="#konvektiver-feuchtetransport">
      Konvektiver Feuchtetransport
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#einfluss-des-lufttransportes-auf-den-warme-und-feuchtetransport">
+     Einfluss des Lufttransportes auf den Wärme- und Feuchtetransport
+    </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#analysthische-losung-der-differentialgleichung-fur-den-stationaren-eindimensionalen-fall">
@@ -361,7 +366,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Theorethische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes</h1>
+                <h1>Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -389,6 +394,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#konvektiver-feuchtetransport">
      Konvektiver Feuchtetransport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#einfluss-des-lufttransportes-auf-den-warme-und-feuchtetransport">
+     Einfluss des Lufttransportes auf den Wärme- und Feuchtetransport
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -419,8 +429,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="theorethische-grundlagen-des-konvektiven-warme-und-feuchtetranspoortes">
-<h1>Theorethische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes<a class="headerlink" href="#theorethische-grundlagen-des-konvektiven-warme-und-feuchtetranspoortes" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="theoretische-grundlagen-des-konvektiven-warme-und-feuchtetranspoortes">
+<h1>Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes<a class="headerlink" href="#theoretische-grundlagen-des-konvektiven-warme-und-feuchtetranspoortes" title="Permalink to this headline">¶</a></h1>
 <p>Wenn wir uns an Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-q-diff-conv-eq">(9)</a> und <a class="reference internal" href="Diffusive_Theorie.html#equation-g-diff-conv-eq">(17)</a>
 im <a class="reference internal" href="Diffusive_Theorie.html"><span class="doc std std-doc">vorhergehenden Kapitel</span></a> zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
 diffusiven Therm beschäftigt und den konvektiven vernachlässigt <span class="math notranslate nohighlight">\(q_{conv} = g_{conv} = 0\)</span>. Um konvektiven Transport zu
@@ -497,12 +507,16 @@ auf</p>
 <div class="math notranslate nohighlight" id="equation-g-ges-eq">
 <span class="eqno">(34)<a class="headerlink" href="#equation-g-ges-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v\]</div>
 <p>Einsetzen in Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-w-eq">(15)</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Feuchtefeldes:</strong></p>
+<div class="math notranslate nohighlight" id="equation-w-conv-eq">
+<span class="eqno">(35)<a class="headerlink" href="#equation-w-conv-eq" title="Permalink to this equation">¶</a></span>\[\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m \]</div>
+</section>
+<section id="einfluss-des-lufttransportes-auf-den-warme-und-feuchtetransport">
+<h3>Einfluss des Lufttransportes auf den Wärme- und Feuchtetransport<a class="headerlink" href="#einfluss-des-lufttransportes-auf-den-warme-und-feuchtetransport" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight" id="equation-qcd-con-eq">
-<span class="eqno">(35)<a class="headerlink" href="#equation-qcd-con-eq" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$(
-w_conv_eq)\\### Einfluss des Lufttransportes auf den Wärme- und Feuchtetransport\\$$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) \end{aligned}\end{align} \]</div>
-<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(35)</a> kann für den stationären eindimensionalen Fall gelöst werden und führt auf</p>
+<span class="eqno">(36)<a class="headerlink" href="#equation-qcd-con-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) \]</div>
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(36)</a> kann für den stationären eindimensionalen Fall gelöst werden und führt auf</p>
 <div class="math notranslate nohighlight" id="equation-qcd-con-sol-eq">
-<span class="eqno">(36)<a class="headerlink" href="#equation-qcd-con-sol-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\ell} - 1}\]</div>
+<span class="eqno">(37)<a class="headerlink" href="#equation-qcd-con-sol-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\ell} - 1}\]</div>
 <p>mit der normalisierten, dimensionslosen Temperatur</p>
 <div class="math notranslate nohighlight">
 \[ T'(x) = \frac{T(x) - T_{1}}{T_{2} - T{1}} = \frac{e(x/\ell) - 1}{e(L/\ell - 1) } \]</div>
@@ -530,11 +544,11 @@ wieder. Dort wird jedoch die immer die Flussdichte und nicht der Wärmefluss bet
 </div>
 <section id="analysthische-losung-der-differentialgleichung-fur-den-stationaren-eindimensionalen-fall">
 <span id="analy-konv"></span><h4>Analysthische Lösung der Differentialgleichung für den stationären eindimensionalen Fall<a class="headerlink" href="#analysthische-losung-der-differentialgleichung-fur-den-stationaren-eindimensionalen-fall" title="Permalink to this headline">¶</a></h4>
-<p>Da sich die normative Darstellung der in Gleichung <a class="reference internal" href="#equation-qcd-con-sol-eq">(36)</a> folgt, wird nachfolgend ein kurzer Beweis für
+<p>Da sich die normative Darstellung der in Gleichung <a class="reference internal" href="#equation-qcd-con-sol-eq">(37)</a> folgt, wird nachfolgend ein kurzer Beweis für
 dessen Gültigkeit erbracht.</p>
-<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(35)</a> kann für den stationären eindimensionalen Fall und wenn <span class="math notranslate nohighlight">\(-\frac{d}{dx}Q_{cd} = 0\)</span>
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(36)</a> kann für den stationären eindimensionalen Fall und wenn <span class="math notranslate nohighlight">\(-\frac{d}{dx}Q_{cd} = 0\)</span>
 folgendermaßen gelöst werden.</p>
-<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(35)</a> kann umgestellt werden zu</p>
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(36)</a> kann umgestellt werden zu</p>
 <div class="math notranslate nohighlight">
 \[ Q_{cd} = c_{pa} \dot{M}_{a} \frac{T_{ } e^{L/\ell} - T_{2}}{e^{L/\ell} -1} \]</div>
 <p>und mit Hilfe der Definiton von <span class="math notranslate nohighlight">\(\ell\)</span> kann folgender Zusammenhang aufgestellt werden</p>
@@ -542,7 +556,7 @@ folgendermaßen gelöst werden.</p>
 \[ \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} = T(x) - \ell \cdot \frac{dT}{dx} \]</div>
 <p>Wenn nachfolgender Ansatz bekannt ist:</p>
 <div class="math notranslate nohighlight" id="equation-ansatz-eq">
-<span class="eqno">(37)<a class="headerlink" href="#equation-ansatz-eq" title="Permalink to this equation">¶</a></span>\[ -\ell e^{x/\ell}\frac{d}{dx}\left(e^{-x/\ell} T(x)\right) = T(x) - \ell \cdot \frac{dT}{dx} \]</div>
+<span class="eqno">(38)<a class="headerlink" href="#equation-ansatz-eq" title="Permalink to this equation">¶</a></span>\[ -\ell e^{x/\ell}\frac{d}{dx}\left(e^{-x/\ell} T(x)\right) = T(x) - \ell \cdot \frac{dT}{dx} \]</div>
 <div class="math notranslate nohighlight">
 \[ \frac{d}{dx}(e^{-x/\ell} T(x)) = - \frac{e^{-x/\ell}}{\ell} \cdot \left(T(x) - \ell \cdot \frac{dT}{dx}\right) = -
 \frac{e^{-x/\ell}}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}}\]</div>

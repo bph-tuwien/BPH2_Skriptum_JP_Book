@@ -125,7 +125,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_Theorie.html">
-     Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes
+     Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes
     </a>
    </li>
    <li class="toctree-l2">
@@ -157,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="Convective_Theorie.html">
-     Theorethische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
+     Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
     </a>
    </li>
    <li class="toctree-l2">
@@ -431,15 +431,15 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="flussigwassertransport-theorie">
 <span id="fl-theorie"></span><h1>Flüssigwassertransport - Theorie<a class="headerlink" href="#flussigwassertransport-theorie" title="Permalink to this headline">¶</a></h1>
-<p>Die hier beschriebenen theorethischen Ausführungen stützen sich Großteils auf
+<p>Die hier beschriebenen theoretischen Ausführungen stützen sich Großteils auf
 <span id="id1">[<a class="reference internal" href="References.html#id13" title="Angela Sasic Kalagasidis, Thomas Bednar, and Carl-Eric Hagentoft. The evaluation of the interface moisture conductivity between control volumes. Comparison between linear, harmonic and integral averaging. In 9th International Conference on Performance of the Exterior Envelopes of Whole Buildings. Clearwater Beach, Florida, 2004. Florida, 2004.">Kalagasidis <em>et al.</em>, 2004</a>]</span> und <span id="id2">[<a class="reference internal" href="References.html#id4" title="Thomas Bednar. Modelling of Moisture Transport in the whole Range from Dry State to Vacuum Saturation. In Proceedings of the CIB W40 Meeting - Glasgow 2004. Glasgow, 2004.">Bednar, 2004</a>]</span>.</p>
 <section id="erweiterung-der-transportgleichung-fur-diffusion-um-den-flussigwasseranteil">
 <h2>Erweiterung der Transportgleichung für Diffusion um den Flüssigwasseranteil<a class="headerlink" href="#erweiterung-der-transportgleichung-fur-diffusion-um-den-flussigwasseranteil" title="Permalink to this headline">¶</a></h2>
-<p>Gleichung <code class="xref eq docutils literal notranslate"><span class="pre">w_conv_eq</span></code> beruht auf der Annahme, dass wir in Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-g-eq">(16)</a> den Anteil für den
+<p>Gleichung <a class="reference internal" href="Convective_Theorie.html#equation-w-conv-eq">(35)</a> beruht auf der Annahme, dass wir in Gleichung <a class="reference internal" href="#equation-g-eq">(39)</a> den Anteil für den
 FLüssigwassertransport vernachlässigt haben <span class="math notranslate nohighlight">\(g_{l} = 0\)</span>.</p>
 <p>Um diesen in</p>
 <div class="math notranslate nohighlight" id="equation-g-eq">
-<span class="eqno">(38)<a class="headerlink" href="#equation-g-eq" title="Permalink to this equation">¶</a></span>\[ g = g_{v} + g_{l} \]</div>
+<span class="eqno">(39)<a class="headerlink" href="#equation-g-eq" title="Permalink to this equation">¶</a></span>\[ g = g_{v} + g_{l} \]</div>
 <p>zu berücksichtigen, kann er allgemein folgendermaßen definiert</p>
 <div class="math notranslate nohighlight">
 \[ g_{l} = K \cdot \nabla P_{suc}\]</div>
@@ -450,7 +450,7 @@ FLüssigwassertransport vernachlässigt haben <span class="math notranslate nohi
 beschreibt.</p>
 <p>Einsetzen in die allgemeine Definiton des Feuchtefeldes <a class="reference internal" href="Diffusive_Theorie.html#equation-w-eq">(15)</a> führt somit auf</p>
 <div class="math notranslate nohighlight" id="equation-w-all-eq">
-<span class="eqno">(39)<a class="headerlink" href="#equation-w-all-eq" title="Permalink to this equation">¶</a></span>\[ \frac{d w}{dt} = - \nabla (g_{v} + g_{l}) + m \]</div>
+<span class="eqno">(40)<a class="headerlink" href="#equation-w-all-eq" title="Permalink to this equation">¶</a></span>\[ \frac{d w}{dt} = - \nabla (g_{v} + g_{l}) + m \]</div>
 <p>und ermöglicht uns die Beschreibung des zeitabhängigen Feuchtefeldes in kg/m³s bei Berücksichtigung der
 Flüssigwasserleitung.</p>
 <div class="admonition note">
@@ -458,7 +458,7 @@ Flüssigwasserleitung.</p>
 <p>In <span class="math notranslate nohighlight">\( g_{v} \)</span> ist der konvektive Term enthalten.</p>
 </div>
 <p>Weiters werden wir uns mit der Beschreibung der Kapillarkräfte und der Flüssigwasserleitung beschäftigen um Gleichung
-<a class="reference internal" href="#equation-w-all-eq">(39)</a> lösen zu können.</p>
+<a class="reference internal" href="#equation-w-all-eq">(40)</a> lösen zu können.</p>
 <section id="feuchtespeicherung">
 <h3>Feuchtespeicherung<a class="headerlink" href="#feuchtespeicherung" title="Permalink to this headline">¶</a></h3>
 <p>Feuchte kann sich in einem Material in all seinen Aggregatzuständen einlagern:</p>
@@ -556,7 +556,7 @@ können dadurch an dieser Schicht wesentlich mehr Wasserdampfmoleküle im Gleich
 </figure>
 <p>Der Zusammenhang zwischen Konzentration und Temperatur kann am besten durch die relative Luftfeuchtigkeit ausgedrückt
 werden. Diese Überlegung kann mittels der Sorptionsisotherme eines Materials veranschaulicht werden.
-<a class="reference internal" href="Fl%C3%BCssigwassertransport.html#sorptionsisotherme"><span class="std std-numref">Fig. 43</span></a></p>
+<a class="reference internal" href="#sorptionsisotherme"><span class="std std-numref">Fig. 51</span></a></p>
 <figure class="align-default" id="sorptionsisotherme">
 <a class="reference internal image-reference" href="_images/sorptionsisotherme.png"><img alt="_images/sorptionsisotherme.png" src="_images/sorptionsisotherme.png" style="height: 350px;" /></a>
 <figcaption>
@@ -575,9 +575,9 @@ die Luftfeuchte darüber &lt; 100 %. <a class="reference internal" href="#saugsp
 <p>Je kleiner der Krümmungsradius desto geringer die relative Luftfeuchtigkeit über der Wasseroberfläche.</p>
 </div>
 <p>Der Zusammenhang zwischen relativer Luftfeuchtikeit und Saugspannung wir über die Kelvin Gleichung hergestellt,
-Gleichung <a class="reference internal" href="#equation-eq-kelvin">(40)</a>.</p>
+Gleichung <a class="reference internal" href="#equation-eq-kelvin">(41)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-kelvin">
-<span class="eqno">(40)<a class="headerlink" href="#equation-eq-kelvin" title="Permalink to this equation">¶</a></span>\[ \varphi = e^{\frac{s}{\rho_{H_{2}O} \cdot R_{H_{2}O} \cdot T}} \]</div>
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq-kelvin" title="Permalink to this equation">¶</a></span>\[ \varphi = e^{\frac{s}{\rho_{H_{2}O} \cdot R_{H_{2}O} \cdot T}} \]</div>
 <p>Darin ist <span class="math notranslate nohighlight">\(\varphi\)</span> die relative Luftfeuchtigkeit, <span class="math notranslate nohighlight">\(\rho_{H_{2}O}\)</span> die Dichte von Wasser in kg/m³, <span class="math notranslate nohighlight">\(R_{H_{2}O}\)</span> die
 Gaskonstante von Wasserdampf mit 462 J/kgK, <span class="math notranslate nohighlight">\(T\)</span> die absolute Temperatur in Kelvin und <span class="math notranslate nohighlight">\(P_{suc}\)</span> die Saugspannung in
 Pascal.</p>
@@ -587,7 +587,7 @@ Pascal.</p>
 <p><span class="caption-number">Fig. 52 </span><span class="caption-text">Saugspannung in einer Pore ist abhängig vom Krümmungsradius.</span><a class="headerlink" href="#saugsp-kelvin" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Durch Gleichung <a class="reference internal" href="#equation-eq-kelvin">(40)</a> kann ein Zusammenhang zwischen der Sorptionsisotherme und der Saugspannungslurve
+<p>Durch Gleichung <a class="reference internal" href="#equation-eq-kelvin">(41)</a> kann ein Zusammenhang zwischen der Sorptionsisotherme und der Saugspannungslurve
 herstellen, Abbildung .</p>
 <figure class="align-default" id="feuchtespeicherfu">
 <a class="reference internal image-reference" href="_images/feuchtespeicherfu.png"><img alt="_images/feuchtespeicherfu.png" src="_images/feuchtespeicherfu.png" style="height: 600px;" /></a>
@@ -599,9 +599,9 @@ herstellen, Abbildung .</p>
 <section id="bestimmung-des-speicher-und-transportkoeffizienten-mit-hilfe-von-parameteranpassung-von-modellfunktionen">
 <h4>Bestimmung des Speicher- und Transportkoeffizienten mit Hilfe von Parameteranpassung von Modellfunktionen<a class="headerlink" href="#bestimmung-des-speicher-und-transportkoeffizienten-mit-hilfe-von-parameteranpassung-von-modellfunktionen" title="Permalink to this headline">¶</a></h4>
 <p>Um numerische Simulationen zu ermöglichen müssen aus den Messpunkte durchgehende FUnktionen erzeugt werden. Es gibt
-hierzu verschiedenste Ansätze, ein solcher ist in Gleichung <a class="reference internal" href="#equation-eq-feuchtefu">(41)</a> dargestellt.</p>
+hierzu verschiedenste Ansätze, ein solcher ist in Gleichung <a class="reference internal" href="#equation-eq-feuchtefu">(42)</a> dargestellt.</p>
 <div class="math notranslate nohighlight" id="equation-eq-feuchtefu">
-<span class="eqno">(41)<a class="headerlink" href="#equation-eq-feuchtefu" title="Permalink to this equation">¶</a></span>\[ w(P_{suc}) = \frac{u_{f}}{1 + \left(\frac{P_{suc}}{P_{0}}\right)^{m}} \]</div>
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq-feuchtefu" title="Permalink to this equation">¶</a></span>\[ w(P_{suc}) = \frac{u_{f}}{1 + \left(\frac{P_{suc}}{P_{0}}\right)^{m}} \]</div>
 <p>Dabei ist <span class="math notranslate nohighlight">\(w(P_{suc})\)</span> der Wassergehalt in Abhängigkeit von der Saugspannung in kg/m³, <span class="math notranslate nohighlight">\(P_{suc}\)</span> die Saugspannung in Pa
 und sowohl <span class="math notranslate nohighlight">\(u_{F}\)</span>, <span class="math notranslate nohighlight">\(P_{0}\)</span> als auch <span class="math notranslate nohighlight">\(m\)</span> freie Parameter zur Anpassung des Kurvenverlaufs.</p>
 </section>
@@ -616,10 +616,10 @@ Aufsaugversuch bei 95 % relativer Luftfeuchtigkeit durchführt.</p>
 </section>
 <section id="flussigwasserleitung">
 <h3>Flüssigwasserleitung<a class="headerlink" href="#flussigwasserleitung" title="Permalink to this headline">¶</a></h3>
-<p>In <span id="id3">[<a class="reference internal" href="References.html#id13" title="Angela Sasic Kalagasidis, Thomas Bednar, and Carl-Eric Hagentoft. The evaluation of the interface moisture conductivity between control volumes. Comparison between linear, harmonic and integral averaging. In 9th International Conference on Performance of the Exterior Envelopes of Whole Buildings. Clearwater Beach, Florida, 2004. Florida, 2004.">Kalagasidis <em>et al.</em>, 2004</a>]</span> wird die Flüssigwasserleitung mittels Gleichung <a class="reference internal" href="#equation-k-eq">(42)</a> für
+<p>In <span id="id3">[<a class="reference internal" href="References.html#id13" title="Angela Sasic Kalagasidis, Thomas Bednar, and Carl-Eric Hagentoft. The evaluation of the interface moisture conductivity between control volumes. Comparison between linear, harmonic and integral averaging. In 9th International Conference on Performance of the Exterior Envelopes of Whole Buildings. Clearwater Beach, Florida, 2004. Florida, 2004.">Kalagasidis <em>et al.</em>, 2004</a>]</span> wird die Flüssigwasserleitung mittels Gleichung <a class="reference internal" href="#equation-k-eq">(43)</a> für
 einen fiktiven Probekörper modelliert.</p>
 <div class="math notranslate nohighlight" id="equation-k-eq">
-<span class="eqno">(42)<a class="headerlink" href="#equation-k-eq" title="Permalink to this equation">¶</a></span>\[ K_{w}(P_{suc}, n) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{n + 1}{2 n} \cdot \left(
+<span class="eqno">(43)<a class="headerlink" href="#equation-k-eq" title="Permalink to this equation">¶</a></span>\[ K_{w}(P_{suc}, n) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{n + 1}{2 n} \cdot \left(
 \frac{A}{300}\right)^{2} \cdot \left(\frac{w(P_{suc}}{300}\right)^{n} \cdot \left( n + 1 - \left(\frac{w(P_
 {suc}}{300}\right)^{n}\right)
 \]</div>
@@ -628,7 +628,7 @@ kg/m²h<sup>0.5</sup>, <span class="math notranslate nohighlight">\(p_{suc}\)</s
 gut fitten zu können.</p>
 <p>Wobei der Wasssergehalt in Abhängigkeit der Saugspannung für den fiktiven Probekörper definiert ist als</p>
 <div class="math notranslate nohighlight" id="equation-w-psuc">
-<span class="eqno">(43)<a class="headerlink" href="#equation-w-psuc" title="Permalink to this equation">¶</a></span>\[ w(P_{suc}) = 300 \cdot (1 + 10^{-6} \cdot P_{suc})^{-1} \]</div>
+<span class="eqno">(44)<a class="headerlink" href="#equation-w-psuc" title="Permalink to this equation">¶</a></span>\[ w(P_{suc}) = 300 \cdot (1 + 10^{-6} \cdot P_{suc})^{-1} \]</div>
 <p>und der Wasseraufnahmekoeffzient für den fiktiven Probekörper definiert ist mit <span class="math notranslate nohighlight">\(A = 10\)</span> kg/m²h<sup>0.5</sup>.</p>
 <figure class="align-default" id="curves-test-materials">
 <a class="reference internal image-reference" href="_images/curves_test_materials.png"><img alt="_images/curves_test_materials.png" src="_images/curves_test_materials.png" style="height: 250px;" /></a>
