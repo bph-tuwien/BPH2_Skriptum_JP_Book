@@ -44,6 +44,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -114,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="W%C3%A4rmebr%C3%BCcken.html">
-   Wärmebrücken
+   Einstieg ins hygrothermische Verhalten am Beispiel von Wärmebrücken
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -129,7 +130,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_risk_standards.html">
-     Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport
+     Vereinfachte Methoden zur Risikonanalyse bei Wärmebrücken
     </a>
    </li>
    <li class="toctree-l2">
@@ -138,6 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="oenorm_8110_2.html">
+   Vermeidung von Feuchteschäden ÖNORM 8110-2:2020
+  </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="Konvektiver_Transport.html">
@@ -286,22 +292,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 
             <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book/issues/new?title=Issue%20on%20page%20%2FConvective_Theorie.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
 
             <!-- Full screen (wrap in <a> to have style consistency -->
 
@@ -463,7 +453,7 @@ der Luft, <span class="math notranslate nohighlight">\(k\)</span> für die Perme
 <figure class="align-default" id="m-steady-state-wall">
 <a class="reference internal image-reference" href="_images/m_steady_state_wall.png"><img alt="_images/m_steady_state_wall.png" src="_images/m_steady_state_wall.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Massenstrom durch ein poröses finites Wandstück.</span><a class="headerlink" href="#m-steady-state-wall" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Massenstrom durch ein poröses finites Wandstück. <span id="id2">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#m-steady-state-wall" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Gleichung <a class="reference internal" href="#equation-m-delta-x-eq">(29)</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den
@@ -477,7 +467,7 @@ Differentialoperator</p>
 <p class="admonition-title">Note</p>
 <p>Auf Grund der bauphysikalischen Relevanz beschäftigen wir uns vorrangig mit Massenströmen deren Gas aus Luft besteht.
 Entsprechende Anpassung der Parameter ermöglichen auch die Abbildung anderer Fluide oder Gase.
-<span id="id2">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></p>
+<span id="id3">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></p>
 </div>
 </section>
 <section id="erweiterung-der-diffusiven-grundgleichungen-um-ihre-konvektiven-therme">
@@ -525,7 +515,7 @@ w_conv_eq)\\### Einfluss des Lufttransportes auf den Wärme- und Feuchtetranspor
 <figure class="align-default" id="peclet-num">
 <a class="reference internal image-reference" href="_images/peclet_num.png"><img alt="_images/peclet_num.png" src="_images/peclet_num.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Temperatur Profil durch ein finites Wandelement für unterschiedliche <span class="math notranslate nohighlight">\(L/\ell = Pe^{*}\)</span></span><a class="headerlink" href="#peclet-num" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Temperatur Profil durch ein finites Wandelement für unterschiedliche <span class="math notranslate nohighlight">\(L/\ell = Pe^{*}\)</span> <span id="id4">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#peclet-num" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p><span class="math notranslate nohighlight">\(Pe^{*}\)</span> ist negativ wenn <span class="math notranslate nohighlight">\(\dot{M}_{a}\)</span> negativ ist. Der Einfluss der modifizierten Peclet Zahl auf den
@@ -584,7 +574,7 @@ e^{-x/\ell} \,dx\]</div>
 <p>Bauteile können durch witteriche Exposition während der Bauzeit, Abweichungen der Ausführung von der ideellen Planung
 oder unbeabsichtigten Ausführungsfehlern immer wieder unvorhergesehenen hygrothermischen Belastungen ausgesetzt sein.
 Eine für die bauphysikalische Planung adaptierte Einstufung von Unsicherheiten wurde in
-<span id="id3">[<a class="reference internal" href="References.html#id5" title="T. Bednar and C. E. Hagentoft. Risk management by probabilistic assessment. Development of guidelines for practice, IEA Annex 55, RAP-RETRO. 2015.">Bednar and Hagentoft, 2015</a>]</span> nach <span id="id4">Mcmanus and Hastings [<a class="reference internal" href="References.html#id14" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> vorgestellt:</p>
+<span id="id5">[<a class="reference internal" href="References.html#id5" title="T. Bednar and C. E. Hagentoft. Risk management by probabilistic assessment. Development of guidelines for practice, IEA Annex 55, RAP-RETRO. 2015.">Bednar and Hagentoft, 2015</a>]</span> nach <span id="id6">Mcmanus and Hastings [<a class="reference internal" href="References.html#id14" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> vorgestellt:</p>
 <blockquote>
 <div><p>“<strong>Lack of knowledge</strong> is defined as facts that are unknown or known only imprecisely that is needed to assess performance of the concept: examples include prior
 building usage, possible salt contents, etc.</p>
@@ -606,10 +596,10 @@ that might intrude a construction, destruction by sabotage or climate change.</p
 very conservative mitigation strategy might help to handle current unknown aspects
 in the future.”</p>
 </div></blockquote>
-<p>Diese zu erwartenden Ungewissheiten können nach <span id="id5">Mcmanus and Hastings [<a class="reference internal" href="References.html#id14" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> als “Known
+<p>Diese zu erwartenden Ungewissheiten können nach <span id="id7">Mcmanus and Hastings [<a class="reference internal" href="References.html#id14" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> als “Known
 Unknowns” deklariert werden. Um diese “Known Unknowns” in hygrothermischen Berechnungen zu berücksichtigen hat sich der
 Begriff der Fehlertoleranz in der bauphysikalischen Bemessung etabliert. Das Konzept der Fehlertoleranz einer
-Baukonstruktion lässt sich mittels der von <span id="id6">Bednar [<a class="reference internal" href="References.html#id6" title="Thomas Bednar. Von der hygrothermischen Bauteilsimulation zum Risikomanagement in der Bauphysik. In Bauinstandsetzen Und Bauphysik. Gestern - Heute - Morgen. Stuttgart, 2016. Fraunhofer IRB Verlag.">2016</a>]</span>
+Baukonstruktion lässt sich mittels der von <span id="id8">Bednar [<a class="reference internal" href="References.html#id6" title="Thomas Bednar. Von der hygrothermischen Bauteilsimulation zum Risikomanagement in der Bauphysik. In Bauinstandsetzen Und Bauphysik. Gestern - Heute - Morgen. Stuttgart, 2016. Fraunhofer IRB Verlag.">2016</a>]</span>
 gewählten Beschreibung der Tauglichkeit einer Baukonstruktion definieren:</p>
 <blockquote>
 <div><p>“Tauglich ist in dem Sinne eine Konstruktion, wenn sie bei üblicher Nutzung keine
@@ -628,8 +618,8 @@ verändern.”</p>
 </section>
 <section id="luftvolumenstromkoeffzienten-hintergrund">
 <h2>Luftvolumenstromkoeffzienten - Hintergrund<a class="headerlink" href="#luftvolumenstromkoeffzienten-hintergrund" title="Permalink to this headline">¶</a></h2>
-<p>Der Ursprung der in ÖNORM 8110-2:202 angeführten Luftvolumenstromkoeffizienten zu Definition von <a class="reference internal" href="Convective_risk.html#lpf"><span class="std std-ref">Leckange</span></a> liegt
-in <span id="id7">[<a class="reference internal" href="References.html#id19" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Proposal for a modified Glaser-Method for the risk assessment of flat timber roofs. In 9th Nordic Symposium on Building Physics - NSB 2011, 181–188. June 2011.">Nusser <em>et al.</em>, 2011</a>]</span> wo erstmals ein adabptiertes Glaserverfahren vorgestellt wird um den
+<p>Der Ursprung der in ÖNORM 8110-2:202 angeführten Luftvolumenstromkoeffizienten zu Definition von <a class="reference internal" href="Convective_risk.html#lpf"><span class="std std-ref">Leckagen</span></a> liegt
+in <span id="id9">[<a class="reference internal" href="References.html#id19" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Proposal for a modified Glaser-Method for the risk assessment of flat timber roofs. In 9th Nordic Symposium on Building Physics - NSB 2011, 181–188. June 2011.">Nusser <em>et al.</em>, 2011</a>]</span> wo erstmals ein adabptiertes Glaserverfahren vorgestellt wird um den
 konvektiven Transport von Wärme- und Feuchtigkeit zu berücksichtigen. Diese Berücksichtigung soll, abhängig von der
 Ausführungsqualität, es ermöglichen die Anfälligkeit eines Bauteiles auf Fehler zu erfassen.</p>
 <div class="admonition note">
@@ -637,15 +627,15 @@ Ausführungsqualität, es ermöglichen die Anfälligkeit eines Bauteiles auf Feh
 <p>Mann könnte auch sagen, dass die Anfälligkeit eines Bauteiles im Umkehrschluss der Kehrwert der
 Fehlertoleranz eines Bauteiles ist.</p>
 </div>
-<p>Diese Kategorisierung der Ausführungsqualität wurde dann in <span id="id8">[]</span> nachgeschärft und
+<p>Diese Kategorisierung der Ausführungsqualität wurde dann in <span id="id10">[<a class="reference internal" href="References.html#id18" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Euro-Glaser unter Beachtung solarer Strahlungs-/ Absportionsbedingungen sowie druckinduzierter Feuchteeinträge im Vergleich zu dynamischen Simulationen. In Third German-Austrian IBPSA Conference, 541. Wien, September 2010.">Nusser <em>et al.</em>, 2010</a>]</span> nachgeschärft und
 wurde mittels F-Klassen berücksichtigt:</p>
 <figure class="align-default" id="f-konv">
 <a class="reference internal image-reference" href="_images/f_konv.png"><img alt="_images/f_konv.png" src="_images/f_konv.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Kategorisierung der F-Klassen. <span id="id9">[]</span></span><a class="headerlink" href="#f-konv" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Kategorisierung der F-Klassen. <span id="id11">[<a class="reference internal" href="References.html#id18" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Euro-Glaser unter Beachtung solarer Strahlungs-/ Absportionsbedingungen sowie druckinduzierter Feuchteeinträge im Vergleich zu dynamischen Simulationen. In Third German-Austrian IBPSA Conference, 541. Wien, September 2010.">Nusser <em>et al.</em>, 2010</a>]</span></span><a class="headerlink" href="#f-konv" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Für die Norm <span id="id10">[<a class="reference internal" href="References.html#id21"><em>ÖNORM 8110-2:2020</em>, n.d.</a>]</span> wurde das Verfahren weiter präzisiert und ist nunr Tabelle 3 zu entnehmen:</p>
+<p>Für die Norm <span id="id12">[<a class="reference internal" href="References.html#id21" title="8110-2 ÖNORM. ÖNORM 8110-2:2020. Technical Report, Austrian Standards, 2020.">ÖNORM, 2020</a>]</span> wurde das Verfahren weiter präzisiert und ist nun Tabelle 3 zu entnehmen:</p>
 <figure class="align-default" id="luftvolstrom-koeff-tab">
 <a class="reference internal image-reference" href="_images/luftvolstrom_koeff_tab.png"><img alt="_images/luftvolstrom_koeff_tab.png" src="_images/luftvolstrom_koeff_tab.png" style="height: 200px;" /></a>
 <figcaption>

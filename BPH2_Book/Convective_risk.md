@@ -129,7 +129,7 @@ $$P_{M} = \frac{{m}_{Luft} \cdot 0.622 / p_{0}}{\delta_{0}/(\mu \cdot d)}$$
 
 ### Modifizierter Euro-Glaser
 
-Das Modifizierte Euro-Glaser-Verfahren wurde als solches erstmals in {cite}`nusserEuroGlaserUnterBeachtung2010`
+Das Modifizierte Euro-Glaser-Verfahren wurde als solches erstmals in {cite}`nusserEuroGlaserUnterBeachtung2010a`
 präsentiert:
 
 > Im Zuge der Untersuchungen wurden 50 Einfamilienhäuser hinsichtlich der Anzahl ihrer Elektro- und
@@ -205,9 +205,8 @@ Um auf der sicheren Seite zu liegen, kann Zeile 3 als ungünstigster Fall gewäh
 
 Zur Bewertung und Analyse der Simulationsergebnisse in Bezug auf Schimmelpilzbildung auf Oberflächen, kann das
 VTT-Modell {cite}`ojanenClassificationMaterialSensitivity2011` herangezogen werden. In
-{cite}`sarkanyHygrothermischenBauteilsimulationZur` wird eine Zusammenfassung der Entwicklung und des theorethischen
-Hintegrundes dieses Modelles gegeben. Nachfolgende Ausführungen werden als direktes Zitat von {cite:
-t}`sarkanyHygrothermischenBauteilsimulationZur2019` übernommen.
+{cite}`sarkanyHygrothermischenBauteilsimulationZur2019` wird eine Zusammenfassung der Entwicklung und des theorethischen
+Hintegrundes dieses Modelles gegeben. Nachfolgende Ausführungen werden als direktes Zitat von {cite:t}`sarkanyHygrothermischenBauteilsimulationZur2019` übernommen.
 
 ```{note}
 Es wurden im direkten Zitat die Referenzen {cite}`hukkaMathematicalModelMould1999` und {cite}`ojanenClassificationMaterialSensitivity2011` mit den identen Referenzen in diesem Werk ersetzt um die
@@ -728,13 +727,13 @@ Verbesserung besteht nun in der Auswahl der entsprechenden Sensitivitätsklassen
 ## Nachweis der Holzverrottung
 
 Zum Nachweis der Holzverrottung kann beispielsweise das Modell von Viitanen {cite}`ModellingDurabilityWooden` oder auch
-das in den WTA-Merkbättern beschriebene verwendet werden {cite}`FeuchtetechnischeBewertungHolzbauteilen`. Hier wird das
+das in den WTA-Merkbättern beschriebene verwendet werden {cite}`FeuchtetechnischeBewertungHolzbauteilen2016`. Hier wird das
 Modell aus den WTA-Merkblättern vorestellt.
 
 **Für den vereinfachten Nachweis der Verrottung gilt:**
 
 > Die relative Porenluftfeucte im Massivholzprodukt darf 95 % bei 0 °C und 86 % bei 30 °C
-> im Tagesmittel nicht überschreiten. {cite}`FeuchtetechnischeBewertungHolzbauteilen`
+> im Tagesmittel nicht überschreiten. {cite}`FeuchtetechnischeBewertungHolzbauteilen2016`
 
 ```{figure} img/Konvektion/verrottung.png
 ---
@@ -759,7 +758,7 @@ Verfahren für die Verrottung von MAssivholz.
 ## Nachweis der Tragfähigkeit
 
 Zum Nachweis der Tragfähigkeit von Bauteilen aus Holz kann das in den WTA-Merkbättern beschriebene Verfahren verwendet
-werden {cite}`FeuchtetechnischeBewertungHolzbauteilen`.
+werden {cite}`FeuchtetechnischeBewertungHolzbauteilen2016`.
 
 **Für den vereinfachten Nachweis der Tragfähigkeit gilt:**
 
@@ -786,27 +785,6 @@ Verfahren für die Tragfähigkeit.
 
 ```{note}
 Die Zusammenfassung der wichtigsten Eckpunkte zum Nachweis Holzverrottung und Tragfähigkeit kann in dem entsprechenden
-WTA-Merkblatt {cite}`FeuchtetechnischeBewertungHolzbauteilen` gefunden werden.
+WTA-Merkblatt {cite}`FeuchtetechnischeBewertungHolzbauteilen2016` gefunden werden.
 ```
 
-## Angaben im Bericht
-
-In ÖNORM 8110-2:2020 werden Ihnen inhaltliche Vorgaben bzgl. Ihres technischen Berichtes gemacht die es einzuhalten
-gilt:
-
-- Darstellung des zugrunde gelegten Planungsstandes
-- Standort
-- nachvollziehbare Darstellung des Konzeptes zur Vermeidung schadensverursachender Wasser dampfkondensation im Inneren
-  und an der Oberfläche von Bauteilen
-- die aus dem Konzept resultierenden Bemessungsklimata für den Innen- und den Außenbereich
-- außenseitige, standortbezogene, lokale Randbedingungen (z. B. solare Einstrahlung, langwelliger Strahlungsaustausch
-  Beschattung durch Nachbargebäude und/oder Bäume, Photovoltaik-Anlagen, Schlagregen)
-- Angaben aus der Gebäudetechnikplanung zu raumlufttechnischen Anlagen und der anzunehmenden Druckdifferenz über die
-  Konstruktion
-- Darstellung der relevanten technischen Eigenschaften der Konstruktion
-- Für den Nachweis der Vermeidung von schadensverursachender Wasserdampfkondensation im Inneren von Bauteilen: —
-  Begründung der Wahl des Verfahrens (siehe Abschnitt 8, Abschnitt 10 und Abschnitt 11)
-- bei Verfahren nach Abschnitt 10 und Abschnitt 11 Darstellung der Einhaltung der Kriterien
-- Nachweis der Vermeidung von schadensverursachender Wasserdampfkondensation an der Oberfläche von Bauteilen:
-    - anzuwendender Bemessungstemperaturfaktor
-    - Temperaturfaktor des Bauteils

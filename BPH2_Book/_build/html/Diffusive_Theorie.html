@@ -44,6 +44,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -56,8 +57,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport" href="Diffusive_risk_standards.html" />
-    <link rel="prev" title="Wärmebrücken" href="W%C3%A4rmebr%C3%BCcken.html" />
+    <link rel="next" title="Vereinfachte Methoden zur Risikonanalyse bei Wärmebrücken" href="Diffusive_risk_standards.html" />
+    <link rel="prev" title="Einstieg ins hygrothermische Verhalten am Beispiel von Wärmebrücken" href="W%C3%A4rmebr%C3%BCcken.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="W%C3%A4rmebr%C3%BCcken.html">
-   Wärmebrücken
+   Einstieg ins hygrothermische Verhalten am Beispiel von Wärmebrücken
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -129,7 +130,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_risk_standards.html">
-     Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport
+     Vereinfachte Methoden zur Risikonanalyse bei Wärmebrücken
     </a>
    </li>
    <li class="toctree-l2">
@@ -138,6 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="oenorm_8110_2.html">
+   Vermeidung von Feuchteschäden ÖNORM 8110-2:2020
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Konvektiver_Transport.html">
@@ -286,22 +292,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 
             <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/andreass0/BPH2_Skriptum_JP_Book/issues/new?title=Issue%20on%20page%20%2FDiffusive_Theorie.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
 
             <!-- Full screen (wrap in <a> to have style consistency -->
 
@@ -458,7 +448,7 @@ beschreibt. Bei Vernachlässigung konvektiver Phänomene können wir <span class
 <figure class="align-default" id="q-steady-state-wall">
 <a class="reference internal image-reference" href="_images/q_steady_state_wall.png"><img alt="_images/q_steady_state_wall.png" src="_images/q_steady_state_wall.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Stationärer Wärmefluss durch ein finites Wandstück.</span><a class="headerlink" href="#q-steady-state-wall" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Stationärer Wärmefluss durch ein finites Wandstück. <span id="id1">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#q-steady-state-wall" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Gleichung <a class="reference internal" href="#equation-q-delta-x-eq">(11)</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den
@@ -620,13 +610,13 @@ Stefan-Boltzmann-Konstante <span class="math notranslate nohighlight">\(\sigma\)
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Wärmebrücken</p>
+            <p class="prev-next-title">Einstieg ins hygrothermische Verhalten am Beispiel von Wärmebrücken</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Diffusive_risk_standards.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Methoden zur Risikonanalyse bei diffusiven Wärme- und Feuchtetransport</p>
+        <p class="prev-next-title">Vereinfachte Methoden zur Risikonanalyse bei Wärmebrücken</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

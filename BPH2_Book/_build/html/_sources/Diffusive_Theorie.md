@@ -34,7 +34,7 @@ $$ q = -\lambda \cdot \frac{\Delta T}{\Delta x}$$(q_delta_x_eq)
 height: 350px
 name: q_steady_state_wall
 ---
-Stationärer Wärmefluss durch ein finites Wandstück.
+Stationärer Wärmefluss durch ein finites Wandstück. {cite}`hagentoftIntroductionBuildingPhysics2001`
 ```
 
 Gleichung {eq}`q_delta_x_eq` kann bei Grenzwertbetrachtung $\lim \limits_{\Delta x \to 0}$ übergeführt werden in den

@@ -10,7 +10,8 @@ Sonneneinstrahlung, Regen oder Wind {numref}`building_comp`.
 height: 250px
 name: building_comp
 ---
-Poröser Baukörper mit Rissen und Luftpfaden. Es wirken sowohl Außen- als auch Innenklima auf das Bauteil.
+Poröser Baukörper mit Rissen und Luftpfaden. Es wirken sowohl Außen- als auch Innenklima auf das Bauteil. 
+{cite}`hagentoftIntroductionBuildingPhysics2001`
 ```
 
 Baukörper bestehen zumeist aus porösen Baustoffen, wodurch
@@ -40,7 +41,7 @@ stellvertretend für einen Raum oder ein Bauteil.
 height: 250px
 name: vol_conservation
 ---
-Massenstrom $\dot{m}$ in dem Volumen $V$ umschlossen von der Fläche $S$.
+Massenstrom $\dot{m}$ in dem Volumen $V$ umschlossen von der Fläche $S$. {cite}`hagentoftIntroductionBuildingPhysics2001`
 ```
 
 Der Nettoeintrag muss in dem Volumen gespeichert werden:
