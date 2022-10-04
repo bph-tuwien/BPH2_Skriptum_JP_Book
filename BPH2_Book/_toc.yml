@@ -12,6 +12,7 @@ parts:
           - file: Diffusive_Theorie
           - file: Diffusive_risk_standards
           - file: Problem_Balkonanschluss
+      - file: oenorm_8110_2
       - file: Konvektiver_Transport
         sections:
           - file: Convective_Theorie

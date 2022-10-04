@@ -138,6 +138,14 @@ Wärmeübergangskoeffizienten $\alpha_{r}$ zusammen:
 
 $$ R_{s} = \frac{1}{\alpha_{c} + \alpha_{r}}$$(R_s_eq)
 
+
+```{figure} img/Wärmebrücke/wärme_BT.png
+---
+height: 350px
+name: wärme_BT
+---
+
+```
 ### Konvektiver Wärmeübergangskoeffizient
 
 Für Innenräume ist der konvektive Wärmeübergangskoeffizient definiert als:

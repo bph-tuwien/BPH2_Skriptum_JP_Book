@@ -1,4 +1,4 @@
-# Wärmebrücken
+# Einstieg ins hygrothermische Verhalten am Beispiel von Wärmebrücken
 
 Die Vermeidung von Wärmebrücken ist eine der klassischen Fragestellungen in der bauphysikalischen Planung. Eine
 Wärmebrücke tritt immer dann auf, wenn auf Grund von unzureichendem Widerstand (durch Dämmungen oder ähnlichem) ein, im
