@@ -90,18 +90,76 @@ $$ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v$$(g_ge
 
 Einsetzen in Gleichung {eq}`w_eq` führt auf die **beschreibende partielle Differentialgleichung des Feuchtefeldes:**
 
-$$\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$
+$$\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m $$(
+w_conv_eq)
 
-$$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) $$
+### Einfluss des Lufttransportes auf den Wärme- und Feuchtetransport
+
+$$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) $$(Qcd_con_eq)
+
+Gleichung {eq}`Qcd_con_eq` kann für den stationären eindimensionalen Fall gelöst werden und führt auf
+
+$$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\ell} - 1}$$ (Qcd_con_sol_eq)
+
+mit der normalisierten, dimensionslosen Temperatur
+
+$$ T'(x) = \frac{T(x) - T_{1}}{T_{2} - T{1}} = \frac{e(x/\ell) - 1}{e(L/\ell - 1) } $$
+
+Für diese Vereinfachung wird die modifizierte Peclet-Zahl $Pe^{*}$ eingeführt. Diese ist definiert als das Verhältnis
+
+$$ Pe^{*} = \frac{L}{\ell} $$
+
+wobei
+
+$$ \ell = \frac{A \lambda}{c_{pa} \dot{M}_{a}} $$
+
+```{figure} img/Konvektion/peclet_num.png
+---
+height: 350px
+name: peclet_num
+---
+Temperatur Profil durch ein finites Wandelement für unterschiedliche $L/\ell = Pe^{*}$
+```
+
+$Pe^{*}$ ist negativ wenn $\dot{M}_{a}$ negativ ist. Der Einfluss der modifizierten Peclet Zahl auf den
+Temperaturverlauf kann {numref}`peclet_num` entnommen werden.
+
+Die Größe $\ell$ charakterisiert das Verhältnis zwischen diffusiven und konvektiven Wärmefluss und damit auch den
+Einfluss des konvektiven Transportes auf den Gesamttransport.
+
+Die $Pe^{*}$ findet sich auch normativ bei den Diffusions-/Konvektionsgleichungen in Abschnitt 11 von ÖNORM 8110-2:2020
+wieder. Dort wird jedoch die immer die Flussdichte und nicht der Wärmefluss betrachtet.
+
+```{note}
+Bei Vernachlässigung von Flüssigwassertransport kann der Feuchtetransport analog betrachet und gelöst werden.
+```
+
+(analy_konv)=
+
+#### Analysthische Lösung der Differentialgleichung für den stationären eindimensionalen Fall
+
+Da sich die normative Darstellung der in Gleichung {eq}`Qcd_con_sol_eq` folgt, wird nachfolgend ein kurzer Beweis für
+dessen Gültigkeit erbracht.
+
+Gleichung {eq}`Qcd_con_eq` kann für den stationären eindimensionalen Fall und wenn $-\frac{d}{dx}Q_{cd} = 0$
+folgendermaßen gelöst werden.
+
+Gleichung {eq}`Qcd_con_eq` kann umgestellt werden zu
 
 $$ Q_{cd} = c_{pa} \dot{M}_{a} \frac{T_{ } e^{L/\ell} - T_{2}}{e^{L/\ell} -1} $$
 
+und mit Hilfe der Definiton von $\ell$ kann folgender Zusammenhang aufgestellt werden
+
 $$ \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} = T(x) - \ell \cdot \frac{dT}{dx} $$
 
-$$ -\ell e^{x/\ell}\frac{d}{dx}\left(e^{-x/\ell} T(x)\right) = T(x) - \ell \cdot \frac{dT}{dx} $$
+Wenn nachfolgender Ansatz bekannt ist:
+
+$$ -\ell e^{x/\ell}\frac{d}{dx}\left(e^{-x/\ell} T(x)\right) = T(x) - \ell \cdot \frac{dT}{dx} $$(ansatz_eq)
 
 $$ \frac{d}{dx}(e^{-x/\ell} T(x)) = - \frac{e^{-x/\ell}}{\ell} \cdot \left(T(x) - \ell \cdot \frac{dT}{dx}\right) = -
 \frac{e^{-x/\ell}}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}}$$
+
+Integrieren über die Länge $L$ des betrachteten finiten Stückes führt auf
 
 $$ \int_{0}^{L} \frac{d}{dx}(e^{-x/\ell} T(x)) \,dx \ = - \int_{0}^{L} \frac{e^{-x/\ell}}{\ell} \cdot \frac{Q_{cd}}{c_
 {pa} \dot{M}_{a}} \,dx$$
@@ -111,6 +169,8 @@ e^{-x/\ell} \,dx$$
 
 $$ \left[e^{-x/\ell} T(x)\right]_{0}^{L} = - \frac{1}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}}
 \left[-\ell e^{-x/\ell}\right]_{0}^{L}$$
+
+und entsprechendes Umformen ergibt
 
 $$ e^{-L/\ell} T(L) - 1 \cdot T(0) = - \frac{1}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} (-\ell) \left(e^{-L/\ell}
 
@@ -191,7 +251,7 @@ wurde mittels F-Klassen berücksichtigt:
 
 ```{figure} img/Konvektion/f_konv.png
 ---
-height: 350px
+height: 250px
 name: f_konv
 ---
 Kategorisierung der F-Klassen. {cite}`nusserEuroGlaserUnterBeachtung2010`

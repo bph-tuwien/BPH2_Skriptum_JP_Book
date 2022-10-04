@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: 206.291 Bauphysik 2 VU
-author: Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.
+author: Hygrothermische Bauteilsimulation und Risikoanalyse
 logo: logo_small.png
 
 # Force re-execution of notebooks on each build.

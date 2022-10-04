@@ -81,11 +81,11 @@ vorrang und müssen eingehalten werden.
 
 (Abschnitt_11)=
 
-### Abschnitt 11: Vereinfachter Nachweis der Vermeidung schadensverursachender Kondensation im Inneren von Bauteilen -> Euro-Glaser
+### Abschnitt 11: Vereinfachter Nachweis der Vermeidung schadensverursachender Kondensation im Inneren von Bauteilen -> Modifizierter Euro-Glaser
 
-Der Nachweis mittels "Euro-Glaser-Verfahrens" stützt sich auf EN ISO 13788 und wird mittels Annahmen und Ergänzungen
-innerhalb der ÖNORM 8110-2:2020 erweitert. Das "Euro-Glaser-Verfahren" ist ein erweitertes Glaserverfahren welches
-konvektive Transportphänome berücksichtigt.
+Der Nachweis mittels "Modifiziertem Euro-Glaser-Verfahrens" stützt sich auf EN ISO 13788 und wird mittels Annahmen und
+Ergänzungen innerhalb der ÖNORM 8110-2:2020 erweitert. Das "Euro-Glaser-Verfahren" ist ein erweitertes Glaserverfahren
+welches konvektive Transportphänome berücksichtigt.
 
 Dieses vereinfachte Verfahren berücksichtig laut EN ISO 13788 nicht:
 
@@ -101,6 +101,22 @@ Dieses vereinfachte Verfahren berücksichtig laut EN ISO 13788 nicht:
 
 - Bei Konstruktionen mit Lufthohlräumen (z. B. Holzrahmenbauwände, Holzbalkendecken) ist anstatt der Diffusionsgleichung
   die Diffusions-/Konvektionsgleichung für Wärme- bzw. Feuchtetransport zu verwenden
+
+Die Diffusions-/Konvektionsgleichungen sind eine auf die Flussdichte bezogene Darstellung unserer im vorherigen Kapitel
+[hergeleiteten Lösung](analy_konv) für die konvektiven Transportgleichungen.
+
+$$ q = c \cdot \dot{m}_{Luft} \cdot \left(T_{1} + \frac{T_{1} - T_{2}}{e^{P_{H}} - 1}\right)$$
+
+und
+
+$$ g' = \frac{0.622}{p_{0}} \cdot \dot {m}_{Luft} \cdot \left(p_{1} + \frac{p_{1} - p_{2}}{e^{P_{M}} - 1}\right)$$
+
+Wobei $e^{P_{H}}$ und $e^{P_{M}}$ die modifizierte Peclet-Zahl für den Fall des Wärme- bzw. Feuchtetransports
+darstellen:
+
+$$P_{H} = \frac{c \cdot \dot{m}_{Luft}}{\frac{\lambda}{d}}$$
+
+$$P_{M} = \frac{{m}_{Luft} \cdot 0.622 / p_{0}}{\delta_{0}/(\mu \cdot d)}$$
 
 **Kriterien zur Beurteilung:**
 
@@ -126,18 +142,18 @@ die Diffusion-/Konvekitonsgleichung angewendet. {numref}`euro_schichten`
 
 ```{figure} img/Konvektion/euro_schichten.png
 ---
-height: 350px
+height: 250px
 name: euro_schichten
 ---
 Definition der Schichten in denen Diffusion und Diffusion + Konvektion angesetzt wird.
 ```
 
 Dabei wird auch gezeigt, dass die Berechnungen für den betrachteten Fall auf der sicheren Seite liegen und das Verfahren
-für konservative Abschätzungen eine gute erste Nöherung darstellt. {numref}`eruoglas_sichere`
+für konservative Abschätzungen eine gute erste Näherung darstellt. {numref}`eruoglas_sichere`
 
 ```{figure} img/Konvektion/eruoglas_sichere.png
 ---
-height: 350px
+height: 400px
 name: eruoglas_sichere
 ---
 Euro-Glaser liegt auf der sicheren Seite
@@ -191,7 +207,7 @@ Zur Bewertung und Analyse der Simulationsergebnisse in Bezug auf Schimmelpilzbil
 VTT-Modell {cite}`ojanenClassificationMaterialSensitivity2011` herangezogen werden. In
 {cite}`sarkanyHygrothermischenBauteilsimulationZur` wird eine Zusammenfassung der Entwicklung und des theorethischen
 Hintegrundes dieses Modelles gegeben. Nachfolgende Ausführungen werden als direktes Zitat von {cite:
-t}`sarkanyHygrothermischenBauteilsimulationZur` übernommen.
+t}`sarkanyHygrothermischenBauteilsimulationZur2019` übernommen.
 
 ```{note}
 Es wurden im direkten Zitat die Referenzen {cite}`hukkaMathematicalModelMould1999` und {cite}`ojanenClassificationMaterialSensitivity2011` mit den identen Referenzen in diesem Werk ersetzt um die
@@ -293,7 +309,7 @@ beiden Fixpunkten besagen Experimente, dass der Mould Index eine parabolische Fu
 
 ```{figure} img/Konvektion/mould_temp.png
 ---
-height: 350px
+height: 250px
 name: mould_temp
 ---
 Temperaturabhängige kritische relative Luftfeuchtigkeit benötigt für Schimmelpilzwachstum für verschiedene Werte des Mould Index. {cite}`hukkaMathematicalModelMould1999`
@@ -619,7 +635,7 @@ Materialien in Sensitivitätsgruppen zusammengefasst die den jeweiligen Koeffizi
 
 ```{figure} img/Konvektion/k_diag.png
 ---
-height: 350px
+height: 250px
 name: k_diag
 ---
 Einteilung des Intensitätskoeffizienten k1 in vier Sensitivitätsklassen. {cite}`ojanenClassificationMaterialSensitivity2011`
@@ -757,7 +773,7 @@ Die Massenprozent für ein diskretisierten Element $i$ der Simulaiton lassen sic
 
 $$ M-\% = \frac{w_{i}}{\rho_{i}} $$
 
-berechnen. Dabei steht $w_{i}$ für den Wassergehalt und \rho_{i} die Dichte in jeweils kg/m³.
+berechnen. Dabei steht $w_{i}$ für den Wassergehalt und $\rho_{i}$ die Dichte in jeweils kg/m³.
 
 ```{figure} img/Konvektion/tragf_num.png
 ---

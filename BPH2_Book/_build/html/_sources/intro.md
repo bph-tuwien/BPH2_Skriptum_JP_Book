@@ -13,5 +13,7 @@ dieses Werk, als auch andere verwendete Referenzen sowie weiterführende Sekund�
 dem [Literaturverzeichnis](References.md) entnommen werden. Die Referenzen sind großteils mit weiterführenden Links zu
 den Quellen zum einfacheren Selbststudium versehen.
 
+**Authoren:** Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.
+
 ```{tableofcontents}
 ```

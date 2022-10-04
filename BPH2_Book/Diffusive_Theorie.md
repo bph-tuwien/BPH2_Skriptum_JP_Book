@@ -8,8 +8,6 @@ und Konzepte zu vermitteln.
 
 ## Allgemeine Transportgleichungen Diffusion
 
-Bei Betrachtung der
-
 ### Wärmetransport
 
 Bei Betrachtung der Wärmeleitung ergibt sich aus Gleichung {eq}`delta_V_q_eq`
