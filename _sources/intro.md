@@ -14,7 +14,9 @@ Viele der theoretischen Inhalte sind angelehnt oder zitiert aus {cite}`hagentoft
 weiterführende Sekundärliteratur kann dem [Literaturverzeichnis](References.md) entnommen werden. Die Referenzen sind
 großteils mit weiterführenden Links zu den Quellen zum einfacheren Selbststudium versehen.
 
-**Authoren:** Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.
+**Autoren:** Univ.-Prof.Dr.techn. DI Thomas Bednar, Univ.Ass. DI Andreas Sarkany BSc.
+
+Erstellt mit Jupyter-Book. Eine Anleitung zur Erstellung eigener Jupyter-Books findet man [hier](https://jupyterbook.org/en/stable/intro.html).
 
 ```{tableofcontents}
 ```
