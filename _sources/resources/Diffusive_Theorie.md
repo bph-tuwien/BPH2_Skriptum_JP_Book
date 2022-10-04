@@ -129,6 +129,11 @@ $$ g = - \delta_{v} \cdot \nabla v $$ (g_nabla_eq)
 
 ## Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitung
 
+Die hier dargestellten Ausführungen sind ein kurzer Auszug aus {cite}`waltherBuildingPhysicsApplications2021`. Das Werk
+ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lösung bauphysikalischer Problemstellungen.
+
+
+
 (Randbedingungen_Diffusive)=
 
 ## Randbedingungen
@@ -138,7 +143,6 @@ Wärmeübergangskoeffizienten $\alpha_{r}$ zusammen:
 
 $$ R_{s} = \frac{1}{\alpha_{c} + \alpha_{r}}$$(R_s_eq)
 
-
 ```{figure} img/Wärmebrücke/wärme_BT.png
 ---
 height: 350px
@@ -146,6 +150,7 @@ name: wärme_BT
 ---
 
 ```
+
 ### Konvektiver Wärmeübergangskoeffizient
 
 Für Innenräume ist der konvektive Wärmeübergangskoeffizient definiert als:

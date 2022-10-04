@@ -90,7 +90,7 @@ welches konvektive Transportphänome berücksichtigt.
 Dieses vereinfachte Verfahren berücksichtig laut EN ISO 13788 nicht:
 
 - Schwankungen der Materialeigenschaften in Abhängigkeit vom Feuchtegehalt
-- kapilalre Saugwirkung und Transport von Feuchte in der flüssigen Phase in Baustoffen
+- kapillare Saugwirkung und Transport von Feuchte in der flüssigen Phase in Baustoffen
 - <del>Luftbewegung aus dem Gebäudeinneren in das Bauteil durch Spalten oder in
   Lufträumen</del> [siehe Eränzung](ergaenzung_11)
 - hygroskopisches Verhalten von Baustoffen
@@ -699,7 +699,7 @@ Werte wenig von den gemessenen abweichen. {cite}`ojanenClassificationMaterialSen
 
 ```{figure} img/Konvektion/sim_exp_beton.png
 ---
-height: 350px
+height: 300px
 name: sim_exp_beton
 ---
 Vergleich der im Versuch gemessenen und simulierten Daten mit dem Dämpfungsbeiwert für das Wachstum von 0.25 für die Schichtgrenze zwischen PUR mit Papieroberfläche und Beton. {cite}`ojanenClassificationMaterialSensitivity2011`
@@ -707,7 +707,7 @@ Vergleich der im Versuch gemessenen und simulierten Daten mit dem Dämpfungsbeiw
 
 ```{figure} img/Konvektion/sim_exp_pine.png
 ---
-height: 350px
+height: 300px
 name: sim_exp_pine
 ---
 Vergleich der im Versuch gemessenen und simulierten Daten mit dem Dämpfungsbeiwert für das Wachstum von 0.25 für die Schichtgrenze zwischen Glaswolle und Fichtenbretter. {cite}`ojanenClassificationMaterialSensitivity2011`

@@ -431,8 +431,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="theoretische-grundlagen-des-konvektiven-warme-und-feuchtetranspoortes">
 <h1>Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes<a class="headerlink" href="#theoretische-grundlagen-des-konvektiven-warme-und-feuchtetranspoortes" title="Permalink to this headline">¶</a></h1>
-<p>Wenn wir uns an Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-q-diff-conv-eq">(9)</a> und <a class="reference internal" href="Diffusive_Theorie.html#equation-g-diff-conv-eq">(17)</a>
-im <a class="reference internal" href="Diffusive_Theorie.html"><span class="doc std std-doc">vorhergehenden Kapitel</span></a> zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
+<p>Wenn wir uns an Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-q-diff-conv-eq">()</a> und <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-g-diff-conv-eq">()</a>
+im <a class="reference internal" href="resources/Diffusive_Theorie.html"><span class="doc std std-doc">vorhergehenden Kapitel</span></a> zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
 diffusiven Therm beschäftigt und den konvektiven vernachlässigt <span class="math notranslate nohighlight">\(q_{conv} = g_{conv} = 0\)</span>. Um konvektiven Transport zu
 berücksichtigen setzen wir <span class="math notranslate nohighlight">\(q_{conv} \neq 0 \)</span> und <span class="math notranslate nohighlight">\(g_{conv} \neq 0\)</span> und erweitern unsere beschreibenden Gleichungen um
 diese Therme.</p>
@@ -446,7 +446,7 @@ werden.</p>
 <p>Ähnlich zu den Formulierungen für die Wärme- und Feuchtestromdichte, kann auch die Massenstromdichte zu Folge
 Luftströmung mit Hilfe Darcy’s Gesetz definiert werden. Wir betrachten hier die Formulierung ohne Berücksichtigung des
 Auftriebs, für den Fall, dass der Auftrieb einen maßgebenden Einfluss hat, kann das Gesetz laut
-<span id="id1">[<a class="reference internal" href="References.html#id24" title="J. Wang and C. E. Hagentoft. A numerical method for calculating combined heat, air and moisture transport in building envelope components. Nordic Journal of Building Physics, 2001.">Wang and Hagentoft, 2001</a>]</span> erweitert werden.</p>
+<span id="id1">[<a class="reference internal" href="References.html#id25" title="J. Wang and C. E. Hagentoft. A numerical method for calculating combined heat, air and moisture transport in building envelope components. Nordic Journal of Building Physics, 2001.">Wang and Hagentoft, 2001</a>]</span> erweitert werden.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Später werden wir sehen, dass diese Formulierung nicht nur zur Beschreibung poröser Materialien verwendet werden kann,
@@ -461,7 +461,7 @@ Modellierung von Luftpfaden durch Baustoffe darstellt.</p>
 <p>In Gleichung <a class="reference internal" href="#equation-m-delta-x-eq">(29)</a> steht <span class="math notranslate nohighlight">\(\rho_{a}\)</span> für die Dichte der Luft in kg/m³, <span class="math notranslate nohighlight">\(\mu\)</span> für die dynamische Viskosität
 der Luft, <span class="math notranslate nohighlight">\(k\)</span> für die Permeabiliät des porösen Materials in m² und <span class="math notranslate nohighlight">\(P\)</span> für den jeweiligen Luftdruck in Pa.</p>
 <figure class="align-default" id="m-steady-state-wall">
-<a class="reference internal image-reference" href="_images/m_steady_state_wall.png"><img alt="_images/m_steady_state_wall.png" src="_images/m_steady_state_wall.png" style="height: 350px;" /></a>
+<a class="reference internal image-reference" href="_images/m_steady_state_wall.png"><img alt="_images/m_steady_state_wall.png" src="_images/m_steady_state_wall.png" style="height: 250px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 11 </span><span class="caption-text">Massenstrom durch ein poröses finites Wandstück. <span id="id2">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#m-steady-state-wall" title="Permalink to this image">¶</a></p>
 </figcaption>
@@ -496,7 +496,7 @@ Temperatur in Kelvin.</p>
 <p>Damit kann der für bauphysikalische Berechnungen relevante Wärmestrom komplett beschrieben werden als:</p>
 <div class="math notranslate nohighlight" id="equation-q-ges-eq">
 <span class="eqno">(32)<a class="headerlink" href="#equation-q-ges-eq" title="Permalink to this equation">¶</a></span>\[ q = - \lambda \nabla T + \dot{m}_{a} \cdot c_{p} T \]</div>
-<p>Einsetzen in Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-dt-eq">(8)</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Temperaturfeldes:</strong></p>
+<p>Einsetzen in Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-dt-eq">()</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Temperaturfeldes:</strong></p>
 <div class="math notranslate nohighlight" id="equation-dt-ges-eq">
 <span class="eqno">(33)<a class="headerlink" href="#equation-dt-ges-eq" title="Permalink to this equation">¶</a></span>\[ \rho c \frac{\partial T}{\partial t} = \nabla \cdot (\lambda \nabla T - \dot{m}_{a} \cdot c_{p} T) + h \]</div>
 </section>
@@ -506,7 +506,7 @@ Temperatur in Kelvin.</p>
 auf</p>
 <div class="math notranslate nohighlight" id="equation-g-ges-eq">
 <span class="eqno">(34)<a class="headerlink" href="#equation-g-ges-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v\]</div>
-<p>Einsetzen in Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-w-eq">(15)</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Feuchtefeldes:</strong></p>
+<p>Einsetzen in Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-w-eq">()</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Feuchtefeldes:</strong></p>
 <div class="math notranslate nohighlight" id="equation-w-conv-eq">
 <span class="eqno">(35)<a class="headerlink" href="#equation-w-conv-eq" title="Permalink to this equation">¶</a></span>\[\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m \]</div>
 </section>
@@ -529,7 +529,7 @@ auf</p>
 <figure class="align-default" id="peclet-num">
 <a class="reference internal image-reference" href="_images/peclet_num.png"><img alt="_images/peclet_num.png" src="_images/peclet_num.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Temperatur Profil durch ein finites Wandelement für unterschiedliche <span class="math notranslate nohighlight">\(L/\ell = Pe^{*}\)</span> <span id="id4">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#peclet-num" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Temperatur Profil durch ein finites Wandelement für unterschiedliche <span class="math notranslate nohighlight">\(L/\ell = Pe^{*}\)</span>. <span id="id4">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#peclet-num" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p><span class="math notranslate nohighlight">\(Pe^{*}\)</span> ist negativ wenn <span class="math notranslate nohighlight">\(\dot{M}_{a}\)</span> negativ ist. Der Einfluss der modifizierten Peclet Zahl auf den
@@ -548,15 +548,14 @@ wieder. Dort wird jedoch die immer die Flussdichte und nicht der Wärmefluss bet
 dessen Gültigkeit erbracht.</p>
 <p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(36)</a> kann für den stationären eindimensionalen Fall und wenn <span class="math notranslate nohighlight">\(-\frac{d}{dx}Q_{cd} = 0\)</span>
 folgendermaßen gelöst werden.</p>
-<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(36)</a> kann umgestellt werden zu</p>
-<div class="math notranslate nohighlight">
-\[ Q_{cd} = c_{pa} \dot{M}_{a} \frac{T_{ } e^{L/\ell} - T_{2}}{e^{L/\ell} -1} \]</div>
-<p>und mit Hilfe der Definiton von <span class="math notranslate nohighlight">\(\ell\)</span> kann folgender Zusammenhang aufgestellt werden</p>
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(36)</a> kann umgestellt werden
+und mit Hilfe der Definiton von <span class="math notranslate nohighlight">\(\ell\)</span> wie folgt dargestellt werden</p>
 <div class="math notranslate nohighlight">
 \[ \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} = T(x) - \ell \cdot \frac{dT}{dx} \]</div>
-<p>Wenn nachfolgender Ansatz bekannt ist:</p>
+<p>Mit Hilfe nachfolgendem Ansatz</p>
 <div class="math notranslate nohighlight" id="equation-ansatz-eq">
 <span class="eqno">(38)<a class="headerlink" href="#equation-ansatz-eq" title="Permalink to this equation">¶</a></span>\[ -\ell e^{x/\ell}\frac{d}{dx}\left(e^{-x/\ell} T(x)\right) = T(x) - \ell \cdot \frac{dT}{dx} \]</div>
+<p>kann folgender Zusammenhang aufestellt werden</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d}{dx}(e^{-x/\ell} T(x)) = - \frac{e^{-x/\ell}}{\ell} \cdot \left(T(x) - \ell \cdot \frac{dT}{dx}\right) = -
 \frac{e^{-x/\ell}}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}}\]</div>
