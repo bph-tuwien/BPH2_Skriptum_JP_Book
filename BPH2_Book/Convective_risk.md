@@ -205,7 +205,7 @@ Um auf der sicheren Seite zu liegen, kann Zeile 3 als ungünstigster Fall gewäh
 
 Zur Bewertung und Analyse der Simulationsergebnisse in Bezug auf Schimmelpilzbildung auf Oberflächen, kann das
 VTT-Modell {cite}`ojanenClassificationMaterialSensitivity2011` herangezogen werden. In
-{cite}`sarkanyHygrothermischenBauteilsimulationZur2019` wird eine Zusammenfassung der Entwicklung und des theorethischen
+{cite}`sarkanyHygrothermischenBauteilsimulationZur2019` wird eine Zusammenfassung der Entwicklung und des theoretischen
 Hintegrundes dieses Modelles gegeben. Nachfolgende Ausführungen werden als direktes Zitat von {cite:t}`sarkanyHygrothermischenBauteilsimulationZur2019` übernommen.
 
 ```{note}

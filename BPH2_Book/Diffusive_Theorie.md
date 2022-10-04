@@ -1,4 +1,4 @@
-# Theorethische Grundlagen des diffusiven Wärme- und Feuchtetransportes
+# Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes
 
 Wenn eine Koppelung zwischen Wärme- und Feuchtetransport in einer Berechnung besteht spricht man allgemein von einer
 hygrothermischen Simulation. Diese Koppelung bringt den Vorteil, dass der Einfluss des Feuchtegehaltes auf die

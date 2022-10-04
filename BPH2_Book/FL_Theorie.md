@@ -2,7 +2,7 @@
 
 # Flüssigwassertransport - Theorie
 
-Die hier beschriebenen theorethischen Ausführungen stützen sich Großteils auf
+Die hier beschriebenen theoretischen Ausführungen stützen sich Großteils auf
 {cite}`kalagasidisEvaluationInterfaceMoisture2004` und {cite}`bednarModellingMoistureTransport2004`.
 
 ## Erweiterung der Transportgleichung für Diffusion um den Flüssigwasseranteil

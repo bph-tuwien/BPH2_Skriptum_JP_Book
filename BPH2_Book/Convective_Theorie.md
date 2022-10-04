@@ -1,4 +1,4 @@
-# Theorethische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
+# Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
 
 Wenn wir uns an Gleichung {eq}`q_diff_conv_eq` und {eq}`g_diff_conv_eq`
 im [vorhergehenden Kapitel](Diffusive_Theorie.md) zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
