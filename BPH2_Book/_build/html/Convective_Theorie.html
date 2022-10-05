@@ -457,8 +457,8 @@ Modellierung von Luftpfaden durch Baustoffe darstellt.</p>
 <div class="math notranslate nohighlight">
 \[ \dot{m}_{a} = \frac{\rho_{a} \cdot k}{\mu} \frac{P - (P + \Delta P)}{\Delta x} \]</div>
 <div class="math notranslate nohighlight" id="equation-m-delta-x-eq">
-<span class="eqno">(29)<a class="headerlink" href="#equation-m-delta-x-eq" title="Permalink to this equation">¶</a></span>\[ \dot{m}_{a} = -\frac{\rho_{a} \cdot k}{\mu} \frac{\Delta P}{\Delta x} \]</div>
-<p>In Gleichung <a class="reference internal" href="#equation-m-delta-x-eq">(29)</a> steht <span class="math notranslate nohighlight">\(\rho_{a}\)</span> für die Dichte der Luft in kg/m³, <span class="math notranslate nohighlight">\(\mu\)</span> für die dynamische Viskosität
+<span class="eqno">(35)<a class="headerlink" href="#equation-m-delta-x-eq" title="Permalink to this equation">¶</a></span>\[ \dot{m}_{a} = -\frac{\rho_{a} \cdot k}{\mu} \frac{\Delta P}{\Delta x} \]</div>
+<p>In Gleichung <a class="reference internal" href="#equation-m-delta-x-eq">(35)</a> steht <span class="math notranslate nohighlight">\(\rho_{a}\)</span> für die Dichte der Luft in kg/m³, <span class="math notranslate nohighlight">\(\mu\)</span> für die dynamische Viskosität
 der Luft, <span class="math notranslate nohighlight">\(k\)</span> für die Permeabiliät des porösen Materials in m² und <span class="math notranslate nohighlight">\(P\)</span> für den jeweiligen Luftdruck in Pa.</p>
 <figure class="align-default" id="m-steady-state-wall">
 <a class="reference internal image-reference" href="_images/m_steady_state_wall.png"><img alt="_images/m_steady_state_wall.png" src="_images/m_steady_state_wall.png" style="height: 250px;" /></a>
@@ -466,13 +466,13 @@ der Luft, <span class="math notranslate nohighlight">\(k\)</span> für die Perme
 <p><span class="caption-number">Fig. 11 </span><span class="caption-text">Massenstrom durch ein poröses finites Wandstück. <span id="id2">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#m-steady-state-wall" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Gleichung <a class="reference internal" href="#equation-m-delta-x-eq">(29)</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den
+<p>Gleichung <a class="reference internal" href="#equation-m-delta-x-eq">(35)</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den
 Differentialoperator</p>
 <div class="math notranslate nohighlight" id="equation-m-delta-x-eq">
-<span class="eqno">(29)<a class="headerlink" href="#equation-m-delta-x-eq" title="Permalink to this equation">¶</a></span>\[ \dot{m}_{a} = -\frac{\rho_{a} \cdot k}{\mu} \frac{dP)}{dx} \]</div>
+<span class="eqno">(35)<a class="headerlink" href="#equation-m-delta-x-eq" title="Permalink to this equation">¶</a></span>\[ \dot{m}_{a} = -\frac{\rho_{a} \cdot k}{\mu} \frac{dP)}{dx} \]</div>
 <p>und mittels des Nabla Operators verallgemeinert werden zu</p>
 <div class="math notranslate nohighlight" id="equation-m-nabla-eq">
-<span class="eqno">(30)<a class="headerlink" href="#equation-m-nabla-eq" title="Permalink to this equation">¶</a></span>\[ \dot{m}_{a} = - \frac{\rho_{a} \cdot k}{\mu} \nabla P \]</div>
+<span class="eqno">(36)<a class="headerlink" href="#equation-m-nabla-eq" title="Permalink to this equation">¶</a></span>\[ \dot{m}_{a} = - \frac{\rho_{a} \cdot k}{\mu} \nabla P \]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Auf Grund der bauphysikalischen Relevanz beschäftigen wir uns vorrangig mit Massenströmen deren Gas aus Luft besteht.
@@ -486,7 +486,7 @@ Entsprechende Anpassung der Parameter ermöglichen auch die Abbildung anderer Fl
 <h3>Konvektiver Wärmetransport<a class="headerlink" href="#konvektiver-warmetransport" title="Permalink to this headline">¶</a></h3>
 <p>Bei Berücksichtigung von Konvektion wird die Wärmestromdichte beschrieben durch</p>
 <div class="math notranslate nohighlight" id="equation-q-diff-conv-2-eq">
-<span class="eqno">(31)<a class="headerlink" href="#equation-q-diff-conv-2-eq" title="Permalink to this equation">¶</a></span>\[ q = q_{diff} + q_{conv}\]</div>
+<span class="eqno">(37)<a class="headerlink" href="#equation-q-diff-conv-2-eq" title="Permalink to this equation">¶</a></span>\[ q = q_{diff} + q_{conv}\]</div>
 <p>wobei <span class="math notranslate nohighlight">\(q_{conv} \neq 0 \)</span> und definiert ist durch</p>
 <div class="math notranslate nohighlight">
 \[ q_{conv} = \dot{m}_{a} \cdot c_{p}T \]</div>
@@ -495,28 +495,28 @@ Druckgradienten, <span class="math notranslate nohighlight">\(c_{p}\)</span> die
 Temperatur in Kelvin.</p>
 <p>Damit kann der für bauphysikalische Berechnungen relevante Wärmestrom komplett beschrieben werden als:</p>
 <div class="math notranslate nohighlight" id="equation-q-ges-eq">
-<span class="eqno">(32)<a class="headerlink" href="#equation-q-ges-eq" title="Permalink to this equation">¶</a></span>\[ q = - \lambda \nabla T + \dot{m}_{a} \cdot c_{p} T \]</div>
+<span class="eqno">(38)<a class="headerlink" href="#equation-q-ges-eq" title="Permalink to this equation">¶</a></span>\[ q = - \lambda \nabla T + \dot{m}_{a} \cdot c_{p} T \]</div>
 <p>Einsetzen in Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-dt-eq">()</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Temperaturfeldes:</strong></p>
 <div class="math notranslate nohighlight" id="equation-dt-ges-eq">
-<span class="eqno">(33)<a class="headerlink" href="#equation-dt-ges-eq" title="Permalink to this equation">¶</a></span>\[ \rho c \frac{\partial T}{\partial t} = \nabla \cdot (\lambda \nabla T - \dot{m}_{a} \cdot c_{p} T) + h \]</div>
+<span class="eqno">(39)<a class="headerlink" href="#equation-dt-ges-eq" title="Permalink to this equation">¶</a></span>\[ \rho c \frac{\partial T}{\partial t} = \nabla \cdot (\lambda \nabla T - \dot{m}_{a} \cdot c_{p} T) + h \]</div>
 </section>
 <section id="konvektiver-feuchtetransport">
 <h3>Konvektiver Feuchtetransport<a class="headerlink" href="#konvektiver-feuchtetransport" title="Permalink to this headline">¶</a></h3>
 <p>Analog zur Wärmestromdichte kann auch die Feuchtestromdichte um ihren konvektiven Einfluss erweitert werden. Das führt
 auf</p>
 <div class="math notranslate nohighlight" id="equation-g-ges-eq">
-<span class="eqno">(34)<a class="headerlink" href="#equation-g-ges-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v\]</div>
+<span class="eqno">(40)<a class="headerlink" href="#equation-g-ges-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v\]</div>
 <p>Einsetzen in Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-w-eq">()</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Feuchtefeldes:</strong></p>
 <div class="math notranslate nohighlight" id="equation-w-conv-eq">
-<span class="eqno">(35)<a class="headerlink" href="#equation-w-conv-eq" title="Permalink to this equation">¶</a></span>\[\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m \]</div>
+<span class="eqno">(41)<a class="headerlink" href="#equation-w-conv-eq" title="Permalink to this equation">¶</a></span>\[\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m \]</div>
 </section>
 <section id="einfluss-des-lufttransportes-auf-den-warme-und-feuchtetransport">
 <h3>Einfluss des Lufttransportes auf den Wärme- und Feuchtetransport<a class="headerlink" href="#einfluss-des-lufttransportes-auf-den-warme-und-feuchtetransport" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight" id="equation-qcd-con-eq">
-<span class="eqno">(36)<a class="headerlink" href="#equation-qcd-con-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) \]</div>
-<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(36)</a> kann für den stationären eindimensionalen Fall gelöst werden und führt auf</p>
+<span class="eqno">(42)<a class="headerlink" href="#equation-qcd-con-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) \]</div>
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(42)</a> kann für den stationären eindimensionalen Fall gelöst werden und führt auf</p>
 <div class="math notranslate nohighlight" id="equation-qcd-con-sol-eq">
-<span class="eqno">(37)<a class="headerlink" href="#equation-qcd-con-sol-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\ell} - 1}\]</div>
+<span class="eqno">(43)<a class="headerlink" href="#equation-qcd-con-sol-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\ell} - 1}\]</div>
 <p>mit der normalisierten, dimensionslosen Temperatur</p>
 <div class="math notranslate nohighlight">
 \[ T'(x) = \frac{T(x) - T_{1}}{T_{2} - T{1}} = \frac{e(x/\ell) - 1}{e(L/\ell - 1) } \]</div>
@@ -544,17 +544,17 @@ wieder. Dort wird jedoch die immer die Flussdichte und nicht der Wärmefluss bet
 </div>
 <section id="analysthische-losung-der-differentialgleichung-fur-den-stationaren-eindimensionalen-fall">
 <span id="analy-konv"></span><h4>Analysthische Lösung der Differentialgleichung für den stationären eindimensionalen Fall<a class="headerlink" href="#analysthische-losung-der-differentialgleichung-fur-den-stationaren-eindimensionalen-fall" title="Permalink to this headline">¶</a></h4>
-<p>Da sich die normative Darstellung der in Gleichung <a class="reference internal" href="#equation-qcd-con-sol-eq">(37)</a> folgt, wird nachfolgend ein kurzer Beweis für
+<p>Da sich die normative Darstellung der in Gleichung <a class="reference internal" href="#equation-qcd-con-sol-eq">(43)</a> folgt, wird nachfolgend ein kurzer Beweis für
 dessen Gültigkeit erbracht.</p>
-<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(36)</a> kann für den stationären eindimensionalen Fall und wenn <span class="math notranslate nohighlight">\(-\frac{d}{dx}Q_{cd} = 0\)</span>
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(42)</a> kann für den stationären eindimensionalen Fall und wenn <span class="math notranslate nohighlight">\(-\frac{d}{dx}Q_{cd} = 0\)</span>
 folgendermaßen gelöst werden.</p>
-<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(36)</a> kann umgestellt werden
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(42)</a> kann umgestellt werden
 und mit Hilfe der Definiton von <span class="math notranslate nohighlight">\(\ell\)</span> wie folgt dargestellt werden</p>
 <div class="math notranslate nohighlight">
 \[ \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} = T(x) - \ell \cdot \frac{dT}{dx} \]</div>
 <p>Mit Hilfe nachfolgendem Ansatz</p>
 <div class="math notranslate nohighlight" id="equation-ansatz-eq">
-<span class="eqno">(38)<a class="headerlink" href="#equation-ansatz-eq" title="Permalink to this equation">¶</a></span>\[ -\ell e^{x/\ell}\frac{d}{dx}\left(e^{-x/\ell} T(x)\right) = T(x) - \ell \cdot \frac{dT}{dx} \]</div>
+<span class="eqno">(44)<a class="headerlink" href="#equation-ansatz-eq" title="Permalink to this equation">¶</a></span>\[ -\ell e^{x/\ell}\frac{d}{dx}\left(e^{-x/\ell} T(x)\right) = T(x) - \ell \cdot \frac{dT}{dx} \]</div>
 <p>kann folgender Zusammenhang aufestellt werden</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d}{dx}(e^{-x/\ell} T(x)) = - \frac{e^{-x/\ell}}{\ell} \cdot \left(T(x) - \ell \cdot \frac{dT}{dx}\right) = -
