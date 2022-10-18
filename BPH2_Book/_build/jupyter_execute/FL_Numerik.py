@@ -61,10 +61,10 @@ plt.rcParams['text.usetex'] = False
 # w(P_{suc}) = 300 \cdot (1 + 10^{-6} \cdot P_{suc})^{-1}
 # $$ (w_Psuc)
 # 
-# Die Flüssigwasserleitung, als Funktion der Saugspannung und eines freien Parameters n {cite}`bednarBeurteilungFeuchteUnd2000`, kann durch GLeichung {eq}`K_w` beschrieben werden.
+# Die Flüssigwasserleitung, als Funktion der Saugspannung und eines freien Parameters resolution {cite}`bednarBeurteilungFeuchteUnd2000`, kann durch GLeichung {eq}`K_w` beschrieben werden.
 # 
 # $$
-# K_{w}(P_{suc}, n) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{n + 1}{2 n} \cdot \left(\frac{A}{300}\right)^{2} \cdot \left(\frac{w(P_{suc}}{300}\right)^{n} \cdot \left( n + 1 - \left(\frac{w(P_{suc}}{300}\right)^{n}\right)
+# K_{w}(P_{suc}, resolution) = - \frac{\partial w(P_{suc})}{\partial P_{suc}} \cdot \frac{resolution + 1}{2 resolution} \cdot \left(\frac{A}{300}\right)^{2} \cdot \left(\frac{w(P_{suc}}{300}\right)^{resolution} \cdot \left( resolution + 1 - \left(\frac{w(P_{suc}}{300}\right)^{resolution}\right)
 # $$ (K_w)
 # 
 # **Nomenklatur:**

@@ -347,14 +347,26 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion-in-bearbeitung">
-   Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitungsgleichung für Diffusion (in Bearbeitung)
+  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion">
+   Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitungsgleichung für Diffusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diskretisierung-finite-differenzen-methode">
-     Diskretisierung - Finite Differenzen Methode
+    <a class="reference internal nav-link" href="#finite-differenzen-methode">
+     Finite Differenzen Methode
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diskretisierung-der-geometrie">
+       Diskretisierung der Geometrie
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diskretisierung-der-differentialgleichung">
+       Diskretisierung der Differentialgleichung
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zeitliche-integration-euler-verfahren">
@@ -418,14 +430,26 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion-in-bearbeitung">
-   Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitungsgleichung für Diffusion (in Bearbeitung)
+  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion">
+   Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitungsgleichung für Diffusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diskretisierung-finite-differenzen-methode">
-     Diskretisierung - Finite Differenzen Methode
+    <a class="reference internal nav-link" href="#finite-differenzen-methode">
+     Finite Differenzen Methode
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diskretisierung-der-geometrie">
+       Diskretisierung der Geometrie
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diskretisierung-der-differentialgleichung">
+       Diskretisierung der Differentialgleichung
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zeitliche-integration-euler-verfahren">
@@ -492,11 +516,11 @@ beschreibt. Bei Vernachlässigung konvektiver Phänomene können wir <span class
 <p><span class="caption-number">Fig. 4 </span><span class="caption-text">Stationärer Wärmefluss durch ein finites Wandstück. <span id="id1">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#q-steady-state-wall" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-q-delta-x-eq">()</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den
+<p>Gleichung <a class="reference internal" href="#equation-q-delta-x-eq">(11)</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den
 Differentialoperator</p>
 <div class="math notranslate nohighlight" id="equation-q-dx-eq">
 <span class="eqno">(12)<a class="headerlink" href="#equation-q-dx-eq" title="Permalink to this equation">¶</a></span>\[ q = -\lambda \cdot \frac{d T}{d x}\]</div>
-<p>Mehrdimensional verallgemeinern lässt sich Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-q-dx-eq">()</a> mittels des Nabla-Operators zu</p>
+<p>Mehrdimensional verallgemeinern lässt sich Gleichung <a class="reference internal" href="#equation-q-dx-eq">(12)</a> mittels des Nabla-Operators zu</p>
 <div class="math notranslate nohighlight" id="equation-q-nabla-eq">
 <span class="eqno">(13)<a class="headerlink" href="#equation-q-nabla-eq" title="Permalink to this equation">¶</a></span>\[ q = -\lambda \cdot \nabla T\]</div>
 <div class="admonition note">
@@ -504,7 +528,7 @@ Differentialoperator</p>
 <p><span class="math notranslate nohighlight">\(\lambda\)</span> kann eine vektorielle Größe sein wodurch richtungsabhängigen Wärmeleitfähigkeiten berücksichtigt werden können.
 Falls also <span class="math notranslate nohighlight">\(\lambda_{x} \neq \lambda_{y} \neq \lambda_{z}\)</span>.</p>
 </div>
-<p>Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-q-nabla-eq">()</a> eingesetzt in Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-dt-eq">()</a> führt auf</p>
+<p>Gleichung <a class="reference internal" href="#equation-q-nabla-eq">(13)</a> eingesetzt in Gleichung <a class="reference internal" href="#equation-dt-eq">(8)</a> führt auf</p>
 <div class="math notranslate nohighlight" id="equation-dt-laplace-eq">
 <span class="eqno">(14)<a class="headerlink" href="#equation-dt-laplace-eq" title="Permalink to this equation">¶</a></span>\[ \frac{\partial T}{\partial t} = \frac {\lambda}{\rho c} \nabla \cdot (\nabla T) = \nabla^{2}T\]</div>
 <p>Dabei beschreibt <span class="math notranslate nohighlight">\(\nabla^{2}\)</span> den Laplace-Operator:</p>
@@ -519,7 +543,7 @@ J/s.</p>
 </section>
 <section id="feuchtetransport">
 <h3>Feuchtetransport<a class="headerlink" href="#feuchtetransport" title="Permalink to this headline">¶</a></h3>
-<p>Analog zum Wärmetransport kann der Feuchtetransport durch Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-w-eq">()</a> beschrieben werden:</p>
+<p>Analog zum Wärmetransport kann der Feuchtetransport durch Gleichung <a class="reference internal" href="#equation-w-eq">(15)</a> beschrieben werden:</p>
 <div class="math notranslate nohighlight" id="equation-w-eq">
 <span class="eqno">(15)<a class="headerlink" href="#equation-w-eq" title="Permalink to this equation">¶</a></span>\[ \frac{\partial w}{\partial t} = - \nabla \cdot g + m \]</div>
 <p>Hier steht <span class="math notranslate nohighlight">\(\frac{\partial w}{\partial t}\)</span> für die Veränderung des Wassergehaltes in kg/m³s, <span class="math notranslate nohighlight">\(g\)</span> für die
@@ -532,8 +556,8 @@ Medien zusammen aus der</p>
 <div class="math notranslate nohighlight" id="equation-g-eq">
 <span class="eqno">(16)<a class="headerlink" href="#equation-g-eq" title="Permalink to this equation">¶</a></span>\[ g = g_{v} + g_{l} \]</div>
 <p>Wenn wir vorübergehend den Flüssigwassertransport vernachlässigen <span class="math notranslate nohighlight">\(g_{l} = 0\)</span>, was bei entsprechenden Randbedingungen
-eine <a class="reference internal" href="resources/Diffusive_Theorie.html#randbedingungen-diffusive"><span class="std std-ref">valide Annahme</span></a> darstellt, setzt sich die Dampfdiffusionsstromdichte <span class="math notranslate nohighlight">\(g_{v}\)</span>, ähnlich
-wie der Wärmefluss <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-q-diff-conv-eq">()</a>, aus einem diffusiven und konvektiven Anteil zusammen</p>
+eine <a class="reference internal" href="#randbedingungen-diffusive"><span class="std std-ref">valide Annahme</span></a> darstellt, setzt sich die Dampfdiffusionsstromdichte <span class="math notranslate nohighlight">\(g_{v}\)</span>, ähnlich
+wie der Wärmefluss <a class="reference internal" href="#equation-q-diff-conv-eq">(9)</a>, aus einem diffusiven und konvektiven Anteil zusammen</p>
 <div class="math notranslate nohighlight" id="equation-g-diff-conv-eq">
 <span class="eqno">(17)<a class="headerlink" href="#equation-g-diff-conv-eq" title="Permalink to this equation">¶</a></span>\[ g = g_{v} = g_{diff} + g_{conv} \]</div>
 <p>Bei Vernachlässigung konvektiver Phänomene können wir wiederum <span class="math notranslate nohighlight">\(g_{conv} = 0\)</span> setzen. Den noch verbleibenden Anteil der
@@ -541,7 +565,7 @@ Feuchtstromdichte können wir in porösen Medien über das Fick’sche Gesetz be
 <figure class="align-default" id="g-steady">
 <a class="reference internal image-reference" href="_images/g_steady.png"><img alt="_images/g_steady.png" src="_images/g_steady.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Feuchtestromdichte durch ein finites poröses Wandstück.</span><a class="headerlink" href="#g-steady" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Feuchtestromdichte durch ein finites poröses Wandstück. <span id="id2">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#g-steady" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Dabei wird die Diffusion in ruhender Luft in Abhängigkeit gesetzt zu dem Dampfdruckgradienten <span class="math notranslate nohighlight">\(\Delta v\)</span> und einer
@@ -562,7 +586,7 @@ entsteht einerseits durch</p>
 <li><p>Reduktion des Vorhandenen Raumes für Diffusion und andererseits</p></li>
 <li><p>zu Folge der längeren Wege die ein Dampf-Teilchen zu Folge eines Porennetzwerkes zurücklegen muss.</p></li>
 </ul>
-<p>Analog zum Wärmefluss kann Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-g-delta-eq">()</a> bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span>
+<p>Analog zum Wärmefluss kann Gleichung <a class="reference internal" href="#equation-g-delta-eq">(19)</a> bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span>
 übergeführt werden in den Differentialoperator</p>
 <div class="math notranslate nohighlight" id="equation-g-dx-eq">
 <span class="eqno">(20)<a class="headerlink" href="#equation-g-dx-eq" title="Permalink to this equation">¶</a></span>\[ g = -\delta_{v} \cdot \frac{d v}{\Delta x} \]</div>
@@ -571,19 +595,15 @@ entsteht einerseits durch</p>
 <span class="eqno">(21)<a class="headerlink" href="#equation-g-nabla-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v \]</div>
 </section>
 </section>
-<section id="numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion-in-bearbeitung">
-<h2>Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitungsgleichung für Diffusion (in Bearbeitung)<a class="headerlink" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion-in-bearbeitung" title="Permalink to this headline">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Dieses Kapitel befindet sich noch in Bearbeitung!</p>
-</div>
+<section id="numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion">
+<h2>Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitungsgleichung für Diffusion<a class="headerlink" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Die hier dargestellten Ausführungen sind ein kurzer Auszug aus <span id="id2">[<a class="reference internal" href="References.html#id24">Walther, 2021</a>]</span>. Das Werk
-ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lösung bauphysikalischer Problemstellungen.</p>
-<p>Die hier dargebrachten einfachen Methoden der Numerik, werden für das bessere Verständnis in einem simplen Python-Code implementiert und können über Binder Interaktiv auf der HTML-Seite ausprobiert werden.</p>
+<p>Die hier dargestellten Ausführungen sind ein kurzer Auszug aus <span id="id3">[<a class="reference internal" href="References.html#id24" title="Edouard Walther. Building Physics - Applications in Python. Spring 2021, first edition, July 2021.">Walther, 2021</a>]</span>. Das Werk
+ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lösung komplexerer (z.B. zeitabhängig, ortsabhängig) bauphysikalischer Problemstellungen.</p>
+<p>Die dargebrachten einfachen Methoden der Numerik, werden für das bessere Verständnis in einem simplen Python-Code implementiert und können über Binder Interaktiv auf der HTML-Seite ausprobiert werden.</p>
 </div>
-<p>Zur numerischen Lösung partieller Differentialgleichungen müssen einerseits die GLeichungen und andererseits die Problemdomäne diskretisiert werden. Dafür gibt es unterschiedliche Ansätze:</p>
+<p>Zur numerischen Lösung partieller Differentialgleichungen müssen einerseits die Gleichungen und andererseits die Problemdomäne diskretisiert werden. Dafür gibt es unterschiedliche Ansätze:</p>
 <ul class="simple">
 <li><p>Finite Differenzen</p></li>
 <li><p>Finite Elemente</p></li>
@@ -596,20 +616,40 @@ ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lös
 <li><p>Runge-Kutta-Verfahren</p></li>
 <li><p>Adams-Bashforth-Verfahren etc.</p></li>
 </ul>
-<p>Wir werden die algebraische Lösung der zeitlichen Ableitung mittels des Euler-Verfahrens integriere um somit das Temperaturfeld zu lösen.</p>
+<p>Wir werden die algebraische Lösung der zeitlichen Ableitung mittels des Euler-Verfahrens integrieren um somit das Temperaturfeld zu lösen.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Wahl des Diskretisierungs und Integrationsverfahrens ist abhängig von der Problemstellung.</p>
 </div>
-<section id="diskretisierung-finite-differenzen-methode">
-<h3>Diskretisierung - Finite Differenzen Methode<a class="headerlink" href="#diskretisierung-finite-differenzen-methode" title="Permalink to this headline">¶</a></h3>
+<section id="finite-differenzen-methode">
+<h3>Finite Differenzen Methode<a class="headerlink" href="#finite-differenzen-methode" title="Permalink to this headline">¶</a></h3>
+<section id="diskretisierung-der-geometrie">
+<h4>Diskretisierung der Geometrie<a class="headerlink" href="#diskretisierung-der-geometrie" title="Permalink to this headline">¶</a></h4>
+<p>Da es numerisch nicht möglich ist kontinuierliche Probleme zu lösen muss als erster Schritt die Geometrie diskretisiert werden. Mittels der FDM (Finite Differenzen Metode) geschieht das auf die denkbar simpelste Weise. Die Problemdomände wird durch Knotenpunkte (Grid Points) diskretisiert wodurch ein Raster entsteht <a class="reference internal" href="#wl-diskret"><span class="std std-numref">Fig. 6</span></a>.</p>
+<figure class="align-default" id="wl-diskret">
+<a class="reference internal image-reference" href="_images/wl_diskret.png"><img alt="_images/wl_diskret.png" src="_images/wl_diskret.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Diskretisierung der geometrischen Problemdomäne.</span><a class="headerlink" href="#wl-diskret" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Jedem dieser Knotenpunkte sind die entsprechenden physikalischen Eigenschaften zugewiesen (Materialparameter, Temperaturen etc.) um alle Eingangswerte zu haben, um damit im nächsten Schritt die beschreibenden Differentialgleichungen für diese Knoten zu lösen und somit die orts- und zeitabhängige Veränderung in diesen darstellen zu können.</p>
+</section>
+<section id="diskretisierung-der-differentialgleichung">
+<h4>Diskretisierung der Differentialgleichung<a class="headerlink" href="#diskretisierung-der-differentialgleichung" title="Permalink to this headline">¶</a></h4>
 <p>Die Finite Differenzen Methode ermöglicht die Diskretisierung partieller Differentialgleichung und damit ihre Überführung in numerisch lösbare Formen. Wir betrachten für unser Beispiel einen eindimensionalen Fall (z.B einen Stab) mit konstanter Wärmeleitfähigkeit. Wenn wir <span class="math notranslate nohighlight">\(a\)</span> definieren als <span class="math notranslate nohighlight">\(a = \frac {\lambda}{\rho c}\)</span> sieht die Diffusionsgleichung für Wärmeleitung folgendermaßen aus:</p>
 <div class="math notranslate nohighlight" id="equation-temp-1d-eq">
 <span class="eqno">(22)<a class="headerlink" href="#equation-temp-1d-eq" title="Permalink to this equation">¶</a></span>\[ \frac{dT}{dt} = a \frac{dT}{dx^{2}}\]</div>
-<p>Für ein Element <span class="math notranslate nohighlight">\(i\)</span> führt die diskrete Darstellung mittels finiter Differenzen auf:</p>
+<p>Für ein diskretes Element <span class="math notranslate nohighlight">\(i\)</span> führt die Darstellung mittels finiter Differenzen auf:</p>
 <div class="math notranslate nohighlight" id="equation-disk-temp-eq">
 <span class="eqno">(23)<a class="headerlink" href="#equation-disk-temp-eq" title="Permalink to this equation">¶</a></span>\[ \frac{T_{i}^{+} - T_{i}}{\Delta t} = a \frac{T_{i+1} -2 T_{i} + T_{i-1}}{\Delta x^{2}}\]</div>
-<p>Wenn wir als Randbedingungen <span class="math notranslate nohighlight">\(T_{(x=0)} = 0\)</span> °C und <span class="math notranslate nohighlight">\(T_{(x=L)} = 10\)</span> °C, Starttemperatur für das zu berechnende Feld <span class="math notranslate nohighlight">\(T_{x=1 bis L-1} = 0\)</span> °C und z.B. <span class="math notranslate nohighlight">\(t = 100\)</span> Sekunden (Simulationszeitraum) wählen, können wir nun mittels der rechten Seite von Gleichung <a class="reference internal" href="#equation-disk-temp-eq">(23)</a> die Verändeurng der Temperatur für jeden Zeitschritt berechnen.</p>
+<p>Wenn wir als Randbedingungen <span class="math notranslate nohighlight">\(T_{(x=0)} = 0\)</span> °C und <span class="math notranslate nohighlight">\(T_{(x=L)} = 10\)</span> °C <a class="reference internal" href="#wl-diskret-rb"><span class="std std-numref">Fig. 7</span></a>, Starttemperatur für das zu berechnende Feld <span class="math notranslate nohighlight">\(T_{x=1\ bis\ L-1} = 0\)</span> °C und z.B. <span class="math notranslate nohighlight">\(t = 50\)</span> Sekunden (Simulationszeitraum) wählen, können wir nun mittels der rechten Seite von Gleichung <a class="reference internal" href="#equation-disk-temp-eq">(23)</a> die Verändeurng der Temperatur für jeden Zeitschritt berechnen.</p>
+<figure class="align-default" id="wl-diskret-rb">
+<a class="reference internal image-reference" href="_images/wl_diskret_RB.png"><img alt="_images/wl_diskret_RB.png" src="_images/wl_diskret_RB.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Äußersten Knoten für die Randbedingungen.</span><a class="headerlink" href="#wl-diskret-rb" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 <section id="zeitliche-integration-euler-verfahren">
 <h3>Zeitliche Integration - Euler-Verfahren<a class="headerlink" href="#zeitliche-integration-euler-verfahren" title="Permalink to this headline">¶</a></h3>
@@ -629,7 +669,7 @@ ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lös
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span> <span class="c1">#für animierte Plots</span>
+<span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>  <span class="c1">#für animierte Plots</span>
 </pre></div>
 </div>
 </div>
@@ -637,20 +677,23 @@ ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lös
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Anzahl der Knoten (Diskretisierung)</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">resolution</span> <span class="o">=</span> <span class="mi">100</span>
 
 <span class="c1"># T and T+ Vektoren erstellen und mit Startwert 0 °C initialisieren</span>
-<span class="n">T_plus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">T_plus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">resolution</span><span class="p">)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">resolution</span><span class="p">)</span>
 
 <span class="c1"># Simulations-Zeit</span>
-<span class="n">sim_time</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sim_time</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span>
 
 <span class="c1">#Geometrie und thermische Parameter</span>
 <span class="n">L</span> <span class="o">=</span> <span class="mf">0.1</span>  <span class="c1"># m</span>
-<span class="n">dx</span> <span class="o">=</span> <span class="n">L</span> <span class="o">/</span> <span class="n">n</span>  <span class="c1">#</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="mf">1e-7</span>  <span class="c1">#m2/s</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">L</span> <span class="o">/</span> <span class="n">resolution</span>  <span class="c1">#</span>
+<span class="n">lambda_mat</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># W/(mK)</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mi">7850</span>  <span class="c1"># kg/m³</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># J/(kgK)</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="n">lambda_mat</span> <span class="o">/</span> <span class="p">(</span><span class="n">rho</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span>
 <span class="n">Fo</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">/</span> <span class="n">dx</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># Fourier-Zahl</span>
 </pre></div>
 </div>
@@ -667,9 +710,9 @@ ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lös
 <span class="k">while</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">sim_time</span><span class="p">:</span>
     <span class="c1"># Randbedingungen bleiben gleich</span>
     <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">T</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">T</span><span class="p">[</span><span class="n">resolution</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
     <span class="c1"># Berechnung innerhalb der Domäne</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">resolution</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
         <span class="c1"># Ergebnis für neuen Zeitschritt berechnen</span>
         <span class="n">T_plus</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Fo</span><span class="p">)</span> <span class="o">+</span> <span class="n">Fo</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
 
@@ -679,9 +722,10 @@ ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lös
     <span class="n">t</span> <span class="o">+=</span> <span class="n">dt</span>
 <span class="c1"># plotting</span>
 <span class="n">x_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x position [m]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature [°C]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_pos</span><span class="p">,</span> <span class="n">T_plus</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.65</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x Position in m&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperatur in °C&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_pos</span><span class="p">,</span> <span class="n">T_plus</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -690,82 +734,20 @@ ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lös
 <img alt="_images/Diffusive_Theorie_4_0.png" src="_images/Diffusive_Theorie_4_0.png" />
 </div>
 </div>
-<p>Für einen beidseitig erhitzten Stab <span class="math notranslate nohighlight">\(T_{(x=0)} = 10\)</span> °C und <span class="math notranslate nohighlight">\(T_{(x=L)} = 10\)</span> °C wäre das Ergebnis:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stabilitätskriterium</span>
-<span class="k">if</span> <span class="n">Fo</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;stability issue&quot;</span><span class="p">)</span>
-
-<span class="c1"># Zeit</span>
-<span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">sim_time</span><span class="p">:</span>
-    <span class="c1"># Randbedingungen bleiben gleich</span>
-    <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="n">T</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="c1"># Berechnung innerhalb der Domäne</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="c1"># Ergebnis für neuen Zeitschritt berechnen</span>
-        <span class="n">T_plus</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Fo</span><span class="p">)</span> <span class="o">+</span> <span class="n">Fo</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
-
-    <span class="c1"># Altes Temperaturfeld mit soeben berechnetem überschreiben</span>
-    <span class="n">T</span> <span class="o">=</span> <span class="n">T_plus</span>
-    <span class="c1"># Zeitschritt dazuzählen</span>
-    <span class="n">t</span> <span class="o">+=</span> <span class="n">dt</span>
-
-<span class="c1"># plotting</span>
-<span class="n">x_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x position [m]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature [°C]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_pos</span><span class="p">,</span> <span class="n">T_plus</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.65</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/Diffusive_Theorie_6_0.png" src="_images/Diffusive_Theorie_6_0.png" />
-</div>
-</div>
-<p>Wenn wir mehr Zeitschritte rechnen <span class="math notranslate nohighlight">\(t = 2000\)</span> Sekunden, erkennen wir, dass das Temperaturfeld danach strebt im gesamten Stab die selbe Temperatur anzunehmen.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SimTime anpassen</span>
-<span class="n">sim_time</span> <span class="o">=</span> <span class="mi">2000</span>  <span class="c1"># Sekunden</span>
-
-<span class="c1"># Stabilitätskriterium</span>
-<span class="k">if</span> <span class="n">Fo</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;stability issue&quot;</span><span class="p">)</span>
-
-<span class="c1"># Zeit</span>
-<span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">sim_time</span><span class="p">:</span>
-    <span class="c1"># Randbedingungen bleiben gleich</span>
-    <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="n">T</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="c1"># Berechnung innerhalb der Domäne</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="c1"># Ergebnis für neuen Zeitschritt berechnen</span>
-        <span class="n">T_plus</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Fo</span><span class="p">)</span> <span class="o">+</span> <span class="n">Fo</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
-
-    <span class="c1"># Altes Temperaturfeld mit soeben berechnetem überschreiben</span>
-    <span class="n">T</span> <span class="o">=</span> <span class="n">T_plus</span>
-    <span class="c1"># Zeitschritt dazuzählen</span>
-    <span class="n">t</span> <span class="o">+=</span> <span class="n">dt</span>
-
-<span class="c1"># plotting</span>
-<span class="n">x_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x position [m]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature [°C]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_pos</span><span class="p">,</span> <span class="n">T_plus</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.65</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/Diffusive_Theorie_8_0.png" src="_images/Diffusive_Theorie_8_0.png" />
-</div>
-</div>
-<p>Nach einer ausreichenden Zeitdauer würde im gesamten Stab dieselbe Temperatur herrschen.</p>
+<p>Wenn wir ausreichend Zeitschritte rechnen und dabei die Randbedingungen nicht verändern konvergiert das Ergebnis gegen die stationäre Lösung des Problems. <a class="reference internal" href="#t-one-side"><span class="std std-numref">Fig. 8</span></a>.</p>
+<figure class="align-default" id="t-one-side">
+<a class="reference internal image-reference" href="_images/T_one_Side.gif"><img alt="_images/T_one_Side.gif" src="_images/T_one_Side.gif" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Zeitlicher Darstellung der Entwicklung des Temperatufeldes in einem Stab mit den Randbedingungen <span class="math notranslate nohighlight">\(T_{(x=0)} = 0\)</span> °C und <span class="math notranslate nohighlight">\(T_{(x=L)} = 10\)</span> °C.</span><a class="headerlink" href="#t-one-side" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Für einen beidseitig erhitzten Stab <span class="math notranslate nohighlight">\(T_{(x=0)} = 10\)</span> °C und <span class="math notranslate nohighlight">\(T_{(x=L)} = 10\)</span> °C ist die zeitliche Entwiklung des Temperaturfeldes in <a class="reference internal" href="#t-both-sides"><span class="std std-numref">Fig. 9</span></a> dargestellt.</p>
+<figure class="align-default" id="t-both-sides">
+<a class="reference internal image-reference" href="_images/T_both_sides.gif"><img alt="_images/T_both_sides.gif" src="_images/T_both_sides.gif" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Zeitlicher Darstellung der Entwicklung des Temperatufeldes in einem Stab mit den Randbedingungen <span class="math notranslate nohighlight">\(T_{(x=0)} = 10\)</span> °C und <span class="math notranslate nohighlight">\(T_{(x=L)} = 10\)</span> °C. Nach einer ausreichenden Zeitdauer herrscht im gesamten Stab dieselbe Temperatur.</span><a class="headerlink" href="#t-both-sides" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Auf Grund der zeitlichen Variation des Wetters sind bei hygrothermischen Simulationen die Randbedingungen auch eine Funktion der Zeit.</p>
