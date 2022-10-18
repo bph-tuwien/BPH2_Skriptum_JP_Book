@@ -431,8 +431,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="theoretische-grundlagen-des-konvektiven-warme-und-feuchtetranspoortes">
 <h1>Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes<a class="headerlink" href="#theoretische-grundlagen-des-konvektiven-warme-und-feuchtetranspoortes" title="Permalink to this headline">¶</a></h1>
-<p>Wenn wir uns an Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-q-diff-conv-eq">()</a> und <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-g-diff-conv-eq">()</a>
-im <a class="reference internal" href="resources/Diffusive_Theorie.html"><span class="doc std std-doc">vorhergehenden Kapitel</span></a> zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
+<p>Wenn wir uns an Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-q-diff-conv-eq">(9)</a> und <a class="reference internal" href="Diffusive_Theorie.html#equation-g-diff-conv-eq">(17)</a>
+im <span class="xref myst">vorhergehenden Kapitel</span> zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
 diffusiven Therm beschäftigt und den konvektiven vernachlässigt <span class="math notranslate nohighlight">\(q_{conv} = g_{conv} = 0\)</span>. Um konvektiven Transport zu
 berücksichtigen setzen wir <span class="math notranslate nohighlight">\(q_{conv} \neq 0 \)</span> und <span class="math notranslate nohighlight">\(g_{conv} \neq 0\)</span> und erweitern unsere beschreibenden Gleichungen um
 diese Therme.</p>
@@ -463,7 +463,7 @@ der Luft, <span class="math notranslate nohighlight">\(k\)</span> für die Perme
 <figure class="align-default" id="m-steady-state-wall">
 <a class="reference internal image-reference" href="_images/m_steady_state_wall.png"><img alt="_images/m_steady_state_wall.png" src="_images/m_steady_state_wall.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Massenstrom durch ein poröses finites Wandstück. <span id="id2">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#m-steady-state-wall" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Massenstrom durch ein poröses finites Wandstück. <span id="id2">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#m-steady-state-wall" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Gleichung <a class="reference internal" href="#equation-m-delta-x-eq">(35)</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den
@@ -496,7 +496,7 @@ Temperatur in Kelvin.</p>
 <p>Damit kann der für bauphysikalische Berechnungen relevante Wärmestrom komplett beschrieben werden als:</p>
 <div class="math notranslate nohighlight" id="equation-q-ges-eq">
 <span class="eqno">(38)<a class="headerlink" href="#equation-q-ges-eq" title="Permalink to this equation">¶</a></span>\[ q = - \lambda \nabla T + \dot{m}_{a} \cdot c_{p} T \]</div>
-<p>Einsetzen in Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-dt-eq">()</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Temperaturfeldes:</strong></p>
+<p>Einsetzen in Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-dt-eq">(8)</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Temperaturfeldes:</strong></p>
 <div class="math notranslate nohighlight" id="equation-dt-ges-eq">
 <span class="eqno">(39)<a class="headerlink" href="#equation-dt-ges-eq" title="Permalink to this equation">¶</a></span>\[ \rho c \frac{\partial T}{\partial t} = \nabla \cdot (\lambda \nabla T - \dot{m}_{a} \cdot c_{p} T) + h \]</div>
 </section>
@@ -506,7 +506,7 @@ Temperatur in Kelvin.</p>
 auf</p>
 <div class="math notranslate nohighlight" id="equation-g-ges-eq">
 <span class="eqno">(40)<a class="headerlink" href="#equation-g-ges-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v + \frac{\dot{m}_{a}}{\rho_{a}} \cdot v\]</div>
-<p>Einsetzen in Gleichung <a class="reference internal" href="resources/Diffusive_Theorie.html#equation-w-eq">()</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Feuchtefeldes:</strong></p>
+<p>Einsetzen in Gleichung <a class="reference internal" href="Diffusive_Theorie.html#equation-w-eq">(15)</a> führt auf die <strong>beschreibende partielle Differentialgleichung des Feuchtefeldes:</strong></p>
 <div class="math notranslate nohighlight" id="equation-w-conv-eq">
 <span class="eqno">(41)<a class="headerlink" href="#equation-w-conv-eq" title="Permalink to this equation">¶</a></span>\[\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac{\dot{m}_{a}}{\rho_{a}} \cdot v + m \]</div>
 </section>
@@ -529,11 +529,11 @@ auf</p>
 <figure class="align-default" id="peclet-num">
 <a class="reference internal image-reference" href="_images/peclet_num.png"><img alt="_images/peclet_num.png" src="_images/peclet_num.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Temperatur Profil durch ein finites Wandelement für unterschiedliche <span class="math notranslate nohighlight">\(L/\ell = Pe^{*}\)</span>. <span id="id4">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#peclet-num" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Temperatur Profil durch ein finites Wandelement für unterschiedliche <span class="math notranslate nohighlight">\(L/\ell = Pe^{*}\)</span>. <span id="id4">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#peclet-num" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p><span class="math notranslate nohighlight">\(Pe^{*}\)</span> ist negativ wenn <span class="math notranslate nohighlight">\(\dot{M}_{a}\)</span> negativ ist. Der Einfluss der modifizierten Peclet Zahl auf den
-Temperaturverlauf kann <a class="reference internal" href="#peclet-num"><span class="std std-numref">Fig. 12</span></a> entnommen werden.</p>
+Temperaturverlauf kann <a class="reference internal" href="#peclet-num"><span class="std std-numref">Fig. 16</span></a> entnommen werden.</p>
 <p>Die Größe <span class="math notranslate nohighlight">\(\ell\)</span> charakterisiert das Verhältnis zwischen diffusiven und konvektiven Wärmefluss und damit auch den
 Einfluss des konvektiven Transportes auf den Gesamttransport.</p>
 <p>Die <span class="math notranslate nohighlight">\(Pe^{*}\)</span> findet sich auch normativ bei den Diffusions-/Konvektionsgleichungen in Abschnitt 11 von ÖNORM 8110-2:2020
@@ -645,14 +645,14 @@ wurde mittels F-Klassen berücksichtigt:</p>
 <figure class="align-default" id="f-konv">
 <a class="reference internal image-reference" href="_images/f_konv.png"><img alt="_images/f_konv.png" src="_images/f_konv.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Kategorisierung der F-Klassen. <span id="id11">[<a class="reference internal" href="References.html#id18" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Euro-Glaser unter Beachtung solarer Strahlungs-/ Absportionsbedingungen sowie druckinduzierter Feuchteeinträge im Vergleich zu dynamischen Simulationen. In Third German-Austrian IBPSA Conference, 541. Wien, September 2010.">Nusser <em>et al.</em>, 2010</a>]</span></span><a class="headerlink" href="#f-konv" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Kategorisierung der F-Klassen. <span id="id11">[<a class="reference internal" href="References.html#id18" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Euro-Glaser unter Beachtung solarer Strahlungs-/ Absportionsbedingungen sowie druckinduzierter Feuchteeinträge im Vergleich zu dynamischen Simulationen. In Third German-Austrian IBPSA Conference, 541. Wien, September 2010.">Nusser <em>et al.</em>, 2010</a>]</span></span><a class="headerlink" href="#f-konv" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Für die Norm <span id="id12">[<a class="reference internal" href="References.html#id21" title="8110-2 ÖNORM. ÖNORM 8110-2:2020. Technical Report, Austrian Standards, 2020.">ÖNORM, 2020</a>]</span> wurde das Verfahren weiter präzisiert und ist nun Tabelle 3 zu entnehmen:</p>
 <figure class="align-default" id="luftvolstrom-koeff-tab">
 <a class="reference internal image-reference" href="_images/luftvolstrom_koeff_tab.png"><img alt="_images/luftvolstrom_koeff_tab.png" src="_images/luftvolstrom_koeff_tab.png" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Tabelle 3 zur Definition des Luftvolumenstromkoeffzienten C.</span><a class="headerlink" href="#luftvolstrom-koeff-tab" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Tabelle 3 zur Definition des Luftvolumenstromkoeffzienten C.</span><a class="headerlink" href="#luftvolstrom-koeff-tab" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
