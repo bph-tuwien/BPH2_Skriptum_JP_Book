@@ -125,7 +125,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_Theorie.html">
-     Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes
+     Theoretische Grundlagen der Wärme- und Feuchtspeicherung und des -transportes
     </a>
    </li>
    <li class="toctree-l2">
@@ -318,8 +318,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#erweiterung-der-diffusiven-grundgleichungen-um-ihre-konvektiven-therme">
-   Erweiterung der diffusiven Grundgleichungen um ihre konvektiven Therme
+  <a class="reference internal nav-link" href="#erweiterung-der-grundgleichungen-um-ihre-konvektiven-therme">
+   Erweiterung der Grundgleichungen um ihre konvektiven Therme
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -382,8 +382,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#erweiterung-der-diffusiven-grundgleichungen-um-ihre-konvektiven-therme">
-   Erweiterung der diffusiven Grundgleichungen um ihre konvektiven Therme
+  <a class="reference internal nav-link" href="#erweiterung-der-grundgleichungen-um-ihre-konvektiven-therme">
+   Erweiterung der Grundgleichungen um ihre konvektiven Therme
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -446,7 +446,7 @@ werden.</p>
 <p>Ähnlich zu den Formulierungen für die Wärme- und Feuchtestromdichte, kann auch die Massenstromdichte zu Folge
 Luftströmung mit Hilfe Darcy’s Gesetz definiert werden. Wir betrachten hier die Formulierung ohne Berücksichtigung des
 Auftriebs, für den Fall, dass der Auftrieb einen maßgebenden Einfluss hat, kann das Gesetz laut
-<span id="id1">[<a class="reference internal" href="References.html#id25" title="J. Wang and C. E. Hagentoft. A numerical method for calculating combined heat, air and moisture transport in building envelope components. Nordic Journal of Building Physics, 2001.">Wang and Hagentoft, 2001</a>]</span> erweitert werden.</p>
+<span id="id1">[<a class="reference internal" href="References.html#id27" title="J. Wang and C. E. Hagentoft. A numerical method for calculating combined heat, air and moisture transport in building envelope components. Nordic Journal of Building Physics, 2001.">Wang and Hagentoft, 2001</a>]</span> erweitert werden.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Später werden wir sehen, dass diese Formulierung nicht nur zur Beschreibung poröser Materialien verwendet werden kann,
@@ -463,7 +463,7 @@ der Luft, <span class="math notranslate nohighlight">\(k\)</span> für die Perme
 <figure class="align-default" id="m-steady-state-wall">
 <a class="reference internal image-reference" href="_images/m_steady_state_wall.png"><img alt="_images/m_steady_state_wall.png" src="_images/m_steady_state_wall.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Massenstrom durch ein poröses finites Wandstück. <span id="id2">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#m-steady-state-wall" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Massenstrom durch ein poröses finites Wandstück. <span id="id2">[<a class="reference internal" href="References.html#id11" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#m-steady-state-wall" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Gleichung <a class="reference internal" href="#equation-m-delta-x-eq">(35)</a> kann bei Grenzwertbetrachtung <span class="math notranslate nohighlight">\(\lim \limits_{\Delta x \to 0}\)</span> übergeführt werden in den
@@ -477,11 +477,11 @@ Differentialoperator</p>
 <p class="admonition-title">Note</p>
 <p>Auf Grund der bauphysikalischen Relevanz beschäftigen wir uns vorrangig mit Massenströmen deren Gas aus Luft besteht.
 Entsprechende Anpassung der Parameter ermöglichen auch die Abbildung anderer Fluide oder Gase.
-<span id="id3">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></p>
+<span id="id3">[<a class="reference internal" href="References.html#id11" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></p>
 </div>
 </section>
-<section id="erweiterung-der-diffusiven-grundgleichungen-um-ihre-konvektiven-therme">
-<h2>Erweiterung der diffusiven Grundgleichungen um ihre konvektiven Therme<a class="headerlink" href="#erweiterung-der-diffusiven-grundgleichungen-um-ihre-konvektiven-therme" title="Permalink to this headline">¶</a></h2>
+<section id="erweiterung-der-grundgleichungen-um-ihre-konvektiven-therme">
+<h2>Erweiterung der Grundgleichungen um ihre konvektiven Therme<a class="headerlink" href="#erweiterung-der-grundgleichungen-um-ihre-konvektiven-therme" title="Permalink to this headline">¶</a></h2>
 <section id="konvektiver-warmetransport">
 <h3>Konvektiver Wärmetransport<a class="headerlink" href="#konvektiver-warmetransport" title="Permalink to this headline">¶</a></h3>
 <p>Bei Berücksichtigung von Konvektion wird die Wärmestromdichte beschrieben durch</p>
@@ -513,8 +513,8 @@ auf</p>
 <section id="einfluss-des-lufttransportes-auf-den-warme-und-feuchtetransport">
 <h3>Einfluss des Lufttransportes auf den Wärme- und Feuchtetransport<a class="headerlink" href="#einfluss-des-lufttransportes-auf-den-warme-und-feuchtetransport" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight" id="equation-qcd-con-eq">
-<span class="eqno">(42)<a class="headerlink" href="#equation-qcd-con-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) \]</div>
-<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(42)</a> kann für den stationären eindimensionalen Fall gelöst werden und führt auf</p>
+<span class="eqno">(42)<a class="headerlink" href="#equation-qcd-con-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = - A \lambda \frac{dT}{dx} + c_{pa} \dot{M}_{a} \cdot T(x) \]</div>
+<p>Gleichung <a class="reference internal" href="#equation-qcd-con-eq">(42)</a> kann für den <a class="reference internal" href="#analy-konv"><span class="std std-ref">stationären eindimensionalen Fall gelöst werden</span></a> und führt auf</p>
 <div class="math notranslate nohighlight" id="equation-qcd-con-sol-eq">
 <span class="eqno">(43)<a class="headerlink" href="#equation-qcd-con-sol-eq" title="Permalink to this equation">¶</a></span>\[ Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\ell} - 1}\]</div>
 <p>mit der normalisierten, dimensionslosen Temperatur</p>
@@ -529,11 +529,11 @@ auf</p>
 <figure class="align-default" id="peclet-num">
 <a class="reference internal image-reference" href="_images/peclet_num.png"><img alt="_images/peclet_num.png" src="_images/peclet_num.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Temperatur Profil durch ein finites Wandelement für unterschiedliche <span class="math notranslate nohighlight">\(L/\ell = Pe^{*}\)</span>. <span id="id4">[<a class="reference internal" href="References.html#id10" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#peclet-num" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Temperatur Profil durch ein finites Wandelement für unterschiedliche <span class="math notranslate nohighlight">\(L/\ell = Pe^{*}\)</span>. <span id="id4">[<a class="reference internal" href="References.html#id11" title="Carl-Eric Hagentoft. Introduction To Building Physics. Studentlitteraur AB, Lund, fifth edition, 2001.">Hagentoft, 2001</a>]</span></span><a class="headerlink" href="#peclet-num" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p><span class="math notranslate nohighlight">\(Pe^{*}\)</span> ist negativ wenn <span class="math notranslate nohighlight">\(\dot{M}_{a}\)</span> negativ ist. Der Einfluss der modifizierten Peclet Zahl auf den
-Temperaturverlauf kann <a class="reference internal" href="#peclet-num"><span class="std std-numref">Fig. 16</span></a> entnommen werden.</p>
+Temperaturverlauf kann <a class="reference internal" href="#peclet-num"><span class="std std-numref">Fig. 18</span></a> entnommen werden.</p>
 <p>Die Größe <span class="math notranslate nohighlight">\(\ell\)</span> charakterisiert das Verhältnis zwischen diffusiven und konvektiven Wärmefluss und damit auch den
 Einfluss des konvektiven Transportes auf den Gesamttransport.</p>
 <p>Die <span class="math notranslate nohighlight">\(Pe^{*}\)</span> findet sich auch normativ bei den Diffusions-/Konvektionsgleichungen in Abschnitt 11 von ÖNORM 8110-2:2020
@@ -587,7 +587,7 @@ e^{-x/\ell} \,dx\]</div>
 <p>Bauteile können durch witteriche Exposition während der Bauzeit, Abweichungen der Ausführung von der ideellen Planung
 oder unbeabsichtigten Ausführungsfehlern immer wieder unvorhergesehenen hygrothermischen Belastungen ausgesetzt sein.
 Eine für die bauphysikalische Planung adaptierte Einstufung von Unsicherheiten wurde in
-<span id="id5">[<a class="reference internal" href="References.html#id5" title="T. Bednar and C. E. Hagentoft. Risk management by probabilistic assessment. Development of guidelines for practice, IEA Annex 55, RAP-RETRO. 2015.">Bednar and Hagentoft, 2015</a>]</span> nach <span id="id6">Mcmanus and Hastings [<a class="reference internal" href="References.html#id14" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> vorgestellt:</p>
+<span id="id5">[<a class="reference internal" href="References.html#id5" title="T. Bednar and C. E. Hagentoft. Risk management by probabilistic assessment. Development of guidelines for practice, IEA Annex 55, RAP-RETRO. 2015.">Bednar and Hagentoft, 2015</a>]</span> nach <span id="id6">Mcmanus and Hastings [<a class="reference internal" href="References.html#id15" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> vorgestellt:</p>
 <blockquote>
 <div><p>“<strong>Lack of knowledge</strong> is defined as facts that are unknown or known only imprecisely that is needed to assess performance of the concept: examples include prior
 building usage, possible salt contents, etc.</p>
@@ -609,7 +609,7 @@ that might intrude a construction, destruction by sabotage or climate change.</p
 very conservative mitigation strategy might help to handle current unknown aspects
 in the future.”</p>
 </div></blockquote>
-<p>Diese zu erwartenden Ungewissheiten können nach <span id="id7">Mcmanus and Hastings [<a class="reference internal" href="References.html#id14" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> als “Known
+<p>Diese zu erwartenden Ungewissheiten können nach <span id="id7">Mcmanus and Hastings [<a class="reference internal" href="References.html#id15" title="H. Mcmanus and Daniel Hastings. A Framework for Understanding Uncertainty and Its Mitigation and Exploitation in Complex Systems. Engineering Management Review, IEEE, 34:81–81, January 2007. doi:10.1109/EMR.2006.261384.">2007</a>]</span> als “Known
 Unknowns” deklariert werden. Um diese “Known Unknowns” in hygrothermischen Berechnungen zu berücksichtigen hat sich der
 Begriff der Fehlertoleranz in der bauphysikalischen Bemessung etabliert. Das Konzept der Fehlertoleranz einer
 Baukonstruktion lässt sich mittels der von <span id="id8">Bednar [<a class="reference internal" href="References.html#id6" title="Thomas Bednar. Von der hygrothermischen Bauteilsimulation zum Risikomanagement in der Bauphysik. In Bauinstandsetzen Und Bauphysik. Gestern - Heute - Morgen. Stuttgart, 2016. Fraunhofer IRB Verlag.">2016</a>]</span>
@@ -632,7 +632,7 @@ verändern.”</p>
 <section id="luftvolumenstromkoeffzienten-hintergrund">
 <h2>Luftvolumenstromkoeffzienten - Hintergrund<a class="headerlink" href="#luftvolumenstromkoeffzienten-hintergrund" title="Permalink to this headline">¶</a></h2>
 <p>Der Ursprung der in ÖNORM 8110-2:202 angeführten Luftvolumenstromkoeffizienten zu Definition von <a class="reference internal" href="Convective_risk.html#lpf"><span class="std std-ref">Leckagen</span></a> liegt
-in <span id="id9">[<a class="reference internal" href="References.html#id19" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Proposal for a modified Glaser-Method for the risk assessment of flat timber roofs. In 9th Nordic Symposium on Building Physics - NSB 2011, 181–188. June 2011.">Nusser <em>et al.</em>, 2011</a>]</span> wo erstmals ein adabptiertes Glaserverfahren vorgestellt wird um den
+in <span id="id9">[<a class="reference internal" href="References.html#id20" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Proposal for a modified Glaser-Method for the risk assessment of flat timber roofs. In 9th Nordic Symposium on Building Physics - NSB 2011, 181–188. June 2011.">Nusser <em>et al.</em>, 2011</a>]</span> wo erstmals ein adabptiertes Glaserverfahren vorgestellt wird um den
 konvektiven Transport von Wärme- und Feuchtigkeit zu berücksichtigen. Diese Berücksichtigung soll, abhängig von der
 Ausführungsqualität, es ermöglichen die Anfälligkeit eines Bauteiles auf Fehler zu erfassen.</p>
 <div class="admonition note">
@@ -640,19 +640,19 @@ Ausführungsqualität, es ermöglichen die Anfälligkeit eines Bauteiles auf Feh
 <p>Mann könnte auch sagen, dass die Anfälligkeit eines Bauteiles im Umkehrschluss der Kehrwert der
 Fehlertoleranz eines Bauteiles ist.</p>
 </div>
-<p>Diese Kategorisierung der Ausführungsqualität wurde dann in <span id="id10">[<a class="reference internal" href="References.html#id18" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Euro-Glaser unter Beachtung solarer Strahlungs-/ Absportionsbedingungen sowie druckinduzierter Feuchteeinträge im Vergleich zu dynamischen Simulationen. In Third German-Austrian IBPSA Conference, 541. Wien, September 2010.">Nusser <em>et al.</em>, 2010</a>]</span> nachgeschärft und
+<p>Diese Kategorisierung der Ausführungsqualität wurde dann in <span id="id10">[<a class="reference internal" href="References.html#id19" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Euro-Glaser unter Beachtung solarer Strahlungs-/ Absportionsbedingungen sowie druckinduzierter Feuchteeinträge im Vergleich zu dynamischen Simulationen. In Building Performance Simulation in a Changing Environment, 541. Wien, September 2010.">Nusser <em>et al.</em>, 2010</a>]</span> nachgeschärft und
 wurde mittels F-Klassen berücksichtigt:</p>
 <figure class="align-default" id="f-konv">
 <a class="reference internal image-reference" href="_images/f_konv.png"><img alt="_images/f_konv.png" src="_images/f_konv.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Kategorisierung der F-Klassen. <span id="id11">[<a class="reference internal" href="References.html#id18" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Euro-Glaser unter Beachtung solarer Strahlungs-/ Absportionsbedingungen sowie druckinduzierter Feuchteeinträge im Vergleich zu dynamischen Simulationen. In Third German-Austrian IBPSA Conference, 541. Wien, September 2010.">Nusser <em>et al.</em>, 2010</a>]</span></span><a class="headerlink" href="#f-konv" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Kategorisierung der F-Klassen. <span id="id11">[<a class="reference internal" href="References.html#id19" title="Bernd Nusser, Thomas Bednar, and Martin Teibinger. Euro-Glaser unter Beachtung solarer Strahlungs-/ Absportionsbedingungen sowie druckinduzierter Feuchteeinträge im Vergleich zu dynamischen Simulationen. In Building Performance Simulation in a Changing Environment, 541. Wien, September 2010.">Nusser <em>et al.</em>, 2010</a>]</span></span><a class="headerlink" href="#f-konv" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Für die Norm <span id="id12">[<a class="reference internal" href="References.html#id21" title="8110-2 ÖNORM. ÖNORM 8110-2:2020. Technical Report, Austrian Standards, 2020.">ÖNORM, 2020</a>]</span> wurde das Verfahren weiter präzisiert und ist nun Tabelle 3 zu entnehmen:</p>
+<p>Für die Norm <span id="id12">[<a class="reference internal" href="References.html#id22" title="8110-2 ÖNORM. ÖNORM 8110-2:2020. Technical Report, Austrian Standards, 2020.">ÖNORM, 2020</a>]</span> wurde das Verfahren weiter präzisiert und ist nun Tabelle 3 zu entnehmen:</p>
 <figure class="align-default" id="luftvolstrom-koeff-tab">
 <a class="reference internal image-reference" href="_images/luftvolstrom_koeff_tab.png"><img alt="_images/luftvolstrom_koeff_tab.png" src="_images/luftvolstrom_koeff_tab.png" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Tabelle 3 zur Definition des Luftvolumenstromkoeffzienten C.</span><a class="headerlink" href="#luftvolstrom-koeff-tab" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Tabelle 3 zur Definition des Luftvolumenstromkoeffzienten C.</span><a class="headerlink" href="#luftvolstrom-koeff-tab" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>

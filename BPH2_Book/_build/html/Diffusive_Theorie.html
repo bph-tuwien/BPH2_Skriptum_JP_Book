@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes &#8212; 206.291 Bauphysik 2 VU</title>
+    <title>Theoretische Grundlagen der Wärme- und Feuchtspeicherung und des -transportes &#8212; 206.291 Bauphysik 2 VU</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -125,7 +125,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes
+     Theoretische Grundlagen der Wärme- und Feuchtspeicherung und des -transportes
     </a>
    </li>
    <li class="toctree-l2">
@@ -330,25 +330,25 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#allgemeine-transportgleichungen-diffusion">
-   Allgemeine Transportgleichungen Diffusion
+  <a class="reference internal nav-link" href="#allgemeine-transportgleichungen">
+   Allgemeine Transportgleichungen
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#warmetransport">
-     Wärmetransport
+    <a class="reference internal nav-link" href="#warmespeicherung-und-transport">
+     Wärmespeicherung und -transport
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#feuchtetransport">
-     Feuchtetransport
+    <a class="reference internal nav-link" href="#feuchtespeicherung-und-transport">
+     Feuchtespeicherung und -transport
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion">
-   Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitungsgleichung für Diffusion
+  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-des-temperaturfeldes">
+   Numerische Lösung einer partiellen Differentialgleichung am Beispiel des Temperaturfeldes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -402,7 +402,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes</h1>
+                <h1>Theoretische Grundlagen der Wärme- und Feuchtspeicherung und des -transportes</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -413,25 +413,25 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#allgemeine-transportgleichungen-diffusion">
-   Allgemeine Transportgleichungen Diffusion
+  <a class="reference internal nav-link" href="#allgemeine-transportgleichungen">
+   Allgemeine Transportgleichungen
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#warmetransport">
-     Wärmetransport
+    <a class="reference internal nav-link" href="#warmespeicherung-und-transport">
+     Wärmespeicherung und -transport
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#feuchtetransport">
-     Feuchtetransport
+    <a class="reference internal nav-link" href="#feuchtespeicherung-und-transport">
+     Feuchtespeicherung und -transport
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion">
-   Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitungsgleichung für Diffusion
+  <a class="reference internal nav-link" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-des-temperaturfeldes">
+   Numerische Lösung einer partiellen Differentialgleichung am Beispiel des Temperaturfeldes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -484,17 +484,17 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="theoretische-grundlagen-des-diffusiven-warme-und-feuchtetransportes">
-<h1>Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes<a class="headerlink" href="#theoretische-grundlagen-des-diffusiven-warme-und-feuchtetransportes" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="theoretische-grundlagen-der-warme-und-feuchtspeicherung-und-des-transportes">
+<h1>Theoretische Grundlagen der Wärme- und Feuchtspeicherung und des -transportes<a class="headerlink" href="#theoretische-grundlagen-der-warme-und-feuchtspeicherung-und-des-transportes" title="Permalink to this headline">¶</a></h1>
 <p>Wenn eine Koppelung zwischen Wärme- und Feuchtetransport in einer Berechnung besteht spricht man allgemein von einer
 hygrothermischen Simulation. Diese Koppelung bringt den Vorteil, dass der Einfluss des Feuchtegehaltes auf die
 Wärmeleitfähigkeit berücksichtigt werden kann. Die Differentialgleichungen, welche für solche Berechnungen miteinander
 gekoppelt werden müssen, werden im folgenden vorgestellt, mit dem Ziel ein Verständnis für die unterliegenden Grundlagen
 und Konzepte zu vermitteln.</p>
-<section id="allgemeine-transportgleichungen-diffusion">
-<h2>Allgemeine Transportgleichungen Diffusion<a class="headerlink" href="#allgemeine-transportgleichungen-diffusion" title="Permalink to this headline">¶</a></h2>
-<section id="warmetransport">
-<h3>Wärmetransport<a class="headerlink" href="#warmetransport" title="Permalink to this headline">¶</a></h3>
+<section id="allgemeine-transportgleichungen">
+<h2>Allgemeine Transportgleichungen<a class="headerlink" href="#allgemeine-transportgleichungen" title="Permalink to this headline">¶</a></h2>
+<section id="warmespeicherung-und-transport">
+<h3>Wärmespeicherung und -transport<a class="headerlink" href="#warmespeicherung-und-transport" title="Permalink to this headline">¶</a></h3>
 <p>Bei Betrachtung der Wärmeleitung ergibt sich aus Gleichung <a class="reference internal" href="Motivation.html#equation-delta-v-q-eq">(7)</a></p>
 <div class="math notranslate nohighlight" id="equation-dt-eq">
 <span class="eqno">(8)<a class="headerlink" href="#equation-dt-eq" title="Permalink to this equation">¶</a></span>\[ \rho c \frac{\partial T}{\partial t} = -\nabla \cdot q + h \]</div>
@@ -541,8 +541,8 @@ z^{2}} \]</div>
 <p>Multiplikation der Wärmestromdichte mit der entsprechend durchströmten Fläche <span class="math notranslate nohighlight">\(A\)</span> in jm² führt auf den Wärmestrom <span class="math notranslate nohighlight">\(Q\)</span> in
 J/s.</p>
 </section>
-<section id="feuchtetransport">
-<h3>Feuchtetransport<a class="headerlink" href="#feuchtetransport" title="Permalink to this headline">¶</a></h3>
+<section id="feuchtespeicherung-und-transport">
+<h3>Feuchtespeicherung und -transport<a class="headerlink" href="#feuchtespeicherung-und-transport" title="Permalink to this headline">¶</a></h3>
 <p>Analog zum Wärmetransport kann der Feuchtetransport durch Gleichung <a class="reference internal" href="#equation-w-eq">(15)</a> beschrieben werden:</p>
 <div class="math notranslate nohighlight" id="equation-w-eq">
 <span class="eqno">(15)<a class="headerlink" href="#equation-w-eq" title="Permalink to this equation">¶</a></span>\[ \frac{\partial w}{\partial t} = - \nabla \cdot g + m \]</div>
@@ -595,11 +595,11 @@ entsteht einerseits durch</p>
 <span class="eqno">(21)<a class="headerlink" href="#equation-g-nabla-eq" title="Permalink to this equation">¶</a></span>\[ g = - \delta_{v} \cdot \nabla v \]</div>
 </section>
 </section>
-<section id="numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion">
-<h2>Numerische Lösung einer partiellen Differentialgleichung am Beispiel der Wärmeleitungsgleichung für Diffusion<a class="headerlink" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-der-warmeleitungsgleichung-fur-diffusion" title="Permalink to this headline">¶</a></h2>
+<section id="numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-des-temperaturfeldes">
+<h2>Numerische Lösung einer partiellen Differentialgleichung am Beispiel des Temperaturfeldes<a class="headerlink" href="#numerische-losung-einer-partiellen-differentialgleichung-am-beispiel-des-temperaturfeldes" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Die hier dargestellten Ausführungen sind ein kurzer Auszug aus <span id="id3">[<a class="reference internal" href="References.html#id24" title="Edouard Walther. Building Physics - Applications in Python. Spring 2021, first edition, July 2021.">Walther, 2021</a>]</span>. Das Werk
+<p>Die hier dargestellten Ausführungen sind ein kurzer Auszug aus <span id="id3">[<a class="reference internal" href="References.html#id25" title="Edouard Walther. Building Physics - Applications in Python. Spring 2021, first edition, July 2021.">Walther, 2021</a>]</span>. Das Werk
 ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lösung komplexerer (z.B. zeitabhängig, ortsabhängig) bauphysikalischer Problemstellungen.</p>
 <p>Die dargebrachten einfachen Methoden der Numerik, werden für das bessere Verständnis in einem simplen Python-Code implementiert und können über Binder Interaktiv auf der HTML-Seite ausprobiert werden.</p>
 </div>
@@ -644,7 +644,7 @@ ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lös
 <span class="eqno">(23)<a class="headerlink" href="#equation-disk-temp-eq" title="Permalink to this equation">¶</a></span>\[ \frac{T_{i}^{+} - T_{i}}{\Delta t} = a \frac{T_{i+1} -2 T_{i} + T_{i-1}}{\Delta x^{2}}\]</div>
 <p>Wenn wir als Randbedingungen <span class="math notranslate nohighlight">\(T_{(x=0)} = 0\)</span> °C und <span class="math notranslate nohighlight">\(T_{(x=L)} = 10\)</span> °C <a class="reference internal" href="#wl-diskret-rb"><span class="std std-numref">Fig. 7</span></a>, Starttemperatur für das zu berechnende Feld <span class="math notranslate nohighlight">\(T_{x=1\ bis\ L-1} = 0\)</span> °C und z.B. <span class="math notranslate nohighlight">\(t = 50\)</span> Sekunden (Simulationszeitraum) wählen, können wir nun mittels der rechten Seite von Gleichung <a class="reference internal" href="#equation-disk-temp-eq">(23)</a> die Verändeurng der Temperatur für jeden Zeitschritt berechnen.</p>
 <figure class="align-default" id="wl-diskret-rb">
-<a class="reference internal image-reference" href="_images/wl_diskret_RB.png"><img alt="_images/wl_diskret_RB.png" src="_images/wl_diskret_RB.png" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="_images/wl_diskret_RB.png"><img alt="_images/wl_diskret_RB.png" src="_images/wl_diskret_RB.png" style="height: 200px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 7 </span><span class="caption-text">Äußersten Knoten für die Randbedingungen.</span><a class="headerlink" href="#wl-diskret-rb" title="Permalink to this image">¶</a></p>
 </figcaption>
@@ -669,7 +669,6 @@ ermöglicht einen einfachen, anwendungsbezogenen Einstieg in die numerische Lös
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>  <span class="c1">#für animierte Plots</span>
 </pre></div>
 </div>
 </div>

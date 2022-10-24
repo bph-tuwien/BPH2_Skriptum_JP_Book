@@ -57,7 +57,7 @@ Entsprechende Anpassung der Parameter ermöglichen auch die Abbildung anderer Fl
 {cite}`hagentoftIntroductionBuildingPhysics2001`
 ```
 
-## Erweiterung der diffusiven Grundgleichungen um ihre konvektiven Therme
+## Erweiterung der Grundgleichungen um ihre konvektiven Therme
 
 ### Konvektiver Wärmetransport
 
@@ -94,9 +94,9 @@ $$\frac{\partial w}{\partial t} = \nabla \cdot \delta_{v} \cdot \nabla v - \frac
 
 ### Einfluss des Lufttransportes auf den Wärme- und Feuchtetransport
 
-$$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot T(x) $$(Qcd_con_eq)
+$$ Q_{cd} = - A \lambda \frac{dT}{dx} + c_{pa} \dot{M}_{a} \cdot T(x) $$(Qcd_con_eq)
 
-Gleichung {eq}`Qcd_con_eq` kann für den stationären eindimensionalen Fall gelöst werden und führt auf
+Gleichung {eq}`Qcd_con_eq` kann für den [stationären eindimensionalen Fall gelöst werden](analy_konv) und führt auf
 
 $$ Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\ell} - 1}$$ (Qcd_con_sol_eq)
 

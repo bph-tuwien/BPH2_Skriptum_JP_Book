@@ -1,0 +1,32 @@
+#### Beispiel: 
+Berechnen Sie die Verringerung des Wärmedurchlasswiderstandes zu Folge des ausgefallenen Kondensats f. die vorgegebene Schicht.
+ÖNORM EN ISO 10456: 2010: Tabelle 4
+
+Kondensatmenge f. betrachtete Schicht
+Bemessungswert der Leitfähigkeit d. Schicht
+
+Nachweis der Vermeidung schadensverursachender Kondensation bei der Anwendung des Bemessungsklimas 
+Vereinfachter Nachweis der Vermeidung schadensverursachender Kondensation im Inneren von Bauteilen
+
+Einstellung eines eingeschwungenen Zustandes
+Veränderung d. Feuchteanreicherung <= 1% im Vergleich z. Vorjahr
+Ermittlung von Risikos:
+Risiko Schimmelpilzwachstums [35]
+Risiko Eisbildung [36]
+Risiko Verrottung (organ. Materialien) [37]	
+Beeinflussung d. Wärmestroms durch Feuchtezustände
+Erhöhung d. mittleren Wärmestroms <= 10%
+
+
+- Darstellung des zugrunde gelegten Planungsstandes
+ — Standort, 
+ — nachvollziehbare Darstellung des Konzeptes zur Vermeidung schadensverursachender Wasser dampfkondensation	im	Inneren	und	an	der	Oberfläche	von	Bauteilen, 
+ — die aus dem Konzept resultierenden Bemessungsklimata für den Innen- und den Außenbereich, 
+ — außenseitige, standortbezogene, lokale Randbedingungen (z. B. solare Einstrahlung, langwelliger Strahlungsaustausch, Beschattung durch Nachbargebäude und/oder Bäume, Photovoltaik-Anlagen, Schlagregen), 
+ — Angaben aus der Gebäudetechnikplanung zu raumlufttechnischen Anlagen und der anzunehmenden Druckdifferenz über die Konstruktion, 
+ — Darstellung der relevanten technischen Eigenschaften der Konstruktion, 
+ —	 für	den	Nachweis 	der	Vermeidung 	von	schadensverursachender 	Wasserdampfkondensation 	im	 Inneren von Bauteilen: — Begründung der Wahl des Verfahrens (siehe Abschnitt 8, Abschnitt 10 und Abschnitt 11), 
+ — bei Verfahren nach Abschnitt 10 und Abschnitt 11 Darstellung der Einhaltung der Kriterien, 
+ — Nachweis	der	Vermeidung	von	schadensverursachender	Wasserdampfkondensation	an	der	 Oberfläche	von	Bauteilen: 
+ — anzuwendender Bemessungstemperaturfaktor
+ — Temperaturfaktor des Bauteils

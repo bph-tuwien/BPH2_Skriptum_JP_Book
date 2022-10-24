@@ -1,0 +1,34 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Herleitung: Analythische Lösung für konvektiven Wärmetransport bei stationären Zuständen}
+
+\begin{equation}
+\begin{aligned}
+		Q_{cd} = c_{pa} \dot{M}_{a}  \cdot T(x)\\
+	%	
+		Q_{cd} = c_{pa} \dot{M}_{a} \frac{T_{ } e^{L/\ell} - T_{2}}{e^{L/\ell} -1}\\
+	%	
+		\frac{Q_{cd}}{c_{pa} \dot{M}_{a}} = T(x) - \ell \cdot \frac{dT}{dx}\\
+	%	
+		-\ell e^{x/\ell}\frac{d}{dx}\left(e^{-x/\ell} T(x)\right) = T(x) - \ell \cdot \frac{dT}{dx} \\
+	%	
+		\frac{d}{dx}(e^{-x/\ell} T(x)) = - \frac{e^{-x/\ell}}{\ell} \cdot \left(T(x) - \ell \cdot \frac{dT}{dx}\right) = - \frac{e^{-x/\ell}}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}}\\
+		\int_{0}^{L} \frac{d}{dx}(e^{-x/\ell} T(x)) \,dx \ = - \int_{0}^{L} \frac{e^{-x/\ell}}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} \,dx\\
+		\left[e^{-x/\ell} T(x)\right]_{0}^{L} = - \frac{1}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} \int_{0}^{L} e^{-x/\ell} \,dx\\
+		\left[e^{-x/\ell} T(x)\right]_{0}^{L} = - \frac{1}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} \left[-\ell e^{-x/\ell}\right]_{0}^{L}\\
+		e^{-L/\ell} T(L) - 1 \cdot T(0) = - \frac{1}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} (-\ell) \left(e^{-L/\ell} - 1\right) & &| \cdot e^{L/\ell} \\
+		T(L) - T(0) \cdot e^{L/\ell} = - \frac{1}{\ell} \cdot \frac{Q_{cd}}{c_{pa} \dot{M}_{a}} (-\ell) \left(1 - e^{L/\ell} \right) & &| \cdot (-1) \\
+		T(0) \cdot e^{L/\ell} -T(L) =\frac{Q_{cd}}{c_{pa} \dot{M}_{a}} \left(e^{L/\ell}  - 1 \right)\\
+		Q_{cd} = c_{pa} \dot{M}_{a} \cdot \frac{T(0) \cdot e^{L/\ell} -T(L)}{e^{L/\ell}  - 1}\\
+\end{aligned}
+\end{equation}
+
+\end{document}

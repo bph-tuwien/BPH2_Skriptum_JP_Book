@@ -27,7 +27,7 @@ _"So viel dämmen wie nötig, so wenig dämmen wie möglich."_
 ## Überblick über das Kapitel
 Da der Umgang mit komplexeren Simulationstools nicht auf Vertrauen sondern fundiertem Hintergrundwissen beruhen soll,
 werden eingangs einige
-- **theoretische Grundlagen des diffusiven Wärem- und Feuchtetransportes**
+- **theoretische Grundlagen der Wärme- und Feuchtspeicherung und des -transportes**
 
 dargelegt, um den kritischen Umgang mit solchen Berechnungsergebnisse und deren Plausibilitätsprüfung  zu
 ermöglichen. Anschließend wird zur Interpretation und Nachweisverfahren unserer ersten Ergebnisse der 
