@@ -58,7 +58,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Anwendungsbeispiel Balkonanschluss" href="Problem_Balkonanschluss.html" />
-    <link rel="prev" title="Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes" href="Diffusive_Theorie.html" />
+    <link rel="prev" title="Theoretische Grundlagen der Wärme- und Feuchtspeicherung und des -transportes" href="Diffusive_Theorie.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -125,7 +125,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="Diffusive_Theorie.html">
-     Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes
+     Theoretische Grundlagen der Wärme- und Feuchtspeicherung und des -transportes
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -316,6 +316,18 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#bestimmung-der-geeigneten-dimensionalitat-des-simulationsmodelles">
    Bestimmung der geeigneten Dimensionalität des Simulationsmodelles
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wahl-der-geometrischen-dimensionalitat">
+     Wahl der geometrischen Dimensionalität
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wahl-der-modellgrenze-schnittebene">
+     Wahl der Modellgrenze - Schnittebene
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#risikoanalyse-mittels-temperaturfaktor-f-r-si">
@@ -375,6 +387,18 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#bestimmung-der-geeigneten-dimensionalitat-des-simulationsmodelles">
    Bestimmung der geeigneten Dimensionalität des Simulationsmodelles
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wahl-der-geometrischen-dimensionalitat">
+     Wahl der geometrischen Dimensionalität
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wahl-der-modellgrenze-schnittebene">
+     Wahl der Modellgrenze - Schnittebene
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#risikoanalyse-mittels-temperaturfaktor-f-r-si">
@@ -423,6 +447,43 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Vereinfachte Methoden zur Risikonanalyse bei Wärmebrücken<a class="headerlink" href="#vereinfachte-methoden-zur-risikonanalyse-bei-warmebrucken" title="Permalink to this headline">¶</a></h1>
 <section id="bestimmung-der-geeigneten-dimensionalitat-des-simulationsmodelles">
 <h2>Bestimmung der geeigneten Dimensionalität des Simulationsmodelles<a class="headerlink" href="#bestimmung-der-geeigneten-dimensionalitat-des-simulationsmodelles" title="Permalink to this headline">¶</a></h2>
+<p>Die Wahl der geeigneten Dimensionalität ist bei hygrothermischen Simulationen eine Kernfrage, da es möglich ist
+bestimmte Probleme zu vereinfachen und damit Rechenressourcen zu sparen. Eine normative Grundlage für die Fragestellung
+bei rein thermischer Betrachtung ist in <span id="id1">[<a class="reference internal" href="References.html#id9">Deutsches, 2018</a>]</span> zu finden.</p>
+<p>Es kann bei der Wahl der Dimensionalität zwischen 2 Fragestellungen unterschieden werden:</p>
+<ul class="simple">
+<li><p>Wahl der geometrischen Dimensionalität 1D, 2D, 3D Simulation</p></li>
+<li><p>Wahl der Modellgrenze - Schnittebene</p></li>
+</ul>
+<section id="wahl-der-geometrischen-dimensionalitat">
+<h3>Wahl der geometrischen Dimensionalität<a class="headerlink" href="#wahl-der-geometrischen-dimensionalitat" title="Permalink to this headline">¶</a></h3>
+<p>Vereinfacht kann gesagt werden, dass die Wahl der Dimensionalität des Modelles mit den maßgebenden Richtungen der
+Feldströme (z.B. Wärmeströme) für das betrachtete Bauteil korreliert. Die maßgebende Richtung der Feldströme ist
+wiederum durch die angreifenden Randbedingungen vorgegeben. Normativ geregelt in <span id="id2">[<a class="reference internal" href="References.html#id9">Deutsches, 2018</a>]</span>.</p>
+<figure class="align-default" id="d-wbr">
+<a class="reference internal image-reference" href="_images/2D_wbr.png"><img alt="_images/2D_wbr.png" src="_images/2D_wbr.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Randbedingungen greifen in x- und z-Richtung an. 2D-Betrachtung ausreichend.</span><a class="headerlink" href="#d-wbr" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="wahl-der-modellgrenze-schnittebene">
+<h3>Wahl der Modellgrenze - Schnittebene<a class="headerlink" href="#wahl-der-modellgrenze-schnittebene" title="Permalink to this headline">¶</a></h3>
+<p>Die Wahl der Modellgrenze hat so zu erfolgen, dass die betrachtete Problemstelle (z.B. Wärmebrücke) keinen Einfluss mehr
+auf die betrachtete Feldgröße (z.B. Temperaturfeld hat) hat. Normativ geregelt in <span id="id3">[<a class="reference internal" href="References.html#id9">Deutsches, 2018</a>]</span>.</p>
+<figure class="align-default" id="tempfeld-para">
+<a class="reference internal image-reference" href="_images/tempfeld_para.png"><img alt="_images/tempfeld_para.png" src="_images/tempfeld_para.png" style="height: 550px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Das Temperaturfeld hat bei der Modellgrenze wieder einen parallelen Verlauf und ist nicht mehr von der Wärmebrücke
+beeinflusst.</span><a class="headerlink" href="#tempfeld-para" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Reduzieren Sie die Dimensionalität nur, wenn Sie ausschließlich Wärmeleitung in Ihrer Berechnung berücksichtigen.
+Feuchte- und Konvektive- Transportphänomene sind hochgradig mehrdimensional.</p>
+</div>
+</section>
 </section>
 <section id="risikoanalyse-mittels-temperaturfaktor-f-r-si">
 <h2>Risikoanalyse mittels  Temperaturfaktor <span class="math notranslate nohighlight">\(f_{R_{Si}}\)</span><a class="headerlink" href="#risikoanalyse-mittels-temperaturfaktor-f-r-si" title="Permalink to this headline">¶</a></h2>
@@ -452,11 +513,11 @@ hintanzuhalten. Der <span class="math notranslate nohighlight">\(f_{R_{Si}}\)</s
 <p>Kondensation tritt auf, wenn an einer Oberfläche eine relative Luftfeuchtigkeit von 100 % erreicht wird (auch kurzfristig).
 Das <a class="reference internal" href="Convective_risk.html#mould-index"><span class="std std-ref">Risiko für Schimmelbefall</span></a> besteht, wenn über mehrere Tage die Oberflächenfeuchte über 80 % liegt.</p>
 </div>
-<p><a class="reference internal" href="#frsi-3d"><span class="std std-numref">Fig. 10</span></a> zeigt die Ergebnisse einer 3D-Simulation für den <span class="math notranslate nohighlight">\( f_{R_{Si}}\)</span> für einen Bauteilanschluss über Eck.</p>
+<p><a class="reference internal" href="#frsi-3d"><span class="std std-numref">Fig. 12</span></a> zeigt die Ergebnisse einer 3D-Simulation für den <span class="math notranslate nohighlight">\( f_{R_{Si}}\)</span> für einen Bauteilanschluss über Eck.</p>
 <figure class="align-default" id="frsi-3d">
 <a class="reference internal image-reference" href="_images/frsi_3d.png"><img alt="_images/frsi_3d.png" src="_images/frsi_3d.png" style="height: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Ecken stellen die kritischen Punkte dar. Im Fall einer vollständigen Wärmedämmung an der Außenseite werden
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Ecken stellen die kritischen Punkte dar. Im Fall einer vollständigen Wärmedämmung an der Außenseite werden
 alle Bereiche unkritischer. Im Fall einer Innendämmung werden die Anschlüsse kritischer, während sich das Risiko
 an der Fläche deutlich minimiert.</span><a class="headerlink" href="#frsi-3d" title="Permalink to this image">¶</a></p>
 </figcaption>
@@ -484,8 +545,8 @@ ergibt sich bei steigenden Wassergehalt in Summee ein höherer Wert für die Wä
 <p><span class="math notranslate nohighlight">\(\lambda_{Wasser} \approx 0.5562 \gg \lambda_{Luft} \approx 0.0262\)</span> W/mK</p>
 </div>
 <p>Dieser Zusammenhang kann einerseits durch Messungen bestimmt werden, andererseits gibt es für bestimmte Anwendungsfälle
-mathematische Modelle um die Wärmeleitfähigkeit vorherzusagen z.B. <span id="id1">[<a class="reference internal" href="References.html#id23" title="Driss Taoukil, Abdelmajid El bouardi, Friedrich Sick, Abdelaziz Mimet, Hassan Ezbakhe, and Taib Ajzoul. Moisture content influence on the thermal conductivity and diffusivity of wood–concrete composite. Construction and Building Materials, 48:104–115, November 2013. doi:10.1016/j.conbuildmat.2013.06.067.">Taoukil <em>et al.</em>, 2013</a>]</span> oder auch
-<span id="id2">[<a class="reference internal" href="References.html#id7" title="D. R. Chaudhary and R. C. Bhandari. Heat transfer through a three-phase porous medium. Journal of Physics D: Applied Physics, 1(6):815–817, June 1968. doi:10.1088/0022-3727/1/6/418.">Chaudhary and Bhandari, 1968</a>]</span>.</p>
+mathematische Modelle um die Wärmeleitfähigkeit vorherzusagen z.B. <span id="id4">[<a class="reference internal" href="References.html#id25" title="Driss Taoukil, Abdelmajid El bouardi, Friedrich Sick, Abdelaziz Mimet, Hassan Ezbakhe, and Taib Ajzoul. Moisture content influence on the thermal conductivity and diffusivity of wood–concrete composite. Construction and Building Materials, 48:104–115, November 2013. doi:10.1016/j.conbuildmat.2013.06.067.">Taoukil <em>et al.</em>, 2013</a>]</span> oder auch
+<span id="id5">[<a class="reference internal" href="References.html#id7" title="D. R. Chaudhary and R. C. Bhandari. Heat transfer through a three-phase porous medium. Journal of Physics D: Applied Physics, 1(6):815–817, June 1968. doi:10.1088/0022-3727/1/6/418.">Chaudhary and Bhandari, 1968</a>]</span>.</p>
 <p>Für die bauphysikalische Praxis hat sich die Formulierung in ÖNORM EN 10456 bewährt:</p>
 <div class="math notranslate nohighlight" id="equation-lambda-psi-eq">
 <span class="eqno">(32)<a class="headerlink" href="#equation-lambda-psi-eq" title="Permalink to this equation">¶</a></span>\[ \lambda(\psi) = \lambda_{Bemessungswert} \cdot e^{f_{\psi} \cdot \psi} \]</div>
@@ -508,12 +569,12 @@ in m.</p>
 tauglich eingestuft werden, zumeist nicht schlagend werden. Nachfolgendes Beispiel, soll das veranschaulichen.</p>
 <section id="beispiel-verringerung-des-warmedurchlasswiderstandes-zu-folge-des-ausgefallenen-kondensats-fur-die-vorgegebene-schicht">
 <h4>Beispiel: Verringerung des Wärmedurchlasswiderstandes zu Folge des ausgefallenen Kondensats für die vorgegebene Schicht.<a class="headerlink" href="#beispiel-verringerung-des-warmedurchlasswiderstandes-zu-folge-des-ausgefallenen-kondensats-fur-die-vorgegebene-schicht" title="Permalink to this headline">¶</a></h4>
-<p>In <a class="reference internal" href="Konvektiver_Transport.html#psi-ex"><span class="std std-numref">Fig. 13</span></a> sei ein verfeinfachtes diskretisiertes Modell eines Flachdachaufbaues dargestellt für den die
+<p>In <a class="reference internal" href="#psi-ex"><span class="std std-numref">Fig. 13</span></a> sei ein verfeinfachtes diskretisiertes Modell eines Flachdachaufbaues dargestellt für den die
 Verringerung der Wärmedurchlasswiderstandes nachgewiesen werden soll.</p>
 <figure class="align-default" id="psi-ex">
 <a class="reference internal image-reference" href="_images/psi_ex.png"><img alt="_images/psi_ex.png" src="_images/psi_ex.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Vereinfacht diskretisierter Flachdachaufbau.</span><a class="headerlink" href="#psi-ex" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Vereinfacht diskretisierter Flachdachaufbau.</span><a class="headerlink" href="#psi-ex" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Die aufgetretene Kondensatmenge ist bewusst knapp unter dem Grenzwert der möglichen Feuchteanreicherung (<span class="math notranslate nohighlight">\(gc \leq 0.5\)</span>
@@ -527,7 +588,7 @@ kg/m²) durch Kondensation laut ÖNORM B 8110-2:2020 gewählt.</p>
 <figure class="align-default" id="f-psi-tab4">
 <a class="reference internal image-reference" href="_images/f_psi_tab4.png"><img alt="_images/f_psi_tab4.png" src="_images/f_psi_tab4.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Auszug aus ÖNORM EN ISO 10456: 2010: Tabelle 4 zur Bestimmung von <span class="math notranslate nohighlight">\(f_{\psi}\)</span> verschiedener Materialien.</span><a class="headerlink" href="#f-psi-tab4" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Auszug aus ÖNORM EN ISO 10456: 2010: Tabelle 4 zur Bestimmung von <span class="math notranslate nohighlight">\(f_{\psi}\)</span> verschiedener Materialien.</span><a class="headerlink" href="#f-psi-tab4" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Einsetzen in Gleichung <a class="reference internal" href="#equation-lambda-psi-eq">(32)</a> und <a class="reference internal" href="#equation-psi-eq">(33)</a> führt auf:</p>
@@ -583,7 +644,7 @@ andere Grenzwerte überschritten werden, bevor der Nachweis der Erhöhung des W�
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Theoretische Grundlagen des diffusiven Wärme- und Feuchtetransportes</p>
+            <p class="prev-next-title">Theoretische Grundlagen der Wärme- und Feuchtspeicherung und des -transportes</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Problem_Balkonanschluss.html" title="next page">

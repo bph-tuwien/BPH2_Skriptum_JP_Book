@@ -2,6 +2,48 @@
 
 ## Bestimmung der geeigneten Dimensionalität des Simulationsmodelles
 
+Die Wahl der geeigneten Dimensionalität ist bei hygrothermischen Simulationen eine Kernfrage, da es möglich ist
+bestimmte Probleme zu vereinfachen und damit Rechenressourcen zu sparen. Eine normative Grundlage für die Fragestellung
+bei rein thermischer Betrachtung ist in {cite}`deutschesDINISO102112018` zu finden.
+
+Es kann bei der Wahl der Dimensionalität zwischen 2 Fragestellungen unterschieden werden:
+
+- Wahl der geometrischen Dimensionalität 1D, 2D, 3D Simulation
+- Wahl der Modellgrenze - Schnittebene
+
+### Wahl der geometrischen Dimensionalität
+
+Vereinfacht kann gesagt werden, dass die Wahl der Dimensionalität des Modelles mit den maßgebenden Richtungen der
+Feldströme (z.B. Wärmeströme) für das betrachtete Bauteil korreliert. Die maßgebende Richtung der Feldströme ist
+wiederum durch die angreifenden Randbedingungen vorgegeben. Normativ geregelt in {cite}`deutschesDINISO102112018`.
+
+```{figure} img/Wärmebrücke/2D_wbr.png
+---
+height: 350px
+name: 2D_wbr
+---
+Randbedingungen greifen in x- und z-Richtung an. 2D-Betrachtung ausreichend.
+```
+
+### Wahl der Modellgrenze - Schnittebene
+
+Die Wahl der Modellgrenze hat so zu erfolgen, dass die betrachtete Problemstelle (z.B. Wärmebrücke) keinen Einfluss mehr
+auf die betrachtete Feldgröße (z.B. Temperaturfeld hat) hat. Normativ geregelt in {cite}`deutschesDINISO102112018`.
+
+```{figure} img/Wärmebrücke/tempfeld_para.png
+---
+height: 550px
+name: tempfeld_para
+---
+Das Temperaturfeld hat bei der Modellgrenze wieder einen parallelen Verlauf und ist nicht mehr von der Wärmebrücke
+ beeinflusst.
+```
+
+```{danger}
+Reduzieren Sie die Dimensionalität nur, wenn Sie ausschließlich Wärmeleitung in Ihrer Berechnung berücksichtigen.
+Feuchte- und Konvektive- Transportphänomene sind hochgradig mehrdimensional.
+```
+
 ## Risikoanalyse mittels  Temperaturfaktor $f_{R_{Si}}$
 
 Um einschätzen zu können, ob sich bei üblicher Wohnungsnutzung Schimmelpilze an einer Bauteiloberfläche bilden, hat sich

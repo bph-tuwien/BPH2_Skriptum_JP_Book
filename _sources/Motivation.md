@@ -97,12 +97,12 @@ $$ - \nabla \cdot q =\frac{dE}{dt} \cdot \frac{1}{\Delta V } $$(delta_V_q_eq)
 Gleichung {eq}`delta_V_q_eq` hat eine besondere Bedeutung. Sie ermöglicht es den Nabla-Operator physikalisch zu
 interpetieren. Er beschreibt die Nettorate des Wärmestromes zu einem Punkt pro Volumseinheit:
 
-$ - \nabla \cdot q $ = Netto Wärmestrom-Eintrag pro Volumseinheit pro Zeitschritt in J/sm³
+$ - \nabla \cdot q $ = Netto Wärmestrom-Eintrag pro Volumseinheit pro Zeiteinheit in J/sm³
 
 Für den Lufmassenstrom können wir schreiben:
 
-$ - \nabla \cdot \dot{m} $ = Netto Luftmassenstrom-Eintrag pro Volumseinheit pro Zeitschritt in kg/sm³
+$ - \nabla \cdot \dot{m} $ = Netto Luftmassenstrom-Eintrag pro Volumseinheit pro Zeiteinheit in kg/sm³
 
 Und für den Feuchtestrom:
 
-$ - \nabla \cdot g $ = Netto Feuchtestrom-Eintrag pro Volumseinheit pro Zeitschritt in kg/sm³
+$ - \nabla \cdot g $ = Netto Feuchtestrom-Eintrag pro Volumseinheit pro Zeiteinheit in kg/sm³
