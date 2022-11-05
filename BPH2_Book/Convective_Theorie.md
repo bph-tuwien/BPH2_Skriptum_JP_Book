@@ -1,4 +1,4 @@
-# Theoretische Grundlagen des konvektiven Wärme- und Feuchtetranspoortes
+# Theoretische Grundlagen des konvektiven Wärme- und Feuchtetransportes
 
 Wenn wir uns an Gleichung {eq}`q_diff_conv_eq` und {eq}`g_diff_conv_eq`
 im [vorhergehenden Kapitel](resources/Diffusive_Theorie.md) zurückerinnern, haben wir uns zu diesem Zeitpunkt nur mit dem
@@ -69,7 +69,7 @@ wobei $q_{conv} \neq 0 $ und definiert ist durch
 
 $$ q_{conv} = \dot{m}_{a} \cdot c_{p}T $$
 
-Dabei beschreibt $\dot{m}_{a}$ (m³/(m²s)) die Massenstromdichte pro Zeiteinheit durch ein poröses Medium zu Folge eines
+Dabei beschreibt $\dot{m}_{a}$ (kg/(m²s)) die Massenstromdichte pro Zeiteinheit durch ein poröses Medium zu Folge eines
 Druckgradienten, $c_{p}$ die spezifische Wärmekapazität (J/kgK) bei konstantem Druck (gilt für Gase) und T die
 Temperatur in Kelvin.
 

@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../../Projekte/20_003_RoofAlarm/JP_Notebook/220202_RoofAlarm_JP/.idea/220202_RoofAlarm_JP.iml" filepath="$PROJECT_DIR$/../../../Projekte/20_003_RoofAlarm/JP_Notebook/220202_RoofAlarm_JP/.idea/220202_RoofAlarm_JP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../OneDrive - Woschitz group GmbH/R_D/Projekte/221028_Fensterliste/.idea/221028_Fensterliste.iml" filepath="$PROJECT_DIR$/../../../../OneDrive - Woschitz group GmbH/R_D/Projekte/221028_Fensterliste/.idea/221028_Fensterliste.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/BPH2_Skriptum_JP_Book.iml" filepath="$PROJECT_DIR$/.idea/BPH2_Skriptum_JP_Book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../Diss/LVAs/Numerische Methoden der Stroemungsmechanik/UE/UE1/.idea/UE1.iml" filepath="$PROJECT_DIR$/../../../Diss/LVAs/Numerische Methoden der Stroemungsmechanik/UE/UE1/.idea/UE1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../Diss/LVAs/Numerische Methoden der Stroemungsmechanik/UE/UE2/.idea/UE2.iml" filepath="$PROJECT_DIR$/../../../Diss/LVAs/Numerische Methoden der Stroemungsmechanik/UE/UE2/.idea/UE2.iml" />
     </modules>
   </component>
 </project>
