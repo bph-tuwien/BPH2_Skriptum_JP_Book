@@ -44,7 +44,7 @@ Reduzieren Sie die Dimensionalität nur, wenn Sie ausschließlich Wärmeleitung 
 Feuchte- und Konvektive- Transportphänomene sind hochgradig mehrdimensional.
 ```
 
-## Risikoanalyse mittels  Temperaturfaktor $f_{R_{Si}}$
+## Risikoanalyse mittels Temperaturfaktor $f_{R_{Si}}$
 
 Um einschätzen zu können, ob sich bei üblicher Wohnungsnutzung Schimmelpilze an einer Bauteiloberfläche bilden, hat sich
 der sogenannte Temperaturfaktor $f_{R_{Si}}$ als sinnvolle Kenngröße für die Planung bewährt. Dieser kann auch bei rein
