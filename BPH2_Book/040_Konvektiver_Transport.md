@@ -1,4 +1,4 @@
-# Konvektiver Stofftransport und Wärmestransport
+# Konvektiver Wärme- und Stofftransport
 
 Der konvektive Transport von Wärme- und Feuchtigkeit ist einer der treibenden Prozesse bei der Entstehung von Schäden.
 Konvektiver Transport ist immer von Luftdruck-Differenzen abhängig und kann, je nach seiner Größe, diffusive Prozessen
