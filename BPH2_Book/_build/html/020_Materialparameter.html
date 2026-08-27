@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materialparameter &#8212; 206.291 Bauphysik 2 VU</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Diffusiver Wärme- und Stofftransport" href="030_W%C3%A4rmebr%C3%BCcken.html" />
+    <link rel="prev" title="Motivation" href="010_Motivation_und_Grundgleichungen.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo_small.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">206.291 Bauphysik 2 VU</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   206.289 Bauphysik 2 VU
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inhalt
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="010_Motivation_und_Grundgleichungen.html">
+   Motivation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Materialparameter
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="030_W%C3%A4rmebr%C3%BCcken.html">
+   Diffusiver Wärme- und Stofftransport
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="031_Diffusive_Theorie.html">
+     Theoretische Grundlagen der Wärme- und Feuchtspeicherung und des -transportes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="032_Diffusive_risk_standards.html">
+     Vereinfachte Methoden zur Risikonanalyse bei Wärmebrücken
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="040_Konvektiver_Transport.html">
+   Konvektiver Wärme- und Stofftransport
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="041_Convective_Theorie.html">
+     Theoretische Grundlagen des konvektiven Wärme- und Feuchtetransportes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="042_Convective_risk.html">
+     Methoden der Nachweisführung und Risikonanalyse bei Berücksichtigung des konvektiven Wärme- und Feuchtetransports
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="050_Fl%C3%BCssigwassertransport.html">
+   Flüssigwassertransport
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="051_FL_Theorie.html">
+     Flüssigwassertransport - Theorie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="060_Schadensprozesse.html">
+   Schadensprozesse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="999_References.html">
+   Literatur
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/020_Materialparameter.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#warmeleitfahigkeit">
+   Wärmeleitfähigkeit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#messung">
+     Messung
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#die-spezifische-warmekapazitat">
+   Die spezifische Wärmekapazität
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Messung
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#feuchtetransport-von-wasserdampf">
+   Feuchtetransport von Wasserdampf
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#feuchtespeicherung">
+   Feuchtespeicherung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#die-sorptionsisotherme">
+   Die Sorptionsisotherme
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approximation-der-feuchtespeicherfunktion">
+   Approximation der Feuchtespeicherfunktion
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Materialparameter</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#warmeleitfahigkeit">
+   Wärmeleitfähigkeit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#messung">
+     Messung
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#die-spezifische-warmekapazitat">
+   Die spezifische Wärmekapazität
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Messung
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#feuchtetransport-von-wasserdampf">
+   Feuchtetransport von Wasserdampf
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#feuchtespeicherung">
+   Feuchtespeicherung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#die-sorptionsisotherme">
+   Die Sorptionsisotherme
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approximation-der-feuchtespeicherfunktion">
+   Approximation der Feuchtespeicherfunktion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="materialparameter">
+<h1>Materialparameter<a class="headerlink" href="#materialparameter" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="warmeleitfahigkeit">
+<h2>Wärmeleitfähigkeit<a class="headerlink" href="#warmeleitfahigkeit" title="Permalink to this headline">¶</a></h2>
+<p>Die Wärmeleitfähigkeit W/(K*m) ist von Material zu Material unterschiedlich und beschreibt, welcher Wärmestrom pro Längeneinheit eines Materials übertragen werden kann. Grundlegend wurde λ im Jahr 1822 von J. B. Fourier in Abhängikeit zur Temperatur und Druckabhängigkeit mit dem Wärmeleitfähigkeit beschrieben [1]. Zur Berechnung der Wärmestromdichte in Feststoffen (weil im Skript genutzt) werden Wärmeleitung, Wärmestrahlung und Wärmekonvektion, welche dem Gradienten der Temperatur proportional ist, genutzt und daraus das Fourier´sche Gesetz abgeleitet [2]:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{q} = - \lambda \cdot \nabla T \]</div>
+<p>[2]</p>
+<div class="section" id="messung">
+<h3>Messung<a class="headerlink" href="#messung" title="Permalink to this headline">¶</a></h3>
+<p>Die Wärmeleitfähigkeit kann durch die Messung der Wärmestromdichte mehrerer analytischer Methoden bestimmt werden. Welche Methode genutzt wird, hängt stark von Material und Aufbau ab. Grundlegend ist das Prinzip der Messmethoden einfach: Eine Probe wird unter definierten Randbedingungen einem bekannten Wärmeeintrag ausgesetzt und aus der Temperaturdifferenz der Platten der Wärmestrom bestimmt [3].
+Die gängigsten analytischen Verfahren für die Bestimmung der Wärmeleitfähigkeit [6]:</p>
+<ul class="simple">
+<li><p>Palttengerät nach ISO 8302;</p></li>
+<li><p>Wärmestrommessplatte-Gerät nach ISO 8301;</p></li>
+<li><p>geregelter oder kalibrierter Heizkasten nach ISO 8990.</p></li>
+</ul>
+<p>Nach Bestimmung des Wärmestroms kann die Wärmeleitfähigkeit mittels folgender Formel abgeleitet werden:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{Q \cdot l}{A \cdot t \cdot \Delta T}
+\]</div>
+<p>Mit den Definitionen</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{q} = \frac{Q}{t \cdot A}, \quad
+l = \Delta x, \quad
+\frac{\Delta T}{\Delta x} = \nabla T
+\]</div>
+<p>lässt sich dies schrittweise umformen:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{\dot{q} \cdot l}{\Delta T}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{\dot{q} \cdot \Delta x}{\Delta T}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{\dot{q}}{\frac{\Delta T}{\Delta x}}
+= \frac{\dot{q}}{\nabla T}
+\]</div>
+<p>[3]</p>
+<p>Um normgerecht bauen zu können, ist der Einfluss von Feuchteeinträgen in Bauteilen in bezug auf die Wärmeleitfähigkeit von großen Interesse. Dieser Zusammenhang erschließt sich mit dem Gedanken, dass Fluide und Gase unterschiedlich effizient Energie leiten und somit dass λ nicht nur von Druck und Temperatur abhängig ist, sondern auch vom Leitwert des spezifischen Gases oder Fluids, welches in den Porenzwischenräumen in einem Material mit eingeschlossen ist. (Bei zunehmenden Wassergehalt verringert sich die Wärmestrahlung, sowie -konvektion und die Wärmeleitung nimmt zu, da die Wärmeleitfähigkeit des Wassers größer ist als die des Luftgemisches). Um Wärmeleitkoeffizienten von verschiedenen Materialien mit Feuchteeintrag zu bestimmen, wird entweder bei bekannter Struktur des Materials die trockene Probe bemessen und mittels der Konzentration und des Feuchtigkeitsverhältnisses bestimmt:</p>
+<div class="math notranslate nohighlight">
+\[ \lambda = \lambda_\text{trocken} + c \cdot \frac{w}{w_\text{trocken}} \]</div>
+<p>Oder eine trockene und eine gesättigte Probe werden gemessen und die analysiert, wie sich die Leitfähigkeit je nach Feutigkeitsverhältnis ändert [4].</p>
+</div>
+</div>
+<div class="section" id="die-spezifische-warmekapazitat">
+<h2>Die spezifische Wärmekapazität<a class="headerlink" href="#die-spezifische-warmekapazitat" title="Permalink to this headline">¶</a></h2>
+<p>Die spez. Wärmekapazität ist eine Messgröße und gibt an in wie weit Moleküle eines Mediums die Fähigkeit haben Energie speichern zu können. Dieser Wert ist wichtig, da die Wärmekapaziät die Enthalpie mit dessen Temperatur verknüpft.</p>
+<p>Es gibt zwei verschiedene Ansätze zur Beschreibung der Wärmekapazität idealer Gase: die isobare Wärmekapazität <span class="math notranslate nohighlight">\(c_p\)</span> ​ bei konstantem Druck und die isochore Wärmekapazität <span class="math notranslate nohighlight">\(c_v\)</span> ​ bei konstantem Volumen. Im Folgenden liegt der Fokus auf <span class="math notranslate nohighlight">\(c_p\)</span> ​ , das angibt, wie viel Wärme pro Masseeinheit benötigt wird, um ein Gas bei konstantem Druck um eine bestimmte Temperatur zu erwärmen. <span class="math notranslate nohighlight">\(c_p\)</span> ​ hängt im Wesentlichen nur von der Temperatur ab und steigt mit ihr meist an, weil bei höheren Temperaturen zusätzliche Molekülschwingungen angeregt werden. [5]</p>
+<div class="section" id="id1">
+<h3>Messung<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Die Bestimmung der Wärmekapazität erfolgt durch die Messung des Wärmestroms und der Heizrate. Der Quotient aus beiden Größen liefert die erforderliche Wärmemenge pro Temperaturänderung <span class="math notranslate nohighlight">\((dQ/dT)_p\)</span>, aus der sich bei bekannter Probenmasse <span class="math notranslate nohighlight">\(m\)</span> die spezifische Wärmekapazität <span class="math notranslate nohighlight">\(c_p\)</span> berechnen lässt. Diese Methode liegt meist der dynamischen Differenzkalorimetrie (DSC) zugrunde, bei der Wärmestrom <span class="math notranslate nohighlight">\((dQ/dt)\)</span> und Heizrate <span class="math notranslate nohighlight">\((dT/dt)\)</span> kontinuierlich über den Temperaturbereich aufgezeichnet werden:</p>
+<div class="math notranslate nohighlight">
+\[ c_p = m^{-1} \cdot C_p = m^{-1} \cdot (\frac{dQ}{dT})_p\]</div>
+<p><span class="math notranslate nohighlight">\(C_p\)</span>: die Gesamtwärmekapazität [<span class="math notranslate nohighlight">\(kJ  \cdot K^{-1}\)</span>]</p>
+<p><span class="math notranslate nohighlight">\((\frac{dQ}{dT})_p\)</span>: Die erforderliche Wärmemenge <span class="math notranslate nohighlight">\(dQ\)</span>, um die Temperatur der Substanz um <span class="math notranslate nohighlight">\(dT\)</span> zu erhöhen[<span class="math notranslate nohighlight">\(kJ \cdot  K^{-1}\)</span>]</p>
+<p>Diese Gleichung gilt in einem Temperaturbereich, in dem die Substanz keinen Phasenübergang erster Ordnung zeigt.</p>
+<p>Der Quotient <span class="math notranslate nohighlight">\((\frac{dQ}{dT})\)</span> kann durch Division des Wärmestroms durch die Heizrate erhalten werden:</p>
+<div class="math notranslate nohighlight">
+\[(dQ/dT) = \frac{(dQ/dt)}{(dT/dt)}\]</div>
+<p><span class="math notranslate nohighlight">\((dQ/dt)\)</span>: Der Wärmestrom[<span class="math notranslate nohighlight">\(kJ \cdot s^{-1}\)</span>]</p>
+<p><span class="math notranslate nohighlight">\((dT/dt)\)</span>: Die Heizrate [<span class="math notranslate nohighlight">\(K \cdot s^{-1}\)</span>].</p>
+<p>Die Messwerte für <span class="math notranslate nohighlight">\(c_p\)</span> können aus der  ÖNORM EN ISO 10456 [6] entnommen werden.</p>
+</div>
+</div>
+<div class="section" id="feuchtetransport-von-wasserdampf">
+<h2>Feuchtetransport von Wasserdampf<a class="headerlink" href="#feuchtetransport-von-wasserdampf" title="Permalink to this headline">¶</a></h2>
+<p>Der Feuchtetransport innerhalb poröser Bauteile erfolgt in Gasphase hauptsächlich durch Diffusion. Die thermische Eigenbewegung von Molekülen führen bei einer Konzentrationsdifferenz zu einem Teilchenstrom, welcher als Ausgleichprozess verstanden werden kann. [2]</p>
+<p>Formal lässt sich Diffusion eines Stoffes A als Relativbewegung seiner mittleren Teilgeschwindigkeiten <span class="math notranslate nohighlight">\(w_A\)</span> gegenüber einer Bezugsgeschwindigkeit <span class="math notranslate nohighlight">\(w\)</span> beschreibe. Die Diffusionsstromdichte ist dann definiert als [1]
+$<span class="math notranslate nohighlight">\( j_A := c_A   \cdot (w_A - w)\)</span><span class="math notranslate nohighlight">\(
+\)</span>j_A<span class="math notranslate nohighlight">\(: Diffusionsstromdichte des Stoffes A [\)</span>\frac{mol}{m^2 \cdot s}$]</p>
+<p><span class="math notranslate nohighlight">\(c_A\)</span>: Molare Konzentration des Stoffes A   [<span class="math notranslate nohighlight">\(\frac{mol}{m^3}\)</span>]</p>
+<p>Für das Zweistoffgemisch Wasserdampf-Luft folgt aus dem Fick´schen Gesetz, dass die Diffusion proportional zum Konzentrationsgradienten ist [1]:
+$<span class="math notranslate nohighlight">\(j_A = -D_{AB}   \cdot \frac{(dc_A)}{(dy)}\)</span>$</p>
+<p><span class="math notranslate nohighlight">\(D_AB\)</span>: Diffusionskoeffizient im Gemisch A-B [<span class="math notranslate nohighlight">\(\frac{m^2}{s}\)</span>]</p>
+<p>Diese Beziehung wird meist über den Wasserdampfpartialdruck <span class="math notranslate nohighlight">\(p_v\)</span> statt über die Konzentration formuliert, da sich der Partialdruck messtechnisch leichter erfassen lässt. Mit der thermischen Zustandsgleichung idealer Gase <span class="math notranslate nohighlight">\(c_v = \frac{(p_v)}{(R_v \cdot T)}\)</span> ergibt sich die Wasserdampfstromdichte in freier, ruhiger Luft zu [1]
+$<span class="math notranslate nohighlight">\( j_v = - \frac{(D_v(T))}{R_v \cdot T}\)</span><span class="math notranslate nohighlight">\(
+\)</span>D_v(T)<span class="math notranslate nohighlight">\(: Temperaturabhängiger Diffusionskoeffizient von Wasserdampf in Luft [\)</span>\frac{m^2}{s}$]</p>
+<p><span class="math notranslate nohighlight">\(R_v\)</span>: Spezifische Gaskonstante von Wasserdampf[<span class="math notranslate nohighlight">\(\frac{J}{kg \cdot K}\)</span>]</p>
+<p>Im Porenraum eines Baustoffs wird die Diffusion durch die Feststoffmatrix teils unterbrochen. Dieser Effekt entsteht durch die Porösität, welche angibt, welcher Anteil der Querschnittsfläche überhaupt durchlässig ist. In Folge dessen gibt die die Tortousität als  Maß für die Länge der tatsächlichen Diffusionswege im Vergleich zum direkten, geradlinigen Weg, die “Umwege” der Diffusionsgradienten an [2].</p>
+<p>Beide Effekte werden in der Bauphysik nicht getrennt behandelt, sondern zusammenfassend in der Wasserdampfdiffusionswiderstandszahl <span class="math notranslate nohighlight">\(\mu\)</span>
+erfasst.<span class="math notranslate nohighlight">\(\mu\)</span> gibt das Verhältnis der Diffusionsstromdichte in ruhiger, freier Luft zu jener im porösen Medium an. Sie beschreibt also, um welchen Faktor der Baustoff die Diffusion gegenüber freier Luft behindert [2].</p>
+<p>Damit lässt sich Gleichung (3) auf poröse Materialien erweitern:</p>
+<div class="math notranslate nohighlight">
+\[ j_v = - \frac{D_v(T)}{\mu  \cdot R_v \cdot T}\]</div>
+<p>Der Diffusionskoeffizient von Wasserdampf in Luft <span class="math notranslate nohighlight">\(D_v(T)\)</span>, nimmt mit der Temperatur zu. Da diese Zunahme in guter Näherung linear angenommen werden kann, lässt sich der temperaturabhängige Vorfaktor <span class="math notranslate nohighlight">\(\frac{D_v(T)}{R_v \cdot T}\)</span> für praktische Anwendungen als näherungsweise konstant zusammenfassen[2]. Man definiert dazu die Wasserdampfpermeabilität der Luft <span class="math notranslate nohighlight">\(\delta_a\)</span>, sodass sich Gleichung (4) vereinfacht zu</p>
+<div class="math notranslate nohighlight">
+\[ j_v = -\frac{\delta_a}{\mu} \cdot \nabla p_v\]</div>
+<p>Die Gleichung zeigt, dass der Feuchtestrom durch ein Bauteil allein vom Partialdruckgefälle des Wasserdamps und der materialspezifischen <span class="math notranslate nohighlight">\(\mu\)</span>-Wert bestimmt wird [2].</p>
+</div>
+<div class="section" id="feuchtespeicherung">
+<h2>Feuchtespeicherung<a class="headerlink" href="#feuchtespeicherung" title="Permalink to this headline">¶</a></h2>
+<p>Die Speicherung von Feuchte in Baustoffen kann im festen, flüssigen oder gasförmigen zustand vorliegen. Je nachdem, welcher Zustand im Porenraum vorherrscht, ändert sich grundlegend, wie das Wasser im Material gebunden ist und wie es sich fortbewegt. Deshalb unterscheidet man mehrere charakteristische Feuchtebereiche, die jeweils einen eigenen Speicher- und Transportmechanismus beschreiben [2].</p>
+<p>Die Feuchtigkeitsbereiche werden durch die Feuchtespeicherfunktion für den gesamten Feuchtebereich generieren. Sie besteht aus der Sorptionsisotherme und der Saugspannungsmessung [2].</p>
+</div>
+<div class="section" id="die-sorptionsisotherme">
+<h2>Die Sorptionsisotherme<a class="headerlink" href="#die-sorptionsisotherme" title="Permalink to this headline">¶</a></h2>
+<p>Die Sorptionsisotherme wird Messtechnisch bestimmt und beschreibt den Feuchtegehalt an der inneren Oberflächde eines Baustoffs als Funktion der relativen Luftfeuchte bei konstanter Temperatur [2].</p>
+<p>Das Messprinzip der Sorptionsisotherme wird in der EN ISO 12571 beschrieben und gibt an in welcher Luftfeuchte oder Konstantklimate über wässrigen Lösungen spezielle Geräte konfiguriert werden müssen. Ziel ist es damit Materialproben bis zum Gleichgewicht einzulagern und in Folge den Wassergehalt zu bestimmen [2].</p>
+<p>Es gibt zwei grundlegende Prozesse, mit denen ein Baustoff Feuchte mit der umgebenden Luft austauscht. Die Adsorption, bei der Wasserdampfmoleküle bei steigender Luftfeuchte an den inneren Oberflächen andocken und der Feuchtegehalt im Baustoff zunimmt, und Desorption, bei der das Material diese Feuchte bei sinkender Luftfeuchte wieder abgibt. Beide Vorgänge zusammen bilden die Sorptionsisotherme und geben genau den Feuchtebereich an, in dem ein Baustoff Wasser ausschließlich über Adsorption aus der umgebenden Luft aufnimmt bis dieser das Feuchtegleichgewicht erreicht. Der sogenannte hygroskopische Feuchtebereich erstreckt sich von 0% relativer Luftfeuchte bis zu einerr Gleichgewichtsfeuchte von etwa 95%. Wenn die Umgebungsluftfeuchte jedoch abnimmt, gibt das Material die eingelagerte Feuchte wieder ab, also disorbiert (ist das ein wort?). Dieser Prozess findet ebenfalls nur innerhalb des Sorptionsfeuchtebereichs statt [2][7].</p>
+<p>Ab einer relativen Luftfeuchte von etwa 95% beginnt der überhygroskopische Feuchtebereich. In diesem Bereich wird Wasser durch Feuchteretention durch die Kapillarkräfte innerhalb von Poren gehalten und lagern sich somit nicht nur an den Oberflächen ab. Dieser Effekt zeigt sich in der Feuchtespeicherfunktion als die Saugspannungskurve, welche den Kapillarwasserbereich charakterisiert. Um die Saugspannungskurve festzulegen muss bemessen werden. Hierbei werden gesättigte Proben durch Anlegen eines externen Drucks bis uzum Gelichgewicht befeuchtet. Die Messmethoden sind in ISO 11274 genormt [2][7].</p>
+<p>Über dem Kapillarwasserbereich liegt der Übersättigungsbereich, der über die freie Wassersättigung hinausgeht und nur unter besonderen Bedingungen, wie etwa durch äußeren Druck oder Unterdruck, durch sehr lange Wasserlagerung (bei der eingeschlossene Porenluft sich allmählich im Wasser löst und entweicht) oder durch Kondensation beim Unterschreiten des Taupunkts, erreicht werden kann [2][8]. Im Gegensatz zum Kapillarwasserbereich, der sich über eine eindeutige Saugspannungskurve beschreiben lässt, existiert im Übersättigungsbereich kein stabiler Gleichgewichtszustand mehr, die relative Luftfeuchte liegt konstant bei 100%.. Erst durch das vollständige Verdrängen der restlichen, in feinsten Poren eingeschlossenen Luft wird schließlich die maximale Sättigung erreicht, bei dieser der gesamte offene Porenraum mit Wasser gefüllt ist [8].</p>
+</div>
+<div class="section" id="approximation-der-feuchtespeicherfunktion">
+<h2>Approximation der Feuchtespeicherfunktion<a class="headerlink" href="#approximation-der-feuchtespeicherfunktion" title="Permalink to this headline">¶</a></h2>
+<p>Die Feuchtespeicherfunktion lässt sich durch folgende Gleichung an jeweilige Materialien approximieren [7]:</p>
+<div class="math notranslate nohighlight">
+\[ u(p_c) = \frac{u_f}{1+\frac{p_c}{p_{k1}}} = \frac{u_f}{1+(\frac{\rho_w \cdot R_D \cdot T \cdot ln(\phi)}{p_{k1}})^{pk1}}\]</div>
+<p><span class="math notranslate nohighlight">\(p_{k1}, p_{k2}\)</span>: freie Parameter [-]</p>
+<p><span class="math notranslate nohighlight">\(R_D\)</span>: Gaskonstante für Wasserdampf [<span class="math notranslate nohighlight">\(\frac{J}{kg\cdot K}\)</span>]</p>
+<p><span class="math notranslate nohighlight">\(T\)</span>: absolute Temperatur [K]</p>
+<p><span class="math notranslate nohighlight">\(u_f\)</span>: freie kapillare Wassersättigung [<span class="math notranslate nohighlight">\(\frac{kg}{m^3}\)</span>]</p>
+<p><span class="math notranslate nohighlight">\(\rho_w\)</span>: Dichte von Wasser [<span class="math notranslate nohighlight">\(\frac{kg}{m^3}\)</span>]</p>
+<p><span class="math notranslate nohighlight">\(\varphi\)</span>: relative Luftfeuchte [-]</p>
+<p><span class="math notranslate nohighlight">\(p_c\)</span>: Kapillardruck [Pa]</p>
+<p>Die beiden freien Parameter <span class="math notranslate nohighlight">\(p_{k1}\)</span> und <span class="math notranslate nohighlight">\(p_{k2}\)</span> werden materialspezifisch berechnet, indem man die beiden gemessenen Sorptionsfeuchten bei 80% und 95% relativer Luftfeuchte in die Gleichung einsetzt. [7]</p>
+<p>[1]: Baehr, H.D. and Stephan, K. (10. Aufl.) Wärme- und Stoffübertragung. Berlin, Heidelberg: Springer</p>
+<p>[2]: WTA (2014) Merkblatt 6-2: Simulation wärme- und feuchtetechnischer Prozesse (Ausgabe 12/2014/D). Wissenschaftlich-Technische Arbeitsgemeinschaft für Bauwerkserhaltung und Denkmalpflege.</p>
+<p>[3]: Salmon, D. (2001) Thermal conductivity of insulations using guarded hot plate apparatus. Measurement Science and Technology, 12(12). doi:10.1088/0957-0233/12/12/201.</p>
+<p>[4]: Künzel, H.M. (1995) Simultaneous heat and moisture transport in building components: One- and two-dimensional calculation using simple parameters. Stuttgart: Fraunhofer Institute of Building Physics.</p>
+<p>[5] Stephan, P., Kabelac, S., Kind, M., Mewes, D., Schaber, K. und Wetzel, T. (Hrsg.) (2019) VDI-Wärmeatlas (12. Auflage). Berlin, Heidelberg: Springer Vieweg.</p>
+<p>[6]: ÖNORM EN ISO 10456 (2010) Baustoffe und Bauprodukte – Wärme- und feuchtetechnische Eigenschaften – Tabellierte Bemessungswerte und Verfahren zur Bestimmung der wärmeschutztechnischen Nenn- und Bemessungswerte (ISO 10456:2007 + Cor 1:2009, konsolidierte Fassung, Ausgabe 2010-02-15). Wien: Austrian Standards International.</p>
+<p>[7]: Holm, A.; Krus, M.; Künzel, H.M.: Approximation der Feuchtespeicherfunktion aus einfach bestimmbaren Kennwerten. IBP-Mitteilung, 29 (2002), Nr. 406. Fraunhofer-Institut für Bauphysik (IBP), Stuttgart/Holzkirchen.</p>
+<p>[8]: Krus, M.; Künzel, H.M.: Flüssigtransport im Übersättigungsbereich. IBP-Mitteilung, 22 (1995), Nr. 270. Fraunhofer-Institut für Bauphysik (IBP), Stuttgart/Holzkirchen.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="010_Motivation_und_Grundgleichungen.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Motivation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="030_W%C3%A4rmebr%C3%BCcken.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Diffusiver Wärme- und Stofftransport</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Hygrothermische Bauteilsimulation und Risikoanalyse<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
